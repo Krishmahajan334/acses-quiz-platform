@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>ACSES — Links</title>
+<meta name="description" content="ACSES DKTE Official Links">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Using direct URL for favicon so it works independently -->
+<link rel="icon" type="image/png" href="https://acses-dkte.vercel.app/assets/portal/images/favicon.png">
+
+<style>
+  /* Base CSS Variables embedded for standalone usage */
+  :root {
+    --bg: #07090A;
+    --panel: rgba(255,255,255,.035);
+    --line: rgba(255,255,255,.10);
+    --ink: #EEF3F1;
+    --ink-dim: #8B98A0;
+    --blue: #4C8DFF;
+    --circuit: #4CFFB2;
+    --amber: #FFB238;
+    --display: 'Sora', sans-serif;
+    --body: 'Inter', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+  
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  /* Mobile-first specific overrides for the links page */
+  body {
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100svh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  a { text-decoration: none; color: inherit; }
+  
+  /* Animated Background Elements Ported over */
+  #circuitPattern {
+    position:fixed; inset:0; z-index:0; pointer-events:none; opacity:.16;
+    background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size:56px 56px;
+    -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 20%, black 20%, transparent 75%);
+    mask-image:radial-gradient(ellipse 80% 60% at 50% 20%, black 20%, transparent 75%);
+  }
+
+  .orb { position:fixed; border-radius:50%; filter:blur(60px); pointer-events:none; z-index:0; opacity:.45; }
+  .orb-1 { width:340px; height:340px; background:var(--blue); top:6%; left:8%; animation:drift 12s ease-in-out infinite; }
+  .orb-2 { width:260px; height:260px; background:var(--circuit); top:38%; right:6%; opacity:.24; animation:drift 15s ease-in-out infinite 1s; }
+  .orb-3 { width:300px; height:300px; background:var(--amber); bottom:auto; top:50%; opacity:.10; animation:drift 18s ease-in-out infinite 2s; }
+  
+  @keyframes drift{ 0%,100%{ transform:translateY(0) translateX(0); } 50%{ transform:translateY(-26px) translateX(14px); } }
+
+  .hero-scanlines {
+    position:fixed; inset:0; z-index:2; pointer-events:none; overflow:hidden; opacity: 0.5;
+    -webkit-mask-image:radial-gradient(ellipse 75% 70% at 70% 50%, black 20%, transparent 78%);
+    mask-image:radial-gradient(ellipse 75% 70% at 70% 50%, black 20%, transparent 78%);
+  }
+  .hero-scanlines::before {
+    content:''; position:absolute; left:0; right:0; height:120px; top:-120px;
+    background:linear-gradient(180deg, transparent, rgba(76,255,178,.10) 45%, rgba(76,141,255,.14) 55%, transparent);
+    animation:scanSweep 6.5s cubic-bezier(.4,0,.2,1) infinite;
+  }
+  @keyframes scanSweep{ 0%{ top:-120px; } 55%,100%{ top:105%; } }
+
+  /* Links Layout */
+  .links-wrapper {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 580px;
+    padding: 60px 24px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0 auto;
+  }
+
+  /* Profile Header */
+  .profile-section {
+    text-align: center;
+    margin-bottom: 24px;
+    animation: fadeUp .8s cubic-bezier(.16,.8,.28,1) forwards;
+  }
+
+  .profile-logo {
+    height: 56px;
+    width: auto;
+    margin-bottom: 24px;
+    object-fit: contain;
+  }
+
+  .profile-title {
+    font-family: var(--display);
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+  
+  .profile-title span {
+    color: var(--circuit);
+  }
+
+  .profile-bio {
+    color: var(--ink-dim);
+    font-size: 14.5px;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .link-card {
+    display: flex;
+    align-items: center;
+    padding: 18px 22px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform .25s ease-out, border-color .3s ease, box-shadow .3s ease, background .3s ease;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeUp .8s cubic-bezier(.16,.8,.28,1) forwards;
+  }
+
+  .link-card:nth-child(1) { animation-delay: 0.1s; }
+  .link-card:nth-child(2) { animation-delay: 0.15s; }
+  .link-card:nth-child(3) { animation-delay: 0.2s; }
+  .link-card:nth-child(4) { animation-delay: 0.25s; }
+  .link-card:nth-child(5) { animation-delay: 0.3s; }
+  .link-card:nth-child(6) { animation-delay: 0.35s; }
+  .link-card:nth-child(7) { animation-delay: 0.4s; }
+
+  .link-card:hover {
+    border-color: rgba(76,141,255,.5); 
+    box-shadow: 0 12px 30px -10px rgba(0,0,0,.6);
+    transform: translateY(-2px);
+    background: rgba(255,255,255,0.06);
+  }
+
+  .link-card.primary {
+    background: linear-gradient(135deg, rgba(76,141,255,0.15), rgba(76,255,178,0.1));
+    border-color: rgba(76,141,255,.4);
+  }
+  
+  .link-card.primary:hover {
+    background: linear-gradient(135deg, rgba(76,141,255,0.25), rgba(76,255,178,0.15));
+    border-color: var(--circuit);
+    box-shadow: 0 12px 30px -10px rgba(76,141,255,.3);
+  }
+
+  .link-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 18px;
+    font-size: 16px;
+    color: var(--ink);
+    flex-shrink: 0;
+  }
+  
+  .link-card.primary .link-icon {
+    background: linear-gradient(135deg, var(--blue), var(--circuit));
+    color: #07090A;
+    border: none;
+  }
+
+  .link-text {
+    flex-grow: 1;
+    font-size: 15.5px;
+  }
+
+  .link-arrow {
+    opacity: 0.4;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    font-size: 14px;
+  }
+
+  .link-card:hover .link-arrow {
+    opacity: 1;
+    transform: translateX(4px);
+    color: var(--circuit);
+  }
+
+  .section-divider {
+    margin: 32px 0 8px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: var(--mono);
+    color: var(--circuit);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 600;
+    opacity: 0;
+    animation: fadeUp .8s cubic-bezier(.16,.8,.28,1) forwards;
+    animation-delay: 0.2s;
+  }
+
+  .section-divider::before,
+  .section-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .section-divider::before { margin-right: 16px; }
+  .section-divider::after { margin-left: 16px; }
+  
+  .links-footer {
+    text-align: center;
+    margin-top: 40px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-dim);
+    opacity: 0;
+    animation: fadeUp .8s cubic-bezier(.16,.8,.28,1) forwards;
+    animation-delay: 0.5s;
+  }
+
+  @keyframes fadeUp { 
+    from { opacity: 0; transform: translateY(16px); } 
+    to { opacity: 1; transform: translateY(0); } 
+  }
+
+</style>
+</head>
+<body>
+
+<!-- Native ACSES Background Elements -->
+<div id="circuitPattern"></div>
+<div class="hero-scanlines" aria-hidden="true"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<div class="links-wrapper">
+  
+  <div class="profile-section">
+    <!-- Using direct URL for logo so it works independently -->
+    <img src="https://acses-dkte.vercel.app/assets/portal/images/logo.png" alt="ACSES Logo" class="profile-logo">
+    <h1 class="profile-title">ACSES <span>DKTE</span></h1>
+    <p class="profile-bio">Association of Computer Science<br>& Engineering Students</p>
+  </div>
+
+  <a href="https://tinyurl.com/acsesmembership" class="link-card primary" target="_blank" rel="noopener">
+    <div class="link-icon"><i class="fa-solid fa-user-plus"></i></div>
+    <div class="link-text">Register as a Member</div>
+    <div class="link-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+  </a>
+
+  <a href="https://acses-dkte.vercel.app/" class="link-card" target="_blank" rel="noopener">
+    <div class="link-icon"><i class="fa-solid fa-globe"></i></div>
+    <div class="link-text">Official Website</div>
+    <div class="link-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+  </a>
+
+  <div class="section-divider">Socials</div>
+
+  <a href="https://www.instagram.com/acses_dkte/" class="link-card" target="_blank" rel="noopener">
+    <div class="link-icon" style="color: #E1306C;"><i class="fa-brands fa-instagram"></i></div>
+    <div class="link-text">Instagram</div>
+    <div class="link-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+  </a>
+
+  <a href="https://www.linkedin.com/company/acses-association-of-computer-science-and-engineering-students/" class="link-card" target="_blank" rel="noopener">
+    <div class="link-icon" style="color: #4C8DFF;"><i class="fa-brands fa-linkedin"></i></div>
+    <div class="link-text">LinkedIn</div>
+    <div class="link-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+  </a>
+
+  <a href="https://github.com/acses-dkte" class="link-card" target="_blank" rel="noopener">
+    <div class="link-icon" style="color: #ffffff;"><i class="fa-brands fa-github"></i></div>
+    <div class="link-text">GitHub</div>
+    <div class="link-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+  </a>
+
+  <div class="section-divider">Contact Us</div>
+
+  <a href="tel:+919055721797" class="link-card">
+    <div class="link-icon"><i class="fa-solid fa-phone"></i></div>
+    <div class="link-text">Krish Mahajan (President)</div>
+    <div class="link-arrow"><i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 11px;"></i></div>
+  </a>
+
+  <a href="tel:+919325324272" class="link-card">
+    <div class="link-icon"><i class="fa-solid fa-phone"></i></div>
+    <div class="link-text">Gomtesh Patil (Vice President)</div>
+    <div class="link-arrow"><i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 11px;"></i></div>
+  </a>
+  
+  <div class="links-footer">
+    © 2026 ACSES DKTE. All rights reserved.
+  </div>
+
+</div>
+
+</body>
+</html>

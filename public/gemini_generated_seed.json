@@ -1,0 +1,4002 @@
+[
+  {
+    "text": "What is the de Broglie wavelength of a particle with momentum 'p' and Planck's constant 'h'?",
+    "topic": "Physics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "h * p",
+        "isCorrect": false
+      },
+      {
+        "text": "h / p",
+        "isCorrect": true
+      },
+      {
+        "text": "p / h",
+        "isCorrect": false
+      },
+      {
+        "text": "h / (2p)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In a thin film interference setup, what is the path difference introduced when light reflects from the surface of an optically denser medium?",
+    "topic": "Physics",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "λ",
+        "isCorrect": false
+      },
+      {
+        "text": "2λ",
+        "isCorrect": false
+      },
+      {
+        "text": "λ / 4",
+        "isCorrect": false
+      },
+      {
+        "text": "λ / 2",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Which condition is required to achieve laser action in a medium?",
+    "topic": "Physics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Population Inversion",
+        "isCorrect": true
+      },
+      {
+        "text": "Thermal Equilibrium",
+        "isCorrect": false
+      },
+      {
+        "text": "Spontaneous Absorption",
+        "isCorrect": false
+      },
+      {
+        "text": "High Dispersion",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "The phenomenon of complete expulsion of magnetic flux from the interior of a superconductor is known as:",
+    "topic": "Physics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Peltier Effect",
+        "isCorrect": false
+      },
+      {
+        "text": "Hall Effect",
+        "isCorrect": false
+      },
+      {
+        "text": "Meissner Effect",
+        "isCorrect": true
+      },
+      {
+        "text": "Seebeck Effect",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "If n1 is the refractive index of the core and n2 is the refractive index of the cladding, what is the Numerical Aperture (NA) of an optical fiber?",
+    "topic": "Physics",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "n1 - n2",
+        "isCorrect": false
+      },
+      {
+        "text": "sqrt(n1^2 - n2^2)",
+        "isCorrect": true
+      },
+      {
+        "text": "sqrt(n1^2 + n2^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "n1 / n2",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which effect is commonly utilized to generate ultrasonic waves using quartz crystals?",
+    "topic": "Physics",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Piezoelectric Effect",
+        "isCorrect": true
+      },
+      {
+        "text": "Photoelectric Effect",
+        "isCorrect": false
+      },
+      {
+        "text": "Compton Effect",
+        "isCorrect": false
+      },
+      {
+        "text": "Tyndall Effect",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "According to Heisenberg's Uncertainty Principle, the product of uncertainties in position (Δx) and momentum (Δp) is always greater than or equal to:",
+    "topic": "Physics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "h / 2",
+        "isCorrect": false
+      },
+      {
+        "text": "h / (4π)",
+        "isCorrect": true
+      },
+      {
+        "text": "2π / h",
+        "isCorrect": false
+      },
+      {
+        "text": "h / π",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "At absolute zero temperature (0 K), where does the Fermi level lie in an intrinsic semiconductor?",
+    "topic": "Physics",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Inside the conduction band",
+        "isCorrect": false
+      },
+      {
+        "text": "Inside the valence band",
+        "isCorrect": false
+      },
+      {
+        "text": "Exactly halfway in the forbidden energy gap",
+        "isCorrect": true
+      },
+      {
+        "text": "At the top of the conduction band",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "The minimum energy required to remove an electron from the surface of a metal is called:",
+    "topic": "Physics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "Ionization Potential",
+        "isCorrect": false
+      },
+      {
+        "text": "Work Function",
+        "isCorrect": true
+      },
+      {
+        "text": "Binding Energy",
+        "isCorrect": false
+      },
+      {
+        "text": "Fermi Energy",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "According to Special Relativity, as the velocity of a particle approaches the speed of light, its relativistic mass:",
+    "topic": "Physics",
+    "difficulty": "Hard",
+    "targetYear": "FY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Decreases to zero",
+        "isCorrect": false
+      },
+      {
+        "text": "Remains constant",
+        "isCorrect": false
+      },
+      {
+        "text": "Approaches infinity",
+        "isCorrect": true
+      },
+      {
+        "text": "Fluctuates sinusoidally",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the typical barrier potential for a Silicon PN junction diode at room temperature?",
+    "topic": "Basic Electronics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "0.3 V",
+        "isCorrect": false
+      },
+      {
+        "text": "0.7 V",
+        "isCorrect": true
+      },
+      {
+        "text": "1.2 V",
+        "isCorrect": false
+      },
+      {
+        "text": "5.0 V",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which of the following mathematical relations correctly links the common-base current gain (alpha) and common-emitter current gain (beta) of a BJT?",
+    "topic": "Basic Electronics",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "beta = alpha / (1 - alpha)",
+        "isCorrect": true
+      },
+      {
+        "text": "beta = alpha / (1 + alpha)",
+        "isCorrect": false
+      },
+      {
+        "text": "alpha = beta / (1 - beta)",
+        "isCorrect": false
+      },
+      {
+        "text": "beta = 1 - alpha",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "An ideal operational amplifier (Op-Amp) has which of the following input and output impedance characteristics?",
+    "topic": "Basic Electronics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "Zero input impedance and Infinite output impedance",
+        "isCorrect": false
+      },
+      {
+        "text": "Infinite input impedance and Zero output impedance",
+        "isCorrect": true
+      },
+      {
+        "text": "Infinite input impedance and Infinite output impedance",
+        "isCorrect": false
+      },
+      {
+        "text": "Zero input impedance and Zero output impedance",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "A Zener diode is primarily used in electronic circuits as a:",
+    "topic": "Basic Electronics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "Current amplifier",
+        "isCorrect": false
+      },
+      {
+        "text": "Rectifier switch",
+        "isCorrect": false
+      },
+      {
+        "text": "Voltage regulator",
+        "isCorrect": true
+      },
+      {
+        "text": "High-frequency oscillator",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which pair of logic gates are categorized as 'Universal Logic Gates'?",
+    "topic": "Basic Electronics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "AND and OR",
+        "isCorrect": false
+      },
+      {
+        "text": "NAND and NOR",
+        "isCorrect": true
+      },
+      {
+        "text": "XOR and XNOR",
+        "isCorrect": false
+      },
+      {
+        "text": "NOT and AND",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the theoretical maximum efficiency of a full-wave bridge rectifier?",
+    "topic": "Basic Electronics",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "40.6%",
+        "isCorrect": false
+      },
+      {
+        "text": "50.0%",
+        "isCorrect": false
+      },
+      {
+        "text": "81.2%",
+        "isCorrect": true
+      },
+      {
+        "text": "100.0%",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "When a BJT is operated as a closed switch in digital circuits, it operates in which region?",
+    "topic": "Basic Electronics",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Active region",
+        "isCorrect": false
+      },
+      {
+        "text": "Cutoff region",
+        "isCorrect": false
+      },
+      {
+        "text": "Saturation region",
+        "isCorrect": true
+      },
+      {
+        "text": "Breakdown region",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the closed-loop voltage gain of an inverting Op-Amp configuration with feedback resistor Rf and input resistor Rin?",
+    "topic": "Basic Electronics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "- Rf / Rin",
+        "isCorrect": true
+      },
+      {
+        "text": "1 + (Rf / Rin)",
+        "isCorrect": false
+      },
+      {
+        "text": "- Rin / Rf",
+        "isCorrect": false
+      },
+      {
+        "text": "Rf * Rin",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "According to De Morgan's Law, the boolean expression NOT(A AND B) is equivalent to:",
+    "topic": "Basic Electronics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "(NOT A) AND (NOT B)",
+        "isCorrect": false
+      },
+      {
+        "text": "(NOT A) OR (NOT B)",
+        "isCorrect": true
+      },
+      {
+        "text": "A OR B",
+        "isCorrect": false
+      },
+      {
+        "text": "NOT(A OR B)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the main structural difference between a BJT and a Field Effect Transistor (FET)?",
+    "topic": "Basic Electronics",
+    "difficulty": "Hard",
+    "targetYear": "FY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "BJT is voltage-controlled while FET is current-controlled",
+        "isCorrect": false
+      },
+      {
+        "text": "BJT is a unipolar device while FET is a bipolar device",
+        "isCorrect": false
+      },
+      {
+        "text": "BJT is current-controlled while FET is voltage-controlled",
+        "isCorrect": true
+      },
+      {
+        "text": "BJT has high input impedance compared to FET",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "If a square matrix A of order n has a determinant equal to zero, then matrix A is said to be:",
+    "topic": "Basic Mathematics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "Non-singular",
+        "isCorrect": false
+      },
+      {
+        "text": "Symmetric",
+        "isCorrect": false
+      },
+      {
+        "text": "Singular",
+        "isCorrect": true
+      },
+      {
+        "text": "Orthogonal",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the derivative of sin(x^2) with respect to x?",
+    "topic": "Basic Mathematics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "2x * cos(x^2)",
+        "isCorrect": true
+      },
+      {
+        "text": "cos(x^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "2 * cos(x)",
+        "isCorrect": false
+      },
+      {
+        "text": "-2x * cos(x^2)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Linear Algebra, the sum of the eigenvalues of a square matrix is always equal to its:",
+    "topic": "Basic Mathematics",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Determinant",
+        "isCorrect": false
+      },
+      {
+        "text": "Rank",
+        "isCorrect": false
+      },
+      {
+        "text": "Trace",
+        "isCorrect": true
+      },
+      {
+        "text": "Nullity",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What are the order and degree of the differential equation: (d^2y/dx^2) + (dy/dx)^3 + y = 0?",
+    "topic": "Basic Mathematics",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Order = 2, Degree = 3",
+        "isCorrect": false
+      },
+      {
+        "text": "Order = 2, Degree = 1",
+        "isCorrect": true
+      },
+      {
+        "text": "Order = 3, Degree = 2",
+        "isCorrect": false
+      },
+      {
+        "text": "Order = 1, Degree = 3",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Euler's formula states that e^(i * θ) is equal to:",
+    "topic": "Basic Mathematics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "cos(θ) - i * sin(θ)",
+        "isCorrect": false
+      },
+      {
+        "text": "sin(θ) + i * cos(θ)",
+        "isCorrect": false
+      },
+      {
+        "text": "cos(θ) + i * sin(θ)",
+        "isCorrect": true
+      },
+      {
+        "text": "i * (cos(θ) + sin(θ))",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Evaluate the limit: lim (x -> 0) [ sin(x) / x ]",
+    "topic": "Basic Mathematics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "1",
+        "isCorrect": true
+      },
+      {
+        "text": "0",
+        "isCorrect": false
+      },
+      {
+        "text": "Infinity",
+        "isCorrect": false
+      },
+      {
+        "text": "Undefined",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "The gradient of a scalar field f(x, y, z) results in a quantity that is a:",
+    "topic": "Basic Mathematics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "Scalar",
+        "isCorrect": false
+      },
+      {
+        "text": "Vector",
+        "isCorrect": true
+      },
+      {
+        "text": "Complex constant",
+        "isCorrect": false
+      },
+      {
+        "text": "Matrix",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the rank of an n x n identity matrix I_n?",
+    "topic": "Basic Mathematics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "0",
+        "isCorrect": false
+      },
+      {
+        "text": "1",
+        "isCorrect": false
+      },
+      {
+        "text": "n",
+        "isCorrect": true
+      },
+      {
+        "text": "n^2",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which formula represents the expansion point for a Maclaurin series?",
+    "topic": "Basic Mathematics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "x = 0",
+        "isCorrect": true
+      },
+      {
+        "text": "x = 1",
+        "isCorrect": false
+      },
+      {
+        "text": "x = pi",
+        "isCorrect": false
+      },
+      {
+        "text": "x = infinity",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "If two vectors A and B are orthogonal, their dot product (A · B) equals:",
+    "topic": "Basic Mathematics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "1",
+        "isCorrect": false
+      },
+      {
+        "text": "0",
+        "isCorrect": true
+      },
+      {
+        "text": "-1",
+        "isCorrect": false
+      },
+      {
+        "text": "|A||B|",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the standard memory size allocated for a 'char' data type in C programming on standard 32/64-bit architectures?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "1 byte",
+        "isCorrect": true
+      },
+      {
+        "text": "2 bytes",
+        "isCorrect": false
+      },
+      {
+        "text": "4 bytes",
+        "isCorrect": false
+      },
+      {
+        "text": "8 bytes",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which data structure follows the Last-In, First-Out (LIFO) principle?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "Queue",
+        "isCorrect": false
+      },
+      {
+        "text": "Array",
+        "isCorrect": false
+      },
+      {
+        "text": "Stack",
+        "isCorrect": true
+      },
+      {
+        "text": "Linked List",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In computer architecture, which component of the CPU is responsible for carrying out arithmetic computations and logical evaluations?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "Control Unit (CU)",
+        "isCorrect": false
+      },
+      {
+        "text": "Arithmetic Logic Unit (ALU)",
+        "isCorrect": true
+      },
+      {
+        "text": "Memory Management Unit (MMU)",
+        "isCorrect": false
+      },
+      {
+        "text": "Registers",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the binary representation of the decimal integer 13?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "1100",
+        "isCorrect": false
+      },
+      {
+        "text": "1011",
+        "isCorrect": false
+      },
+      {
+        "text": "1101",
+        "isCorrect": true
+      },
+      {
+        "text": "1110",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the worst-case time complexity of searching an element in a sorted array using Binary Search?",
+    "topic": "Intro to CS",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n log n)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In C programming, what does the dereference operator '*' do when applied to a pointer variable?",
+    "topic": "Intro to CS",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Returns the memory address of the pointer variable",
+        "isCorrect": false
+      },
+      {
+        "text": "Accesses the value stored at the address contained in the pointer",
+        "isCorrect": true
+      },
+      {
+        "text": "Multiplies the address by 2",
+        "isCorrect": false
+      },
+      {
+        "text": "Allocates dynamic memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which type of computer memory is volatile and loses its stored content when power is disconnected?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "ROM",
+        "isCorrect": false
+      },
+      {
+        "text": "Flash Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "RAM",
+        "isCorrect": true
+      },
+      {
+        "text": "Hard Disk Drive",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which linear data structure enforces insertion at the rear end and deletion from the front end?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "Queue",
+        "isCorrect": true
+      },
+      {
+        "text": "Stack",
+        "isCorrect": false
+      },
+      {
+        "text": "Binary Search Tree",
+        "isCorrect": false
+      },
+      {
+        "text": "Heap",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the process of identifying, tracing, and fixing software bugs or errors in program code called?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "Compiling",
+        "isCorrect": false
+      },
+      {
+        "text": "Linking",
+        "isCorrect": false
+      },
+      {
+        "text": "Debugging",
+        "isCorrect": true
+      },
+      {
+        "text": "Refactoring",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which header file in standard C must be included to use functions like printf() and scanf()?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "<stdlib.h>",
+        "isCorrect": false
+      },
+      {
+        "text": "<stdio.h>",
+        "isCorrect": true
+      },
+      {
+        "text": "<string.h>",
+        "isCorrect": false
+      },
+      {
+        "text": "<math.h>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the worst-case time complexity of searching for an element in a Balanced Binary Search Tree (such as an AVL tree) with 'n' nodes?",
+    "topic": "Data Structures",
+    "difficulty": "Easy",
+    "targetYear": "SY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n log n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which data structure is primarily used to implement Breadth-First Search (BFS) on a graph?",
+    "topic": "Data Structures",
+    "difficulty": "Easy",
+    "targetYear": "SY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "Stack",
+        "isCorrect": false
+      },
+      {
+        "text": "Priority Queue",
+        "isCorrect": false
+      },
+      {
+        "text": "Queue",
+        "isCorrect": true
+      },
+      {
+        "text": "Binary Heap",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the postfix equivalent of the infix expression: (A + B) * C - D / E?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "timeLimitSec": 60,
+    "options": [
+      {
+        "text": "A B + C * D E / -",
+        "isCorrect": true
+      },
+      {
+        "text": "A B C * + D E / -",
+        "isCorrect": false
+      },
+      {
+        "text": "A B + C D E / * -",
+        "isCorrect": false
+      },
+      {
+        "text": "+ A B * C - / D E",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In a circular queue with array size N, front index 'f', and rear index 'r', what condition indicates that the queue is completely full (assuming one slot is left empty)?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "(rear + 1) % N == front",
+        "isCorrect": true
+      },
+      {
+        "text": "rear == front",
+        "isCorrect": false
+      },
+      {
+        "text": "(front + 1) % N == rear",
+        "isCorrect": false
+      },
+      {
+        "text": "rear % N == front",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which collision resolution technique in hashing suffers from primary clustering?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Quadratic Probing",
+        "isCorrect": false
+      },
+      {
+        "text": "Linear Probing",
+        "isCorrect": true
+      },
+      {
+        "text": "Double Hashing",
+        "isCorrect": false
+      },
+      {
+        "text": "Separate Chaining",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the minimum number of queues needed to implement a stack?",
+    "topic": "Data Structures",
+    "difficulty": "Easy",
+    "targetYear": "SY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "1",
+        "isCorrect": false
+      },
+      {
+        "text": "2",
+        "isCorrect": true
+      },
+      {
+        "text": "3",
+        "isCorrect": false
+      },
+      {
+        "text": "4",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In QuickSort, what is the worst-case time complexity if the pivot is always chosen as the smallest or largest element?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "O(n log n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(2^n)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which of the following traversals on a Binary Search Tree produces elements in sorted non-decreasing order?",
+    "topic": "Data Structures",
+    "difficulty": "Easy",
+    "targetYear": "SY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "Pre-order",
+        "isCorrect": false
+      },
+      {
+        "text": "Post-order",
+        "isCorrect": false
+      },
+      {
+        "text": "In-order",
+        "isCorrect": true
+      },
+      {
+        "text": "Level-order",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the amortized time complexity of inserting an element into a dynamic array (like std::vector in C++)?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "O(1)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In a Max-Heap with N elements, what is the time complexity to insert a new key?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log N)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(N)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(N log N)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which of the following feature is used to achieve compile-time polymorphism in C++?",
+    "topic": "C++",
+    "difficulty": "Easy",
+    "targetYear": "SY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "Virtual Functions",
+        "isCorrect": false
+      },
+      {
+        "text": "Function Overloading",
+        "isCorrect": true
+      },
+      {
+        "text": "Dynamic Binding",
+        "isCorrect": false
+      },
+      {
+        "text": "Abstract Classes",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What will happen if a programmer uses the 'delete' operator on a pointer allocated with 'new[]'?",
+    "topic": "C++",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Compilation Error",
+        "isCorrect": false
+      },
+      {
+        "text": "Undefined Behavior",
+        "isCorrect": true
+      },
+      {
+        "text": "Only the last element is deleted",
+        "isCorrect": false
+      },
+      {
+        "text": "Memory leak is guaranteed to be avoided",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What does the 'constexpr' keyword signify in C++11 and later?",
+    "topic": "C++",
+    "difficulty": "Hard",
+    "targetYear": "SY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "The variable or function can be evaluated at compile-time",
+        "isCorrect": true
+      },
+      {
+        "text": "The variable value can be changed at runtime dynamically",
+        "isCorrect": false
+      },
+      {
+        "text": "The function must be executed in a multithreaded context",
+        "isCorrect": false
+      },
+      {
+        "text": "The pointer cannot be reassigned",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which C++ smart pointer allows shared ownership of a dynamically allocated object?",
+    "topic": "C++",
+    "difficulty": "Easy",
+    "targetYear": "SY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "std::unique_ptr",
+        "isCorrect": false
+      },
+      {
+        "text": "std::auto_ptr",
+        "isCorrect": false
+      },
+      {
+        "text": "std::shared_ptr",
+        "isCorrect": true
+      },
+      {
+        "text": "std::weak_ptr",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the correct way to declare a reference variable 'ref' to an integer 'x' in C++?",
+    "topic": "C++",
+    "difficulty": "Easy",
+    "targetYear": "SY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "int &ref = x;",
+        "isCorrect": true
+      },
+      {
+        "text": "int *ref = &x;",
+        "isCorrect": false
+      },
+      {
+        "text": "int ref = &x;",
+        "isCorrect": false
+      },
+      {
+        "text": "ref &int = x;",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which mechanism in C++ provides a way to handle runtime errors gracefully?",
+    "topic": "C++",
+    "difficulty": "Easy",
+    "targetYear": "SY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "Templates",
+        "isCorrect": false
+      },
+      {
+        "text": "Macros",
+        "isCorrect": false
+      },
+      {
+        "text": "Exception Handling (try-catch)",
+        "isCorrect": true
+      },
+      {
+        "text": "Namespaces",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the primary difference between a 'struct' and a 'class' in C++?",
+    "topic": "C++",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "Members of struct are private by default; members of class are public by default",
+        "isCorrect": false
+      },
+      {
+        "text": "Members of struct are public by default; members of class are private by default",
+        "isCorrect": true
+      },
+      {
+        "text": "Structs cannot have member functions; classes can",
+        "isCorrect": false
+      },
+      {
+        "text": "Structs cannot inherit from other structs in C++",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What does RAII stand for in the context of C++ memory and resource management?",
+    "topic": "C++",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Resource Allocation Is Instant",
+        "isCorrect": false
+      },
+      {
+        "text": "Resource Acquisition Is Initialization",
+        "isCorrect": true
+      },
+      {
+        "text": "Runtime Allocation In Interface",
+        "isCorrect": false
+      },
+      {
+        "text": "Reference Acquisition In Inheritance",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which header file is required to use std::sort in standard C++?",
+    "topic": "C++",
+    "difficulty": "Easy",
+    "targetYear": "SY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "<utility>",
+        "isCorrect": false
+      },
+      {
+        "text": "<algorithm>",
+        "isCorrect": true
+      },
+      {
+        "text": "<stdlib.h>",
+        "isCorrect": false
+      },
+      {
+        "text": "<vector>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the output of 'cout << (5 >> 1);' in C++?",
+    "topic": "C++",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "10",
+        "isCorrect": false
+      },
+      {
+        "text": "2.5",
+        "isCorrect": false
+      },
+      {
+        "text": "2",
+        "isCorrect": true
+      },
+      {
+        "text": "5",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which OOP concept involves hiding internal implementation details and exposing only necessary functionality?",
+    "topic": "Object Oriented Programming",
+    "difficulty": "Easy",
+    "targetYear": "SY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "Abstraction",
+        "isCorrect": true
+      },
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      },
+      {
+        "text": "Aggregation",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What makes a C++ class an Abstract Class?",
+    "topic": "Object Oriented Programming",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "It has no data members",
+        "isCorrect": false
+      },
+      {
+        "text": "It contains at least one pure virtual function",
+        "isCorrect": true
+      },
+      {
+        "text": "All its methods are static",
+        "isCorrect": false
+      },
+      {
+        "text": "It cannot have a constructor",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What type of inheritance causes the 'Diamond Problem' in OOP?",
+    "topic": "Object Oriented Programming",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Single Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Multilevel Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Multiple Inheritance",
+        "isCorrect": true
+      },
+      {
+        "text": "Hierarchical Inheritance",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, what is dynamic binding?",
+    "topic": "Object Oriented Programming",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Connecting function call to function body at compile time",
+        "isCorrect": false
+      },
+      {
+        "text": "Connecting function call to function body at run time",
+        "isCorrect": true
+      },
+      {
+        "text": "Allocating memory dynamically using pointers",
+        "isCorrect": false
+      },
+      {
+        "text": "Binding variables to types automatically",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which keyword in C++ allows a non-member function to access private and protected members of a class?",
+    "topic": "Object Oriented Programming",
+    "difficulty": "Easy",
+    "targetYear": "SY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "friend",
+        "isCorrect": true
+      },
+      {
+        "text": "public",
+        "isCorrect": false
+      },
+      {
+        "text": "extern",
+        "isCorrect": false
+      },
+      {
+        "text": "inline",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What happens if a class does not define a constructor in C++?",
+    "topic": "Object Oriented Programming",
+    "difficulty": "Easy",
+    "targetYear": "SY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "The code fails to compile",
+        "isCorrect": false
+      },
+      {
+        "text": "The compiler automatically generates a default constructor",
+        "isCorrect": true
+      },
+      {
+        "text": "Objects of the class cannot be instantiated",
+        "isCorrect": false
+      },
+      {
+        "text": "A runtime exception is thrown",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Why should a base class destructor be declared as 'virtual' when polymorphism is used?",
+    "topic": "Object Oriented Programming",
+    "difficulty": "Hard",
+    "targetYear": "SY",
+    "timeLimitSec": 60,
+    "options": [
+      {
+        "text": "To prevent instantiation of the base class",
+        "isCorrect": false
+      },
+      {
+        "text": "To enable correct cleanup of derived class objects when deleted via base pointer",
+        "isCorrect": true
+      },
+      {
+        "text": "To allow private members to be deleted",
+        "isCorrect": false
+      },
+      {
+        "text": "To make the class abstract",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is encapsulation?",
+    "topic": "Object Oriented Programming",
+    "difficulty": "Easy",
+    "targetYear": "SY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "Wrapping data and functions into a single unit (class)",
+        "isCorrect": true
+      },
+      {
+        "text": "Deriving new classes from existing classes",
+        "isCorrect": false
+      },
+      {
+        "text": "Creating multiple methods with the same name",
+        "isCorrect": false
+      },
+      {
+        "text": "Hiding runtime errors behind dynamic pointers",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which access specifier makes members accessible within the class and its derived classes, but NOT from outside?",
+    "topic": "Object Oriented Programming",
+    "difficulty": "Easy",
+    "targetYear": "SY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "private",
+        "isCorrect": false
+      },
+      {
+        "text": "public",
+        "isCorrect": false
+      },
+      {
+        "text": "protected",
+        "isCorrect": true
+      },
+      {
+        "text": "internal",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is method overriding in Object-Oriented Programming?",
+    "topic": "Object Oriented Programming",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Defining multiple functions with same name but different parameters in same scope",
+        "isCorrect": false
+      },
+      {
+        "text": "Redefining a base class virtual function in a derived class with same signature",
+        "isCorrect": true
+      },
+      {
+        "text": "Combining multiple classes into a single file",
+        "isCorrect": false
+      },
+      {
+        "text": "Converting a base class reference into a derived class pointer",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which process scheduling algorithm can cause the 'convoy effect'?",
+    "topic": "Operating Systems",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Round Robin",
+        "isCorrect": false
+      },
+      {
+        "text": "First-Come, First-Served (FCFS)",
+        "isCorrect": true
+      },
+      {
+        "text": "Shortest Job First (SJF) Preemptive",
+        "isCorrect": false
+      },
+      {
+        "text": "Priority Scheduling",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which of the following conditions is NOT required for a deadlock to occur in an operating system?",
+    "topic": "Operating Systems",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Mutual Exclusion",
+        "isCorrect": false
+      },
+      {
+        "text": "Hold and Wait",
+        "isCorrect": false
+      },
+      {
+        "text": "Preemption",
+        "isCorrect": true
+      },
+      {
+        "text": "Circular Wait",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is Belady's Anomaly?",
+    "topic": "Operating Systems",
+    "difficulty": "Hard",
+    "targetYear": "SY",
+    "timeLimitSec": 60,
+    "options": [
+      {
+        "text": "More page faults occur when allocating fewer frame slots",
+        "isCorrect": false
+      },
+      {
+        "text": "More page faults occur when allocating more frame slots in FIFO replacement",
+        "isCorrect": true
+      },
+      {
+        "text": "CPU utilization drops when adding more threads to a process",
+        "isCorrect": false
+      },
+      {
+        "text": "Disk latency increases exponentially with file size",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the purpose of the Translation Lookaside Buffer (TLB) in virtual memory management?",
+    "topic": "Operating Systems",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "To speed up translation of virtual addresses to physical addresses",
+        "isCorrect": true
+      },
+      {
+        "text": "To store backup copies of dirty pages on disk",
+        "isCorrect": false
+      },
+      {
+        "text": "To handle CPU interrupt vectors",
+        "isCorrect": false
+      },
+      {
+        "text": "To manage process synchronization semaphores",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which system call is used in Unix-like systems to create a new child process?",
+    "topic": "Operating Systems",
+    "difficulty": "Easy",
+    "targetYear": "SY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "exec()",
+        "isCorrect": false
+      },
+      {
+        "text": "fork()",
+        "isCorrect": true
+      },
+      {
+        "text": "wait()",
+        "isCorrect": false
+      },
+      {
+        "text": "exit()",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What phenomenon occurs when main memory has enough total space for a process, but the available space is non-contiguous?",
+    "topic": "Operating Systems",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Internal Fragmentation",
+        "isCorrect": false
+      },
+      {
+        "text": "External Fragmentation",
+        "isCorrect": true
+      },
+      {
+        "text": "Thrashing",
+        "isCorrect": false
+      },
+      {
+        "text": "Page Fault",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What state does a process enter when it is waiting for an I/O operation to complete?",
+    "topic": "Operating Systems",
+    "difficulty": "Easy",
+    "targetYear": "SY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "Ready State",
+        "isCorrect": false
+      },
+      {
+        "text": "Running State",
+        "isCorrect": false
+      },
+      {
+        "text": "Waiting / Blocked State",
+        "isCorrect": true
+      },
+      {
+        "text": "Terminated State",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the Banker's Algorithm used for in Operating Systems?",
+    "topic": "Operating Systems",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Deadlock Detection",
+        "isCorrect": false
+      },
+      {
+        "text": "Deadlock Avoidance",
+        "isCorrect": true
+      },
+      {
+        "text": "Process Scheduling",
+        "isCorrect": false
+      },
+      {
+        "text": "Page Replacement",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is 'Thrashing' in an Operating System?",
+    "topic": "Operating Systems",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "When a CPU spends more time swapping pages than executing instructions",
+        "isCorrect": true
+      },
+      {
+        "text": "When a process consumes 100% of CPU cycles in an infinite loop",
+        "isCorrect": false
+      },
+      {
+        "text": "When two processes access a shared memory block concurrently",
+        "isCorrect": false
+      },
+      {
+        "text": "When the disk head fails due to rapid mechanical movements",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which synchronization primitive uses wait() and signal() operations to manage concurrent resource access?",
+    "topic": "Operating Systems",
+    "difficulty": "Easy",
+    "targetYear": "SY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "Semaphore",
+        "isCorrect": true
+      },
+      {
+        "text": "Spinlock",
+        "isCorrect": false
+      },
+      {
+        "text": "Pipe",
+        "isCorrect": false
+      },
+      {
+        "text": "Socket",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Java's memory management, where are static variables stored starting from Java 8 onwards?",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "PermGen Space",
+        "isCorrect": false
+      },
+      {
+        "text": "Metaspace",
+        "isCorrect": false
+      },
+      {
+        "text": "Heap Memory (in the Class object)",
+        "isCorrect": true
+      },
+      {
+        "text": "Native Thread Stack",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which Java feature guarantees that reading a variable will always return the most recent write by any thread, without acquiring an explicit lock?",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "The volatile keyword",
+        "isCorrect": true
+      },
+      {
+        "text": "The transient keyword",
+        "isCorrect": false
+      },
+      {
+        "text": "The synchronized keyword",
+        "isCorrect": false
+      },
+      {
+        "text": "The final keyword",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What happens when a method declared with generic type parameters uses unbounded wildcards like List<?> in Java?",
+    "topic": "Java",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "timeLimitSec": 60,
+    "options": [
+      {
+        "text": "You can insert any object type into the list without compilation errors.",
+        "isCorrect": false
+      },
+      {
+        "text": "You can only read objects from the list as Object type and cannot add non-null elements.",
+        "isCorrect": true
+      },
+      {
+        "text": "The compiler replaces List<?> with List<String> by default.",
+        "isCorrect": false
+      },
+      {
+        "text": "It throws a ClassCastException at runtime if non-Strings are present.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which collector in modern JVMs is designed for ultra-low latency with pause times consistently below 1 millisecond, regardless of heap size?",
+    "topic": "Java",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Parallel GC",
+        "isCorrect": false
+      },
+      {
+        "text": "CMS (Concurrent Mark Sweep)",
+        "isCorrect": false
+      },
+      {
+        "text": "G1 GC",
+        "isCorrect": false
+      },
+      {
+        "text": "ZGC (Z Garbage Collector)",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "In Java's ConcurrentHashMap (Java 8+), what data structure is used when a hash bucket contains more than 8 elements to prevent degradation?",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Doubly Linked List",
+        "isCorrect": false
+      },
+      {
+        "text": "Red-Black Tree",
+        "isCorrect": true
+      },
+      {
+        "text": "B-Tree",
+        "isCorrect": false
+      },
+      {
+        "text": "Skip List",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the key difference between Optional.orElse() and Optional.orElseGet() in Java?",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "orElse() takes a Supplier while orElseGet() takes a direct value.",
+        "isCorrect": false
+      },
+      {
+        "text": "orElse() is executed even if the Optional is non-empty, whereas orElseGet() is evaluated lazily.",
+        "isCorrect": true
+      },
+      {
+        "text": "orElseGet() throws a Checked Exception if the Optional is empty.",
+        "isCorrect": false
+      },
+      {
+        "text": "There is no functional difference; orElseGet() is just a deprecated alias.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which interface must a custom resource implement to be used within a Java try-with-resources statement?",
+    "topic": "Java",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "java.io.Closeable only",
+        "isCorrect": false
+      },
+      {
+        "text": "java.lang.AutoCloseable",
+        "isCorrect": true
+      },
+      {
+        "text": "java.lang.Cloneable",
+        "isCorrect": false
+      },
+      {
+        "text": "java.io.Serializable",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "How does Java handle type erasure when compiling generic classes like MyClass<T extends Number>?",
+    "topic": "Java",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "timeLimitSec": 60,
+    "options": [
+      {
+        "text": "Replaces all occurrences of T with Object.",
+        "isCorrect": false
+      },
+      {
+        "text": "Replaces all occurrences of T with Number.",
+        "isCorrect": true
+      },
+      {
+        "text": "Retains the exact type parameters in bytecode for runtime reflection.",
+        "isCorrect": false
+      },
+      {
+        "text": "Creates separate bytecode classes for each type instantiation.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What does CompletableFuture.thenCompose() do in Java asynchronous programming?",
+    "topic": "Java",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "timeLimitSec": 60,
+    "options": [
+      {
+        "text": "Combines two independent futures and applies a BiFunction to their results.",
+        "isCorrect": false
+      },
+      {
+        "text": "Flattens and chains dependent CompletableFutures (similar to flatMap).",
+        "isCorrect": true
+      },
+      {
+        "text": "Executes a callback only when an exception occurs during execution.",
+        "isCorrect": false
+      },
+      {
+        "text": "Blocks the calling thread until all subtasks complete.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Why is String immutable in Java?",
+    "topic": "Java",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "To prevent subclassing by declared keywords.",
+        "isCorrect": false
+      },
+      {
+        "text": "To enable Security, Thread Safety, and String Pool Caching.",
+        "isCorrect": true
+      },
+      {
+        "text": "Because underlying arrays in Java cannot be resized.",
+        "isCorrect": false
+      },
+      {
+        "text": "To allow Strings to be stored directly in native register memory.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What lifecycle method of a Java Servlet is called only once when the servlet container initializes the servlet instance?",
+    "topic": "Servlets",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "service()",
+        "isCorrect": false
+      },
+      {
+        "text": "doGet()",
+        "isCorrect": false
+      },
+      {
+        "text": "init()",
+        "isCorrect": true
+      },
+      {
+        "text": "config()",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the primary operational difference between HttpServletResponse.sendRedirect() and RequestDispatcher.forward()?",
+    "topic": "Servlets",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "forward() makes a client-side round trip while sendRedirect() happens server-side.",
+        "isCorrect": false
+      },
+      {
+        "text": "sendRedirect() issues a 302 HTTP response to the browser; forward() processes the target resource on the server without changing the browser URL.",
+        "isCorrect": true
+      },
+      {
+        "text": "forward() can redirect to external domain URLs, whereas sendRedirect() cannot.",
+        "isCorrect": false
+      },
+      {
+        "text": "There is no difference; both retain request attributes across calls.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which Servlet interface allows shared access to attributes across the entire web application scope?",
+    "topic": "Servlets",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "ServletConfig",
+        "isCorrect": false
+      },
+      {
+        "text": "HttpSession",
+        "isCorrect": false
+      },
+      {
+        "text": "ServletContext",
+        "isCorrect": true
+      },
+      {
+        "text": "HttpServletRequest",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In a multithreaded Servlet environment, why is using instance variables inside a Servlet class considered unsafe?",
+    "topic": "Servlets",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "The web container instantiates a new Servlet object for every request.",
+        "isCorrect": false
+      },
+      {
+        "text": "A single Servlet instance typically handles multiple concurrent request threads, making instance fields shared and vulnerable to race conditions.",
+        "isCorrect": true
+      },
+      {
+        "text": "Instance variables cause instant ClassCastExceptions during execution.",
+        "isCorrect": false
+      },
+      {
+        "text": "Instance fields cannot be garbage collected until the web application shuts down.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which annotation replaces the traditional web.xml mapping for a Servlet in Servlet 3.0+ specification?",
+    "topic": "Servlets",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "@WebMapping",
+        "isCorrect": false
+      },
+      {
+        "text": "@WebServlet",
+        "isCorrect": true
+      },
+      {
+        "text": "@ServletConfig",
+        "isCorrect": false
+      },
+      {
+        "text": "@Controller",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "How does Servlet session tracking work when the client browser disables cookies completely?",
+    "topic": "Servlets",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Session tracking is completely impossible.",
+        "isCorrect": false
+      },
+      {
+        "text": "By using URL Rewriting (appending JSESSIONID to the URL).",
+        "isCorrect": true
+      },
+      {
+        "text": "By storing session state inside localStorage via client JS.",
+        "isCorrect": false
+      },
+      {
+        "text": "By switching automatically to HTTP basic authentication.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the order of execution for Servlet Filters attached to a request path?",
+    "topic": "Servlets",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Determined by filter class alphabetical order.",
+        "isCorrect": false
+      },
+      {
+        "text": "Defined by the order of filter mappings configured in web.xml or @WebFilter settings.",
+        "isCorrect": true
+      },
+      {
+        "text": "Filters execute randomly based on thread scheduling.",
+        "isCorrect": false
+      },
+      {
+        "text": "Filters execute after the target Servlet's service method finishes.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the purpose of Asynchronous Servlet processing introduced in Servlet 3.0?",
+    "topic": "Servlets",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "timeLimitSec": 60,
+    "options": [
+      {
+        "text": "To make SQL queries execute automatically in parallel.",
+        "isCorrect": false
+      },
+      {
+        "text": "To release the container request thread back to the pool while long-running tasks process on background threads.",
+        "isCorrect": true
+      },
+      {
+        "text": "To force the web browser to render pages asynchronously.",
+        "isCorrect": false
+      },
+      {
+        "text": "To replace WebSockets for real-time bi-directional messaging.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which listener interface allows an application to execute code immediately when the Servlet container finishes bootstrapping the application context?",
+    "topic": "Servlets",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "HttpSessionListener",
+        "isCorrect": false
+      },
+      {
+        "text": "ServletContextListener",
+        "isCorrect": true
+      },
+      {
+        "text": "ServletRequestListener",
+        "isCorrect": false
+      },
+      {
+        "text": "ServletAttributeListener",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What HTTP method does the default implementation of HttpServlet.doHead() wrap around?",
+    "topic": "Servlets",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "doPost()",
+        "isCorrect": false
+      },
+      {
+        "text": "doOptions()",
+        "isCorrect": false
+      },
+      {
+        "text": "doGet(), but discards the body content and returns only response headers.",
+        "isCorrect": true
+      },
+      {
+        "text": "doTrace()",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the worst-case search time complexity in a Red-Black Tree with N nodes?",
+    "topic": "Advanced Data Structures",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "O(N)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log N)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(N log N)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In a Disjoint Set Union (DSU) data structure, what is the amortized time complexity per operation when using both Path Compression and Union by Rank?",
+    "topic": "Advanced Data Structures",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "O(log N)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(α(N)), where α is the inverse Ackermann function.",
+        "isCorrect": true
+      },
+      {
+        "text": "O(sqrt(N))",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the bitwise operation used in a Fenwick Tree (Binary Indexed Tree) to isolate the lowest set bit of an integer x?",
+    "topic": "Advanced Data Structures",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "x | -x",
+        "isCorrect": false
+      },
+      {
+        "text": "x & (-x)",
+        "isCorrect": true
+      },
+      {
+        "text": "x ^ (x - 1)",
+        "isCorrect": false
+      },
+      {
+        "text": "x & (x - 1)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What structural property guarantees that search operations in a B-Tree of order m remain balanced?",
+    "topic": "Advanced Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "All non-leaf nodes have exactly 2 child nodes.",
+        "isCorrect": false
+      },
+      {
+        "text": "All leaf nodes must be at the exact same depth level.",
+        "isCorrect": true
+      },
+      {
+        "text": "Nodes are colored Red or Black.",
+        "isCorrect": false
+      },
+      {
+        "text": "Root must always contain m elements.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the space complexity of a Trie storing N keys, where the maximum length of a key is L and the alphabet size is Sigma?",
+    "topic": "Advanced Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "O(N * L * Sigma)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(N + L + Sigma)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(N * log(Sigma))",
+        "isCorrect": false
+      },
+      {
+        "text": "O(Sigma^L)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In a Splay Tree, what key operation brings an accessed or recently inserted element to the root position?",
+    "topic": "Advanced Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Re-balancing",
+        "isCorrect": false
+      },
+      {
+        "text": "Splaying",
+        "isCorrect": true
+      },
+      {
+        "text": "Heapifying",
+        "isCorrect": false
+      },
+      {
+        "text": "Color Flipping",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which of the following data structures allows range minimum queries (RMQ) in O(1) query time after O(N log N) preprocessing?",
+    "topic": "Advanced Data Structures",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "timeLimitSec": 60,
+    "options": [
+      {
+        "text": "Segment Tree",
+        "isCorrect": false
+      },
+      {
+        "text": "Fenwick Tree",
+        "isCorrect": false
+      },
+      {
+        "text": "Sparse Table",
+        "isCorrect": true
+      },
+      {
+        "text": "Skip List",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "A Bloom Filter is a probabilistic data structure. What type of query error can it produce?",
+    "topic": "Advanced Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "False Negatives only",
+        "isCorrect": false
+      },
+      {
+        "text": "False Positives only",
+        "isCorrect": true
+      },
+      {
+        "text": "Both False Positives and False Negatives",
+        "isCorrect": false
+      },
+      {
+        "text": "Index out of bounds error",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the expected search time complexity in a correctly configured Skip List with N elements?",
+    "topic": "Advanced Data Structures",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "O(N)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log N)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(N log N)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In a Segment Tree built over an array of size N, what is the maximum number of nodes the tree array requires?",
+    "topic": "Advanced Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "2 * N",
+        "isCorrect": false
+      },
+      {
+        "text": "4 * N",
+        "isCorrect": true
+      },
+      {
+        "text": "N^2",
+        "isCorrect": false
+      },
+      {
+        "text": "N log N",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which HTTP request method is defined as idempotent according to the RFC 7231 specification?",
+    "topic": "Web Tech.",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "POST",
+        "isCorrect": false
+      },
+      {
+        "text": "PUT",
+        "isCorrect": true
+      },
+      {
+        "text": "CONNECT",
+        "isCorrect": false
+      },
+      {
+        "text": "PATCH (in general non-idempotent implementations)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "When a web application makes a cross-origin request with custom headers (e.g. Authorization), what preliminary HTTP request does the browser send?",
+    "topic": "Web Tech.",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "GET Pre-check",
+        "isCorrect": false
+      },
+      {
+        "text": "OPTIONS Preflight request",
+        "isCorrect": true
+      },
+      {
+        "text": "HEAD Security check",
+        "isCorrect": false
+      },
+      {
+        "text": "POST Handshake",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In JavaScript's Event Loop, which queue takes precedence for immediate execution right after the current execution context stack empties?",
+    "topic": "Web Tech.",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Macrotask Queue (setTimeout, setInterval)",
+        "isCorrect": false
+      },
+      {
+        "text": "Microtask Queue (Promise callbacks, process.nextTick)",
+        "isCorrect": true
+      },
+      {
+        "text": "Animation Frame Queue",
+        "isCorrect": false
+      },
+      {
+        "text": "I/O Callback Queue",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which feature introduced in HTTP/2 eliminates the Head-of-Line (HoL) blocking issue present at the HTTP application layer in HTTP/1.1?",
+    "topic": "Web Tech.",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Gzip compression",
+        "isCorrect": false
+      },
+      {
+        "text": "Multiplexing over a single TCP connection",
+        "isCorrect": true
+      },
+      {
+        "text": "UDP Transport Layer protocol",
+        "isCorrect": false
+      },
+      {
+        "text": "Domain Sharding",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the primary difference between WebSockets and Server-Sent Events (SSE)?",
+    "topic": "Web Tech.",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "SSE is full-duplex while WebSockets are unidirectional.",
+        "isCorrect": false
+      },
+      {
+        "text": "WebSockets support full-duplex bi-directional communication, whereas SSE provides unidirectional server-to-client streaming.",
+        "isCorrect": true
+      },
+      {
+        "text": "WebSockets only run over HTTP/2, whereas SSE runs over HTTP/1.0.",
+        "isCorrect": false
+      },
+      {
+        "text": "SSE requires binary payloads while WebSockets only support plain text.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which cookie attribute prevents client-side JavaScript (e.g., document.cookie) from accessing the session cookie to mitigate XSS attacks?",
+    "topic": "Web Tech.",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "Secure",
+        "isCorrect": false
+      },
+      {
+        "text": "SameSite",
+        "isCorrect": false
+      },
+      {
+        "text": "HttpOnly",
+        "isCorrect": true
+      },
+      {
+        "text": "Domain",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What CSS Layout Model is specifically designed for 2-dimensional layouts (handling both rows and columns simultaneously)?",
+    "topic": "Web Tech.",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "Flexbox",
+        "isCorrect": false
+      },
+      {
+        "text": "CSS Grid",
+        "isCorrect": true
+      },
+      {
+        "text": "Float layout",
+        "isCorrect": false
+      },
+      {
+        "text": "Position absolute",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Progressive Web Apps (PWAs), which script acts as a programmable network proxy running separately from the main browser thread?",
+    "topic": "Web Tech.",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Web Worker",
+        "isCorrect": false
+      },
+      {
+        "text": "Service Worker",
+        "isCorrect": true
+      },
+      {
+        "text": "DOM Worker",
+        "isCorrect": false
+      },
+      {
+        "text": "Shared Worker",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What does Content Security Policy (CSP) header 'default-src 'self'' specify to the browser?",
+    "topic": "Web Tech.",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Only allows inline JavaScript execution.",
+        "isCorrect": false
+      },
+      {
+        "text": "Restricts loading resources (scripts, images, CSS) strictly to the origin of the document.",
+        "isCorrect": true
+      },
+      {
+        "text": "Disables HTTPS enforcement for local development.",
+        "isCorrect": false
+      },
+      {
+        "text": "Allows loading scripts from any external CDN provider.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In JavaScript (ES6+), what is the output of typeof (async function() {})?",
+    "topic": "Web Tech.",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "timeLimitSec": 30,
+    "options": [
+      {
+        "text": "'object'",
+        "isCorrect": false
+      },
+      {
+        "text": "'promise'",
+        "isCorrect": false
+      },
+      {
+        "text": "'function'",
+        "isCorrect": true
+      },
+      {
+        "text": "'asyncfunction'",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In consistent hashing, what is the primary purpose of introducing 'virtual nodes' for each physical node on the hash ring?",
+    "topic": "System Design",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "To increase the cryptographic security of key hashing",
+        "isCorrect": false
+      },
+      {
+        "text": "To achieve a more uniform distribution of keys across physical nodes and prevent hotspots",
+        "isCorrect": true
+      },
+      {
+        "text": "To allow nodes to communicate without network latency",
+        "isCorrect": false
+      },
+      {
+        "text": "To bypass the need for a central metadata coordinator completely",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "According to the PACELC theorem, if a system experiences NO partition (Else), what trade-off must a distributed database choose between?",
+    "topic": "System Design",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Latency (L) and Consistency (C)",
+        "isCorrect": true
+      },
+      {
+        "text": "Availability (A) and Partition Tolerance (P)",
+        "isCorrect": false
+      },
+      {
+        "text": "Performance (P) and Encryption (E)",
+        "isCorrect": false
+      },
+      {
+        "text": "Durability (D) and Atomicity (A)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which rate-limiting algorithm allows short bursts of traffic while guaranteeing a fixed average processing rate over time by dropping requests when a bucket overflows?",
+    "topic": "System Design",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Sliding Window Counter",
+        "isCorrect": false
+      },
+      {
+        "text": "Fixed Window Counter",
+        "isCorrect": false
+      },
+      {
+        "text": "Leaky Bucket Algorithm",
+        "isCorrect": true
+      },
+      {
+        "text": "Token Bucket Algorithm",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the main drawback of Write-Back (Write-Behind) caching strategy compared to Write-Through caching?",
+    "topic": "System Design",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Write latency is significantly higher for Write-Back caching",
+        "isCorrect": false
+      },
+      {
+        "text": "Data loss can occur if the cache crashes before dirty data is written to persistent storage",
+        "isCorrect": true
+      },
+      {
+        "text": "Read latency is always doubled due to cache lookup misses",
+        "isCorrect": false
+      },
+      {
+        "text": "It requires dual-write consistency mechanisms on the application client layer",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Apache Kafka, what happens when a consumer group has more consumer instances than partitions in a subscribed topic?",
+    "topic": "System Design",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Excess consumers will remain idle and consume no messages from that topic",
+        "isCorrect": true
+      },
+      {
+        "text": "Kafka automatically splits partitions to accommodate extra consumers",
+        "isCorrect": false
+      },
+      {
+        "text": "Multiple consumers in the group will read duplicate messages from the same partition",
+        "isCorrect": false
+      },
+      {
+        "text": "The consumer group throws a ConsumerGroupRebalanceException and halts processing",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "A Bloom Filter guarantees which of the following properties?",
+    "topic": "System Design",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "No false positives, but possible false negatives",
+        "isCorrect": false
+      },
+      {
+        "text": "No false negatives, but possible false positives",
+        "isCorrect": true
+      },
+      {
+        "text": "Exact estimation of element counts with 100% precision",
+        "isCorrect": false
+      },
+      {
+        "text": "Ability to delete arbitrary items efficiently without rebuilds",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "When designing a distributed locking mechanism using Redis, what key weakness does the standard single-instance acquire approach face that the Redlock algorithm attempts to solve?",
+    "topic": "System Design",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Single point of failure and asynchronous replication loss during master failover",
+        "isCorrect": true
+      },
+      {
+        "text": "Inability to set key expiry times on locked items",
+        "isCorrect": false
+      },
+      {
+        "text": "High network overhead due to HTTP REST roundtrips",
+        "isCorrect": false
+      },
+      {
+        "text": "Incompatibility with multithreaded key creation",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What type of load balancing routing technique relies on BGP (Border Gateway Protocol) to route client requests to the topologically nearest data center sharing the same IP address?",
+    "topic": "System Design",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "DNS Round-Robin",
+        "isCorrect": false
+      },
+      {
+        "text": "Layer 4 Reverse Proxying",
+        "isCorrect": false
+      },
+      {
+        "text": "Anycast Routing",
+        "isCorrect": true
+      },
+      {
+        "text": "Weighted Least Connections",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What database sharding strategy assigns rows to shards based on the result of `hash(key) % total_shards`?",
+    "topic": "System Design",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Range-based Partitioning",
+        "isCorrect": false
+      },
+      {
+        "text": "Directory-based Partitioning",
+        "isCorrect": false
+      },
+      {
+        "text": "Hash-based Partitioning",
+        "isCorrect": true
+      },
+      {
+        "text": "Geographic Partitioning",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In cache eviction algorithms, how does LFU (Least Frequently Used) differ from LRU (Least Recently Used)?",
+    "topic": "System Design",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "LFU tracks access frequency count, while LRU tracks time since last access",
+        "isCorrect": true
+      },
+      {
+        "text": "LRU requires O(1) space complexity while LFU requires O(N^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "LFU evicts the oldest created cache entry regardless of usage",
+        "isCorrect": false
+      },
+      {
+        "text": "LRU cannot be implemented using a Doubly Linked List and Hash Map",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In the Saga Pattern for microservices distributed transactions, what is the main difference between Orchestration and Choreography?",
+    "topic": "Microservices",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Choreography uses synchronous HTTP REST calls while Orchestration uses gRPC",
+        "isCorrect": false
+      },
+      {
+        "text": "Orchestration relies on a centralized coordinator to direct services, while Choreography uses decentralized domain event exchange",
+        "isCorrect": true
+      },
+      {
+        "text": "Choreography guarantees ACID compliance whereas Orchestration guarantees BASE compliance",
+        "isCorrect": false
+      },
+      {
+        "text": "Orchestration cannot execute compensating transactions if a step fails",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the primary role of the 'Half-Open' state in the Circuit Breaker design pattern?",
+    "topic": "Microservices",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "To allow a limited number of requests through to test if the downstream service has recovered",
+        "isCorrect": true
+      },
+      {
+        "text": "To immediately drop all incoming traffic without attempting downstream connection",
+        "isCorrect": false
+      },
+      {
+        "text": "To mirror incoming requests to a backup staging environment for debugging",
+        "isCorrect": false
+      },
+      {
+        "text": "To queue all incoming requests indefinitely until manual reset",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which design pattern is specifically used to solve the problem of atomically updating a local database and publishing a message/event to a message broker in a single transaction?",
+    "topic": "Microservices",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Transactional Outbox Pattern",
+        "isCorrect": true
+      },
+      {
+        "text": "Strangler Fig Pattern",
+        "isCorrect": false
+      },
+      {
+        "text": "Backend For Frontend (BFF) Pattern",
+        "isCorrect": false
+      },
+      {
+        "text": "Bulkhead Pattern",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In a Microservices architecture using CQRS (Command Query Responsibility Segregation), how are write and read operations typically separated?",
+    "topic": "Microservices",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Writes are handled by frontend clients; reads are handled strictly by backend servers",
+        "isCorrect": false
+      },
+      {
+        "text": "Commands mutate state using a write-optimized data model, while Queries fetch data using a read-optimized data model",
+        "isCorrect": true
+      },
+      {
+        "text": "Queries are sent via UDP for performance; Commands are sent via TCP for reliability",
+        "isCorrect": false
+      },
+      {
+        "text": "Commands and Queries use the exact same relational table schema with different indexes",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the primary advantage of deploying a Service Mesh (e.g., Istio, Linkerd) in a microservices environment?",
+    "topic": "Microservices",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "It eliminates the need for message queues by processing background jobs inside proxies",
+        "isCorrect": false
+      },
+      {
+        "text": "It offloads service-to-service communication logic (mTLS, telemetry, routing) into sidecar proxies without modifying application code",
+        "isCorrect": true
+      },
+      {
+        "text": "It replaces relational databases with distributed cache nodes dynamically",
+        "isCorrect": false
+      },
+      {
+        "text": "It automatically converts legacy monolithic C++ code to modern Go microservices",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "How does the 'Bulkhead' pattern enhance fault tolerance in microservice applications?",
+    "topic": "Microservices",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "By compressing payloads sent over HTTP to prevent bandwidth saturation",
+        "isCorrect": false
+      },
+      {
+        "text": "By isolating resource pools (e.g., thread pools, connection pools) so that failure in one component does not exhaust resources for others",
+        "isCorrect": true
+      },
+      {
+        "text": "By encrypting database connections across multiple availability zones",
+        "isCorrect": false
+      },
+      {
+        "text": "By routing external client requests through multiple DNS resolvers",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In distributed tracing across microservices, what key pieces of context must be propagated along HTTP headers across service boundaries?",
+    "topic": "Microservices",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Database Schema ID and Table Index Key",
+        "isCorrect": false
+      },
+      {
+        "text": "Trace ID and Span ID",
+        "isCorrect": true
+      },
+      {
+        "text": "JWT Secret Key and User Password Hash",
+        "isCorrect": false
+      },
+      {
+        "text": "Container ID and Host IP Address",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Why is client-side service discovery preferred over server-side discovery in high-throughput cloud environments?",
+    "topic": "Microservices",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Client-side discovery eliminates the need for a service registry",
+        "isCorrect": false
+      },
+      {
+        "text": "Client-side discovery avoids a central load balancer bottleneck by enabling clients to make load balancing decisions directly",
+        "isCorrect": true
+      },
+      {
+        "text": "Server-side discovery cannot support round-robin routing algorithms",
+        "isCorrect": false
+      },
+      {
+        "text": "Client-side discovery enforces strict synchronous RPC protocols",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the function of an Idempotency Key in microservice REST API calls (e.g., payment processing)?",
+    "topic": "Microservices",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "To encrypt payload content in transit",
+        "isCorrect": false
+      },
+      {
+        "text": "To allow clients to safely retry a request without executing the operation multiple times",
+        "isCorrect": true
+      },
+      {
+        "text": "To speed up JSON serialization speeds",
+        "isCorrect": false
+      },
+      {
+        "text": "To authenticate OAuth 2.0 user scopes",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Event-Sourcing architecture, how is the current state of an entity derived?",
+    "topic": "Microservices",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "By querying the single row containing current values in a relational table",
+        "isCorrect": false
+      },
+      {
+        "text": "By replaying all state-changing events in chronological order from an immutable append-only log",
+        "isCorrect": true
+      },
+      {
+        "text": "By fetching cached JSON documents directly from an edge CDN node",
+        "isCorrect": false
+      },
+      {
+        "text": "By performing full-text index searches across application log files",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What Kubernetes API resource is specifically designed for managing stateful applications requiring persistent storage and unique, stable network identifiers for each pod?",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Deployment",
+        "isCorrect": false
+      },
+      {
+        "text": "StatefulSet",
+        "isCorrect": true
+      },
+      {
+        "text": "DaemonSet",
+        "isCorrect": false
+      },
+      {
+        "text": "ReplicaSet",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Under the AWS/Cloud Shared Responsibility Model, which of the following is entirely the responsibility of the Cloud Customer when using IaaS (e.g., Amazon EC2)?",
+    "topic": "Cloud Computing",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Hypervisor security and physical facility security",
+        "isCorrect": false
+      },
+      {
+        "text": "Operating system security patching, network firewall configuration, and application updates",
+        "isCorrect": true
+      },
+      {
+        "text": "Decommissioning faulty hardware hard drives",
+        "isCorrect": false
+      },
+      {
+        "text": "Maintaining data center power infrastructure",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Infrastructure as Code (IaC) tools like Terraform, what is the primary function of the 'state file'?",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "To store compiled Go binaries before uploading them to cloud instances",
+        "isCorrect": false
+      },
+      {
+        "text": "To map real-world cloud infrastructure resources to the application configuration code definitions",
+        "isCorrect": true
+      },
+      {
+        "text": "To act as an auto-scaling triggers database for Kubernetes worker nodes",
+        "isCorrect": false
+      },
+      {
+        "text": "To store SSH private keys used for connecting to provisioned VMs",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What causes 'Cold Start' latency in Serverless FaaS platform implementations (such as AWS Lambda)?",
+    "topic": "Cloud Computing",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Network bandwidth throttling on high API usage",
+        "isCorrect": false
+      },
+      {
+        "text": "The initialization of a new container instance, runtime environment, and application code upon receiving a request",
+        "isCorrect": true
+      },
+      {
+        "text": "DNS query propagation delay across global edge regions",
+        "isCorrect": false
+      },
+      {
+        "text": "Database lock contention during serverless SQL queries",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Disaster Recovery planning, how is RPO (Recovery Point Objective) defined?",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "The maximum acceptable duration of system downtime after a disaster",
+        "isCorrect": false
+      },
+      {
+        "text": "The maximum acceptable amount of data loss measured in time prior to the disruption",
+        "isCorrect": true
+      },
+      {
+        "text": "The financial cost associated with restoring backup infrastructure",
+        "isCorrect": false
+      },
+      {
+        "text": "The minimum bandwidth needed to replicate data across regions",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What Kubernetes workload resource guarantees that a copy of a specific pod runs on ALL (or selected) worker nodes in a cluster?",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "DaemonSet",
+        "isCorrect": true
+      },
+      {
+        "text": "Job",
+        "isCorrect": false
+      },
+      {
+        "text": "StatefulSet",
+        "isCorrect": false
+      },
+      {
+        "text": "HorizontalPodAutoscaler",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which cloud storage architecture is best suited for storing unstructured data (e.g., images, videos, backups) accessed via RESTful HTTP APIs with unlimited horizontal scaling?",
+    "topic": "Cloud Computing",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Block Storage (e.g., AWS EBS)",
+        "isCorrect": false
+      },
+      {
+        "text": "Object Storage (e.g., AWS S3)",
+        "isCorrect": true
+      },
+      {
+        "text": "Network File System (e.g., AWS EFS)",
+        "isCorrect": false
+      },
+      {
+        "text": "Storage Area Network (SAN)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In cloud cost optimization (FinOps), what is the key difference between Spot Instances and Reserved Instances?",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Spot Instances offer guaranteed uninterrupted runtime; Reserved Instances can be terminated with a 2-minute notice",
+        "isCorrect": false
+      },
+      {
+        "text": "Spot Instances leverage spare compute capacity at steep discounts but can be reclaimed by the provider; Reserved Instances offer discounts in exchange for long-term term commitments",
+        "isCorrect": true
+      },
+      {
+        "text": "Reserved Instances only apply to Serverless functions; Spot Instances apply to relational databases",
+        "isCorrect": false
+      },
+      {
+        "text": "Spot Instances cannot run in Public Cloud environments",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the primary function of an Ingress Controller in a Kubernetes cluster?",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "To manage disk snapshot backups for Persistent Volumes",
+        "isCorrect": false
+      },
+      {
+        "text": "To manage external HTTP/HTTPS traffic routing to internal cluster services",
+        "isCorrect": true
+      },
+      {
+        "text": "To auto-scale node pools in response to CPU metrics",
+        "isCorrect": false
+      },
+      {
+        "text": "To scan container images for security vulnerabilities upon deployment",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which cloud disaster recovery strategy involves keeping a minimal, scaled-down version of core infrastructure running continuously in a secondary region, ready to scale up upon failover?",
+    "topic": "Cloud Computing",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Backup and Restore",
+        "isCorrect": false
+      },
+      {
+        "text": "Pilot Light",
+        "isCorrect": false
+      },
+      {
+        "text": "Warm Standby",
+        "isCorrect": true
+      },
+      {
+        "text": "Multi-site Active-Active",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Hexagonal Architecture (Ports and Adapters), what is the core responsibility of an 'Adapter'?",
+    "topic": "Advanced Architecture",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "To contain all core business domain logic and entity definitions",
+        "isCorrect": false
+      },
+      {
+        "text": "To convert data between the format expected by the application domain core and external infrastructure components (e.g., DBs, UI, APIs)",
+        "isCorrect": true
+      },
+      {
+        "text": "To handle network packet routing across container subnets",
+        "isCorrect": false
+      },
+      {
+        "text": "To enforce thread safety inside domain aggregate roots",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Domain-Driven Design (DDD), what is an 'Aggregate Root'?",
+    "topic": "Advanced Architecture",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "A database table index that acts as a primary lookup key",
+        "isCorrect": false
+      },
+      {
+        "text": "A gateway pattern that aggregates HTTP responses from microservices",
+        "isCorrect": false
+      },
+      {
+        "text": "An entity that binds a cluster of associated domain objects together and acts as the sole external entry point for modifying state within that boundary",
+        "isCorrect": true
+      },
+      {
+        "text": "A root-level XML schema file defining enterprise data formats",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "How does Lambda Architecture differ from Kappa Architecture in big data stream processing systems?",
+    "topic": "Advanced Architecture",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Lambda Architecture processes all data in real-time streaming; Kappa Architecture relies strictly on nightly batch runs",
+        "isCorrect": false
+      },
+      {
+        "text": "Lambda Architecture maintains separate Batch and Speed layers; Kappa Architecture removes the batch layer and processes all data through a single stream processing pipeline",
+        "isCorrect": true
+      },
+      {
+        "text": "Lambda Architecture is designed exclusively for AWS cloud; Kappa is open-source",
+        "isCorrect": false
+      },
+      {
+        "text": "Kappa Architecture uses relational SQL stores; Lambda uses Graph databases",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What fundamental principle underpins a Zero Trust Network Architecture (ZTNA)?",
+    "topic": "Advanced Architecture",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Trust all internal network traffic once behind a secure perimeter firewall",
+        "isCorrect": false
+      },
+      {
+        "text": "Never trust, always verify every request regardless of origin or network location",
+        "isCorrect": true
+      },
+      {
+        "text": "Use public key certificates exclusively for external client devices",
+        "isCorrect": false
+      },
+      {
+        "text": "Disable all outgoing telemetry traffic to third-party endpoints",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In consensus protocols like Raft, what is the role of the 'Heartbeat' timer sent by the Leader to Followers?",
+    "topic": "Advanced Architecture",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "To trigger automatic key compaction in log entries",
+        "isCorrect": false
+      },
+      {
+        "text": "To prevent Followers from timing out and initiating a new Leader election",
+        "isCorrect": true
+      },
+      {
+        "text": "To force Followers to commit unwritten transactions to disk",
+        "isCorrect": false
+      },
+      {
+        "text": "To measure network throughput for metric monitoring dashboards",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the primary migration strategy behind the 'Strangler Fig' architectural pattern when modernizing legacy monolithic applications?",
+    "topic": "Advanced Architecture",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Completely shutting down the monolith and rewriting the system from scratch in a single release",
+        "isCorrect": false
+      },
+      {
+        "text": "Gradually replacing monolithic functionality by intercepting requests and routing them to new microservices until the monolith is retired",
+        "isCorrect": true
+      },
+      {
+        "text": "Wrapping the monolith inside a WebAssembly container to increase performance",
+        "isCorrect": false
+      },
+      {
+        "text": "Moving the monolithic database to a NoSQL engine without changing backend application code",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Conflict-free Replicated Data Types (CRDTs), what property ensures that replicas converge to the exact same state regardless of the order in which operations/updates are received?",
+    "topic": "Advanced Architecture",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Commutativity, Associativity, and Idempotency of state merge operations",
+        "isCorrect": true
+      },
+      {
+        "text": "Strict linearizability enforced by a single global master node",
+        "isCorrect": false
+      },
+      {
+        "text": "Two-Phase Commit (2PC) locks across edge nodes",
+        "isCorrect": false
+      },
+      {
+        "text": "Cryptographic proof-of-work hash validation",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which principle of the Reactive Manifesto states that a system must remain responsive even in the face of failure?",
+    "topic": "Advanced Architecture",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "Elasticity",
+        "isCorrect": false
+      },
+      {
+        "text": "Resilience",
+        "isCorrect": true
+      },
+      {
+        "text": "Message-Driven",
+        "isCorrect": false
+      },
+      {
+        "text": "Consistency",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Vector Databases used for AI architectures (e.g., RAG systems), what indexing structure is commonly used for fast Approximate Nearest Neighbor (ANN) high-dimensional searches?",
+    "topic": "Advanced Architecture",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "B+ Tree Indexing",
+        "isCorrect": false
+      },
+      {
+        "text": "Hierarchical Navigable Small World (HNSW) Graphs",
+        "isCorrect": true
+      },
+      {
+        "text": "LSM Trees (Log-Structured Merge-trees)",
+        "isCorrect": false
+      },
+      {
+        "text": "Inverted Bitmap Indexing",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What major limitation of the Two-Phase Commit (2PC) protocol makes it poorly suited for high-availability, large-scale cloud architectures?",
+    "topic": "Advanced Architecture",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "timeLimitSec": 45,
+    "options": [
+      {
+        "text": "It requires all participant nodes to hold database locks during voting and commit phases, causing blocking bottlenecks and vulnerability to coordinator failure",
+        "isCorrect": true
+      },
+      {
+        "text": "It cannot guarantee atomicity in single-node transactions",
+        "isCorrect": false
+      },
+      {
+        "text": "It does not support SQL or relational database engines",
+        "isCorrect": false
+      },
+      {
+        "text": "It generates excessive UDP broadcast network traffic",
+        "isCorrect": false
+      }
+    ]
+  }
+]

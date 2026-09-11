@@ -1,0 +1,135 @@
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model QuizEvent {
+  id             String     @id @default(uuid())
+  name           String
+  durationSec    Int
+  questionCount  Int
+  passPercent    Int
+  status         String     @default("ACTIVE")
+  createdAt      DateTime   @default(now())
+  questions      Question[]
+  attempts       Attempt[]
+}
+
+model Question {
+  id              String            @id @default(uuid())
+  eventId         String
+  text            String
+  imageUrl        String?
+  durationSec     Int?
+  difficulty      String
+  topic           String
+  targetYear      String            @default("ALL") // "FY", "SY", "TY", "LY", "ALL"
+  status          String            @default("ACTIVE")
+  event           QuizEvent         @relation(fields: [eventId], references: [id])
+  options         Option[]
+  attemptQuestions AttemptQuestion[]
+}
+
+model Option {
+  id         String   @id @default(uuid())
+  questionId String
+  text       String
+  optionKey  String
+  isCorrect  Boolean
+  question   Question @relation(fields: [questionId], references: [id])
+  answers    Answer[]
+}
+
+model Participant {
+  id         String     @id @default(uuid())
+  name       String
+  email      String     @unique
+  mobile     String
+  year       String
+  prn        String?
+  createdAt  DateTime   @default(now())
+  attempts   Attempt[]
+  coupons    Coupon[]
+}
+
+model Attempt {
+  id             String            @id @default(uuid())
+  participantId  String
+  eventId        String
+  status         String            @default("ACTIVE")
+  startedAt      DateTime          @default(now())
+  deadlineAt     DateTime
+  submittedAt    DateTime?
+  scorePercent   Float?
+  participant    Participant       @relation(fields: [participantId], references: [id])
+  event          QuizEvent         @relation(fields: [eventId], references: [id])
+  questions      AttemptQuestion[]
+  answers        Answer[]
+  coupon         Coupon?
+}
+
+model AttemptQuestion {
+  id          String    @id @default(uuid())
+  attemptId   String
+  questionId  String
+  position    Int
+  servedAt    DateTime?
+  deadlineAt  DateTime?
+  answeredAt  DateTime?
+  attempt     Attempt   @relation(fields: [attemptId], references: [id])
+  question    Question  @relation(fields: [questionId], references: [id])
+
+  @@unique([attemptId, questionId])
+  @@unique([attemptId, position])
+}
+
+model Answer {
+  id               String   @id @default(uuid())
+  attemptId        String
+  questionId       String
+  selectedOptionId String
+  isCorrect        Boolean
+  submittedAt      DateTime @default(now())
+  attempt          Attempt  @relation(fields: [attemptId], references: [id])
+  option           Option   @relation(fields: [selectedOptionId], references: [id])
+
+  @@unique([attemptId, questionId])
+}
+
+model Coupon {
+  id            String      @id @default(uuid())
+  code          String      @unique
+  attemptId     String      @unique
+  participantId String
+  status        String      @default("ISSUED")
+  issuedAt      DateTime    @default(now())
+  redeemedAt    DateTime?
+  attempt       Attempt     @relation(fields: [attemptId], references: [id])
+  participant   Participant @relation(fields: [participantId], references: [id])
+}
+
+model AuditLog {
+  id         String   @id @default(uuid())
+  actor      String
+  action     String
+  entityType String
+  entityId   String
+  metadata   String?  // Using String for SQLite since it doesn't support JSON
+  createdAt  DateTime @default(now())
+}
+
+model SyncJob {
+  id          String    @id @default(uuid())
+  type        String    // GOOGLE_SHEETS
+  payload     String    // Stored as stringified JSON since SQLite doesn't have Json type
+  status      String    @default("PENDING") // PENDING, COMPLETED, FAILED
+  attempts    Int       @default(0)
+  nextRetryAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}

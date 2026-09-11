@@ -1,0 +1,54 @@
+[
+  {
+    "text": "What does CPU stand for?",
+    "topic": "Hardware",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "imageUrl": "",
+    "options": [
+      {
+        "text": "Central Process Unit",
+        "isCorrect": false
+      },
+      {
+        "text": "Computer Personal Unit",
+        "isCorrect": false
+      },
+      {
+        "text": "Central Processing Unit",
+        "isCorrect": true
+      },
+      {
+        "text": "Central Processor Unit",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which data structure operates on a Last In First Out (LIFO) principle?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "ALL",
+    "durationSec": 45,
+    "imageUrl": "",
+    "options": [
+      {
+        "text": "Queue",
+        "isCorrect": false
+      },
+      {
+        "text": "Stack",
+        "isCorrect": true
+      },
+      {
+        "text": "Linked List",
+        "isCorrect": false
+      },
+      {
+        "text": "Tree",
+        "isCorrect": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,7502 @@
+[
+  {
+    "text": "What is the fundamental unit of Mass in the SI system?",
+    "topic": "Physics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Gram",
+        "isCorrect": false
+      },
+      {
+        "text": "Ounce",
+        "isCorrect": false
+      },
+      {
+        "text": "Pound",
+        "isCorrect": false
+      },
+      {
+        "text": "Kilogram",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Which electronic component primarily Stores electrical energy in an electric field?",
+    "topic": "Basic Electronics",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Capacitor",
+        "isCorrect": true
+      },
+      {
+        "text": "Inductor",
+        "isCorrect": false
+      },
+      {
+        "text": "Diode",
+        "isCorrect": false
+      },
+      {
+        "text": "Transformer",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #3: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #4: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the fundamental unit of Mass in the SI system?",
+    "topic": "Physics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Gram",
+        "isCorrect": false
+      },
+      {
+        "text": "Ounce",
+        "isCorrect": false
+      },
+      {
+        "text": "Pound",
+        "isCorrect": false
+      },
+      {
+        "text": "Kilogram",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Which electronic component primarily Stores electrical energy in an electric field?",
+    "topic": "Basic Electronics",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Capacitor",
+        "isCorrect": true
+      },
+      {
+        "text": "Inductor",
+        "isCorrect": false
+      },
+      {
+        "text": "Transformer",
+        "isCorrect": false
+      },
+      {
+        "text": "Diode",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #7: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #8: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "What is the fundamental unit of Mass in the SI system?",
+    "topic": "Physics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Ounce",
+        "isCorrect": false
+      },
+      {
+        "text": "Kilogram",
+        "isCorrect": true
+      },
+      {
+        "text": "Gram",
+        "isCorrect": false
+      },
+      {
+        "text": "Pound",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which electronic component primarily Stores electrical energy in an electric field?",
+    "topic": "Basic Electronics",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Inductor",
+        "isCorrect": false
+      },
+      {
+        "text": "Capacitor",
+        "isCorrect": true
+      },
+      {
+        "text": "Transformer",
+        "isCorrect": false
+      },
+      {
+        "text": "Diode",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #11: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #12: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the fundamental unit of Mass in the SI system?",
+    "topic": "Physics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Kilogram",
+        "isCorrect": true
+      },
+      {
+        "text": "Pound",
+        "isCorrect": false
+      },
+      {
+        "text": "Gram",
+        "isCorrect": false
+      },
+      {
+        "text": "Ounce",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which electronic component primarily Stores electrical energy in an electric field?",
+    "topic": "Basic Electronics",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Transformer",
+        "isCorrect": false
+      },
+      {
+        "text": "Inductor",
+        "isCorrect": false
+      },
+      {
+        "text": "Capacitor",
+        "isCorrect": true
+      },
+      {
+        "text": "Diode",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #15: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #16: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the fundamental unit of Mass in the SI system?",
+    "topic": "Physics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Pound",
+        "isCorrect": false
+      },
+      {
+        "text": "Kilogram",
+        "isCorrect": true
+      },
+      {
+        "text": "Ounce",
+        "isCorrect": false
+      },
+      {
+        "text": "Gram",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which electronic component primarily Stores electrical energy in an electric field?",
+    "topic": "Basic Electronics",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Transformer",
+        "isCorrect": false
+      },
+      {
+        "text": "Inductor",
+        "isCorrect": false
+      },
+      {
+        "text": "Capacitor",
+        "isCorrect": true
+      },
+      {
+        "text": "Diode",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #19: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #20: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the fundamental unit of Mass in the SI system?",
+    "topic": "Physics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Ounce",
+        "isCorrect": false
+      },
+      {
+        "text": "Kilogram",
+        "isCorrect": true
+      },
+      {
+        "text": "Gram",
+        "isCorrect": false
+      },
+      {
+        "text": "Pound",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which electronic component primarily Stores electrical energy in an electric field?",
+    "topic": "Basic Electronics",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Transformer",
+        "isCorrect": false
+      },
+      {
+        "text": "Inductor",
+        "isCorrect": false
+      },
+      {
+        "text": "Capacitor",
+        "isCorrect": true
+      },
+      {
+        "text": "Diode",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #23: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #24: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the fundamental unit of Mass in the SI system?",
+    "topic": "Physics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Pound",
+        "isCorrect": false
+      },
+      {
+        "text": "Kilogram",
+        "isCorrect": true
+      },
+      {
+        "text": "Gram",
+        "isCorrect": false
+      },
+      {
+        "text": "Ounce",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which electronic component primarily Stores electrical energy in an electric field?",
+    "topic": "Basic Electronics",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Transformer",
+        "isCorrect": false
+      },
+      {
+        "text": "Capacitor",
+        "isCorrect": true
+      },
+      {
+        "text": "Inductor",
+        "isCorrect": false
+      },
+      {
+        "text": "Diode",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #27: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #28: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the fundamental unit of Mass in the SI system?",
+    "topic": "Physics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Kilogram",
+        "isCorrect": true
+      },
+      {
+        "text": "Gram",
+        "isCorrect": false
+      },
+      {
+        "text": "Ounce",
+        "isCorrect": false
+      },
+      {
+        "text": "Pound",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which electronic component primarily Stores electrical energy in an electric field?",
+    "topic": "Basic Electronics",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Transformer",
+        "isCorrect": false
+      },
+      {
+        "text": "Capacitor",
+        "isCorrect": true
+      },
+      {
+        "text": "Inductor",
+        "isCorrect": false
+      },
+      {
+        "text": "Diode",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #31: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #32: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the fundamental unit of Mass in the SI system?",
+    "topic": "Physics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Kilogram",
+        "isCorrect": true
+      },
+      {
+        "text": "Pound",
+        "isCorrect": false
+      },
+      {
+        "text": "Ounce",
+        "isCorrect": false
+      },
+      {
+        "text": "Gram",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which electronic component primarily Stores electrical energy in an electric field?",
+    "topic": "Basic Electronics",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Inductor",
+        "isCorrect": false
+      },
+      {
+        "text": "Transformer",
+        "isCorrect": false
+      },
+      {
+        "text": "Diode",
+        "isCorrect": false
+      },
+      {
+        "text": "Capacitor",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #35: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #36: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the fundamental unit of Mass in the SI system?",
+    "topic": "Physics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Ounce",
+        "isCorrect": false
+      },
+      {
+        "text": "Pound",
+        "isCorrect": false
+      },
+      {
+        "text": "Kilogram",
+        "isCorrect": true
+      },
+      {
+        "text": "Gram",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which electronic component primarily Stores electrical energy in an electric field?",
+    "topic": "Basic Electronics",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Inductor",
+        "isCorrect": false
+      },
+      {
+        "text": "Transformer",
+        "isCorrect": false
+      },
+      {
+        "text": "Capacitor",
+        "isCorrect": true
+      },
+      {
+        "text": "Diode",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #39: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #40: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the fundamental unit of Mass in the SI system?",
+    "topic": "Physics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Pound",
+        "isCorrect": false
+      },
+      {
+        "text": "Gram",
+        "isCorrect": false
+      },
+      {
+        "text": "Kilogram",
+        "isCorrect": true
+      },
+      {
+        "text": "Ounce",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which electronic component primarily Stores electrical energy in an electric field?",
+    "topic": "Basic Electronics",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Transformer",
+        "isCorrect": false
+      },
+      {
+        "text": "Diode",
+        "isCorrect": false
+      },
+      {
+        "text": "Capacitor",
+        "isCorrect": true
+      },
+      {
+        "text": "Inductor",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #43: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #44: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "What is the fundamental unit of Mass in the SI system?",
+    "topic": "Physics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Gram",
+        "isCorrect": false
+      },
+      {
+        "text": "Kilogram",
+        "isCorrect": true
+      },
+      {
+        "text": "Pound",
+        "isCorrect": false
+      },
+      {
+        "text": "Ounce",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which electronic component primarily Stores electrical energy in an electric field?",
+    "topic": "Basic Electronics",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Diode",
+        "isCorrect": false
+      },
+      {
+        "text": "Inductor",
+        "isCorrect": false
+      },
+      {
+        "text": "Capacitor",
+        "isCorrect": true
+      },
+      {
+        "text": "Transformer",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #47: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #48: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "What is the fundamental unit of Mass in the SI system?",
+    "topic": "Physics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Ounce",
+        "isCorrect": false
+      },
+      {
+        "text": "Kilogram",
+        "isCorrect": true
+      },
+      {
+        "text": "Gram",
+        "isCorrect": false
+      },
+      {
+        "text": "Pound",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which electronic component primarily Stores electrical energy in an electric field?",
+    "topic": "Basic Electronics",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Inductor",
+        "isCorrect": false
+      },
+      {
+        "text": "Capacitor",
+        "isCorrect": true
+      },
+      {
+        "text": "Transformer",
+        "isCorrect": false
+      },
+      {
+        "text": "Diode",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #51: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #52: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the fundamental unit of Mass in the SI system?",
+    "topic": "Physics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Gram",
+        "isCorrect": false
+      },
+      {
+        "text": "Kilogram",
+        "isCorrect": true
+      },
+      {
+        "text": "Pound",
+        "isCorrect": false
+      },
+      {
+        "text": "Ounce",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which electronic component primarily Stores electrical energy in an electric field?",
+    "topic": "Basic Electronics",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Diode",
+        "isCorrect": false
+      },
+      {
+        "text": "Capacitor",
+        "isCorrect": true
+      },
+      {
+        "text": "Inductor",
+        "isCorrect": false
+      },
+      {
+        "text": "Transformer",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #55: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #56: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the fundamental unit of Mass in the SI system?",
+    "topic": "Physics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Gram",
+        "isCorrect": false
+      },
+      {
+        "text": "Kilogram",
+        "isCorrect": true
+      },
+      {
+        "text": "Ounce",
+        "isCorrect": false
+      },
+      {
+        "text": "Pound",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which electronic component primarily Stores electrical energy in an electric field?",
+    "topic": "Basic Electronics",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Diode",
+        "isCorrect": false
+      },
+      {
+        "text": "Inductor",
+        "isCorrect": false
+      },
+      {
+        "text": "Transformer",
+        "isCorrect": false
+      },
+      {
+        "text": "Capacitor",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #59: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #60: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the fundamental unit of Mass in the SI system?",
+    "topic": "Physics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Gram",
+        "isCorrect": false
+      },
+      {
+        "text": "Kilogram",
+        "isCorrect": true
+      },
+      {
+        "text": "Pound",
+        "isCorrect": false
+      },
+      {
+        "text": "Ounce",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which electronic component primarily Stores electrical energy in an electric field?",
+    "topic": "Basic Electronics",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Transformer",
+        "isCorrect": false
+      },
+      {
+        "text": "Inductor",
+        "isCorrect": false
+      },
+      {
+        "text": "Capacitor",
+        "isCorrect": true
+      },
+      {
+        "text": "Diode",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #63: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #64: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the fundamental unit of Mass in the SI system?",
+    "topic": "Physics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Gram",
+        "isCorrect": false
+      },
+      {
+        "text": "Ounce",
+        "isCorrect": false
+      },
+      {
+        "text": "Kilogram",
+        "isCorrect": true
+      },
+      {
+        "text": "Pound",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which electronic component primarily Stores electrical energy in an electric field?",
+    "topic": "Basic Electronics",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Diode",
+        "isCorrect": false
+      },
+      {
+        "text": "Transformer",
+        "isCorrect": false
+      },
+      {
+        "text": "Capacitor",
+        "isCorrect": true
+      },
+      {
+        "text": "Inductor",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #67: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #68: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the fundamental unit of Mass in the SI system?",
+    "topic": "Physics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Pound",
+        "isCorrect": false
+      },
+      {
+        "text": "Gram",
+        "isCorrect": false
+      },
+      {
+        "text": "Kilogram",
+        "isCorrect": true
+      },
+      {
+        "text": "Ounce",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which electronic component primarily Stores electrical energy in an electric field?",
+    "topic": "Basic Electronics",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Diode",
+        "isCorrect": false
+      },
+      {
+        "text": "Inductor",
+        "isCorrect": false
+      },
+      {
+        "text": "Transformer",
+        "isCorrect": false
+      },
+      {
+        "text": "Capacitor",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #71: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #72: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the fundamental unit of Mass in the SI system?",
+    "topic": "Physics",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Pound",
+        "isCorrect": false
+      },
+      {
+        "text": "Gram",
+        "isCorrect": false
+      },
+      {
+        "text": "Ounce",
+        "isCorrect": false
+      },
+      {
+        "text": "Kilogram",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Which electronic component primarily Stores electrical energy in an electric field?",
+    "topic": "Basic Electronics",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Capacitor",
+        "isCorrect": true
+      },
+      {
+        "text": "Inductor",
+        "isCorrect": false
+      },
+      {
+        "text": "Diode",
+        "isCorrect": false
+      },
+      {
+        "text": "Transformer",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Basic Computer Science Question Variation #75: What does ROM stand for?",
+    "topic": "Intro to CS",
+    "difficulty": "Easy",
+    "targetYear": "FY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Read Only Memory",
+        "isCorrect": true
+      },
+      {
+        "text": "Random Output Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Random Only Memory",
+        "isCorrect": false
+      },
+      {
+        "text": "Read Output Memory",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Array?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 1)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Stack?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 3)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      },
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      },
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Binary Tree?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 5)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Array?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 7)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      },
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Stack?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 9)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      },
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Binary Tree?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 11)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      },
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      },
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Array?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 13)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      },
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Stack?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 15)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      },
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      },
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Binary Tree?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 17)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      },
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      },
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Array?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 19)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      },
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Stack?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 21)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      },
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Binary Tree?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 23)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      },
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Array?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 25)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      },
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      },
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Stack?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 27)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      },
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Binary Tree?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 29)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      },
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Array?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 31)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      },
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Stack?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 33)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      },
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Binary Tree?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 35)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      },
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Array?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 37)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Stack?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 39)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      },
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Binary Tree?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 41)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Array?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 43)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Stack?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 45)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      },
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Binary Tree?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 47)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      },
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      },
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Array?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 49)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      },
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      },
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Stack?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 51)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      },
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      },
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Binary Tree?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 53)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      },
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Array?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 55)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      },
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Stack?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 57)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      },
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Binary Tree?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 59)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Array?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 61)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      },
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Stack?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 63)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Binary Tree?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 65)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      },
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Array?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 67)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      },
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      },
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Stack?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 69)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      },
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Binary Tree?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 71)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      },
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      },
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Array?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Object-Oriented Programming, which concept refers to hiding internal state and requiring all interaction to be performed through an object's methods? (Variation 73)",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Abstraction",
+        "isCorrect": false
+      },
+      {
+        "text": "Polymorphism",
+        "isCorrect": false
+      },
+      {
+        "text": "Inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "Encapsulation",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "What is the average time complexity for searching in a balanced Stack?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "SY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Java, which exception is thrown when an array is accessed with an illegal index? (Case 0)",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "IllegalArgumentException",
+        "isCorrect": false
+      },
+      {
+        "text": "ArrayIndexOutOfBoundsException",
+        "isCorrect": true
+      },
+      {
+        "text": "IndexOutOfBoundsException",
+        "isCorrect": false
+      },
+      {
+        "text": "NullPointerException",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which method is used in a Java Servlet to handle HTTP GET requests? (Case 1)",
+    "topic": "Java Servlets",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "doPost()",
+        "isCorrect": false
+      },
+      {
+        "text": "doGet()",
+        "isCorrect": true
+      },
+      {
+        "text": "service()",
+        "isCorrect": false
+      },
+      {
+        "text": "init()",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which graph traversal algorithm uses a Queue data structure? (Variation 2)",
+    "topic": "Advanced DSA",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Breadth First Search (BFS)",
+        "isCorrect": true
+      },
+      {
+        "text": "Depth First Search (DFS)",
+        "isCorrect": false
+      },
+      {
+        "text": "A* Search",
+        "isCorrect": false
+      },
+      {
+        "text": "Dijkstra's Algorithm",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Java, which exception is thrown when an array is accessed with an illegal index? (Case 3)",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "ArrayIndexOutOfBoundsException",
+        "isCorrect": true
+      },
+      {
+        "text": "IndexOutOfBoundsException",
+        "isCorrect": false
+      },
+      {
+        "text": "IllegalArgumentException",
+        "isCorrect": false
+      },
+      {
+        "text": "NullPointerException",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which method is used in a Java Servlet to handle HTTP GET requests? (Case 4)",
+    "topic": "Java Servlets",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "doPost()",
+        "isCorrect": false
+      },
+      {
+        "text": "init()",
+        "isCorrect": false
+      },
+      {
+        "text": "service()",
+        "isCorrect": false
+      },
+      {
+        "text": "doGet()",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Which graph traversal algorithm uses a Queue data structure? (Variation 5)",
+    "topic": "Advanced DSA",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Dijkstra's Algorithm",
+        "isCorrect": false
+      },
+      {
+        "text": "Depth First Search (DFS)",
+        "isCorrect": false
+      },
+      {
+        "text": "Breadth First Search (BFS)",
+        "isCorrect": true
+      },
+      {
+        "text": "A* Search",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Java, which exception is thrown when an array is accessed with an illegal index? (Case 6)",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "ArrayIndexOutOfBoundsException",
+        "isCorrect": true
+      },
+      {
+        "text": "IndexOutOfBoundsException",
+        "isCorrect": false
+      },
+      {
+        "text": "NullPointerException",
+        "isCorrect": false
+      },
+      {
+        "text": "IllegalArgumentException",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which method is used in a Java Servlet to handle HTTP GET requests? (Case 7)",
+    "topic": "Java Servlets",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "service()",
+        "isCorrect": false
+      },
+      {
+        "text": "doGet()",
+        "isCorrect": true
+      },
+      {
+        "text": "init()",
+        "isCorrect": false
+      },
+      {
+        "text": "doPost()",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which graph traversal algorithm uses a Queue data structure? (Variation 8)",
+    "topic": "Advanced DSA",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "A* Search",
+        "isCorrect": false
+      },
+      {
+        "text": "Dijkstra's Algorithm",
+        "isCorrect": false
+      },
+      {
+        "text": "Breadth First Search (BFS)",
+        "isCorrect": true
+      },
+      {
+        "text": "Depth First Search (DFS)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Java, which exception is thrown when an array is accessed with an illegal index? (Case 9)",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "ArrayIndexOutOfBoundsException",
+        "isCorrect": true
+      },
+      {
+        "text": "NullPointerException",
+        "isCorrect": false
+      },
+      {
+        "text": "IndexOutOfBoundsException",
+        "isCorrect": false
+      },
+      {
+        "text": "IllegalArgumentException",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which method is used in a Java Servlet to handle HTTP GET requests? (Case 10)",
+    "topic": "Java Servlets",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "doPost()",
+        "isCorrect": false
+      },
+      {
+        "text": "doGet()",
+        "isCorrect": true
+      },
+      {
+        "text": "service()",
+        "isCorrect": false
+      },
+      {
+        "text": "init()",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which graph traversal algorithm uses a Queue data structure? (Variation 11)",
+    "topic": "Advanced DSA",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Breadth First Search (BFS)",
+        "isCorrect": true
+      },
+      {
+        "text": "Depth First Search (DFS)",
+        "isCorrect": false
+      },
+      {
+        "text": "Dijkstra's Algorithm",
+        "isCorrect": false
+      },
+      {
+        "text": "A* Search",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Java, which exception is thrown when an array is accessed with an illegal index? (Case 12)",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "ArrayIndexOutOfBoundsException",
+        "isCorrect": true
+      },
+      {
+        "text": "NullPointerException",
+        "isCorrect": false
+      },
+      {
+        "text": "IllegalArgumentException",
+        "isCorrect": false
+      },
+      {
+        "text": "IndexOutOfBoundsException",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which method is used in a Java Servlet to handle HTTP GET requests? (Case 13)",
+    "topic": "Java Servlets",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "doGet()",
+        "isCorrect": true
+      },
+      {
+        "text": "doPost()",
+        "isCorrect": false
+      },
+      {
+        "text": "init()",
+        "isCorrect": false
+      },
+      {
+        "text": "service()",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which graph traversal algorithm uses a Queue data structure? (Variation 14)",
+    "topic": "Advanced DSA",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Depth First Search (DFS)",
+        "isCorrect": false
+      },
+      {
+        "text": "Breadth First Search (BFS)",
+        "isCorrect": true
+      },
+      {
+        "text": "Dijkstra's Algorithm",
+        "isCorrect": false
+      },
+      {
+        "text": "A* Search",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Java, which exception is thrown when an array is accessed with an illegal index? (Case 15)",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "NullPointerException",
+        "isCorrect": false
+      },
+      {
+        "text": "ArrayIndexOutOfBoundsException",
+        "isCorrect": true
+      },
+      {
+        "text": "IndexOutOfBoundsException",
+        "isCorrect": false
+      },
+      {
+        "text": "IllegalArgumentException",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which method is used in a Java Servlet to handle HTTP GET requests? (Case 16)",
+    "topic": "Java Servlets",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "doPost()",
+        "isCorrect": false
+      },
+      {
+        "text": "service()",
+        "isCorrect": false
+      },
+      {
+        "text": "init()",
+        "isCorrect": false
+      },
+      {
+        "text": "doGet()",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Which graph traversal algorithm uses a Queue data structure? (Variation 17)",
+    "topic": "Advanced DSA",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "A* Search",
+        "isCorrect": false
+      },
+      {
+        "text": "Breadth First Search (BFS)",
+        "isCorrect": true
+      },
+      {
+        "text": "Depth First Search (DFS)",
+        "isCorrect": false
+      },
+      {
+        "text": "Dijkstra's Algorithm",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Java, which exception is thrown when an array is accessed with an illegal index? (Case 18)",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "ArrayIndexOutOfBoundsException",
+        "isCorrect": true
+      },
+      {
+        "text": "IndexOutOfBoundsException",
+        "isCorrect": false
+      },
+      {
+        "text": "IllegalArgumentException",
+        "isCorrect": false
+      },
+      {
+        "text": "NullPointerException",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which method is used in a Java Servlet to handle HTTP GET requests? (Case 19)",
+    "topic": "Java Servlets",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "service()",
+        "isCorrect": false
+      },
+      {
+        "text": "doGet()",
+        "isCorrect": true
+      },
+      {
+        "text": "init()",
+        "isCorrect": false
+      },
+      {
+        "text": "doPost()",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which graph traversal algorithm uses a Queue data structure? (Variation 20)",
+    "topic": "Advanced DSA",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Breadth First Search (BFS)",
+        "isCorrect": true
+      },
+      {
+        "text": "Depth First Search (DFS)",
+        "isCorrect": false
+      },
+      {
+        "text": "Dijkstra's Algorithm",
+        "isCorrect": false
+      },
+      {
+        "text": "A* Search",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Java, which exception is thrown when an array is accessed with an illegal index? (Case 21)",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "NullPointerException",
+        "isCorrect": false
+      },
+      {
+        "text": "IllegalArgumentException",
+        "isCorrect": false
+      },
+      {
+        "text": "IndexOutOfBoundsException",
+        "isCorrect": false
+      },
+      {
+        "text": "ArrayIndexOutOfBoundsException",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Which method is used in a Java Servlet to handle HTTP GET requests? (Case 22)",
+    "topic": "Java Servlets",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "doGet()",
+        "isCorrect": true
+      },
+      {
+        "text": "service()",
+        "isCorrect": false
+      },
+      {
+        "text": "doPost()",
+        "isCorrect": false
+      },
+      {
+        "text": "init()",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which graph traversal algorithm uses a Queue data structure? (Variation 23)",
+    "topic": "Advanced DSA",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Depth First Search (DFS)",
+        "isCorrect": false
+      },
+      {
+        "text": "A* Search",
+        "isCorrect": false
+      },
+      {
+        "text": "Breadth First Search (BFS)",
+        "isCorrect": true
+      },
+      {
+        "text": "Dijkstra's Algorithm",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Java, which exception is thrown when an array is accessed with an illegal index? (Case 24)",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "IllegalArgumentException",
+        "isCorrect": false
+      },
+      {
+        "text": "NullPointerException",
+        "isCorrect": false
+      },
+      {
+        "text": "ArrayIndexOutOfBoundsException",
+        "isCorrect": true
+      },
+      {
+        "text": "IndexOutOfBoundsException",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which method is used in a Java Servlet to handle HTTP GET requests? (Case 25)",
+    "topic": "Java Servlets",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "doPost()",
+        "isCorrect": false
+      },
+      {
+        "text": "doGet()",
+        "isCorrect": true
+      },
+      {
+        "text": "service()",
+        "isCorrect": false
+      },
+      {
+        "text": "init()",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which graph traversal algorithm uses a Queue data structure? (Variation 26)",
+    "topic": "Advanced DSA",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Dijkstra's Algorithm",
+        "isCorrect": false
+      },
+      {
+        "text": "A* Search",
+        "isCorrect": false
+      },
+      {
+        "text": "Depth First Search (DFS)",
+        "isCorrect": false
+      },
+      {
+        "text": "Breadth First Search (BFS)",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "In Java, which exception is thrown when an array is accessed with an illegal index? (Case 27)",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "ArrayIndexOutOfBoundsException",
+        "isCorrect": true
+      },
+      {
+        "text": "NullPointerException",
+        "isCorrect": false
+      },
+      {
+        "text": "IllegalArgumentException",
+        "isCorrect": false
+      },
+      {
+        "text": "IndexOutOfBoundsException",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which method is used in a Java Servlet to handle HTTP GET requests? (Case 28)",
+    "topic": "Java Servlets",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "service()",
+        "isCorrect": false
+      },
+      {
+        "text": "init()",
+        "isCorrect": false
+      },
+      {
+        "text": "doPost()",
+        "isCorrect": false
+      },
+      {
+        "text": "doGet()",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Which graph traversal algorithm uses a Queue data structure? (Variation 29)",
+    "topic": "Advanced DSA",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Breadth First Search (BFS)",
+        "isCorrect": true
+      },
+      {
+        "text": "Dijkstra's Algorithm",
+        "isCorrect": false
+      },
+      {
+        "text": "A* Search",
+        "isCorrect": false
+      },
+      {
+        "text": "Depth First Search (DFS)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Java, which exception is thrown when an array is accessed with an illegal index? (Case 30)",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "NullPointerException",
+        "isCorrect": false
+      },
+      {
+        "text": "IndexOutOfBoundsException",
+        "isCorrect": false
+      },
+      {
+        "text": "IllegalArgumentException",
+        "isCorrect": false
+      },
+      {
+        "text": "ArrayIndexOutOfBoundsException",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Which method is used in a Java Servlet to handle HTTP GET requests? (Case 31)",
+    "topic": "Java Servlets",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "init()",
+        "isCorrect": false
+      },
+      {
+        "text": "service()",
+        "isCorrect": false
+      },
+      {
+        "text": "doGet()",
+        "isCorrect": true
+      },
+      {
+        "text": "doPost()",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which graph traversal algorithm uses a Queue data structure? (Variation 32)",
+    "topic": "Advanced DSA",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Depth First Search (DFS)",
+        "isCorrect": false
+      },
+      {
+        "text": "Dijkstra's Algorithm",
+        "isCorrect": false
+      },
+      {
+        "text": "Breadth First Search (BFS)",
+        "isCorrect": true
+      },
+      {
+        "text": "A* Search",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Java, which exception is thrown when an array is accessed with an illegal index? (Case 33)",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "IllegalArgumentException",
+        "isCorrect": false
+      },
+      {
+        "text": "ArrayIndexOutOfBoundsException",
+        "isCorrect": true
+      },
+      {
+        "text": "IndexOutOfBoundsException",
+        "isCorrect": false
+      },
+      {
+        "text": "NullPointerException",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which method is used in a Java Servlet to handle HTTP GET requests? (Case 34)",
+    "topic": "Java Servlets",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "doGet()",
+        "isCorrect": true
+      },
+      {
+        "text": "doPost()",
+        "isCorrect": false
+      },
+      {
+        "text": "init()",
+        "isCorrect": false
+      },
+      {
+        "text": "service()",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which graph traversal algorithm uses a Queue data structure? (Variation 35)",
+    "topic": "Advanced DSA",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Breadth First Search (BFS)",
+        "isCorrect": true
+      },
+      {
+        "text": "Depth First Search (DFS)",
+        "isCorrect": false
+      },
+      {
+        "text": "Dijkstra's Algorithm",
+        "isCorrect": false
+      },
+      {
+        "text": "A* Search",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Java, which exception is thrown when an array is accessed with an illegal index? (Case 36)",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "IndexOutOfBoundsException",
+        "isCorrect": false
+      },
+      {
+        "text": "NullPointerException",
+        "isCorrect": false
+      },
+      {
+        "text": "ArrayIndexOutOfBoundsException",
+        "isCorrect": true
+      },
+      {
+        "text": "IllegalArgumentException",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which method is used in a Java Servlet to handle HTTP GET requests? (Case 37)",
+    "topic": "Java Servlets",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "service()",
+        "isCorrect": false
+      },
+      {
+        "text": "init()",
+        "isCorrect": false
+      },
+      {
+        "text": "doPost()",
+        "isCorrect": false
+      },
+      {
+        "text": "doGet()",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Which graph traversal algorithm uses a Queue data structure? (Variation 38)",
+    "topic": "Advanced DSA",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Depth First Search (DFS)",
+        "isCorrect": false
+      },
+      {
+        "text": "Breadth First Search (BFS)",
+        "isCorrect": true
+      },
+      {
+        "text": "A* Search",
+        "isCorrect": false
+      },
+      {
+        "text": "Dijkstra's Algorithm",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Java, which exception is thrown when an array is accessed with an illegal index? (Case 39)",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "IndexOutOfBoundsException",
+        "isCorrect": false
+      },
+      {
+        "text": "IllegalArgumentException",
+        "isCorrect": false
+      },
+      {
+        "text": "ArrayIndexOutOfBoundsException",
+        "isCorrect": true
+      },
+      {
+        "text": "NullPointerException",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which method is used in a Java Servlet to handle HTTP GET requests? (Case 40)",
+    "topic": "Java Servlets",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "service()",
+        "isCorrect": false
+      },
+      {
+        "text": "init()",
+        "isCorrect": false
+      },
+      {
+        "text": "doPost()",
+        "isCorrect": false
+      },
+      {
+        "text": "doGet()",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Which graph traversal algorithm uses a Queue data structure? (Variation 41)",
+    "topic": "Advanced DSA",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "A* Search",
+        "isCorrect": false
+      },
+      {
+        "text": "Depth First Search (DFS)",
+        "isCorrect": false
+      },
+      {
+        "text": "Breadth First Search (BFS)",
+        "isCorrect": true
+      },
+      {
+        "text": "Dijkstra's Algorithm",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Java, which exception is thrown when an array is accessed with an illegal index? (Case 42)",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "IllegalArgumentException",
+        "isCorrect": false
+      },
+      {
+        "text": "NullPointerException",
+        "isCorrect": false
+      },
+      {
+        "text": "ArrayIndexOutOfBoundsException",
+        "isCorrect": true
+      },
+      {
+        "text": "IndexOutOfBoundsException",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which method is used in a Java Servlet to handle HTTP GET requests? (Case 43)",
+    "topic": "Java Servlets",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "service()",
+        "isCorrect": false
+      },
+      {
+        "text": "doGet()",
+        "isCorrect": true
+      },
+      {
+        "text": "init()",
+        "isCorrect": false
+      },
+      {
+        "text": "doPost()",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which graph traversal algorithm uses a Queue data structure? (Variation 44)",
+    "topic": "Advanced DSA",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Breadth First Search (BFS)",
+        "isCorrect": true
+      },
+      {
+        "text": "Depth First Search (DFS)",
+        "isCorrect": false
+      },
+      {
+        "text": "Dijkstra's Algorithm",
+        "isCorrect": false
+      },
+      {
+        "text": "A* Search",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Java, which exception is thrown when an array is accessed with an illegal index? (Case 45)",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "IllegalArgumentException",
+        "isCorrect": false
+      },
+      {
+        "text": "ArrayIndexOutOfBoundsException",
+        "isCorrect": true
+      },
+      {
+        "text": "NullPointerException",
+        "isCorrect": false
+      },
+      {
+        "text": "IndexOutOfBoundsException",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which method is used in a Java Servlet to handle HTTP GET requests? (Case 46)",
+    "topic": "Java Servlets",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "doPost()",
+        "isCorrect": false
+      },
+      {
+        "text": "doGet()",
+        "isCorrect": true
+      },
+      {
+        "text": "init()",
+        "isCorrect": false
+      },
+      {
+        "text": "service()",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which graph traversal algorithm uses a Queue data structure? (Variation 47)",
+    "topic": "Advanced DSA",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Dijkstra's Algorithm",
+        "isCorrect": false
+      },
+      {
+        "text": "Breadth First Search (BFS)",
+        "isCorrect": true
+      },
+      {
+        "text": "A* Search",
+        "isCorrect": false
+      },
+      {
+        "text": "Depth First Search (DFS)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Java, which exception is thrown when an array is accessed with an illegal index? (Case 48)",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "IllegalArgumentException",
+        "isCorrect": false
+      },
+      {
+        "text": "NullPointerException",
+        "isCorrect": false
+      },
+      {
+        "text": "IndexOutOfBoundsException",
+        "isCorrect": false
+      },
+      {
+        "text": "ArrayIndexOutOfBoundsException",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Which method is used in a Java Servlet to handle HTTP GET requests? (Case 49)",
+    "topic": "Java Servlets",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "doGet()",
+        "isCorrect": true
+      },
+      {
+        "text": "doPost()",
+        "isCorrect": false
+      },
+      {
+        "text": "service()",
+        "isCorrect": false
+      },
+      {
+        "text": "init()",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which graph traversal algorithm uses a Queue data structure? (Variation 50)",
+    "topic": "Advanced DSA",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "A* Search",
+        "isCorrect": false
+      },
+      {
+        "text": "Dijkstra's Algorithm",
+        "isCorrect": false
+      },
+      {
+        "text": "Breadth First Search (BFS)",
+        "isCorrect": true
+      },
+      {
+        "text": "Depth First Search (DFS)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Java, which exception is thrown when an array is accessed with an illegal index? (Case 51)",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "NullPointerException",
+        "isCorrect": false
+      },
+      {
+        "text": "ArrayIndexOutOfBoundsException",
+        "isCorrect": true
+      },
+      {
+        "text": "IndexOutOfBoundsException",
+        "isCorrect": false
+      },
+      {
+        "text": "IllegalArgumentException",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which method is used in a Java Servlet to handle HTTP GET requests? (Case 52)",
+    "topic": "Java Servlets",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "doGet()",
+        "isCorrect": true
+      },
+      {
+        "text": "doPost()",
+        "isCorrect": false
+      },
+      {
+        "text": "init()",
+        "isCorrect": false
+      },
+      {
+        "text": "service()",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which graph traversal algorithm uses a Queue data structure? (Variation 53)",
+    "topic": "Advanced DSA",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "A* Search",
+        "isCorrect": false
+      },
+      {
+        "text": "Depth First Search (DFS)",
+        "isCorrect": false
+      },
+      {
+        "text": "Breadth First Search (BFS)",
+        "isCorrect": true
+      },
+      {
+        "text": "Dijkstra's Algorithm",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Java, which exception is thrown when an array is accessed with an illegal index? (Case 54)",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "NullPointerException",
+        "isCorrect": false
+      },
+      {
+        "text": "IndexOutOfBoundsException",
+        "isCorrect": false
+      },
+      {
+        "text": "ArrayIndexOutOfBoundsException",
+        "isCorrect": true
+      },
+      {
+        "text": "IllegalArgumentException",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which method is used in a Java Servlet to handle HTTP GET requests? (Case 55)",
+    "topic": "Java Servlets",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "init()",
+        "isCorrect": false
+      },
+      {
+        "text": "doPost()",
+        "isCorrect": false
+      },
+      {
+        "text": "doGet()",
+        "isCorrect": true
+      },
+      {
+        "text": "service()",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which graph traversal algorithm uses a Queue data structure? (Variation 56)",
+    "topic": "Advanced DSA",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Depth First Search (DFS)",
+        "isCorrect": false
+      },
+      {
+        "text": "Dijkstra's Algorithm",
+        "isCorrect": false
+      },
+      {
+        "text": "Breadth First Search (BFS)",
+        "isCorrect": true
+      },
+      {
+        "text": "A* Search",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Java, which exception is thrown when an array is accessed with an illegal index? (Case 57)",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "ArrayIndexOutOfBoundsException",
+        "isCorrect": true
+      },
+      {
+        "text": "NullPointerException",
+        "isCorrect": false
+      },
+      {
+        "text": "IndexOutOfBoundsException",
+        "isCorrect": false
+      },
+      {
+        "text": "IllegalArgumentException",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which method is used in a Java Servlet to handle HTTP GET requests? (Case 58)",
+    "topic": "Java Servlets",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "init()",
+        "isCorrect": false
+      },
+      {
+        "text": "doPost()",
+        "isCorrect": false
+      },
+      {
+        "text": "doGet()",
+        "isCorrect": true
+      },
+      {
+        "text": "service()",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which graph traversal algorithm uses a Queue data structure? (Variation 59)",
+    "topic": "Advanced DSA",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "A* Search",
+        "isCorrect": false
+      },
+      {
+        "text": "Depth First Search (DFS)",
+        "isCorrect": false
+      },
+      {
+        "text": "Breadth First Search (BFS)",
+        "isCorrect": true
+      },
+      {
+        "text": "Dijkstra's Algorithm",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Java, which exception is thrown when an array is accessed with an illegal index? (Case 60)",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "ArrayIndexOutOfBoundsException",
+        "isCorrect": true
+      },
+      {
+        "text": "NullPointerException",
+        "isCorrect": false
+      },
+      {
+        "text": "IllegalArgumentException",
+        "isCorrect": false
+      },
+      {
+        "text": "IndexOutOfBoundsException",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which method is used in a Java Servlet to handle HTTP GET requests? (Case 61)",
+    "topic": "Java Servlets",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "init()",
+        "isCorrect": false
+      },
+      {
+        "text": "doPost()",
+        "isCorrect": false
+      },
+      {
+        "text": "service()",
+        "isCorrect": false
+      },
+      {
+        "text": "doGet()",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Which graph traversal algorithm uses a Queue data structure? (Variation 62)",
+    "topic": "Advanced DSA",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Dijkstra's Algorithm",
+        "isCorrect": false
+      },
+      {
+        "text": "Breadth First Search (BFS)",
+        "isCorrect": true
+      },
+      {
+        "text": "A* Search",
+        "isCorrect": false
+      },
+      {
+        "text": "Depth First Search (DFS)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Java, which exception is thrown when an array is accessed with an illegal index? (Case 63)",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "IllegalArgumentException",
+        "isCorrect": false
+      },
+      {
+        "text": "IndexOutOfBoundsException",
+        "isCorrect": false
+      },
+      {
+        "text": "ArrayIndexOutOfBoundsException",
+        "isCorrect": true
+      },
+      {
+        "text": "NullPointerException",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which method is used in a Java Servlet to handle HTTP GET requests? (Case 64)",
+    "topic": "Java Servlets",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "doPost()",
+        "isCorrect": false
+      },
+      {
+        "text": "doGet()",
+        "isCorrect": true
+      },
+      {
+        "text": "service()",
+        "isCorrect": false
+      },
+      {
+        "text": "init()",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which graph traversal algorithm uses a Queue data structure? (Variation 65)",
+    "topic": "Advanced DSA",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "A* Search",
+        "isCorrect": false
+      },
+      {
+        "text": "Depth First Search (DFS)",
+        "isCorrect": false
+      },
+      {
+        "text": "Breadth First Search (BFS)",
+        "isCorrect": true
+      },
+      {
+        "text": "Dijkstra's Algorithm",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Java, which exception is thrown when an array is accessed with an illegal index? (Case 66)",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "ArrayIndexOutOfBoundsException",
+        "isCorrect": true
+      },
+      {
+        "text": "IndexOutOfBoundsException",
+        "isCorrect": false
+      },
+      {
+        "text": "NullPointerException",
+        "isCorrect": false
+      },
+      {
+        "text": "IllegalArgumentException",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which method is used in a Java Servlet to handle HTTP GET requests? (Case 67)",
+    "topic": "Java Servlets",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "init()",
+        "isCorrect": false
+      },
+      {
+        "text": "doPost()",
+        "isCorrect": false
+      },
+      {
+        "text": "doGet()",
+        "isCorrect": true
+      },
+      {
+        "text": "service()",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which graph traversal algorithm uses a Queue data structure? (Variation 68)",
+    "topic": "Advanced DSA",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Depth First Search (DFS)",
+        "isCorrect": false
+      },
+      {
+        "text": "Breadth First Search (BFS)",
+        "isCorrect": true
+      },
+      {
+        "text": "Dijkstra's Algorithm",
+        "isCorrect": false
+      },
+      {
+        "text": "A* Search",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Java, which exception is thrown when an array is accessed with an illegal index? (Case 69)",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "NullPointerException",
+        "isCorrect": false
+      },
+      {
+        "text": "ArrayIndexOutOfBoundsException",
+        "isCorrect": true
+      },
+      {
+        "text": "IndexOutOfBoundsException",
+        "isCorrect": false
+      },
+      {
+        "text": "IllegalArgumentException",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which method is used in a Java Servlet to handle HTTP GET requests? (Case 70)",
+    "topic": "Java Servlets",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "doGet()",
+        "isCorrect": true
+      },
+      {
+        "text": "init()",
+        "isCorrect": false
+      },
+      {
+        "text": "doPost()",
+        "isCorrect": false
+      },
+      {
+        "text": "service()",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which graph traversal algorithm uses a Queue data structure? (Variation 71)",
+    "topic": "Advanced DSA",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Dijkstra's Algorithm",
+        "isCorrect": false
+      },
+      {
+        "text": "Breadth First Search (BFS)",
+        "isCorrect": true
+      },
+      {
+        "text": "Depth First Search (DFS)",
+        "isCorrect": false
+      },
+      {
+        "text": "A* Search",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Java, which exception is thrown when an array is accessed with an illegal index? (Case 72)",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "IndexOutOfBoundsException",
+        "isCorrect": false
+      },
+      {
+        "text": "IllegalArgumentException",
+        "isCorrect": false
+      },
+      {
+        "text": "NullPointerException",
+        "isCorrect": false
+      },
+      {
+        "text": "ArrayIndexOutOfBoundsException",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Which method is used in a Java Servlet to handle HTTP GET requests? (Case 73)",
+    "topic": "Java Servlets",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "init()",
+        "isCorrect": false
+      },
+      {
+        "text": "service()",
+        "isCorrect": false
+      },
+      {
+        "text": "doPost()",
+        "isCorrect": false
+      },
+      {
+        "text": "doGet()",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Which graph traversal algorithm uses a Queue data structure? (Variation 74)",
+    "topic": "Advanced DSA",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Depth First Search (DFS)",
+        "isCorrect": false
+      },
+      {
+        "text": "Breadth First Search (BFS)",
+        "isCorrect": true
+      },
+      {
+        "text": "Dijkstra's Algorithm",
+        "isCorrect": false
+      },
+      {
+        "text": "A* Search",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In System Design, what technique is used to distribute incoming network traffic across multiple servers? (Variation 0)",
+    "topic": "System Design",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Load Balancing",
+        "isCorrect": true
+      },
+      {
+        "text": "Caching",
+        "isCorrect": false
+      },
+      {
+        "text": "Sharding",
+        "isCorrect": false
+      },
+      {
+        "text": "Replication",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which of the following is a key characteristic of a Microservices Architecture? (Variation 1)",
+    "topic": "Microservices",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Monolithic codebase",
+        "isCorrect": false
+      },
+      {
+        "text": "Single shared database",
+        "isCorrect": false
+      },
+      {
+        "text": "Tightly coupled components",
+        "isCorrect": false
+      },
+      {
+        "text": "Independently deployable services",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "In Cloud Computing, what does IaaS stand for? (Variation 2)",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Infrastructure as a Service",
+        "isCorrect": true
+      },
+      {
+        "text": "Internet as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Integration as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Information as a Service",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In System Design, what technique is used to distribute incoming network traffic across multiple servers? (Variation 3)",
+    "topic": "System Design",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Load Balancing",
+        "isCorrect": true
+      },
+      {
+        "text": "Caching",
+        "isCorrect": false
+      },
+      {
+        "text": "Sharding",
+        "isCorrect": false
+      },
+      {
+        "text": "Replication",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which of the following is a key characteristic of a Microservices Architecture? (Variation 4)",
+    "topic": "Microservices",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Tightly coupled components",
+        "isCorrect": false
+      },
+      {
+        "text": "Monolithic codebase",
+        "isCorrect": false
+      },
+      {
+        "text": "Independently deployable services",
+        "isCorrect": true
+      },
+      {
+        "text": "Single shared database",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Cloud Computing, what does IaaS stand for? (Variation 5)",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Internet as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Information as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Infrastructure as a Service",
+        "isCorrect": true
+      },
+      {
+        "text": "Integration as a Service",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In System Design, what technique is used to distribute incoming network traffic across multiple servers? (Variation 6)",
+    "topic": "System Design",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Replication",
+        "isCorrect": false
+      },
+      {
+        "text": "Load Balancing",
+        "isCorrect": true
+      },
+      {
+        "text": "Caching",
+        "isCorrect": false
+      },
+      {
+        "text": "Sharding",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which of the following is a key characteristic of a Microservices Architecture? (Variation 7)",
+    "topic": "Microservices",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Monolithic codebase",
+        "isCorrect": false
+      },
+      {
+        "text": "Single shared database",
+        "isCorrect": false
+      },
+      {
+        "text": "Independently deployable services",
+        "isCorrect": true
+      },
+      {
+        "text": "Tightly coupled components",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Cloud Computing, what does IaaS stand for? (Variation 8)",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Integration as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Infrastructure as a Service",
+        "isCorrect": true
+      },
+      {
+        "text": "Information as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Internet as a Service",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In System Design, what technique is used to distribute incoming network traffic across multiple servers? (Variation 9)",
+    "topic": "System Design",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Load Balancing",
+        "isCorrect": true
+      },
+      {
+        "text": "Caching",
+        "isCorrect": false
+      },
+      {
+        "text": "Sharding",
+        "isCorrect": false
+      },
+      {
+        "text": "Replication",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which of the following is a key characteristic of a Microservices Architecture? (Variation 10)",
+    "topic": "Microservices",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Single shared database",
+        "isCorrect": false
+      },
+      {
+        "text": "Tightly coupled components",
+        "isCorrect": false
+      },
+      {
+        "text": "Monolithic codebase",
+        "isCorrect": false
+      },
+      {
+        "text": "Independently deployable services",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "In Cloud Computing, what does IaaS stand for? (Variation 11)",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Information as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Infrastructure as a Service",
+        "isCorrect": true
+      },
+      {
+        "text": "Internet as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Integration as a Service",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In System Design, what technique is used to distribute incoming network traffic across multiple servers? (Variation 12)",
+    "topic": "System Design",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Sharding",
+        "isCorrect": false
+      },
+      {
+        "text": "Caching",
+        "isCorrect": false
+      },
+      {
+        "text": "Replication",
+        "isCorrect": false
+      },
+      {
+        "text": "Load Balancing",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Which of the following is a key characteristic of a Microservices Architecture? (Variation 13)",
+    "topic": "Microservices",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Monolithic codebase",
+        "isCorrect": false
+      },
+      {
+        "text": "Single shared database",
+        "isCorrect": false
+      },
+      {
+        "text": "Independently deployable services",
+        "isCorrect": true
+      },
+      {
+        "text": "Tightly coupled components",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Cloud Computing, what does IaaS stand for? (Variation 14)",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Integration as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Infrastructure as a Service",
+        "isCorrect": true
+      },
+      {
+        "text": "Information as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Internet as a Service",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In System Design, what technique is used to distribute incoming network traffic across multiple servers? (Variation 15)",
+    "topic": "System Design",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Replication",
+        "isCorrect": false
+      },
+      {
+        "text": "Caching",
+        "isCorrect": false
+      },
+      {
+        "text": "Load Balancing",
+        "isCorrect": true
+      },
+      {
+        "text": "Sharding",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which of the following is a key characteristic of a Microservices Architecture? (Variation 16)",
+    "topic": "Microservices",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Tightly coupled components",
+        "isCorrect": false
+      },
+      {
+        "text": "Single shared database",
+        "isCorrect": false
+      },
+      {
+        "text": "Independently deployable services",
+        "isCorrect": true
+      },
+      {
+        "text": "Monolithic codebase",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Cloud Computing, what does IaaS stand for? (Variation 17)",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Internet as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Information as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Infrastructure as a Service",
+        "isCorrect": true
+      },
+      {
+        "text": "Integration as a Service",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In System Design, what technique is used to distribute incoming network traffic across multiple servers? (Variation 18)",
+    "topic": "System Design",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Caching",
+        "isCorrect": false
+      },
+      {
+        "text": "Replication",
+        "isCorrect": false
+      },
+      {
+        "text": "Load Balancing",
+        "isCorrect": true
+      },
+      {
+        "text": "Sharding",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which of the following is a key characteristic of a Microservices Architecture? (Variation 19)",
+    "topic": "Microservices",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Monolithic codebase",
+        "isCorrect": false
+      },
+      {
+        "text": "Tightly coupled components",
+        "isCorrect": false
+      },
+      {
+        "text": "Single shared database",
+        "isCorrect": false
+      },
+      {
+        "text": "Independently deployable services",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "In Cloud Computing, what does IaaS stand for? (Variation 20)",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Information as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Integration as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Internet as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Infrastructure as a Service",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "In System Design, what technique is used to distribute incoming network traffic across multiple servers? (Variation 21)",
+    "topic": "System Design",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Load Balancing",
+        "isCorrect": true
+      },
+      {
+        "text": "Replication",
+        "isCorrect": false
+      },
+      {
+        "text": "Sharding",
+        "isCorrect": false
+      },
+      {
+        "text": "Caching",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which of the following is a key characteristic of a Microservices Architecture? (Variation 22)",
+    "topic": "Microservices",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Independently deployable services",
+        "isCorrect": true
+      },
+      {
+        "text": "Single shared database",
+        "isCorrect": false
+      },
+      {
+        "text": "Tightly coupled components",
+        "isCorrect": false
+      },
+      {
+        "text": "Monolithic codebase",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Cloud Computing, what does IaaS stand for? (Variation 23)",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Information as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Infrastructure as a Service",
+        "isCorrect": true
+      },
+      {
+        "text": "Integration as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Internet as a Service",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In System Design, what technique is used to distribute incoming network traffic across multiple servers? (Variation 24)",
+    "topic": "System Design",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Replication",
+        "isCorrect": false
+      },
+      {
+        "text": "Caching",
+        "isCorrect": false
+      },
+      {
+        "text": "Sharding",
+        "isCorrect": false
+      },
+      {
+        "text": "Load Balancing",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Which of the following is a key characteristic of a Microservices Architecture? (Variation 25)",
+    "topic": "Microservices",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Single shared database",
+        "isCorrect": false
+      },
+      {
+        "text": "Independently deployable services",
+        "isCorrect": true
+      },
+      {
+        "text": "Monolithic codebase",
+        "isCorrect": false
+      },
+      {
+        "text": "Tightly coupled components",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Cloud Computing, what does IaaS stand for? (Variation 26)",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Internet as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Infrastructure as a Service",
+        "isCorrect": true
+      },
+      {
+        "text": "Information as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Integration as a Service",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In System Design, what technique is used to distribute incoming network traffic across multiple servers? (Variation 27)",
+    "topic": "System Design",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Load Balancing",
+        "isCorrect": true
+      },
+      {
+        "text": "Caching",
+        "isCorrect": false
+      },
+      {
+        "text": "Sharding",
+        "isCorrect": false
+      },
+      {
+        "text": "Replication",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which of the following is a key characteristic of a Microservices Architecture? (Variation 28)",
+    "topic": "Microservices",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Single shared database",
+        "isCorrect": false
+      },
+      {
+        "text": "Monolithic codebase",
+        "isCorrect": false
+      },
+      {
+        "text": "Independently deployable services",
+        "isCorrect": true
+      },
+      {
+        "text": "Tightly coupled components",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Cloud Computing, what does IaaS stand for? (Variation 29)",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Internet as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Infrastructure as a Service",
+        "isCorrect": true
+      },
+      {
+        "text": "Information as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Integration as a Service",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In System Design, what technique is used to distribute incoming network traffic across multiple servers? (Variation 30)",
+    "topic": "System Design",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Load Balancing",
+        "isCorrect": true
+      },
+      {
+        "text": "Replication",
+        "isCorrect": false
+      },
+      {
+        "text": "Caching",
+        "isCorrect": false
+      },
+      {
+        "text": "Sharding",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which of the following is a key characteristic of a Microservices Architecture? (Variation 31)",
+    "topic": "Microservices",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Independently deployable services",
+        "isCorrect": true
+      },
+      {
+        "text": "Monolithic codebase",
+        "isCorrect": false
+      },
+      {
+        "text": "Tightly coupled components",
+        "isCorrect": false
+      },
+      {
+        "text": "Single shared database",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Cloud Computing, what does IaaS stand for? (Variation 32)",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Information as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Integration as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Infrastructure as a Service",
+        "isCorrect": true
+      },
+      {
+        "text": "Internet as a Service",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In System Design, what technique is used to distribute incoming network traffic across multiple servers? (Variation 33)",
+    "topic": "System Design",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Replication",
+        "isCorrect": false
+      },
+      {
+        "text": "Sharding",
+        "isCorrect": false
+      },
+      {
+        "text": "Load Balancing",
+        "isCorrect": true
+      },
+      {
+        "text": "Caching",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which of the following is a key characteristic of a Microservices Architecture? (Variation 34)",
+    "topic": "Microservices",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Single shared database",
+        "isCorrect": false
+      },
+      {
+        "text": "Independently deployable services",
+        "isCorrect": true
+      },
+      {
+        "text": "Monolithic codebase",
+        "isCorrect": false
+      },
+      {
+        "text": "Tightly coupled components",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Cloud Computing, what does IaaS stand for? (Variation 35)",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Internet as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Integration as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Information as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Infrastructure as a Service",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "In System Design, what technique is used to distribute incoming network traffic across multiple servers? (Variation 36)",
+    "topic": "System Design",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Load Balancing",
+        "isCorrect": true
+      },
+      {
+        "text": "Caching",
+        "isCorrect": false
+      },
+      {
+        "text": "Sharding",
+        "isCorrect": false
+      },
+      {
+        "text": "Replication",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which of the following is a key characteristic of a Microservices Architecture? (Variation 37)",
+    "topic": "Microservices",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Tightly coupled components",
+        "isCorrect": false
+      },
+      {
+        "text": "Single shared database",
+        "isCorrect": false
+      },
+      {
+        "text": "Independently deployable services",
+        "isCorrect": true
+      },
+      {
+        "text": "Monolithic codebase",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Cloud Computing, what does IaaS stand for? (Variation 38)",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Integration as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Information as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Infrastructure as a Service",
+        "isCorrect": true
+      },
+      {
+        "text": "Internet as a Service",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In System Design, what technique is used to distribute incoming network traffic across multiple servers? (Variation 39)",
+    "topic": "System Design",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Replication",
+        "isCorrect": false
+      },
+      {
+        "text": "Caching",
+        "isCorrect": false
+      },
+      {
+        "text": "Sharding",
+        "isCorrect": false
+      },
+      {
+        "text": "Load Balancing",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Which of the following is a key characteristic of a Microservices Architecture? (Variation 40)",
+    "topic": "Microservices",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Tightly coupled components",
+        "isCorrect": false
+      },
+      {
+        "text": "Single shared database",
+        "isCorrect": false
+      },
+      {
+        "text": "Independently deployable services",
+        "isCorrect": true
+      },
+      {
+        "text": "Monolithic codebase",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Cloud Computing, what does IaaS stand for? (Variation 41)",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Integration as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Internet as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Infrastructure as a Service",
+        "isCorrect": true
+      },
+      {
+        "text": "Information as a Service",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In System Design, what technique is used to distribute incoming network traffic across multiple servers? (Variation 42)",
+    "topic": "System Design",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Load Balancing",
+        "isCorrect": true
+      },
+      {
+        "text": "Replication",
+        "isCorrect": false
+      },
+      {
+        "text": "Caching",
+        "isCorrect": false
+      },
+      {
+        "text": "Sharding",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which of the following is a key characteristic of a Microservices Architecture? (Variation 43)",
+    "topic": "Microservices",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Single shared database",
+        "isCorrect": false
+      },
+      {
+        "text": "Independently deployable services",
+        "isCorrect": true
+      },
+      {
+        "text": "Tightly coupled components",
+        "isCorrect": false
+      },
+      {
+        "text": "Monolithic codebase",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Cloud Computing, what does IaaS stand for? (Variation 44)",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Information as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Integration as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Internet as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Infrastructure as a Service",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "In System Design, what technique is used to distribute incoming network traffic across multiple servers? (Variation 45)",
+    "topic": "System Design",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Load Balancing",
+        "isCorrect": true
+      },
+      {
+        "text": "Caching",
+        "isCorrect": false
+      },
+      {
+        "text": "Replication",
+        "isCorrect": false
+      },
+      {
+        "text": "Sharding",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which of the following is a key characteristic of a Microservices Architecture? (Variation 46)",
+    "topic": "Microservices",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Monolithic codebase",
+        "isCorrect": false
+      },
+      {
+        "text": "Single shared database",
+        "isCorrect": false
+      },
+      {
+        "text": "Tightly coupled components",
+        "isCorrect": false
+      },
+      {
+        "text": "Independently deployable services",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "In Cloud Computing, what does IaaS stand for? (Variation 47)",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Information as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Integration as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Internet as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Infrastructure as a Service",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "In System Design, what technique is used to distribute incoming network traffic across multiple servers? (Variation 48)",
+    "topic": "System Design",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Replication",
+        "isCorrect": false
+      },
+      {
+        "text": "Load Balancing",
+        "isCorrect": true
+      },
+      {
+        "text": "Sharding",
+        "isCorrect": false
+      },
+      {
+        "text": "Caching",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which of the following is a key characteristic of a Microservices Architecture? (Variation 49)",
+    "topic": "Microservices",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Single shared database",
+        "isCorrect": false
+      },
+      {
+        "text": "Monolithic codebase",
+        "isCorrect": false
+      },
+      {
+        "text": "Independently deployable services",
+        "isCorrect": true
+      },
+      {
+        "text": "Tightly coupled components",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Cloud Computing, what does IaaS stand for? (Variation 50)",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Integration as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Infrastructure as a Service",
+        "isCorrect": true
+      },
+      {
+        "text": "Internet as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Information as a Service",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In System Design, what technique is used to distribute incoming network traffic across multiple servers? (Variation 51)",
+    "topic": "System Design",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Caching",
+        "isCorrect": false
+      },
+      {
+        "text": "Load Balancing",
+        "isCorrect": true
+      },
+      {
+        "text": "Sharding",
+        "isCorrect": false
+      },
+      {
+        "text": "Replication",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which of the following is a key characteristic of a Microservices Architecture? (Variation 52)",
+    "topic": "Microservices",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Single shared database",
+        "isCorrect": false
+      },
+      {
+        "text": "Monolithic codebase",
+        "isCorrect": false
+      },
+      {
+        "text": "Tightly coupled components",
+        "isCorrect": false
+      },
+      {
+        "text": "Independently deployable services",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "In Cloud Computing, what does IaaS stand for? (Variation 53)",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Integration as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Internet as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Infrastructure as a Service",
+        "isCorrect": true
+      },
+      {
+        "text": "Information as a Service",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In System Design, what technique is used to distribute incoming network traffic across multiple servers? (Variation 54)",
+    "topic": "System Design",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Replication",
+        "isCorrect": false
+      },
+      {
+        "text": "Caching",
+        "isCorrect": false
+      },
+      {
+        "text": "Sharding",
+        "isCorrect": false
+      },
+      {
+        "text": "Load Balancing",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Which of the following is a key characteristic of a Microservices Architecture? (Variation 55)",
+    "topic": "Microservices",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Tightly coupled components",
+        "isCorrect": false
+      },
+      {
+        "text": "Single shared database",
+        "isCorrect": false
+      },
+      {
+        "text": "Independently deployable services",
+        "isCorrect": true
+      },
+      {
+        "text": "Monolithic codebase",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Cloud Computing, what does IaaS stand for? (Variation 56)",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Infrastructure as a Service",
+        "isCorrect": true
+      },
+      {
+        "text": "Internet as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Integration as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Information as a Service",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In System Design, what technique is used to distribute incoming network traffic across multiple servers? (Variation 57)",
+    "topic": "System Design",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Load Balancing",
+        "isCorrect": true
+      },
+      {
+        "text": "Caching",
+        "isCorrect": false
+      },
+      {
+        "text": "Replication",
+        "isCorrect": false
+      },
+      {
+        "text": "Sharding",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which of the following is a key characteristic of a Microservices Architecture? (Variation 58)",
+    "topic": "Microservices",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Tightly coupled components",
+        "isCorrect": false
+      },
+      {
+        "text": "Monolithic codebase",
+        "isCorrect": false
+      },
+      {
+        "text": "Single shared database",
+        "isCorrect": false
+      },
+      {
+        "text": "Independently deployable services",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "In Cloud Computing, what does IaaS stand for? (Variation 59)",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Integration as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Information as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Infrastructure as a Service",
+        "isCorrect": true
+      },
+      {
+        "text": "Internet as a Service",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In System Design, what technique is used to distribute incoming network traffic across multiple servers? (Variation 60)",
+    "topic": "System Design",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Sharding",
+        "isCorrect": false
+      },
+      {
+        "text": "Replication",
+        "isCorrect": false
+      },
+      {
+        "text": "Caching",
+        "isCorrect": false
+      },
+      {
+        "text": "Load Balancing",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Which of the following is a key characteristic of a Microservices Architecture? (Variation 61)",
+    "topic": "Microservices",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Single shared database",
+        "isCorrect": false
+      },
+      {
+        "text": "Tightly coupled components",
+        "isCorrect": false
+      },
+      {
+        "text": "Monolithic codebase",
+        "isCorrect": false
+      },
+      {
+        "text": "Independently deployable services",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "In Cloud Computing, what does IaaS stand for? (Variation 62)",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Infrastructure as a Service",
+        "isCorrect": true
+      },
+      {
+        "text": "Information as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Integration as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Internet as a Service",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In System Design, what technique is used to distribute incoming network traffic across multiple servers? (Variation 63)",
+    "topic": "System Design",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Sharding",
+        "isCorrect": false
+      },
+      {
+        "text": "Replication",
+        "isCorrect": false
+      },
+      {
+        "text": "Load Balancing",
+        "isCorrect": true
+      },
+      {
+        "text": "Caching",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which of the following is a key characteristic of a Microservices Architecture? (Variation 64)",
+    "topic": "Microservices",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Monolithic codebase",
+        "isCorrect": false
+      },
+      {
+        "text": "Independently deployable services",
+        "isCorrect": true
+      },
+      {
+        "text": "Single shared database",
+        "isCorrect": false
+      },
+      {
+        "text": "Tightly coupled components",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Cloud Computing, what does IaaS stand for? (Variation 65)",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Integration as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Infrastructure as a Service",
+        "isCorrect": true
+      },
+      {
+        "text": "Information as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Internet as a Service",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In System Design, what technique is used to distribute incoming network traffic across multiple servers? (Variation 66)",
+    "topic": "System Design",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Load Balancing",
+        "isCorrect": true
+      },
+      {
+        "text": "Replication",
+        "isCorrect": false
+      },
+      {
+        "text": "Sharding",
+        "isCorrect": false
+      },
+      {
+        "text": "Caching",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which of the following is a key characteristic of a Microservices Architecture? (Variation 67)",
+    "topic": "Microservices",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Tightly coupled components",
+        "isCorrect": false
+      },
+      {
+        "text": "Monolithic codebase",
+        "isCorrect": false
+      },
+      {
+        "text": "Single shared database",
+        "isCorrect": false
+      },
+      {
+        "text": "Independently deployable services",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "In Cloud Computing, what does IaaS stand for? (Variation 68)",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Internet as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Information as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Infrastructure as a Service",
+        "isCorrect": true
+      },
+      {
+        "text": "Integration as a Service",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In System Design, what technique is used to distribute incoming network traffic across multiple servers? (Variation 69)",
+    "topic": "System Design",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Load Balancing",
+        "isCorrect": true
+      },
+      {
+        "text": "Replication",
+        "isCorrect": false
+      },
+      {
+        "text": "Caching",
+        "isCorrect": false
+      },
+      {
+        "text": "Sharding",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which of the following is a key characteristic of a Microservices Architecture? (Variation 70)",
+    "topic": "Microservices",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Monolithic codebase",
+        "isCorrect": false
+      },
+      {
+        "text": "Single shared database",
+        "isCorrect": false
+      },
+      {
+        "text": "Independently deployable services",
+        "isCorrect": true
+      },
+      {
+        "text": "Tightly coupled components",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Cloud Computing, what does IaaS stand for? (Variation 71)",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Information as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Infrastructure as a Service",
+        "isCorrect": true
+      },
+      {
+        "text": "Integration as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Internet as a Service",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In System Design, what technique is used to distribute incoming network traffic across multiple servers? (Variation 72)",
+    "topic": "System Design",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Sharding",
+        "isCorrect": false
+      },
+      {
+        "text": "Replication",
+        "isCorrect": false
+      },
+      {
+        "text": "Caching",
+        "isCorrect": false
+      },
+      {
+        "text": "Load Balancing",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "text": "Which of the following is a key characteristic of a Microservices Architecture? (Variation 73)",
+    "topic": "Microservices",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Tightly coupled components",
+        "isCorrect": false
+      },
+      {
+        "text": "Independently deployable services",
+        "isCorrect": true
+      },
+      {
+        "text": "Monolithic codebase",
+        "isCorrect": false
+      },
+      {
+        "text": "Single shared database",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Cloud Computing, what does IaaS stand for? (Variation 74)",
+    "topic": "Cloud Computing",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Integration as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Internet as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Information as a Service",
+        "isCorrect": false
+      },
+      {
+        "text": "Infrastructure as a Service",
+        "isCorrect": true
+      }
+    ]
+  }
+]
