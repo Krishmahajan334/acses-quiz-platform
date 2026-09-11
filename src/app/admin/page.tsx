@@ -1,5 +1,6 @@
 import { prisma } from '@/lib/db';
 import ClearDataButton from './components/ClearDataButton';
+import SyncDataButton from './components/SyncDataButton';
 import { Users, LayoutList, CheckCircle, Ticket } from 'lucide-react';
 
 export const dynamic = 'force-dynamic';
@@ -17,7 +18,10 @@ export default async function AdminDashboard() {
           <h2 className="text-3xl font-bold text-foreground uppercase tracking-tight">Dashboard Overview</h2>
           <p className="text-muted-foreground mt-1 text-sm uppercase tracking-widest">System Metrics & Controls</p>
         </div>
-        <ClearDataButton />
+        <div className="flex gap-4">
+          <SyncDataButton />
+          <ClearDataButton />
+        </div>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
