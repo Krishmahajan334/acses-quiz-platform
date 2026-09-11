@@ -4,13 +4,13 @@ import { z } from 'zod';
 // Example: 24UCS056
 const prnRegex = /^\d{2}[A-Za-z]{3,4}\d{3}$/;
 
-// Mobile Regex: Exactly 10 digits
-const mobileRegex = /^\d{10}$/;
+// Mobile Regex: Exactly 10 digits starting with 6, 7, 8, or 9 (Indian numbers)
+const mobileRegex = /^[6-9]\d{9}$/;
 
 export const registrationSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters").max(100, "Name too long").trim(),
   email: z.string().email("Invalid email address. Please provide a valid email like @gmail.com").toLowerCase().trim(),
-  mobile: z.string().regex(mobileRegex, "Mobile number must be exactly 10 digits").trim(),
+  mobile: z.string().regex(mobileRegex, "Please enter a valid 10-digit Indian mobile number").trim(),
   year: z.enum(["FY", "SY", "TY", "Final Year"], {
     message: "Please select a valid academic year"
   }),
