@@ -22,15 +22,17 @@ export default function AdminLoginPage() {
       });
 
       if (res.ok) {
+        setLoading(false); // Force loading state to clear before routing
         router.push('/admin');
         router.refresh();
       } else {
         const data = await res.json();
-        setError(data.error || 'Login failed');
+        setError(data.error || 'Login failed - Incorrect Password');
+        setLoading(false);
       }
     } catch (err: any) {
-      setError('An error occurred');
-    } finally {
+      console.error("Login fetch error:", err);
+      setError('Network error: Could not reach the server');
       setLoading(false);
     }
   };
