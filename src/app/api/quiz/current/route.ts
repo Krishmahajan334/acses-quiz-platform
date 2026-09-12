@@ -36,7 +36,10 @@ export async function GET() {
     let qDeadlineAt = currentAttemptQuestion.deadlineAt;
     
     if (!currentAttemptQuestion.servedAt) {
-      const qDurationSec = currentAttemptQuestion.question.durationSec || Math.floor(attempt.event.durationSec / attempt.event.questionCount);
+      let qDurationSec = currentAttemptQuestion.question.durationSec || Math.floor(attempt.event.durationSec / attempt.event.questionCount);
+      
+      // NEW: Enforce maximum of 60 seconds per question
+      qDurationSec = Math.min(qDurationSec, 60);
       
       qDeadlineAt = new Date(Date.now() + qDurationSec * 1000);
       

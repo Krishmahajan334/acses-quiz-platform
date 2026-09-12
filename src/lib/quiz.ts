@@ -43,57 +43,80 @@ export async function generateAttempt(participantId: string, eventId: string, du
     throw new Error("Not enough unique questions in the bank");
   }
 
-  // 1. Group questions by topic
-  const questionsByTopic: Record<string, any[]> = {};
+  const CS_TOPICS = ['Advanced CS', 'Data Structures', 'Java Servlets', 'Java', 'OOP', 'Operating Systems'];
+  const BASIC_TOPICS = ['Basic Electronics', 'Physics'];
+
+  // 1. Group into CS and Basic topics
+  const csQuestionsByTopic: Record<string, any[]> = {};
+  const basicQuestionsByTopic: Record<string, any[]> = {};
+
   allQuestions.forEach(q => {
-    if (!questionsByTopic[q.topic]) {
-      questionsByTopic[q.topic] = [];
+    if (CS_TOPICS.includes(q.topic)) {
+      if (!csQuestionsByTopic[q.topic]) csQuestionsByTopic[q.topic] = [];
+      csQuestionsByTopic[q.topic].push(q);
+    } else {
+      if (!basicQuestionsByTopic[q.topic]) basicQuestionsByTopic[q.topic] = [];
+      basicQuestionsByTopic[q.topic].push(q);
     }
-    questionsByTopic[q.topic].push(q);
   });
 
   // 2. Shuffle questions inside each topic bucket for randomness
-  for (const topic in questionsByTopic) {
-    const bucket = questionsByTopic[topic];
-    for (let i = bucket.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [bucket[i], bucket[j]] = [bucket[j], bucket[i]];
-    }
-  }
-
-  // 3. Round-robin pick from each topic and alternate difficulty to guarantee diversity
-  const selectedQuestions: any[] = [];
-  const topicKeys = Object.keys(questionsByTopic);
-  
-  const difficultyCycle = ['Easy', 'Medium', 'Hard'];
-  let difficultyIndex = 0;
-  
-  // Keep picking 1 from each topic until we hit questionCount
-  let keepPicking = true;
-  while (selectedQuestions.length < questionCount && keepPicking) {
-    let pickedInThisRound = false;
-    for (const topic of topicKeys) {
-      if (selectedQuestions.length >= questionCount) break;
-      
-      const bucket = questionsByTopic[topic];
-      if (bucket.length > 0) {
-        const targetDiff = difficultyCycle[difficultyIndex % difficultyCycle.length];
-        
-        // Try to find a question matching the target difficulty
-        let qIndex = bucket.findIndex(q => q.difficulty === targetDiff);
-        
-        if (qIndex === -1) {
-          // Fallback: take the last item if the specific difficulty isn't available
-          qIndex = bucket.length - 1;
-        }
-
-        selectedQuestions.push(bucket.splice(qIndex, 1)[0]);
-        pickedInThisRound = true;
-        difficultyIndex++;
+  [csQuestionsByTopic, basicQuestionsByTopic].forEach(group => {
+    for (const topic in group) {
+      const bucket = group[topic];
+      for (let i = bucket.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [bucket[i], bucket[j]] = [bucket[j], bucket[i]];
       }
     }
-    // If no buckets had questions left (shouldn't happen due to count check, but safety first)
-    if (!pickedInThisRound) keepPicking = false;
+  });
+
+  // 3. Round-robin pick based on participant year
+  const selectedQuestions: any[] = [];
+  const difficultyCycle = ['Easy', 'Medium', 'Hard'];
+  let difficultyIndex = 0;
+
+  // Helper to pick questions from a given group of topic buckets
+  const pickFromGroup = (group: Record<string, any[]>, countNeeded: number) => {
+    const topicKeys = Object.keys(group);
+    let keepPicking = true;
+    let picked = 0;
+    while (picked < countNeeded && keepPicking) {
+      let pickedInThisRound = false;
+      for (const topic of topicKeys) {
+        if (picked >= countNeeded) break;
+        
+        const bucket = group[topic];
+        if (bucket.length > 0) {
+          const targetDiff = difficultyCycle[difficultyIndex % difficultyCycle.length];
+          let qIndex = bucket.findIndex(q => q.difficulty === targetDiff);
+          if (qIndex === -1) qIndex = bucket.length - 1;
+          
+          selectedQuestions.push(bucket.splice(qIndex, 1)[0]);
+          picked++;
+          pickedInThisRound = true;
+          difficultyIndex++;
+        }
+      }
+      if (!pickedInThisRound) keepPicking = false;
+    }
+    return picked;
+  };
+
+  if (participant.year === 'FY' || participant.year === 'SY') {
+    // FY/SY: Strictly basic topics (Physics, Electronics)
+    const picked = pickFromGroup(basicQuestionsByTopic, questionCount);
+    if (picked < questionCount) {
+      // Emergency fallback only if db is literally empty
+      pickFromGroup(csQuestionsByTopic, questionCount - picked);
+    }
+  } else {
+    // TY/LY: Prioritize technical CS topics
+    const picked = pickFromGroup(csQuestionsByTopic, questionCount);
+    if (picked < questionCount) {
+      // Fallback to basic if we run out of CS questions
+      pickFromGroup(basicQuestionsByTopic, questionCount - picked);
+    }
   }
 
   // 4. Finally shuffle the selected questions so the student doesn't get them strictly in topic-order
