@@ -54,7 +54,9 @@ export default async function AdminResultsPage() {
                     {attempt.coupon?.code || <span className="text-gray-400">N/A</span>}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    {attempt.submittedAt ? new Date(attempt.submittedAt).toLocaleString() : 'In Progress'}
+                    {attempt.submittedAt 
+                      ? new Date(attempt.submittedAt).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true }) 
+                      : 'In Progress'}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                     <DeleteParticipantButton participantId={attempt.participantId} name={attempt.participant.name} />

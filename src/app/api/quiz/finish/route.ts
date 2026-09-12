@@ -118,6 +118,7 @@ export async function POST(request: Request) {
           scorePercent,
           status: 'COMPLETED',
           couponCode,
+          timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true }),
         };
         const res = await fetch(webhookUrl, {
           method: 'POST',
