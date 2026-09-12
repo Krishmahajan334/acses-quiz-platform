@@ -117,59 +117,59 @@ export default function ResultPage() {
       <Navbar />
       <PageBackground />
       
-      <main className="relative min-h-screen pt-32 pb-16 px-6 flex flex-col items-center justify-center font-sans">
+      <main className="relative min-h-screen pt-20 pb-8 px-4 sm:px-6 flex flex-col items-center justify-center font-sans">
         
         <div className="w-full max-w-lg z-10 animate-fade-up">
           
-          <div className={`bg-secondary/40 backdrop-blur-md border p-8 sm:p-10 rounded-2xl shadow-2xl text-center relative overflow-hidden transition-all duration-500 \${result.passed ? 'border-primary/50' : 'border-border'}`}>
+          <div className={`bg-secondary/40 backdrop-blur-md border p-6 sm:p-8 rounded-2xl shadow-2xl text-center relative overflow-hidden transition-all duration-500 \${result.passed ? 'border-primary/50' : 'border-border'}`}>
             
             {/* Subtle top glow based on result */}
             <div className={`absolute top-0 left-1/2 -translate-x-1/2 w-48 h-1 blur-sm rounded-full \${result.passed ? 'bg-primary' : 'bg-muted-foreground'}`}></div>
 
-            <div className="mb-6 flex justify-center">
+            <div className="mb-3 flex justify-center">
               {result.passed ? (
-                <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center border border-primary/30 shadow-[0_0_20px_rgba(34,197,94,0.15)]">
-                  <Trophy className="w-10 h-10 text-primary" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-full flex items-center justify-center border border-primary/30 shadow-[0_0_20px_rgba(34,197,94,0.15)]">
+                  <Trophy className="w-6 h-6 text-primary" />
                 </div>
               ) : (
-                <div className="w-20 h-20 bg-secondary rounded-full flex items-center justify-center border border-border">
-                  <ShieldCheck className="w-10 h-10 text-muted-foreground" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-secondary rounded-full flex items-center justify-center border border-border">
+                  <ShieldCheck className="w-6 h-6 text-muted-foreground" />
                 </div>
               )}
             </div>
 
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground mb-2 tracking-tight uppercase">
+            <h2 className="text-xl sm:text-2xl font-extrabold text-foreground mb-1 tracking-tight uppercase">
               {result.passed ? "Quiz Complete" : "Challenge Concluded"}
             </h2>
-            <p className="text-muted-foreground font-medium mb-8">
+            <p className="text-muted-foreground text-sm font-medium mb-4">
               {result.passed ? "Excellent Performance. You have conquered the challenge." : "You did not meet the passing threshold. Keep learning."}
             </p>
             
-            <div className="mb-8 p-6 bg-background rounded-xl border border-border shadow-inner">
-              <p className="text-muted-foreground text-xs uppercase tracking-widest font-bold mb-2">Final Evaluation</p>
-              <div className={`text-6xl sm:text-7xl font-black tracking-tighter \${result.passed ? 'text-primary' : 'text-foreground'}`}>
-                {result.scorePercent.toFixed(0)}<span className="text-3xl text-muted-foreground opacity-60">%</span>
+            <div className="mb-4 p-4 sm:p-6 bg-background rounded-xl border border-border shadow-inner">
+              <p className="text-muted-foreground text-[10px] sm:text-xs uppercase tracking-widest font-bold mb-1">Final Evaluation</p>
+              <div className={`text-5xl sm:text-6xl font-black tracking-tighter \${result.passed ? 'text-primary' : 'text-foreground'}`}>
+                {result.scorePercent.toFixed(0)}<span className="text-2xl sm:text-3xl text-muted-foreground opacity-60">%</span>
               </div>
             </div>
 
             {result.passed && result.couponCode && (
-              <div className="bg-primary/5 border border-primary/30 rounded-xl p-6 mb-8 text-left relative overflow-hidden">
-                <h3 className="text-primary font-bold text-sm uppercase tracking-widest mb-2 flex items-center gap-2">
-                  <Trophy className="w-4 h-4" /> Qualified Reward
+              <div className="bg-primary/5 border border-primary/30 rounded-xl p-4 sm:p-5 mb-5 text-left relative overflow-hidden">
+                <h3 className="text-primary font-bold text-xs uppercase tracking-widest mb-2 flex items-center gap-2">
+                  <Trophy className="w-3 h-3" /> Qualified Reward
                 </h3>
-                <p className="text-foreground/80 text-sm mb-4 leading-relaxed font-medium">
+                <p className="text-foreground/80 text-xs sm:text-sm mb-3 leading-relaxed font-medium">
                   Congratulations on conquering the challenge! Present this secure cryptographic token at the ACSES desk to claim your <strong className="text-primary">exclusive discount for our upcoming technical event</strong>.
                 </p>
                 <div className="flex items-center gap-2">
-                  <div className="flex-1 bg-background px-3 sm:px-4 py-3 rounded-lg border border-primary/20 font-mono text-xs sm:text-sm md:text-lg font-bold text-foreground tracking-widest shadow-inner select-all break-all">
+                  <div className="flex-1 bg-background px-3 py-2 sm:px-4 sm:py-3 rounded-lg border border-primary/20 font-mono text-xs sm:text-sm md:text-base font-bold text-foreground tracking-widest shadow-inner select-all break-all">
                     {result.couponCode}
                   </div>
                   <button 
                     onClick={handleCopy}
-                    className="bg-primary/20 hover:bg-primary/30 text-primary p-3 rounded-lg border border-primary/20 transition-colors flex-shrink-0"
+                    className="bg-primary/20 hover:bg-primary/30 text-primary p-2 sm:p-3 rounded-lg border border-primary/20 transition-colors flex-shrink-0"
                     title="Copy Coupon"
                   >
-                    {copied ? <CheckCircle2 className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
+                    {copied ? <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5" /> : <Copy className="w-4 h-4 sm:w-5 sm:h-5" />}
                   </button>
                 </div>
               </div>
@@ -180,47 +180,47 @@ export default function ResultPage() {
               href="https://forms.gle/Sa3mbHEV2eoGC6jt9" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="block relative w-full rounded-2xl bg-gradient-to-br from-primary/30 via-primary/10 to-background border-2 border-primary/50 p-6 sm:p-8 mb-8 hover:border-primary transition-all group overflow-hidden cursor-pointer shadow-[0_0_40px_rgba(34,197,94,0.15)] hover:shadow-[0_0_60px_rgba(34,197,94,0.25)] hover:-translate-y-1"
+              className="block relative w-full rounded-2xl bg-gradient-to-br from-primary/30 via-primary/10 to-background border-2 border-primary/50 p-5 sm:p-6 mb-5 hover:border-primary transition-all group overflow-hidden cursor-pointer shadow-[0_0_40px_rgba(34,197,94,0.15)] hover:shadow-[0_0_60px_rgba(34,197,94,0.25)] hover:-translate-y-1"
             >
               <div className="absolute inset-0 bg-[url('/noise.png')] opacity-20 mix-blend-overlay pointer-events-none"></div>
               <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
               
               <div className="relative flex flex-col items-center text-center">
-                <div className="mb-4 relative">
+                <div className="mb-3 relative">
                   <div className="absolute inset-0 bg-primary rounded-full blur-xl opacity-50 group-hover:opacity-70 animate-pulse transition-opacity"></div>
-                  <div className="w-16 h-16 bg-primary/20 rounded-full border border-primary/50 flex items-center justify-center relative z-10">
-                    <ShieldCheck className="w-8 h-8 text-primary" />
+                  <div className="w-12 h-12 bg-primary/20 rounded-full border border-primary/50 flex items-center justify-center relative z-10">
+                    <ShieldCheck className="w-6 h-6 text-primary" />
                   </div>
                 </div>
                 
-                <h3 className="text-2xl sm:text-3xl font-black text-foreground uppercase tracking-tighter mb-2">
+                <h3 className="text-xl sm:text-2xl font-black text-foreground uppercase tracking-tighter mb-1">
                   Join the <span className="text-primary">Elite 1%</span>
                 </h3>
-                <p className="text-primary font-bold uppercase tracking-widest text-sm mb-4">
+                <p className="text-primary font-bold uppercase tracking-widest text-[10px] sm:text-xs mb-3">
                   Become an Official ACSES Member
                 </p>
-                <p className="text-foreground/80 text-sm mb-8 leading-relaxed max-w-sm mx-auto">
+                <p className="text-foreground/80 text-xs mb-5 leading-relaxed max-w-sm mx-auto hidden sm:block">
                   Unlock exclusive technical workshops, premium events, and VIP access to the best computer science community on campus.
                 </p>
                 
-                <div className="bg-primary text-primary-foreground w-full py-4 rounded-md font-black uppercase tracking-widest text-sm group-hover:brightness-110 shadow-[0_0_20px_rgba(34,197,94,0.4)] transition-all flex items-center justify-center">
+                <div className="bg-primary text-primary-foreground w-full py-3 rounded-md font-black uppercase tracking-widest text-xs group-hover:brightness-110 shadow-[0_0_20px_rgba(34,197,94,0.4)] transition-all flex items-center justify-center">
                   Register Now
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
             </a>
 
-            <div className="space-y-4">
+            <div className="space-y-3">
               <Link
                 href="/links-standalone.html"
-                className="w-full inline-flex justify-center items-center py-4 px-6 rounded-md text-sm font-bold text-foreground bg-secondary hover:bg-secondary/80 focus:outline-none transition-all uppercase tracking-widest border border-white/5"
+                className="w-full inline-flex justify-center items-center py-3 px-4 rounded-md text-xs sm:text-sm font-bold text-foreground bg-secondary hover:bg-secondary/80 focus:outline-none transition-all uppercase tracking-widest border border-white/5"
               >
                 Access Important Links
               </Link>
 
               <Link
                 href="/"
-                className="w-full inline-flex justify-center items-center py-4 px-6 rounded-md text-sm font-bold text-primary-foreground bg-primary/20 text-primary hover:bg-primary/30 focus:outline-none transition-all uppercase tracking-widest"
+                className="w-full inline-flex justify-center items-center py-3 px-4 rounded-md text-xs sm:text-sm font-bold text-primary-foreground bg-primary/20 text-primary hover:bg-primary/30 focus:outline-none transition-all uppercase tracking-widest"
               >
                 Return to Terminal
               </Link>

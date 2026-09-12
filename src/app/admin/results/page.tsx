@@ -33,32 +33,32 @@ export default async function AdminResultsPage() {
             <tbody className="bg-white divide-y divide-gray-200">
               {attempts.map((attempt) => (
                 <tr key={attempt.id} className="hover:bg-gray-50">
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm font-medium text-gray-900">{attempt.participant.name}</div>
-                    <div className="text-xs text-gray-500">PRN: {attempt.participant.prn || 'N/A'} ({attempt.participant.year})</div>
+                  <td className="px-3 sm:px-6 py-2 sm:py-4 whitespace-nowrap">
+                    <div className="text-xs sm:text-sm font-medium text-gray-900">{attempt.participant.name}</div>
+                    <div className="text-[10px] sm:text-xs text-gray-500">PRN: {attempt.participant.prn || 'N/A'} ({attempt.participant.year})</div>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                  <td className="px-3 sm:px-6 py-2 sm:py-4 whitespace-nowrap text-xs sm:text-sm text-gray-500 hidden sm:table-cell">
                     {attempt.participant.email}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-bold">
+                  <td className="px-3 sm:px-6 py-2 sm:py-4 whitespace-nowrap text-sm text-gray-900 font-bold">
                     {attempt.scorePercent !== null ? `${attempt.scorePercent.toFixed(0)}%` : '-'}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
+                  <td className="px-3 sm:px-6 py-2 sm:py-4 whitespace-nowrap">
+                    <span className={`px-2 inline-flex text-[10px] sm:text-xs leading-5 font-semibold rounded-full \${
                       attempt.status === 'COMPLETED' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'
                     }`}>
                       {attempt.status}
                     </span>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-900">
+                  <td className="px-3 sm:px-6 py-2 sm:py-4 whitespace-nowrap text-xs sm:text-sm font-mono text-gray-900 hidden md:table-cell">
                     {attempt.coupon?.code || <span className="text-gray-400">N/A</span>}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                  <td className="px-3 sm:px-6 py-2 sm:py-4 whitespace-nowrap text-[10px] sm:text-sm text-gray-500">
                     {attempt.submittedAt 
                       ? new Date(attempt.submittedAt).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true }) 
                       : 'In Progress'}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                  <td className="px-3 sm:px-6 py-2 sm:py-4 whitespace-nowrap text-right text-sm font-medium">
                     <DeleteParticipantButton participantId={attempt.participantId} name={attempt.participant.name} />
                   </td>
                 </tr>
