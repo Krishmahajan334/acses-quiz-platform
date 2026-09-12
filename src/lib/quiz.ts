@@ -103,19 +103,35 @@ export async function generateAttempt(participantId: string, eventId: string, du
     return picked;
   };
 
-  if (participant.year === 'FY' || participant.year === 'SY') {
-    // FY/SY: Strictly basic topics (Physics, Electronics)
-    const picked = pickFromGroup(basicQuestionsByTopic, questionCount);
-    if (picked < questionCount) {
-      // Emergency fallback only if db is literally empty
-      pickFromGroup(csQuestionsByTopic, questionCount - picked);
-    }
+  if (participant.year === 'FY') {
+    // FY: 80% Basic, 20% CS (minimum 1 CS)
+    const csCount = Math.max(1, Math.round(questionCount * 0.2));
+    const basicCount = questionCount - csCount;
+
+    let pickedBasic = pickFromGroup(basicQuestionsByTopic, basicCount);
+    let pickedCs = pickFromGroup(csQuestionsByTopic, csCount);
+
+    // Fallbacks if one bucket is empty
+    if (pickedBasic < basicCount) pickFromGroup(csQuestionsByTopic, basicCount - pickedBasic);
+    if (pickedCs < csCount) pickFromGroup(basicQuestionsByTopic, csCount - pickedCs);
+    
+  } else if (participant.year === 'SY') {
+    // SY: 20% Basic, 80% CS (minimum 1 Basic)
+    const basicCount = Math.max(1, Math.round(questionCount * 0.2));
+    const csCount = questionCount - basicCount;
+
+    let pickedBasic = pickFromGroup(basicQuestionsByTopic, basicCount);
+    let pickedCs = pickFromGroup(csQuestionsByTopic, csCount);
+
+    // Fallbacks if one bucket is empty
+    if (pickedBasic < basicCount) pickFromGroup(csQuestionsByTopic, basicCount - pickedBasic);
+    if (pickedCs < csCount) pickFromGroup(basicQuestionsByTopic, csCount - pickedCs);
+
   } else {
-    // TY/LY: Prioritize technical CS topics
-    const picked = pickFromGroup(csQuestionsByTopic, questionCount);
-    if (picked < questionCount) {
-      // Fallback to basic if we run out of CS questions
-      pickFromGroup(basicQuestionsByTopic, questionCount - picked);
+    // TY/LY: 100% CS (fallback to Basic if CS is completely empty)
+    const pickedCs = pickFromGroup(csQuestionsByTopic, questionCount);
+    if (pickedCs < questionCount) {
+      pickFromGroup(basicQuestionsByTopic, questionCount - pickedCs);
     }
   }
 
