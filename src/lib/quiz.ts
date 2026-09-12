@@ -154,21 +154,31 @@ export async function generateAttempt(participantId: string, eventId: string, du
 
   // Transaction
   const attempt = await prisma.$transaction(async (tx) => {
-    // 1. Check if user already has an active attempt
-    const existingActive = await tx.attempt.findFirst({
-      where: {
-        participantId,
-        eventId,
-        status: 'ACTIVE',
-        deadlineAt: { gt: new Date() }
-      }
+    // 1. Check for COMPLETED attempts (prevent retaking)
+    const completedAttempt = await tx.attempt.findFirst({
+      where: { participantId, eventId, status: 'COMPLETED' }
     });
-
-    if (existingActive) {
-      throw new Error("You already have an active attempt.");
+    if (completedAttempt) {
+      throw new Error("You have already completed the quiz. Multiple attempts are not allowed.");
     }
 
-    // 2. Create the attempt
+    // 2. Check for ACTIVE attempts
+    const activeAttempts = await tx.attempt.findMany({
+      where: { participantId, eventId, status: 'ACTIVE' }
+    });
+
+    for (const active of activeAttempts) {
+      if (active.deadlineAt > new Date()) {
+        // Still valid time left, they should resume, not restart
+        throw new Error("You already have an active attempt. Please refresh the page to resume.");
+      } else {
+        // Time has expired (glitch or they closed the browser). Delete it so they can start fresh.
+        await tx.attemptQuestion.deleteMany({ where: { attemptId: active.id } });
+        await tx.attempt.delete({ where: { id: active.id } });
+      }
+    }
+
+    // 3. Create the new attempt
     const newAttempt = await tx.attempt.create({
       data: {
         participantId,
