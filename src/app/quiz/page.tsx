@@ -151,13 +151,39 @@ export default function QuizPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-background flex flex-col items-center justify-center">
+      <div className="min-h-screen bg-background text-foreground font-sans select-none flex flex-col">
         <PageBackground />
-        <div className="flex flex-col items-center animate-pulse">
-          <ShieldCheck className="w-12 h-12 text-primary mb-6" />
-          <div className="text-primary uppercase tracking-widest text-sm font-bold flex items-center gap-3">
-            <Loader2 className="w-5 h-5 animate-spin" />
-            Initializing Node...
+        
+        {/* Skeleton Top Navbar */}
+        <div className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/5">
+          <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div className="flex items-center gap-3 animate-pulse">
+              <div className="w-6 h-6 bg-secondary rounded-full"></div>
+              <div className="w-16 h-4 bg-secondary rounded hidden sm:block"></div>
+            </div>
+            <div className="flex items-center gap-3 animate-pulse">
+              <div className="w-12 h-4 bg-secondary rounded"></div>
+              <div className="w-8 h-4 bg-secondary rounded"></div>
+            </div>
+          </div>
+          <div className="h-[2px] w-full bg-secondary relative overflow-hidden"></div>
+        </div>
+
+        {/* Skeleton Main Content */}
+        <div className="flex-1 max-w-4xl w-full mx-auto px-6 pt-32 pb-24 flex flex-col relative z-10">
+          <div className="flex justify-end mb-8 animate-pulse">
+            <div className="w-24 h-10 bg-secondary rounded-md"></div>
+          </div>
+
+          <div className="flex-1 flex flex-col space-y-6 animate-pulse">
+            <div className="w-full h-8 bg-secondary rounded-md"></div>
+            <div className="w-3/4 h-8 bg-secondary rounded-md mb-8"></div>
+
+            <div className="space-y-4">
+              {[1, 2, 3, 4].map(i => (
+                <div key={i} className="w-full h-20 bg-secondary/50 rounded-xl border border-border"></div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -23,8 +23,7 @@ export default function AdminLoginPage() {
 
       if (res.ok) {
         setLoading(false); // Force loading state to clear before routing
-        router.push('/admin');
-        router.refresh();
+        window.location.href = '/admin';
       } else {
         const data = await res.json();
         setError(data.error || 'Login failed - Incorrect Password');

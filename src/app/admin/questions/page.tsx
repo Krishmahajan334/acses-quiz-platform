@@ -5,8 +5,12 @@ import BulkDeleteQuestionsButton from '../components/BulkDeleteQuestionsButton';
 
 export const dynamic = 'force-dynamic';
 
-export default async function QuestionBankPage() {
-  const questions = await prisma.question.findMany({
+export default async function QuestionBankPage(props: { searchParams: Promise<{ page?: string }> }) {
+  const searchParams = await props.searchParams;
+  const page = parseInt(searchParams.page || '1', 10);
+  const ITEMS_PER_PAGE = 50;
+
+  const allQuestions = await prisma.question.findMany({
     include: {
       options: true,
       event: true
@@ -16,19 +20,52 @@ export default async function QuestionBankPage() {
     }
   });
 
+  const totalPages = Math.ceil(allQuestions.length / ITEMS_PER_PAGE);
+  const questions = allQuestions.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE);
+
   return (
     <div>
-      <div className="flex justify-between items-center mb-8">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
         <div>
           <h1 className="text-3xl font-bold text-gray-900 tracking-tight">Question Bank</h1>
           <p className="text-gray-500 mt-1 text-sm">View all questions and their options</p>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex flex-wrap items-center gap-4 w-full md:w-auto">
           <BulkDeleteQuestionsButton />
           <BulkUploadButton />
-          <Link href="/admin/questions/new" className="bg-gray-900 hover:bg-gray-800 text-white px-4 py-2 rounded-lg text-sm font-semibold transition shadow-sm">
+          <Link href="/admin/questions/new" className="bg-gray-900 hover:bg-gray-800 text-white px-4 py-2 rounded-lg text-sm font-semibold transition shadow-sm whitespace-nowrap">
             + Add Question
           </Link>
+        </div>
+      </div>
+
+      {/* Statistics Section */}
+      <div className="mb-8 bg-gray-900 rounded-2xl shadow-sm border border-gray-800 p-6">
+        <h2 className="text-lg font-bold text-white mb-4">Question Distribution</h2>
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+          <div className="bg-gray-800 p-4 rounded-xl border border-gray-700">
+            <p className="text-sm font-medium text-gray-400">Total</p>
+            <p className="text-2xl font-bold text-blue-400">{allQuestions.length}</p>
+          </div>
+          
+          {['FY', 'SY', 'TY', 'LY'].map(year => {
+            const yearQs = allQuestions.filter(q => q.targetYear === year);
+            const easy = yearQs.filter(q => q.difficulty === 'Easy').length;
+            const med = yearQs.filter(q => q.difficulty === 'Medium').length;
+            const hard = yearQs.filter(q => q.difficulty === 'Hard').length;
+            
+            return (
+              <div key={year} className="bg-gray-800 p-4 rounded-xl border border-gray-700">
+                <p className="text-sm font-bold text-white mb-2">{year} Year</p>
+                <div className="flex justify-between text-xs text-gray-400">
+                  <span><span className="text-green-400">●</span> E: {easy}</span>
+                  <span><span className="text-yellow-400">●</span> M: {med}</span>
+                  <span><span className="text-red-400">●</span> H: {hard}</span>
+                </div>
+                <p className="text-lg font-bold text-white mt-1">{yearQs.length}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
 
@@ -96,6 +133,26 @@ export default async function QuestionBankPage() {
           ))
         )}
       </div>
+
+      {totalPages > 1 && (
+        <div className="flex justify-center items-center gap-4 mt-8 bg-gray-900/50 py-4 rounded-xl border border-gray-800">
+          <Link 
+            href={`/admin/questions?page=${Math.max(1, page - 1)}`}
+            className={`px-4 py-2 rounded font-bold text-sm transition-colors ${page === 1 ? 'bg-gray-800 text-gray-600 pointer-events-none' : 'bg-gray-800 text-white hover:bg-gray-700'}`}
+          >
+            &larr; Previous
+          </Link>
+          <span className="text-gray-400 text-sm font-bold">
+            Page {page} of {totalPages}
+          </span>
+          <Link 
+            href={`/admin/questions?page=${Math.min(totalPages, page + 1)}`}
+            className={`px-4 py-2 rounded font-bold text-sm transition-colors ${page === totalPages ? 'bg-gray-800 text-gray-600 pointer-events-none' : 'bg-gray-800 text-white hover:bg-gray-700'}`}
+          >
+            Next &rarr;
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

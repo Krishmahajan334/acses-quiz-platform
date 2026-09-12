@@ -33,22 +33,60 @@ export async function generateAttempt(participantId: string, eventId: string, du
   const uniqueQuestionsMap = new Map();
   allQuestionsRaw.forEach(q => {
     if (!uniqueQuestionsMap.has(q.text)) {
-      uniqueQuestionsMap.set(q.text, q.id);
+      uniqueQuestionsMap.set(q.text, q); // store full object
     }
   });
-  const allQuestions = Array.from(uniqueQuestionsMap.values()).map(id => ({ id }));
+  
+  const allQuestions = Array.from(uniqueQuestionsMap.values());
 
   if (allQuestions.length < questionCount) {
     throw new Error("Not enough unique questions in the bank");
   }
 
-  // Proper Fisher-Yates Shuffle
-  for (let i = allQuestions.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [allQuestions[i], allQuestions[j]] = [allQuestions[j], allQuestions[i]];
+  // 1. Group questions by topic
+  const questionsByTopic: Record<string, any[]> = {};
+  allQuestions.forEach(q => {
+    if (!questionsByTopic[q.topic]) {
+      questionsByTopic[q.topic] = [];
+    }
+    questionsByTopic[q.topic].push(q);
+  });
+
+  // 2. Shuffle questions inside each topic bucket for randomness
+  for (const topic in questionsByTopic) {
+    const bucket = questionsByTopic[topic];
+    for (let i = bucket.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [bucket[i], bucket[j]] = [bucket[j], bucket[i]];
+    }
   }
+
+  // 3. Round-robin pick from each topic to guarantee diversity
+  const selectedQuestions: any[] = [];
+  const topicKeys = Object.keys(questionsByTopic);
   
-  const selectedQuestions = allQuestions.slice(0, questionCount);
+  // Keep picking 1 from each topic until we hit questionCount
+  let keepPicking = true;
+  while (selectedQuestions.length < questionCount && keepPicking) {
+    let pickedInThisRound = false;
+    for (const topic of topicKeys) {
+      if (selectedQuestions.length >= questionCount) break;
+      
+      const bucket = questionsByTopic[topic];
+      if (bucket.length > 0) {
+        selectedQuestions.push(bucket.pop());
+        pickedInThisRound = true;
+      }
+    }
+    // If no buckets had questions left (shouldn't happen due to count check, but safety first)
+    if (!pickedInThisRound) keepPicking = false;
+  }
+
+  // 4. Finally shuffle the selected questions so the student doesn't get them strictly in topic-order
+  for (let i = selectedQuestions.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [selectedQuestions[i], selectedQuestions[j]] = [selectedQuestions[j], selectedQuestions[i]];
+  }
 
   // Calculate deadline
   const startedAt = new Date();

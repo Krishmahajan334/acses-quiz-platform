@@ -41,20 +41,39 @@ export default function AdminLayout({
         {/* Subtle grid background for admin */}
         <div className="absolute inset-0 pointer-events-none opacity-[0.02]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
         
-        {/* Mobile Header */}
+        {/* Mobile Header (Top) */}
         <header className="bg-secondary/50 border-b border-border md:hidden p-4 flex justify-between items-center z-10 backdrop-blur-md">
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-5 h-5 text-primary" />
             <h1 className="text-lg font-bold text-foreground uppercase tracking-widest">Admin</h1>
           </div>
-          <Link href="/" className="text-xs uppercase tracking-widest font-bold text-primary">Exit</Link>
+          <Link href="/" className="text-xs uppercase tracking-widest font-bold text-primary flex items-center gap-1">
+            <LogOut className="w-3 h-3" />
+            Exit
+          </Link>
         </header>
         
-        <main className="flex-1 overflow-x-hidden overflow-y-auto p-6 md:p-8 z-10">
+        <main className="flex-1 overflow-x-hidden overflow-y-auto p-4 md:p-8 z-10 pb-20 md:pb-8">
           <div className="max-w-7xl mx-auto animate-fade-in">
             {children}
           </div>
         </main>
+
+        {/* Mobile Bottom Navigation */}
+        <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-background/95 backdrop-blur-md border-t border-border flex justify-around items-center p-3 z-50">
+          <Link href="/admin" className="flex flex-col items-center gap-1 text-muted-foreground hover:text-primary transition-colors">
+            <LayoutDashboard className="w-5 h-5" />
+            <span className="text-[10px] font-bold uppercase tracking-wider">Dashboard</span>
+          </Link>
+          <Link href="/admin/questions" className="flex flex-col items-center gap-1 text-muted-foreground hover:text-primary transition-colors">
+            <Database className="w-5 h-5" />
+            <span className="text-[10px] font-bold uppercase tracking-wider">Questions</span>
+          </Link>
+          <Link href="/admin/results" className="flex flex-col items-center gap-1 text-muted-foreground hover:text-primary transition-colors">
+            <Trophy className="w-5 h-5" />
+            <span className="text-[10px] font-bold uppercase tracking-wider">Results</span>
+          </Link>
+        </nav>
       </div>
     </div>
   );

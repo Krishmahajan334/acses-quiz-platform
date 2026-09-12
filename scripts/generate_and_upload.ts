@@ -5,9 +5,9 @@ const MODEL = "gemini-3.6-flash";
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${API_KEY}`;
 
 const YEARS = [
-  { year: "SY", topics: "Data Structures, C++, Object Oriented Programming, Operating Systems.", amount: 50 },
-  { year: "TY", topics: "Java, Servlets, Advanced Data Structures, Web Tech.", amount: 50 },
-  { year: "LY", topics: "System Design, Microservices, Cloud Computing, Advanced Architecture.", amount: 50 }
+  { year: "SY", topics: "Data Structures, C++, Object Oriented Programming, Operating Systems.", amount: 50, batches: 4 },
+  { year: "TY", topics: "Java, Servlets, Advanced Data Structures, Web Tech.", amount: 50, batches: 5 },
+  { year: "LY", topics: "System Design, Microservices, Cloud Computing, Advanced Architecture.", amount: 50, batches: 5 }
 ];
 
 async function generateBatch(yearInfo: any) {
@@ -60,7 +60,7 @@ Ensure exactly one option is true, and shuffle its position in the array. Ensure
 const sleep = (ms: number) => new Promise(r => setTimeout(r, ms));
 
 async function main() {
-  console.log("Starting Generation & Upload for SY, TY, LY (Free Tier Mode)...");
+  console.log("Starting Generation & Upload for SY, TY, LY (Paid Tier Mode)...");
   
   const activeEvent = await prisma.quizEvent.findFirst({
     where: { status: 'ACTIVE' }
@@ -68,53 +68,54 @@ async function main() {
 
   if (!activeEvent) throw new Error("No active event!");
 
-  // Wait a minute first to let the previous rate limit completely clear
-  console.log("Waiting 60s for previous rate limit to clear...");
-  await sleep(60000);
-
   for (const year of YEARS) {
-    console.log(`Generating ${year.amount} questions for ${year.year}...`);
-    const questions = await generateBatch(year);
-    console.log(`Generated ${questions.length} questions. Uploading...`);
+    let yearTotal = 0;
     
-    if (questions.length === 0) continue;
+    for (let b = 0; b < year.batches; b++) {
+      console.log(`[Batch ${b + 1}/${year.batches}] Generating ${year.amount} questions for ${year.year}...`);
+      const questions = await generateBatch(year);
+      console.log(`Generated ${questions.length} questions. Uploading...`);
+      
+      if (questions.length === 0) continue;
 
-    let added = 0;
-    // Chunk upload
-    for (let i = 0; i < questions.length; i += 25) {
-      const chunk = questions.slice(i, i + 25);
-      await prisma.$transaction(async (tx) => {
-        for (const q of chunk) {
-          const newQuestion = await tx.question.create({
-            data: {
-              eventId: activeEvent.id,
-              text: q.text,
-              topic: q.topic,
-              difficulty: q.difficulty || "Medium",
-              targetYear: q.targetYear || "ALL",
-              durationSec: q.timeLimitSec ? parseInt(q.timeLimitSec) : null,
-            }
-          });
+      let added = 0;
+      for (let i = 0; i < questions.length; i += 25) {
+        const chunk = questions.slice(i, i + 25);
+        await prisma.$transaction(async (tx) => {
+          for (const q of chunk) {
+            const newQuestion = await tx.question.create({
+              data: {
+                eventId: activeEvent.id,
+                text: q.text,
+                topic: q.topic,
+                difficulty: q.difficulty || "Medium",
+                targetYear: q.targetYear || "ALL",
+                durationSec: q.timeLimitSec ? parseInt(q.timeLimitSec) : null,
+              }
+            });
 
-          const optionsData = q.options.map((opt: any, index: number) => ({
-            questionId: newQuestion.id,
-            text: opt.text,
-            optionKey: String.fromCharCode(65 + index),
-            isCorrect: Boolean(opt.isCorrect)
-          }));
+            const optionsData = q.options.map((opt: any, index: number) => ({
+              questionId: newQuestion.id,
+              text: opt.text,
+              optionKey: String.fromCharCode(65 + index),
+              isCorrect: Boolean(opt.isCorrect)
+            }));
 
-          await tx.option.createMany({ data: optionsData });
-          added++;
-        }
-      }, { maxWait: 20000, timeout: 60000 });
+            await tx.option.createMany({ data: optionsData });
+            added++;
+          }
+        }, { maxWait: 20000, timeout: 60000 });
+      }
+      yearTotal += added;
+      console.log(`Successfully uploaded ${added} questions in this batch!`);
+      
+      // Just a tiny 2-second pause to prevent overloading the local DB connection pool
+      await sleep(2000);
     }
-    console.log(`Successfully uploaded ${added} questions for ${year.year}!`);
-    
-    console.log("Waiting 60 seconds before next batch to respect Free Tier Limits...");
-    await sleep(60000);
+    console.log(`Total for ${year.year}: ${yearTotal} questions.`);
   }
   
-  console.log("All done! 100% Free.");
+  console.log("All done! 1000 Question Bank reached.");
 }
 
 main().catch(console.error).finally(() => process.exit(0));

@@ -13,12 +13,12 @@ export default async function AdminDashboard() {
 
   return (
     <div>
-      <div className="flex justify-between items-center mb-8 border-b border-border pb-6">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8 border-b border-border pb-6">
         <div>
           <h2 className="text-3xl font-bold text-foreground uppercase tracking-tight">Dashboard Overview</h2>
           <p className="text-muted-foreground mt-1 text-sm uppercase tracking-widest">System Metrics & Controls</p>
         </div>
-        <div className="flex gap-4">
+        <div className="flex flex-wrap gap-4 w-full md:w-auto">
           <SyncDataButton />
           <ClearDataButton />
         </div>

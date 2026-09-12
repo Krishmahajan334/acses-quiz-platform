@@ -28,7 +28,7 @@ export async function POST(request: Request) {
 
     let addedCount = 0;
 
-    // Use a transaction to safely insert all questions and options
+    // Use a transaction to safely insert all questions and options with extended timeout
     await prisma.$transaction(async (tx) => {
       for (const q of questions) {
         if (!q.text || !q.topic || !q.difficulty || !Array.isArray(q.options) || q.options.length === 0) {
@@ -60,7 +60,7 @@ export async function POST(request: Request) {
         
         addedCount++;
       }
-    });
+    }, { maxWait: 20000, timeout: 60000 });
 
     return NextResponse.json({ success: true, message: `Successfully imported ${addedCount} questions.` });
   } catch (error: any) {
