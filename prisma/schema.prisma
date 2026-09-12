@@ -30,9 +30,11 @@ model Question {
   topic           String
   targetYear      String            @default("ALL") // "FY", "SY", "TY", "LY", "ALL"
   status          String            @default("ACTIVE")
+  uploadBatchId   String?           // Links question to an upload batch
   event           QuizEvent         @relation(fields: [eventId], references: [id])
   options         Option[]
   attemptQuestions AttemptQuestion[]
+  uploadBatch     UploadHistory?    @relation(fields: [uploadBatchId], references: [id], onDelete: Cascade)
 }
 
 model Option {
@@ -132,4 +134,12 @@ model SyncJob {
   nextRetryAt DateTime?
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
+}
+
+model UploadHistory {
+  id             String     @id @default(uuid())
+  filename       String
+  questionCount  Int
+  createdAt      DateTime   @default(now())
+  questions      Question[]
 }

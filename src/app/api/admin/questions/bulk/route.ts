@@ -11,7 +11,15 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const questions = await request.json();
+    const body = await request.json();
+    let filename = "Unknown File";
+    let questions = body;
+
+    // Handle the new payload format { filename, questions }
+    if (!Array.isArray(body) && body.questions && Array.isArray(body.questions)) {
+      filename = body.filename || "Unknown File";
+      questions = body.questions;
+    }
 
     if (!Array.isArray(questions)) {
       return NextResponse.json({ error: "Payload must be an array of questions" }, { status: 400 });
@@ -30,6 +38,14 @@ export async function POST(request: Request) {
 
     // Use a transaction to safely insert all questions and options with extended timeout
     await prisma.$transaction(async (tx) => {
+      // 1. Create the UploadHistory record
+      const uploadHistory = await tx.uploadHistory.create({
+        data: {
+          filename,
+          questionCount: 0 // We will update this at the end
+        }
+      });
+
       for (const q of questions) {
         if (!q.text || !q.topic || !q.difficulty || !Array.isArray(q.options) || q.options.length === 0) {
           throw new Error("Invalid question format detected. Ensure text, topic, difficulty, and options exist.");
@@ -38,6 +54,7 @@ export async function POST(request: Request) {
         const newQuestion = await tx.question.create({
           data: {
             eventId: activeEvent.id,
+            uploadBatchId: uploadHistory.id,
             text: q.text,
             topic: q.topic,
             difficulty: q.difficulty,
@@ -60,6 +77,13 @@ export async function POST(request: Request) {
         
         addedCount++;
       }
+
+      // 2. Update the UploadHistory with final count
+      await tx.uploadHistory.update({
+        where: { id: uploadHistory.id },
+        data: { questionCount: addedCount }
+      });
+
     }, { maxWait: 50000, timeout: 300000 });
 
     return NextResponse.json({ success: true, message: `Successfully imported ${addedCount} questions.` });

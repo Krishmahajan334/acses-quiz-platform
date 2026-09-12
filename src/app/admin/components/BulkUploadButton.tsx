@@ -30,7 +30,10 @@ export default function BulkUploadButton() {
       const res = await fetch("/api/admin/questions/bulk", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
+        body: JSON.stringify({
+          filename: file.name,
+          questions: payload
+        })
       });
 
       const data = await res.json();

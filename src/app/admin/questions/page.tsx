@@ -2,6 +2,7 @@ import { prisma } from '@/lib/db';
 import Link from 'next/link';
 import BulkUploadButton from '../components/BulkUploadButton';
 import BulkDeleteQuestionsButton from '../components/BulkDeleteQuestionsButton';
+import UploadHistoryList from '../components/UploadHistoryList';
 
 export const dynamic = 'force-dynamic';
 
@@ -69,6 +70,8 @@ export default async function QuestionBankPage(props: { searchParams: Promise<{ 
           })}
         </div>
       </div>
+
+      <UploadHistoryList />
 
       <div className="grid grid-cols-1 gap-6">
         {questions.length === 0 ? (
