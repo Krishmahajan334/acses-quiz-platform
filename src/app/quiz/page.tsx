@@ -31,6 +31,7 @@ export default function QuizPage() {
   const [timeLeft, setTimeLeft] = useState<string>('');
   const [isUrgent, setIsUrgent] = useState(false);
   const [cheatWarning, setCheatWarning] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   const fetchCurrentQuestion = async () => {
     setLoading(true);
@@ -61,10 +62,8 @@ export default function QuizPage() {
     }
   };
 
+  // Anti-Cheat: Require Fullscreen and track blur/visibility
   useEffect(() => {
-    fetchCurrentQuestion();
-
-    // Anti-Cheat: Prevent context menu, copy, paste, and track tab switching
     const preventDefault = (e: Event) => e.preventDefault();
     
     const handleVisibilityChange = () => {
@@ -73,18 +72,50 @@ export default function QuizPage() {
       }
     };
 
+    const handleBlur = () => {
+      setCheatWarning(true);
+    };
+
+    const handleFullscreenChange = () => {
+      if (!document.fullscreenElement) {
+        setIsFullscreen(false);
+        setCheatWarning(true);
+      } else {
+        setIsFullscreen(true);
+      }
+    };
+
     document.addEventListener('contextmenu', preventDefault);
     document.addEventListener('copy', preventDefault);
     document.addEventListener('paste', preventDefault);
     document.addEventListener('visibilitychange', handleVisibilityChange);
+    window.addEventListener('blur', handleBlur);
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
 
     return () => {
       document.removeEventListener('contextmenu', preventDefault);
       document.removeEventListener('copy', preventDefault);
       document.removeEventListener('paste', preventDefault);
       document.removeEventListener('visibilitychange', handleVisibilityChange);
+      window.removeEventListener('blur', handleBlur);
+      document.removeEventListener('fullscreenchange', handleFullscreenChange);
     };
   }, []);
+
+  const requestFullscreen = async () => {
+    try {
+      if (document.documentElement.requestFullscreen) {
+        await document.documentElement.requestFullscreen();
+      }
+      setIsFullscreen(true);
+      fetchCurrentQuestion();
+    } catch (err) {
+      console.error("Fullscreen failed:", err);
+      // Fallback if browser blocks fullscreen
+      setIsFullscreen(true);
+      fetchCurrentQuestion();
+    }
+  };
 
   useEffect(() => {
     if (!questionData?.deadlineAt) return;
@@ -148,6 +179,22 @@ export default function QuizPage() {
     if (!selectedOption) return;
     await submitAnswer(selectedOption);
   };
+
+  if (!isFullscreen) {
+    return (
+      <div className="min-h-screen bg-background flex flex-col items-center justify-center p-4">
+        <PageBackground />
+        <div className="bg-secondary/50 border border-border p-8 rounded-xl shadow-2xl max-w-md w-full text-center backdrop-blur-md">
+          <ShieldCheck className="w-16 h-16 text-primary mx-auto mb-4" />
+          <h2 className="text-xl font-bold text-foreground uppercase tracking-widest mb-2">Secure Environment</h2>
+          <p className="text-muted-foreground mb-8 text-sm">This quiz requires full-screen mode to prevent the use of external tools like Circle to Search.</p>
+          <button onClick={requestFullscreen} className="w-full bg-primary text-primary-foreground uppercase tracking-widest text-xs font-bold py-4 rounded-md hover:brightness-110 transition-all">
+            Enter Fullscreen & Start
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   if (loading) {
     return (

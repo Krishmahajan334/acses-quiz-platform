@@ -198,7 +198,7 @@ export async function generateAttempt(participantId: string, eventId: string, du
   cookieStore.set('quiz_attempt_id', attempt.id, {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
-    sameSite: 'lax',
+    sameSite: 'none',
     maxAge: durationSec + 60, // Keep cookie slightly longer than quiz duration
     path: '/'
   });
