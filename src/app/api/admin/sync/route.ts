@@ -38,6 +38,15 @@ export async function POST() {
           continue;
         }
 
+        const allAttempts = await prisma.attempt.findMany({
+          where: { participantId: attempt.participantId, status: 'COMPLETED' },
+          select: { scorePercent: true },
+          orderBy: { submittedAt: 'asc' }
+        });
+        
+        const attemptCount = allAttempts.length;
+        const allScores = `[${allAttempts.map(a => `${a.scorePercent !== null ? a.scorePercent.toFixed(0) : 0}%`).join(', ')}]`;
+
         const postData = {
           name: attempt.participant.name,
           prn: attempt.participant.prn,
@@ -46,6 +55,8 @@ export async function POST() {
           scorePercent: attempt.scorePercent || 0,
           status: attempt.status,
           couponCode: attempt.coupon?.code || null,
+          attemptCount,
+          allScores,
         };
 
         const res = await fetch(webhookUrl, {

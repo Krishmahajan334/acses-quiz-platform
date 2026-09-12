@@ -110,6 +110,16 @@ export async function POST(request: Request) {
     try {
       const webhookUrl = process.env.GOOGLE_SCRIPT_WEB_URL;
       if (webhookUrl) {
+        // Fetch all completed attempts for this participant to calculate history
+        const allAttempts = await prisma.attempt.findMany({
+          where: { participantId: attempt.participantId, status: 'COMPLETED' },
+          select: { scorePercent: true },
+          orderBy: { submittedAt: 'asc' }
+        });
+        
+        const attemptCount = allAttempts.length;
+        const allScores = `[${allAttempts.map(a => `${a.scorePercent !== null ? a.scorePercent.toFixed(0) : 0}%`).join(', ')}]`;
+
         const postData = {
           name: attempt.participant.name,
           prn: attempt.participant.prn,
@@ -118,6 +128,8 @@ export async function POST(request: Request) {
           scorePercent,
           status: 'COMPLETED',
           couponCode,
+          attemptCount,
+          allScores,
           timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true }),
         };
         const res = await fetch(webhookUrl, {

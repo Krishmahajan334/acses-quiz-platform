@@ -9,9 +9,9 @@ async function updatePassPercent() {
   if (activeEvent) {
     await prisma.quizEvent.update({
       where: { id: activeEvent.id },
-      data: { passPercent: 80 }
+      data: { passPercent: 60 }
     });
-    console.log(`Successfully updated passPercent to 80 for event: ${activeEvent.name}`);
+    console.log(`Successfully updated passPercent to 60 for event: ${activeEvent.name}`);
   } else {
     console.log('No active QuizEvent found.');
   }

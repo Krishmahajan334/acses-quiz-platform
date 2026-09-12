@@ -12,6 +12,23 @@ export default async function AdminResultsPage() {
     },
   });
 
+  // Fetch all completed attempts to calculate historical attempt count and score arrays
+  const allCompletedAttempts = await prisma.attempt.findMany({
+    where: { status: 'COMPLETED' },
+    select: { participantId: true, scorePercent: true, submittedAt: true },
+    orderBy: { submittedAt: 'asc' } // chronological order for score array
+  });
+
+  const historyMap = new Map<string, { count: number; scores: string[] }>();
+  allCompletedAttempts.forEach(a => {
+    if (!historyMap.has(a.participantId)) {
+      historyMap.set(a.participantId, { count: 0, scores: [] });
+    }
+    const h = historyMap.get(a.participantId)!;
+    h.count++;
+    h.scores.push(`${a.scorePercent !== null ? a.scorePercent.toFixed(0) : 0}%`);
+  });
+
   return (
     <div>
       <h2 className="text-3xl font-bold text-foreground uppercase tracking-tight mb-8">Quiz Results & Coupons</h2>
@@ -23,6 +40,7 @@ export default async function AdminResultsPage() {
               <tr>
                 <th scope="col" className="px-6 py-4 text-left text-xs font-bold text-muted-foreground uppercase tracking-wider">Name / PRN</th>
                 <th scope="col" className="px-6 py-4 text-left text-xs font-bold text-muted-foreground uppercase tracking-wider hidden sm:table-cell">Email</th>
+                <th scope="col" className="px-6 py-4 text-left text-xs font-bold text-muted-foreground uppercase tracking-wider hidden lg:table-cell">History</th>
                 <th scope="col" className="px-6 py-4 text-left text-xs font-bold text-muted-foreground uppercase tracking-wider">Score</th>
                 <th scope="col" className="px-6 py-4 text-left text-xs font-bold text-muted-foreground uppercase tracking-wider">Status</th>
                 <th scope="col" className="px-6 py-4 text-left text-xs font-bold text-muted-foreground uppercase tracking-wider hidden md:table-cell">Coupon Code</th>
@@ -31,7 +49,9 @@ export default async function AdminResultsPage() {
               </tr>
             </thead>
             <tbody className="divide-y divide-border">
-              {attempts.map((attempt) => (
+              {attempts.map((attempt) => {
+                const history = historyMap.get(attempt.participantId) || { count: 0, scores: [] };
+                return (
                 <tr key={attempt.id} className="hover:bg-secondary/60 transition-colors">
                   <td className="px-3 sm:px-6 py-3 sm:py-4">
                     <div className="text-xs sm:text-sm font-bold text-foreground break-words">{attempt.participant.name}</div>
@@ -39,6 +59,16 @@ export default async function AdminResultsPage() {
                   </td>
                   <td className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap text-xs sm:text-sm text-muted-foreground hidden sm:table-cell">
                     {attempt.participant.email}
+                  </td>
+                  <td className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap hidden lg:table-cell">
+                    {history.count > 0 ? (
+                      <div className="flex flex-col">
+                        <span className="text-xs text-foreground font-bold">{history.count} {history.count === 1 ? 'attempt' : 'attempts'}</span>
+                        <span className="text-[10px] text-muted-foreground opacity-80 tracking-widest mt-0.5">[{history.scores.join(', ')}]</span>
+                      </div>
+                    ) : (
+                      <span className="text-xs text-muted-foreground">-</span>
+                    )}
                   </td>
                   <td className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap text-sm text-foreground font-black">
                     {attempt.scorePercent !== null ? `${attempt.scorePercent.toFixed(0)}%` : '-'}
@@ -62,7 +92,8 @@ export default async function AdminResultsPage() {
                     <DeleteParticipantButton participantId={attempt.participantId} name={attempt.participant.name} />
                   </td>
                 </tr>
-              ))}
+                );
+              })}
               
               {attempts.length === 0 && (
                 <tr>

@@ -11,8 +11,8 @@ export async function POST(request: Request) {
 
     const { questionId, selectedOptionId } = await request.json();
 
-    if (!questionId || !selectedOptionId) {
-      return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
+    if (!questionId) {
+      return NextResponse.json({ error: "Missing required field: questionId" }, { status: 400 });
     }
 
     // 1. Verify question belongs to this attempt and is the current one
@@ -64,16 +64,6 @@ export async function POST(request: Request) {
             questionId,
             selectedOptionId: finalOptionId,
             isCorrect
-          }
-        });
-      } else {
-        // Record an empty incorrect answer
-        await tx.answer.create({
-          data: {
-            attemptId: attempt.id,
-            questionId,
-            selectedOptionId: "",
-            isCorrect: false
           }
         });
       }
