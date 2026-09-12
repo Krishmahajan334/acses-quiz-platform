@@ -31,6 +31,7 @@ export default function QuizPage() {
   const [timeLeft, setTimeLeft] = useState<string>('');
   const [isUrgent, setIsUrgent] = useState(false);
   const [cheatWarning, setCheatWarning] = useState(false);
+  const [violationCount, setViolationCount] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
 
   const fetchCurrentQuestion = async () => {
@@ -66,20 +67,34 @@ export default function QuizPage() {
   useEffect(() => {
     const preventDefault = (e: Event) => e.preventDefault();
     
+    const triggerViolation = () => {
+      setViolationCount(prev => {
+        const next = prev + 1;
+        if (next >= 3) {
+          fetch('/api/quiz/disqualify', { method: 'POST' }).then(() => {
+            router.push('/result');
+          });
+        } else {
+          setCheatWarning(true);
+        }
+        return next;
+      });
+    };
+
     const handleVisibilityChange = () => {
       if (document.hidden) {
-        setCheatWarning(true);
+        triggerViolation();
       }
     };
 
     const handleBlur = () => {
-      setCheatWarning(true);
+      triggerViolation();
     };
 
     const handleFullscreenChange = () => {
       if (!document.fullscreenElement) {
         setIsFullscreen(false);
-        setCheatWarning(true);
+        triggerViolation();
       } else {
         setIsFullscreen(true);
       }

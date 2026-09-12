@@ -12,6 +12,7 @@ interface ResultData {
   passed: boolean;
   couponCode: string | null;
   message?: string;
+  disqualified?: boolean;
 }
 
 export default function ResultPage() {
@@ -83,6 +84,33 @@ export default function ResultPage() {
   }
 
   if (!result) return null;
+
+  if (result.disqualified) {
+    return (
+      <>
+        <Navbar />
+        <PageBackground />
+        <main className="relative min-h-screen pt-32 pb-16 px-6 flex flex-col items-center justify-center font-sans">
+          <div className="w-full max-w-lg z-10 animate-fade-up">
+            <div className="bg-destructive/10 border border-destructive p-8 sm:p-10 rounded-2xl shadow-[0_0_50px_rgba(220,38,38,0.3)] text-center relative overflow-hidden backdrop-blur-xl">
+              <div className="mb-6 flex justify-center">
+                <AlertTriangle className="w-24 h-24 text-destructive animate-pulse" />
+              </div>
+              <h2 className="text-4xl font-black text-destructive mb-4 tracking-tighter uppercase">
+                DISQUALIFIED
+              </h2>
+              <p className="text-foreground/90 font-medium mb-8 text-lg">
+                Your attempt was forcefully terminated due to repeated anti-cheat violations (tab switching, leaving fullscreen, or background apps). Your score is 0.
+              </p>
+              <Link href="/" className="w-full inline-flex justify-center items-center py-4 px-6 rounded-md text-sm font-bold text-destructive-foreground bg-destructive hover:brightness-110 transition-all uppercase tracking-widest">
+                Return to Terminal
+              </Link>
+            </div>
+          </div>
+        </main>
+      </>
+    );
+  }
 
   return (
     <>

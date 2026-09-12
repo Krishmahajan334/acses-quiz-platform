@@ -32,10 +32,11 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Invalid attempt." }, { status: 401 });
     }
 
-    // Idempotency: If already completed, just return the result
-    if (attempt.status === 'COMPLETED') {
+    // Idempotency: If already completed or disqualified, return the result
+    if (attempt.status === 'COMPLETED' || attempt.status === 'DISQUALIFIED') {
       return NextResponse.json({
         success: true,
+        disqualified: attempt.status === 'DISQUALIFIED',
         scorePercent: attempt.scorePercent,
         passed: (attempt.scorePercent || 0) >= attempt.event.passPercent,
         couponCode: attempt.coupon?.code || null,
