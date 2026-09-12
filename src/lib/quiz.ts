@@ -61,9 +61,12 @@ export async function generateAttempt(participantId: string, eventId: string, du
     }
   }
 
-  // 3. Round-robin pick from each topic to guarantee diversity
+  // 3. Round-robin pick from each topic and alternate difficulty to guarantee diversity
   const selectedQuestions: any[] = [];
   const topicKeys = Object.keys(questionsByTopic);
+  
+  const difficultyCycle = ['Easy', 'Medium', 'Hard'];
+  let difficultyIndex = 0;
   
   // Keep picking 1 from each topic until we hit questionCount
   let keepPicking = true;
@@ -74,8 +77,19 @@ export async function generateAttempt(participantId: string, eventId: string, du
       
       const bucket = questionsByTopic[topic];
       if (bucket.length > 0) {
-        selectedQuestions.push(bucket.pop());
+        const targetDiff = difficultyCycle[difficultyIndex % difficultyCycle.length];
+        
+        // Try to find a question matching the target difficulty
+        let qIndex = bucket.findIndex(q => q.difficulty === targetDiff);
+        
+        if (qIndex === -1) {
+          // Fallback: take the last item if the specific difficulty isn't available
+          qIndex = bucket.length - 1;
+        }
+
+        selectedQuestions.push(bucket.splice(qIndex, 1)[0]);
         pickedInThisRound = true;
+        difficultyIndex++;
       }
     }
     // If no buckets had questions left (shouldn't happen due to count check, but safety first)
