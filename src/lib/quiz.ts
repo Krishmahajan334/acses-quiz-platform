@@ -36,11 +36,21 @@ export async function generateAttempt(participantId: string, eventId: string, du
     select: { id: true, text: true, topic: true, difficulty: true }
   });
 
-  // Deduplicate by text, and filter out previously answered questions
+  // Deduplicate by text (ignoring variation tags), and filter out previously answered questions
   const uniqueQuestionsMap = new Map();
+  
+  const normalizeText = (text: string) => {
+    return text
+      .replace(/\(Variation \d+\)/gi, '')
+      .replace(/Variation #\d+:/gi, '')
+      .trim()
+      .toLowerCase();
+  };
+
   allQuestionsRaw.forEach(q => {
-    if (!uniqueQuestionsMap.has(q.text) && !pastQuestionIds.has(q.id)) {
-      uniqueQuestionsMap.set(q.text, q); // store full object
+    const normalized = normalizeText(q.text);
+    if (!uniqueQuestionsMap.has(normalized) && !pastQuestionIds.has(q.id)) {
+      uniqueQuestionsMap.set(normalized, q); // store full object
     }
   });
   
@@ -50,7 +60,8 @@ export async function generateAttempt(participantId: string, eventId: string, du
   if (availableQuestions.length < questionCount) {
     uniqueQuestionsMap.clear();
     allQuestionsRaw.forEach(q => {
-      if (!uniqueQuestionsMap.has(q.text)) uniqueQuestionsMap.set(q.text, q); 
+      const normalized = normalizeText(q.text);
+      if (!uniqueQuestionsMap.has(normalized)) uniqueQuestionsMap.set(normalized, q); 
     });
     availableQuestions = Array.from(uniqueQuestionsMap.values());
   }
