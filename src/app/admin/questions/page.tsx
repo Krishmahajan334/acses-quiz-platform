@@ -48,7 +48,8 @@ export default async function QuestionBankPage(props: { searchParams: Promise<{ 
             <p className="text-2xl font-bold text-blue-400">{allQuestions.length}</p>
           </div>
           
-          {['FY', 'SY', 'TY', 'LY'].map(year => {
+          {['FY', 'SY', 'TY', 'Final Year'].map((year, index) => {
+            const displayLabel = ['FY', 'SY', 'TY', 'LY'][index];
             const yearQs = allQuestions.filter(q => q.targetYear === year);
             const easy = yearQs.filter(q => q.difficulty === 'Easy').length;
             const med = yearQs.filter(q => q.difficulty === 'Medium').length;
@@ -56,7 +57,7 @@ export default async function QuestionBankPage(props: { searchParams: Promise<{ 
             
             return (
               <div key={year} className="bg-gray-800 p-4 rounded-xl border border-gray-700">
-                <p className="text-sm font-bold text-white mb-2">{year} Year</p>
+                <p className="text-sm font-bold text-white mb-2">{displayLabel} Year</p>
                 <div className="flex justify-between text-xs text-gray-400">
                   <span><span className="text-green-400">●</span> E: {easy}</span>
                   <span><span className="text-yellow-400">●</span> M: {med}</span>

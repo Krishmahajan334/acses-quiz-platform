@@ -450,7 +450,7 @@
     ]
   },
   {
-    "text": "A 2D array A[10][20] of 4-byte integers is stored in memory using Row-Major order starting at base address 1000. What is the byte memory address of element A[3][5]?",
+    "text": "A 2D array A[10,20] of 4-byte integers is stored in memory using Row-Major order starting at base address 1000. What is the byte memory address of element A[3,5]?",
     "topic": "Intro to CS",
     "difficulty": "Medium",
     "targetYear": "FY",
@@ -2450,7 +2450,7 @@
     ]
   },
   {
-    "text": "Consider the C code: int arr[3][3] = {{1,2,3},{4,5,6},{7,8,9}}; int *ptr = &arr[0][0]; What value does the expression *(ptr + 5) evaluate to?",
+    "text": "Consider the C code: int arr[3,3] = {{1,2,3},{4,5,6},{7,8,9}}; int *ptr = &arr[0,0]; What value does the expression *(ptr + 5) evaluate to?",
     "topic": "Intro to CS",
     "difficulty": "Hard",
     "targetYear": "FY",
@@ -4925,7 +4925,7 @@
     ]
   },
   {
-    "text": "In C programming, given int arr[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};, what value is produced by the pointer expression *(*(arr + 1) + 2)?",
+    "text": "In C programming, given int arr[3,3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};, what value is produced by the pointer expression *(*(arr + 1) + 2)?",
     "topic": "Intro to CS",
     "difficulty": "Medium",
     "targetYear": "FY",
@@ -5500,7 +5500,7 @@
     ]
   },
   {
-    "text": "Consider a 2D integer array declared in C as `int arr[3][4];`. If the base memory address of `arr` is 1000 and `sizeof(int)` is 4 bytes, what address is calculated by the expression `*(arr + 1) + 2`?",
+    "text": "Consider a 2D integer array declared in C as `int arr[3,4];`. If the base memory address of `arr` is 1000 and `sizeof(int)` is 4 bytes, what address is calculated by the expression `*(arr + 1) + 2`?",
     "topic": "Intro to CS",
     "difficulty": "Hard",
     "targetYear": "FY",
@@ -8124,3 +8124,4 @@
       }
     ]
   }
+]

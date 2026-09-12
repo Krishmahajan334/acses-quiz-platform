@@ -6,10 +6,22 @@
     "targetYear": "FY",
     "durationSec": 30,
     "options": [
-      { "text": "Generates continuous power", "isCorrect": false },
-      { "text": "Stores electrical energy", "isCorrect": true },
-      { "text": "Amplifies voltage", "isCorrect": false },
-      { "text": "Converts AC to DC", "isCorrect": false }
+      {
+        "text": "Generates continuous power",
+        "isCorrect": false
+      },
+      {
+        "text": "Stores electrical energy",
+        "isCorrect": true
+      },
+      {
+        "text": "Amplifies voltage",
+        "isCorrect": false
+      },
+      {
+        "text": "Converts AC to DC",
+        "isCorrect": false
+      }
     ]
   },
   {
@@ -19,10 +31,22 @@
     "targetYear": "FY",
     "durationSec": 30,
     "options": [
-      { "text": "Newton's First Law", "isCorrect": false },
-      { "text": "Newton's Second Law", "isCorrect": false },
-      { "text": "Newton's Third Law", "isCorrect": true },
-      { "text": "Law of Conservation of Energy", "isCorrect": false }
+      {
+        "text": "Newton's First Law",
+        "isCorrect": false
+      },
+      {
+        "text": "Newton's Second Law",
+        "isCorrect": false
+      },
+      {
+        "text": "Newton's Third Law",
+        "isCorrect": true
+      },
+      {
+        "text": "Law of Conservation of Energy",
+        "isCorrect": false
+      }
     ]
   },
   {
@@ -32,10 +56,22 @@
     "targetYear": "SY",
     "durationSec": 45,
     "options": [
-      { "text": "O(n)", "isCorrect": false },
-      { "text": "O(n log n)", "isCorrect": false },
-      { "text": "O(log n)", "isCorrect": true },
-      { "text": "O(1)", "isCorrect": false }
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n log n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      }
     ]
   },
   {
@@ -45,10 +81,22 @@
     "targetYear": "SY",
     "durationSec": 45,
     "options": [
-      { "text": "sealed", "isCorrect": false },
-      { "text": "final", "isCorrect": true },
-      { "text": "static", "isCorrect": false },
-      { "text": "const", "isCorrect": false }
+      {
+        "text": "sealed",
+        "isCorrect": false
+      },
+      {
+        "text": "final",
+        "isCorrect": true
+      },
+      {
+        "text": "static",
+        "isCorrect": false
+      },
+      {
+        "text": "const",
+        "isCorrect": false
+      }
     ]
   },
   {
@@ -58,10 +106,22 @@
     "targetYear": "TY",
     "durationSec": 45,
     "options": [
-      { "text": "List", "isCorrect": false },
-      { "text": "Set", "isCorrect": false },
-      { "text": "Collection", "isCorrect": false },
-      { "text": "Map", "isCorrect": true }
+      {
+        "text": "List",
+        "isCorrect": false
+      },
+      {
+        "text": "Set",
+        "isCorrect": false
+      },
+      {
+        "text": "Collection",
+        "isCorrect": false
+      },
+      {
+        "text": "Map",
+        "isCorrect": true
+      }
     ]
   },
   {
@@ -71,10 +131,22 @@
     "targetYear": "TY",
     "durationSec": 60,
     "options": [
-      { "text": "service()", "isCorrect": false },
-      { "text": "init()", "isCorrect": true },
-      { "text": "destroy()", "isCorrect": false },
-      { "text": "doGet()", "isCorrect": false }
+      {
+        "text": "service()",
+        "isCorrect": false
+      },
+      {
+        "text": "init()",
+        "isCorrect": true
+      },
+      {
+        "text": "destroy()",
+        "isCorrect": false
+      },
+      {
+        "text": "doGet()",
+        "isCorrect": false
+      }
     ]
   },
   {
@@ -84,10 +156,22 @@
     "targetYear": "Final Year",
     "durationSec": 60,
     "options": [
-      { "text": "Saga Pattern", "isCorrect": true },
-      { "text": "Singleton Pattern", "isCorrect": false },
-      { "text": "Observer Pattern", "isCorrect": false },
-      { "text": "Factory Pattern", "isCorrect": false }
+      {
+        "text": "Saga Pattern",
+        "isCorrect": true
+      },
+      {
+        "text": "Singleton Pattern",
+        "isCorrect": false
+      },
+      {
+        "text": "Observer Pattern",
+        "isCorrect": false
+      },
+      {
+        "text": "Factory Pattern",
+        "isCorrect": false
+      }
     ]
   },
   {
@@ -97,10 +181,22 @@
     "targetYear": "Final Year",
     "durationSec": 45,
     "options": [
-      { "text": "Processes share memory space, threads do not.", "isCorrect": false },
-      { "text": "Threads are heavyweight, processes are lightweight.", "isCorrect": false },
-      { "text": "Threads share the same memory space, processes have isolated memory.", "isCorrect": true },
-      { "text": "There is no functional difference.", "isCorrect": false }
+      {
+        "text": "Processes share memory space, threads do not.",
+        "isCorrect": false
+      },
+      {
+        "text": "Threads are heavyweight, processes are lightweight.",
+        "isCorrect": false
+      },
+      {
+        "text": "Threads share the same memory space, processes have isolated memory.",
+        "isCorrect": true
+      },
+      {
+        "text": "There is no functional difference.",
+        "isCorrect": false
+      }
     ]
   }
 ]

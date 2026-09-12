@@ -1,2602 +1,2602 @@
 [
-    {
-        "text": "Which Java collection guarantees insertion-order iteration while allowing duplicate elements?",
-        "topic": "Java",
-        "difficulty": "Easy",
-        "targetYear": "TY",
-        "durationSec": 30,
-        "options": [
-            {
-                "text": "HashSet",
-                "isCorrect": false
-            },
-            {
-                "text": "ArrayList",
-                "isCorrect": true
-            },
-            {
-                "text": "TreeSet",
-                "isCorrect": false
-            },
-            {
-                "text": "Hashtable",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "What is the result of declaring a Java method as final?",
-        "topic": "Java",
-        "difficulty": "Easy",
-        "targetYear": "Final Year",
-        "durationSec": 30,
-        "options": [
-            {
-                "text": "It cannot be overloaded",
-                "isCorrect": false
-            },
-            {
-                "text": "It cannot be overridden by subclasses",
-                "isCorrect": true
-            },
-            {
-                "text": "It cannot be called from subclasses",
-                "isCorrect": false
-            },
-            {
-                "text": "It must be static",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "Which Java interface is the root interface of the collection hierarchy?",
-        "topic": "Java",
-        "difficulty": "Easy",
-        "targetYear": "TY",
-        "durationSec": 30,
-        "options": [
-            {
-                "text": "Iterable",
-                "isCorrect": false
-            },
-            {
-                "text": "Collection",
-                "isCorrect": true
-            },
-            {
-                "text": "List",
-                "isCorrect": false
-            },
-            {
-                "text": "Iterator",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "Which Java keyword is used to explicitly invoke a superclass constructor?",
-        "topic": "Java",
-        "difficulty": "Easy",
-        "targetYear": "Final Year",
-        "durationSec": 30,
-        "options": [
-            {
-                "text": "this",
-                "isCorrect": false
-            },
-            {
-                "text": "super",
-                "isCorrect": true
-            },
-            {
-                "text": "base",
-                "isCorrect": false
-            },
-            {
-                "text": "parent",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "Which Java type represents a sequence of characters that is immutable?",
-        "topic": "Java",
-        "difficulty": "Easy",
-        "targetYear": "TY",
-        "durationSec": 30,
-        "options": [
-            {
-                "text": "String",
-                "isCorrect": true
-            },
-            {
-                "text": "StringBuilder",
-                "isCorrect": false
-            },
-            {
-                "text": "StringBuffer",
-                "isCorrect": false
-            },
-            {
-                "text": "CharSequenceBuffer",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "What does the Java garbage collector primarily reclaim?",
-        "topic": "Java",
-        "difficulty": "Easy",
-        "targetYear": "Final Year",
-        "durationSec": 30,
-        "options": [
-            {
-                "text": "Any object explicitly deleted by the programmer",
-                "isCorrect": false
-            },
-            {
-                "text": "Objects that are no longer reachable",
-                "isCorrect": true
-            },
-            {
-                "text": "All objects in the heap periodically",
-                "isCorrect": false
-            },
-            {
-                "text": "Only objects created using new",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "Which Java exception is unchecked?",
-        "topic": "Java",
-        "difficulty": "Medium",
-        "targetYear": "TY",
-        "durationSec": 45,
-        "options": [
-            {
-                "text": "IOException",
-                "isCorrect": false
-            },
-            {
-                "text": "SQLException",
-                "isCorrect": false
-            },
-            {
-                "text": "NullPointerException",
-                "isCorrect": true
-            },
-            {
-                "text": "ClassNotFoundException",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "Which statement about Java interfaces is correct in modern Java?",
-        "topic": "Java",
-        "difficulty": "Medium",
-        "targetYear": "Final Year",
-        "durationSec": 45,
-        "options": [
-            {
-                "text": "Interfaces cannot contain implemented methods",
-                "isCorrect": false
-            },
-            {
-                "text": "Interfaces can contain default and static methods with implementations",
-                "isCorrect": true
-            },
-            {
-                "text": "Interfaces can be instantiated directly",
-                "isCorrect": false
-            },
-            {
-                "text": "Every interface method must be private",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "What happens when an object is passed to a Java method and one of its fields is modified through the parameter?",
-        "topic": "Java",
-        "difficulty": "Medium",
-        "targetYear": "TY",
-        "durationSec": 45,
-        "options": [
-            {
-                "text": "Java passes the object by reference in the C++ sense",
-                "isCorrect": false
-            },
-            {
-                "text": "Java passes a copy of the reference, so the referenced object's state can be modified",
-                "isCorrect": true
-            },
-            {
-                "text": "Java always creates a deep copy of the object",
-                "isCorrect": false
-            },
-            {
-                "text": "The modification is discarded when the method returns",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "Which mechanism allows Java generic type information to be removed from most bytecode representations at runtime?",
-        "topic": "Java",
-        "difficulty": "Hard",
-        "targetYear": "Final Year",
-        "durationSec": 60,
-        "options": [
-            {
-                "text": "Method overloading",
-                "isCorrect": false
-            },
-            {
-                "text": "Type erasure",
-                "isCorrect": true
-            },
-            {
-                "text": "Dynamic linking",
-                "isCorrect": false
-            },
-            {
-                "text": "Class initialization",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "In C, what does the expression sizeof(char) always evaluate to?",
-        "topic": "C",
-        "difficulty": "Easy",
-        "targetYear": "TY",
-        "durationSec": 30,
-        "options": [
-            {
-                "text": "0",
-                "isCorrect": false
-            },
-            {
-                "text": "1",
-                "isCorrect": true
-            },
-            {
-                "text": "2",
-                "isCorrect": false
-            },
-            {
-                "text": "sizeof(int)",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "Which C storage class gives a local variable automatic storage duration by default?",
-        "topic": "C",
-        "difficulty": "Easy",
-        "targetYear": "Final Year",
-        "durationSec": 30,
-        "options": [
-            {
-                "text": "static",
-                "isCorrect": false
-            },
-            {
-                "text": "extern",
-                "isCorrect": false
-            },
-            {
-                "text": "auto",
-                "isCorrect": true
-            },
-            {
-                "text": "register",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "What does a pointer store in C?",
-        "topic": "C",
-        "difficulty": "Easy",
-        "targetYear": "TY",
-        "durationSec": 30,
-        "options": [
-            {
-                "text": "Always an integer value",
-                "isCorrect": false
-            },
-            {
-                "text": "The address of an object or function, depending on pointer type",
-                "isCorrect": true
-            },
-            {
-                "text": "Only the value of the referenced object",
-                "isCorrect": false
-            },
-            {
-                "text": "The size of the referenced object",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "Which header defines the malloc and free functions in standard C?",
-        "topic": "C",
-        "difficulty": "Easy",
-        "targetYear": "Final Year",
-        "durationSec": 30,
-        "options": [
-            {
-                "text": "stdio.h",
-                "isCorrect": false
-            },
-            {
-                "text": "stdlib.h",
-                "isCorrect": true
-            },
-            {
-                "text": "string.h",
-                "isCorrect": false
-            },
-            {
-                "text": "memory.h",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "Which operator is used to obtain the address of an object in C?",
-        "topic": "C",
-        "difficulty": "Easy",
-        "targetYear": "TY",
-        "durationSec": 30,
-        "options": [
-            {
-                "text": "*",
-                "isCorrect": false
-            },
-            {
-                "text": "&",
-                "isCorrect": true
-            },
-            {
-                "text": "->",
-                "isCorrect": false
-            },
-            {
-                "text": "%",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "What is the primary purpose of the volatile qualifier in C?",
-        "topic": "C",
-        "difficulty": "Medium",
-        "targetYear": "Final Year",
-        "durationSec": 45,
-        "options": [
-            {
-                "text": "To make a variable constant",
-                "isCorrect": false
-            },
-            {
-                "text": "To indicate that the object's value may change independently of normal program flow",
-                "isCorrect": true
-            },
-            {
-                "text": "To allocate the variable on the heap",
-                "isCorrect": false
-            },
-            {
-                "text": "To guarantee atomic access",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "What is undefined behavior in C?",
-        "topic": "C",
-        "difficulty": "Medium",
-        "targetYear": "TY",
-        "durationSec": 45,
-        "options": [
-            {
-                "text": "Behavior explicitly prohibited with a required diagnostic",
-                "isCorrect": false
-            },
-            {
-                "text": "Behavior for which the C standard imposes no requirements",
-                "isCorrect": true
-            },
-            {
-                "text": "Behavior that always causes a compiler error",
-                "isCorrect": false
-            },
-            {
-                "text": "Behavior that is implementation-defined",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "Consider int a[5] = {1,2,3,4,5}; What does *(a + 3) evaluate to?",
-        "topic": "C",
-        "difficulty": "Medium",
-        "targetYear": "Final Year",
-        "durationSec": 45,
-        "options": [
-            {
-                "text": "2",
-                "isCorrect": false
-            },
-            {
-                "text": "3",
-                "isCorrect": false
-            },
-            {
-                "text": "4",
-                "isCorrect": true
-            },
-            {
-                "text": "5",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "Which statement about static local variables in C is correct?",
-        "topic": "C",
-        "difficulty": "Hard",
-        "targetYear": "TY",
-        "durationSec": 60,
-        "options": [
-            {
-                "text": "They are recreated and initialized every time control enters the block",
-                "isCorrect": false
-            },
-            {
-                "text": "They retain their stored value between function calls",
-                "isCorrect": true
-            },
-            {
-                "text": "They are always visible to every source file",
-                "isCorrect": false
-            },
-            {
-                "text": "They must be allocated dynamically",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "What is the most important consequence of accessing an array element outside its valid bounds in C?",
-        "topic": "C",
-        "difficulty": "Hard",
-        "targetYear": "Final Year",
-        "durationSec": 60,
-        "options": [
-            {
-                "text": "The compiler automatically resizes the array",
-                "isCorrect": false
-            },
-            {
-                "text": "The behavior is undefined",
-                "isCorrect": true
-            },
-            {
-                "text": "The value is guaranteed to be zero",
-                "isCorrect": false
-            },
-            {
-                "text": "A standard exception is always thrown",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "Which C++ feature allows a function to have different implementations based on the dynamic type of an object?",
-        "topic": "C++",
-        "difficulty": "Easy",
-        "targetYear": "TY",
-        "durationSec": 30,
-        "options": [
-            {
-                "text": "Compile-time constant evaluation",
-                "isCorrect": false
-            },
-            {
-                "text": "Virtual functions",
-                "isCorrect": true
-            },
-            {
-                "text": "Namespaces",
-                "isCorrect": false
-            },
-            {
-                "text": "Friend declarations",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "Which C++ keyword is used to allocate an object dynamically?",
-        "topic": "C++",
-        "difficulty": "Easy",
-        "targetYear": "Final Year",
-        "durationSec": 30,
-        "options": [
-            {
-                "text": "alloc",
-                "isCorrect": false
-            },
-            {
-                "text": "new",
-                "isCorrect": true
-            },
-            {
-                "text": "create",
-                "isCorrect": false
-            },
-            {
-                "text": "malloc",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "What is the default access specifier for members of a C++ class?",
-        "topic": "C++",
-        "difficulty": "Easy",
-        "targetYear": "TY",
-        "durationSec": 30,
-        "options": [
-            {
-                "text": "public",
-                "isCorrect": false
-            },
-            {
-                "text": "private",
-                "isCorrect": true
-            },
-            {
-                "text": "protected",
-                "isCorrect": false
-            },
-            {
-                "text": "internal",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "Which operator is commonly overloaded to provide stream output for a user-defined C++ type?",
-        "topic": "C++",
-        "difficulty": "Easy",
-        "targetYear": "Final Year",
-        "durationSec": 30,
-        "options": [
-            {
-                "text": ">>",
-                "isCorrect": false
-            },
-            {
-                "text": "<<",
-                "isCorrect": true
-            },
-            {
-                "text": "::",
-                "isCorrect": false
-            },
-            {
-                "text": "&&",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "Which C++ cast is primarily intended for safe downcasting within a polymorphic class hierarchy?",
-        "topic": "C++",
-        "difficulty": "Medium",
-        "targetYear": "TY",
-        "durationSec": 45,
-        "options": [
-            {
-                "text": "static_cast",
-                "isCorrect": false
-            },
-            {
-                "text": "dynamic_cast",
-                "isCorrect": true
-            },
-            {
-                "text": "reinterpret_cast",
-                "isCorrect": false
-            },
-            {
-                "text": "const_cast",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "Why should a polymorphic C++ base class commonly have a virtual destructor?",
-        "topic": "C++",
-        "difficulty": "Medium",
-        "targetYear": "Final Year",
-        "durationSec": 45,
-        "options": [
-            {
-                "text": "To prevent stack allocation",
-                "isCorrect": false
-            },
-            {
-                "text": "To ensure correct destruction when deleting a derived object through a base pointer",
-                "isCorrect": true
-            },
-            {
-                "text": "To make all constructors virtual",
-                "isCorrect": false
-            },
-            {
-                "text": "To disable inheritance",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "What does std::move primarily do in C++?",
-        "topic": "C++",
-        "difficulty": "Medium",
-        "targetYear": "TY",
-        "durationSec": 45,
-        "options": [
-            {
-                "text": "Physically moves an object to a different memory address",
-                "isCorrect": false
-            },
-            {
-                "text": "Converts an expression to an rvalue reference, enabling move operations",
-                "isCorrect": true
-            },
-            {
-                "text": "Immediately destroys the source object",
-                "isCorrect": false
-            },
-            {
-                "text": "Copies the complete object byte-by-byte",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "What is the primary purpose of RAII in modern C++?",
-        "topic": "C++",
-        "difficulty": "Hard",
-        "targetYear": "Final Year",
-        "durationSec": 60,
-        "options": [
-            {
-                "text": "To eliminate all dynamic memory allocation",
-                "isCorrect": false
-            },
-            {
-                "text": "To bind resource lifetime to object lifetime",
-                "isCorrect": true
-            },
-            {
-                "text": "To force every class to use inheritance",
-                "isCorrect": false
-            },
-            {
-                "text": "To prevent constructors from throwing exceptions",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "What problem can occur when a class uses multiple inheritance and two base classes provide the same non-virtual base subobject?",
-        "topic": "C++",
-        "difficulty": "Hard",
-        "targetYear": "TY",
-        "durationSec": 60,
-        "options": [
-            {
-                "text": "Name mangling is disabled",
-                "isCorrect": false
-            },
-            {
-                "text": "The derived object can contain multiple copies of the common base subobject",
-                "isCorrect": true
-            },
-            {
-                "text": "Constructors cannot execute",
-                "isCorrect": false
-            },
-            {
-                "text": "All virtual functions become static",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "Which Python data type is mutable?",
-        "topic": "Python",
-        "difficulty": "Easy",
-        "targetYear": "Final Year",
-        "durationSec": 30,
-        "options": [
-            {
-                "text": "tuple",
-                "isCorrect": false
-            },
-            {
-                "text": "str",
-                "isCorrect": false
-            },
-            {
-                "text": "list",
-                "isCorrect": true
-            },
-            {
-                "text": "frozenset",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "What does len([10, 20, 30]) return in Python?",
-        "topic": "Python",
-        "difficulty": "Easy",
-        "targetYear": "TY",
-        "durationSec": 30,
-        "options": [
-            {
-                "text": "2",
-                "isCorrect": false
-            },
-            {
-                "text": "3",
-                "isCorrect": true
-            },
-            {
-                "text": "30",
-                "isCorrect": false
-            },
-            {
-                "text": "4",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "Which Python keyword is used to define a generator function that produces values lazily?",
-        "topic": "Python",
-        "difficulty": "Easy",
-        "targetYear": "Final Year",
-        "durationSec": 30,
-        "options": [
-            {
-                "text": "yield",
-                "isCorrect": true
-            },
-            {
-                "text": "generate",
-                "isCorrect": false
-            },
-            {
-                "text": "lazy",
-                "isCorrect": false
-            },
-            {
-                "text": "defer",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "What does dictionary.get(key, default) do when key is absent?",
-        "topic": "Python",
-        "difficulty": "Easy",
-        "targetYear": "TY",
-        "durationSec": 30,
-        "options": [
-            {
-                "text": "Raises KeyError unconditionally",
-                "isCorrect": false
-            },
-            {
-                "text": "Returns the supplied default value",
-                "isCorrect": true
-            },
-            {
-                "text": "Deletes the key",
-                "isCorrect": false
-            },
-            {
-                "text": "Inserts the key with a random value",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "Which Python mechanism allows a function to retain access to variables from its enclosing lexical scope?",
-        "topic": "Python",
-        "difficulty": "Medium",
-        "targetYear": "Final Year",
-        "durationSec": 45,
-        "options": [
-            {
-                "text": "Closure",
-                "isCorrect": true
-            },
-            {
-                "text": "Destructor",
-                "isCorrect": false
-            },
-            {
-                "text": "Iterator protocol",
-                "isCorrect": false
-            },
-            {
-                "text": "Metaclass declaration",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "What is the key property of Python's `is` operator?",
-        "topic": "Python",
-        "difficulty": "Medium",
-        "targetYear": "TY",
-        "durationSec": 45,
-        "options": [
-            {
-                "text": "It compares object identity",
-                "isCorrect": true
-            },
-            {
-                "text": "It always compares numerical values",
-                "isCorrect": false
-            },
-            {
-                "text": "It performs a deep copy",
-                "isCorrect": false
-            },
-            {
-                "text": "It compares only string contents",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "What is the primary role of the **iter** method in Python's iterator protocol?",
-        "topic": "Python",
-        "difficulty": "Medium",
-        "targetYear": "Final Year",
-        "durationSec": 45,
-        "options": [
-            {
-                "text": "It returns an iterator object",
-                "isCorrect": true
-            },
-            {
-                "text": "It always returns the next element",
-                "isCorrect": false
-            },
-            {
-                "text": "It terminates every loop",
-                "isCorrect": false
-            },
-            {
-                "text": "It converts an iterator into a list",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "What is the purpose of Python's `nonlocal` keyword?",
-        "topic": "Python",
-        "difficulty": "Hard",
-        "targetYear": "TY",
-        "durationSec": 60,
-        "options": [
-            {
-                "text": "To access a variable in the global namespace only",
-                "isCorrect": false
-            },
-            {
-                "text": "To rebind a variable in an enclosing non-global function scope",
-                "isCorrect": true
-            },
-            {
-                "text": "To make a variable immutable",
-                "isCorrect": false
-            },
-            {
-                "text": "To allocate a variable outside Python's memory manager",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "Why can Python threads fail to provide parallel execution of CPU-bound Python bytecode in the standard CPython implementation?",
-        "topic": "Python",
-        "difficulty": "Hard",
-        "targetYear": "Final Year",
-        "durationSec": 60,
-        "options": [
-            {
-                "text": "Python does not support multiple threads",
-                "isCorrect": false
-            },
-            {
-                "text": "The Global Interpreter Lock restricts simultaneous execution of Python bytecode by multiple threads",
-                "isCorrect": true
-            },
-            {
-                "text": "Threads always execute only on the GPU",
-                "isCorrect": false
-            },
-            {
-                "text": "The operating system prohibits all Python threads",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "Which data structure follows the Last-In-First-Out principle?",
-        "topic": "Data Structures",
-        "difficulty": "Easy",
-        "targetYear": "TY",
-        "durationSec": 30,
-        "options": [
-            {
-                "text": "Queue",
-                "isCorrect": false
-            },
-            {
-                "text": "Stack",
-                "isCorrect": true
-            },
-            {
-                "text": "Priority queue",
-                "isCorrect": false
-            },
-            {
-                "text": "Circular buffer",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "Which traversal of a binary search tree produces keys in nondecreasing order?",
-        "topic": "Data Structures",
-        "difficulty": "Easy",
-        "targetYear": "Final Year",
-        "durationSec": 30,
-        "options": [
-            {
-                "text": "Preorder",
-                "isCorrect": false
-            },
-            {
-                "text": "Inorder",
-                "isCorrect": true
-            },
-            {
-                "text": "Postorder",
-                "isCorrect": false
-            },
-            {
-                "text": "Level order",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "Which data structure is most directly used to implement breadth-first search?",
-        "topic": "Data Structures",
-        "difficulty": "Easy",
-        "targetYear": "TY",
-        "durationSec": 30,
-        "options": [
-            {
-                "text": "Stack",
-                "isCorrect": false
-            },
-            {
-                "text": "Queue",
-                "isCorrect": true
-            },
-            {
-                "text": "Heap",
-                "isCorrect": false
-            },
-            {
-                "text": "Hash table",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "What is the average-case search complexity of a well-distributed hash table?",
-        "topic": "Data Structures",
-        "difficulty": "Easy",
-        "targetYear": "Final Year",
-        "durationSec": 30,
-        "options": [
-            {
-                "text": "O(1)",
-                "isCorrect": true
-            },
-            {
-                "text": "O(log n)",
-                "isCorrect": false
-            },
-            {
-                "text": "O(n log n)",
-                "isCorrect": false
-            },
-            {
-                "text": "O(n^2)",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "Which property must an AVL tree maintain after every insertion or deletion?",
-        "topic": "Data Structures",
-        "difficulty": "Medium",
-        "targetYear": "TY",
-        "durationSec": 45,
-        "options": [
-            {
-                "text": "Every node must have exactly two children",
-                "isCorrect": false
-            },
-            {
-                "text": "The height difference between the left and right subtrees of every node is at most one",
-                "isCorrect": true
-            },
-            {
-                "text": "All leaves must be at the same depth",
-                "isCorrect": false
-            },
-            {
-                "text": "Every node must have the same number of descendants",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "What is the worst-case time complexity of deleting the minimum element from a binary heap containing n elements?",
-        "topic": "Data Structures",
-        "difficulty": "Medium",
-        "targetYear": "Final Year",
-        "durationSec": 45,
-        "options": [
-            {
-                "text": "O(1)",
-                "isCorrect": false
-            },
-            {
-                "text": "O(log n)",
-                "isCorrect": true
-            },
-            {
-                "text": "O(n)",
-                "isCorrect": false
-            },
-            {
-                "text": "O(n log n)",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "In a disjoint-set union structure using union by rank and path compression, the amortized time per operation is closest to which bound?",
-        "topic": "Data Structures",
-        "difficulty": "Hard",
-        "targetYear": "TY",
-        "durationSec": 60,
-        "options": [
-            {
-                "text": "O(1) exactly",
-                "isCorrect": false
-            },
-            {
-                "text": "O(log n)",
-                "isCorrect": false
-            },
-            {
-                "text": "O(alpha(n))",
-                "isCorrect": true
-            },
-            {
-                "text": "O(n)",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "Which technique is used by a B-tree to keep search, insertion, and deletion efficient when nodes can contain multiple keys?",
-        "topic": "Data Structures",
-        "difficulty": "Hard",
-        "targetYear": "Final Year",
-        "durationSec": 60,
-        "options": [
-            {
-                "text": "Maintaining a nearly constant height by allowing multiple children per internal node",
-                "isCorrect": true
-            },
-            {
-                "text": "Storing every key only in a linked list",
-                "isCorrect": false
-            },
-            {
-                "text": "Using recursion without balancing",
-                "isCorrect": false
-            },
-            {
-                "text": "Restricting every node to exactly two children",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "What is the primary advantage of a trie over a comparison-based balanced search tree for string keys?",
-        "topic": "Data Structures",
-        "difficulty": "Hard",
-        "targetYear": "TY",
-        "durationSec": 60,
-        "options": [
-            {
-                "text": "Its search time can depend primarily on the key length rather than the number of stored keys",
-                "isCorrect": true
-            },
-            {
-                "text": "It always uses less memory than a binary search tree",
-                "isCorrect": false
-            },
-            {
-                "text": "It requires no extra nodes",
-                "isCorrect": false
-            },
-            {
-                "text": "It guarantees O(1) search regardless of key length",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "Which operation is typically O(1) in a singly linked list when a pointer to the first node is available?",
-        "topic": "Data Structures",
-        "difficulty": "Easy",
-        "targetYear": "Final Year",
-        "durationSec": 30,
-        "options": [
-            {
-                "text": "Accessing the element at index n/2",
-                "isCorrect": false
-            },
-            {
-                "text": "Inserting a node at the beginning",
-                "isCorrect": true
-            },
-            {
-                "text": "Searching for an arbitrary value",
-                "isCorrect": false
-            },
-            {
-                "text": "Finding the last node without a tail pointer",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "What is the maximum number of edges in a simple undirected graph with n vertices?",
-        "topic": "Data Structures",
-        "difficulty": "Medium",
-        "targetYear": "Final Year",
-        "durationSec": 45,
-        "options": [
-            {
-                "text": "n",
-                "isCorrect": false
-            },
-            {
-                "text": "n - 1",
-                "isCorrect": false
-            },
-            {
-                "text": "n(n - 1) / 2",
-                "isCorrect": true
-            },
-            {
-                "text": "n(n + 1)",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
-        "text": "Which Java feature allows a class to inherit behavior from multiple sources without supporting multiple class inheritance?",
-            "topic": "Java",
-            "difficulty": "Easy",
-            "targetYear": "TY",
-            "durationSec": 30,
-            "options": [
-                {
-                    "text": "Multiple interfaces",
-                    "isCorrect": true
-                },
-                {
-                    "text": "Multiple superclasses",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Multiple constructors",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Multiple packages",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "What is the output of `System.out.println(10 + 20 + \"30\");` in Java?",
-            "topic": "Java",
-            "difficulty": "Easy",
-            "targetYear": "Final Year",
-            "durationSec": 30,
-            "options": [
-                {
-                    "text": "3030",
-                    "isCorrect": false
-                },
-                {
-                    "text": "102030",
-                    "isCorrect": false
-                },
-                {
-                    "text": "3030",
-                    "isCorrect": true
-                },
-                {
-                    "text": "60",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which Java collection does not allow duplicate elements?",
-            "topic": "Java",
-            "difficulty": "Easy",
-            "targetYear": "TY",
-            "durationSec": 30,
-            "options": [
-                {
-                    "text": "List",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Set",
-                    "isCorrect": true
-                },
-                {
-                    "text": "Queue",
-                    "isCorrect": false
-                },
-                {
-                    "text": "ArrayList",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which keyword is used to create an object dynamically in Java?",
-            "topic": "Java",
-            "difficulty": "Easy",
-            "targetYear": "Final Year",
-            "durationSec": 30,
-            "options": [
-                {
-                    "text": "alloc",
-                    "isCorrect": false
-                },
-                {
-                    "text": "malloc",
-                    "isCorrect": false
-                },
-                {
-                    "text": "new",
-                    "isCorrect": true
-                },
-                {
-                    "text": "create",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which Java type is designed to represent a sequence of characters that cannot be modified after creation?",
-            "topic": "Java",
-            "difficulty": "Easy",
-            "targetYear": "TY",
-            "durationSec": 30,
-            "options": [
-                {
-                    "text": "String",
-                    "isCorrect": true
-                },
-                {
-                    "text": "StringBuilder",
-                    "isCorrect": false
-                },
-                {
-                    "text": "StringBuffer",
-                    "isCorrect": false
-                },
-                {
-                    "text": "CharacterArray",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which exception is thrown when an array index is outside its valid range in Java?",
-            "topic": "Java",
-            "difficulty": "Medium",
-            "targetYear": "Final Year",
-            "durationSec": 45,
-            "options": [
-                {
-                    "text": "NullPointerException",
-                    "isCorrect": false
-                },
-                {
-                    "text": "ArrayIndexOutOfBoundsException",
-                    "isCorrect": true
-                },
-                {
-                    "text": "IndexException",
-                    "isCorrect": false
-                },
-                {
-                    "text": "IllegalArgumentException",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which statement about Java interfaces is correct?",
-            "topic": "Java",
-            "difficulty": "Medium",
-            "targetYear": "TY",
-            "durationSec": 45,
-            "options": [
-                {
-                    "text": "A class can implement multiple interfaces",
-                    "isCorrect": true
-                },
-                {
-                    "text": "An interface can extend a class",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Interfaces cannot contain default methods",
-                    "isCorrect": false
-                },
-                {
-                    "text": "A class can extend multiple classes",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "What happens when a Java method is declared `final`?",
-            "topic": "Java",
-            "difficulty": "Medium",
-            "targetYear": "Final Year",
-            "durationSec": 45,
-            "options": [
-                {
-                    "text": "It cannot be overloaded",
-                    "isCorrect": false
-                },
-                {
-                    "text": "It cannot be overridden",
-                    "isCorrect": true
-                },
-                {
-                    "text": "It cannot be called",
-                    "isCorrect": false
-                },
-                {
-                    "text": "It must be static",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which mechanism determines the overridden instance method implementation at runtime in Java?",
-            "topic": "Java",
-            "difficulty": "Hard",
-            "targetYear": "TY",
-            "durationSec": 60,
-            "options": [
-                {
-                    "text": "Static binding",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Dynamic method dispatch",
-                    "isCorrect": true
-                },
-                {
-                    "text": "Compile-time constant folding",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Preprocessing",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "In Java, which statement about `HashMap` is correct?",
-            "topic": "Java",
-            "difficulty": "Hard",
-            "targetYear": "Final Year",
-            "durationSec": 60,
-            "options": [
-                {
-                    "text": "It guarantees insertion order",
-                    "isCorrect": false
-                },
-                {
-                    "text": "It allows one null key and multiple null values",
-                    "isCorrect": true
-                },
-                {
-                    "text": "It prohibits all null values",
-                    "isCorrect": false
-                },
-                {
-                    "text": "It sorts keys automatically",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "What is the primary purpose of the `volatile` keyword in Java?",
-            "topic": "Java",
-            "difficulty": "Hard",
-            "targetYear": "TY",
-            "durationSec": 60,
-            "options": [
-                {
-                    "text": "To make compound operations atomic",
-                    "isCorrect": false
-                },
-                {
-                    "text": "To establish visibility guarantees for reads and writes",
-                    "isCorrect": true
-                },
-                {
-                    "text": "To permanently store a variable",
-                    "isCorrect": false
-                },
-                {
-                    "text": "To prevent garbage collection",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which C storage class specifies that a variable should retain its value between function calls?",
-            "topic": "C",
-            "difficulty": "Easy",
-            "targetYear": "Final Year",
-            "durationSec": 30,
-            "options": [
-                {
-                    "text": "auto",
-                    "isCorrect": false
-                },
-                {
-                    "text": "register",
-                    "isCorrect": false
-                },
-                {
-                    "text": "static",
-                    "isCorrect": true
-                },
-                {
-                    "text": "extern",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which operator is used to obtain the address of a variable in C?",
-            "topic": "C",
-            "difficulty": "Easy",
-            "targetYear": "TY",
-            "durationSec": 30,
-            "options": [
-                {
-                    "text": "*",
-                    "isCorrect": false
-                },
-                {
-                    "text": "&",
-                    "isCorrect": true
-                },
-                {
-                    "text": "%",
-                    "isCorrect": false
-                },
-                {
-                    "text": "#",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which header file provides the declaration of `printf()`?",
-            "topic": "C",
-            "difficulty": "Easy",
-            "targetYear": "Final Year",
-            "durationSec": 30,
-            "options": [
-                {
-                    "text": "stdlib.h",
-                    "isCorrect": false
-                },
-                {
-                    "text": "string.h",
-                    "isCorrect": false
-                },
-                {
-                    "text": "stdio.h",
-                    "isCorrect": true
-                },
-                {
-                    "text": "memory.h",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "What does `strlen()` return for a valid null-terminated C string?",
-            "topic": "C",
-            "difficulty": "Easy",
-            "targetYear": "TY",
-            "durationSec": 30,
-            "options": [
-                {
-                    "text": "Number of characters before the null character",
-                    "isCorrect": true
-                },
-                {
-                    "text": "Size of the pointer",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Number of bytes including the null character",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Allocated capacity of the string",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which C construct is primarily used to group variables of different data types under one name?",
-            "topic": "C",
-            "difficulty": "Easy",
-            "targetYear": "Final Year",
-            "durationSec": 30,
-            "options": [
-                {
-                    "text": "Array",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Structure",
-                    "isCorrect": true
-                },
-                {
-                    "text": "Macro",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Enumeration",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "What does a pointer variable store in C?",
-            "topic": "C",
-            "difficulty": "Medium",
-            "targetYear": "TY",
-            "durationSec": 45,
-            "options": [
-                {
-                    "text": "A memory address",
-                    "isCorrect": true
-                },
-                {
-                    "text": "Only an integer value",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Only a character",
-                    "isCorrect": false
-                },
-                {
-                    "text": "A CPU register name",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "What is the value of `sizeof(char)` in C?",
-            "topic": "C",
-            "difficulty": "Medium",
-            "targetYear": "Final Year",
-            "durationSec": 45,
-            "options": [
-                {
-                    "text": "Always 0",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Always 1",
-                    "isCorrect": true
-                },
-                {
-                    "text": "Always 2",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Always 4",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which function dynamically allocates a block of memory initialized to zero in C?",
-            "topic": "C",
-            "difficulty": "Medium",
-            "targetYear": "TY",
-            "durationSec": 45,
-            "options": [
-                {
-                    "text": "malloc()",
-                    "isCorrect": false
-                },
-                {
-                    "text": "calloc()",
-                    "isCorrect": true
-                },
-                {
-                    "text": "realloc()",
-                    "isCorrect": false
-                },
-                {
-                    "text": "alloca()",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "What is undefined behavior in C?",
-            "topic": "C",
-            "difficulty": "Hard",
-            "targetYear": "Final Year",
-            "durationSec": 60,
-            "options": [
-                {
-                    "text": "Behavior explicitly specified by the standard",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Behavior for which the C standard imposes no requirements",
-                    "isCorrect": true
-                },
-                {
-                    "text": "A compiler warning that always stops execution",
-                    "isCorrect": false
-                },
-                {
-                    "text": "A runtime error defined identically on every platform",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Consider `int a[5]; int *p = a;`. What does `*(p + 3)` access?",
-            "topic": "C",
-            "difficulty": "Hard",
-            "targetYear": "TY",
-            "durationSec": 60,
-            "options": [
-                {
-                    "text": "a[1]",
-                    "isCorrect": false
-                },
-                {
-                    "text": "a[2]",
-                    "isCorrect": false
-                },
-                {
-                    "text": "a[3]",
-                    "isCorrect": true
-                },
-                {
-                    "text": "a[4]",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "In C++, which feature allows the same function name to be defined with different parameter lists?",
-            "topic": "C++",
-            "difficulty": "Easy",
-            "targetYear": "Final Year",
-            "durationSec": 30,
-            "options": [
-                {
-                    "text": "Function overloading",
-                    "isCorrect": true
-                },
-                {
-                    "text": "Function hiding only",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Friendship",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Encapsulation",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which C++ access specifier makes class members accessible from anywhere through an object, subject to other language rules?",
-            "topic": "C++",
-            "difficulty": "Easy",
-            "targetYear": "TY",
-            "durationSec": 30,
-            "options": [
-                {
-                    "text": "private",
-                    "isCorrect": false
-                },
-                {
-                    "text": "protected",
-                    "isCorrect": false
-                },
-                {
-                    "text": "public",
-                    "isCorrect": true
-                },
-                {
-                    "text": "internal",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which operator is commonly used for dynamic memory allocation in C++?",
-            "topic": "C++",
-            "difficulty": "Easy",
-            "targetYear": "Final Year",
-            "durationSec": 30,
-            "options": [
-                {
-                    "text": "alloc",
-                    "isCorrect": false
-                },
-                {
-                    "text": "new",
-                    "isCorrect": true
-                },
-                {
-                    "text": "malloc",
-                    "isCorrect": false
-                },
-                {
-                    "text": "create",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which special member function is called when an object is initialized from another object of the same class?",
-            "topic": "C++",
-            "difficulty": "Easy",
-            "targetYear": "TY",
-            "durationSec": 30,
-            "options": [
-                {
-                    "text": "Copy constructor",
-                    "isCorrect": true
-                },
-                {
-                    "text": "Destructor",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Move assignment operator",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Default operator",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which C++ keyword is used to prevent a virtual function from being overridden in a derived class?",
-            "topic": "C++",
-            "difficulty": "Easy",
-            "targetYear": "Final Year",
-            "durationSec": 30,
-            "options": [
-                {
-                    "text": "sealed",
-                    "isCorrect": false
-                },
-                {
-                    "text": "final",
-                    "isCorrect": true
-                },
-                {
-                    "text": "override_only",
-                    "isCorrect": false
-                },
-                {
-                    "text": "constant",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "What is the purpose of a virtual destructor in a polymorphic C++ base class?",
-            "topic": "C++",
-            "difficulty": "Medium",
-            "targetYear": "TY",
-            "durationSec": 45,
-            "options": [
-                {
-                    "text": "To allow proper destruction through a base-class pointer",
-                    "isCorrect": true
-                },
-                {
-                    "text": "To prevent object destruction",
-                    "isCorrect": false
-                },
-                {
-                    "text": "To make all constructors virtual",
-                    "isCorrect": false
-                },
-                {
-                    "text": "To allocate objects on the stack",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which C++ cast is specifically intended for safe downcasting within a polymorphic hierarchy and performs a runtime check?",
-            "topic": "C++",
-            "difficulty": "Medium",
-            "targetYear": "Final Year",
-            "durationSec": 45,
-            "options": [
-                {
-                    "text": "static_cast",
-                    "isCorrect": false
-                },
-                {
-                    "text": "dynamic_cast",
-                    "isCorrect": true
-                },
-                {
-                    "text": "reinterpret_cast",
-                    "isCorrect": false
-                },
-                {
-                    "text": "const_cast",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "What does RAII in C++ primarily associate resource lifetime with?",
-            "topic": "C++",
-            "difficulty": "Medium",
-            "targetYear": "TY",
-            "durationSec": 45,
-            "options": [
-                {
-                    "text": "The lifetime of an object",
-                    "isCorrect": true
-                },
-                {
-                    "text": "The lifetime of the operating system",
-                    "isCorrect": false
-                },
-                {
-                    "text": "The lifetime of a namespace",
-                    "isCorrect": false
-                },
-                {
-                    "text": "The lifetime of a compiler process",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which C++ smart pointer provides exclusive ownership of a dynamically allocated object?",
-            "topic": "C++",
-            "difficulty": "Medium",
-            "targetYear": "Final Year",
-            "durationSec": 45,
-            "options": [
-                {
-                    "text": "shared_ptr",
-                    "isCorrect": false
-                },
-                {
-                    "text": "weak_ptr",
-                    "isCorrect": false
-                },
-                {
-                    "text": "unique_ptr",
-                    "isCorrect": true
-                },
-                {
-                    "text": "auto_ptr_ref",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "What is the key issue with the classic diamond inheritance problem in C++?",
-            "topic": "C++",
-            "difficulty": "Hard",
-            "targetYear": "TY",
-            "durationSec": 60,
-            "options": [
-                {
-                    "text": "Ambiguity caused by multiple copies of a common base subobject",
-                    "isCorrect": true
-                },
-                {
-                    "text": "Inability to define constructors",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Automatic conversion to C",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Loss of all virtual functions",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "What is the purpose of a C++ virtual function table in typical implementations?",
-            "topic": "C++",
-            "difficulty": "Hard",
-            "targetYear": "Final Year",
-            "durationSec": 60,
-            "options": [
-                {
-                    "text": "To support dynamic dispatch of virtual functions",
-                    "isCorrect": true
-                },
-                {
-                    "text": "To store local automatic variables",
-                    "isCorrect": false
-                },
-                {
-                    "text": "To replace the stack",
-                    "isCorrect": false
-                },
-                {
-                    "text": "To store all template source code",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "In C++, what does `std::move` primarily do?",
-            "topic": "C++",
-            "difficulty": "Hard",
-            "targetYear": "TY",
-            "durationSec": 60,
-            "options": [
-                {
-                    "text": "Physically moves an object to another memory address",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Converts an expression to an xvalue enabling move semantics",
-                    "isCorrect": true
-                },
-                {
-                    "text": "Immediately invokes the move constructor",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Copies all bytes using memcpy",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which Python object is immutable?",
-            "topic": "Python",
-            "difficulty": "Easy",
-            "targetYear": "Final Year",
-            "durationSec": 30,
-            "options": [
-                {
-                    "text": "list",
-                    "isCorrect": false
-                },
-                {
-                    "text": "set",
-                    "isCorrect": false
-                },
-                {
-                    "text": "tuple",
-                    "isCorrect": true
-                },
-                {
-                    "text": "dict",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which keyword defines a function in Python?",
-            "topic": "Python",
-            "difficulty": "Easy",
-            "targetYear": "TY",
-            "durationSec": 30,
-            "options": [
-                {
-                    "text": "func",
-                    "isCorrect": false
-                },
-                {
-                    "text": "def",
-                    "isCorrect": true
-                },
-                {
-                    "text": "function",
-                    "isCorrect": false
-                },
-                {
-                    "text": "define",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "What does `len([10, 20, 30])` return?",
-            "topic": "Python",
-            "difficulty": "Easy",
-            "targetYear": "Final Year",
-            "durationSec": 30,
-            "options": [
-                {
-                    "text": "2",
-                    "isCorrect": false
-                },
-                {
-                    "text": "3",
-                    "isCorrect": true
-                },
-                {
-                    "text": "4",
-                    "isCorrect": false
-                },
-                {
-                    "text": "30",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which Python data structure stores key-value pairs?",
-            "topic": "Python",
-            "difficulty": "Easy",
-            "targetYear": "TY",
-            "durationSec": 30,
-            "options": [
-                {
-                    "text": "tuple",
-                    "isCorrect": false
-                },
-                {
-                    "text": "list",
-                    "isCorrect": false
-                },
-                {
-                    "text": "dict",
-                    "isCorrect": true
-                },
-                {
-                    "text": "set",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which operator performs exponentiation in Python?",
-            "topic": "Python",
-            "difficulty": "Easy",
-            "targetYear": "Final Year",
-            "durationSec": 30,
-            "options": [
-                {
-                    "text": "^",
-                    "isCorrect": false
-                },
-                {
-                    "text": "**",
-                    "isCorrect": true
-                },
-                {
-                    "text": "//",
-                    "isCorrect": false
-                },
-                {
-                    "text": "%%",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "What is the result of `7 // 2` in Python?",
-            "topic": "Python",
-            "difficulty": "Medium",
-            "targetYear": "TY",
-            "durationSec": 45,
-            "options": [
-                {
-                    "text": "3",
-                    "isCorrect": true
-                },
-                {
-                    "text": "3.5",
-                    "isCorrect": false
-                },
-                {
-                    "text": "4",
-                    "isCorrect": false
-                },
-                {
-                    "text": "1",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "What does the Python `yield` statement make a function behave like?",
-            "topic": "Python",
-            "difficulty": "Medium",
-            "targetYear": "Final Year",
-            "durationSec": 45,
-            "options": [
-                {
-                    "text": "A generator function",
-                    "isCorrect": true
-                },
-                {
-                    "text": "A static method",
-                    "isCorrect": false
-                },
-                {
-                    "text": "A constructor",
-                    "isCorrect": false
-                },
-                {
-                    "text": "A module",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which Python mechanism is used to handle exceptions?",
-            "topic": "Python",
-            "difficulty": "Medium",
-            "targetYear": "TY",
-            "durationSec": 45,
-            "options": [
-                {
-                    "text": "try and except",
-                    "isCorrect": true
-                },
-                {
-                    "text": "check and catch",
-                    "isCorrect": false
-                },
-                {
-                    "text": "error and handle",
-                    "isCorrect": false
-                },
-                {
-                    "text": "test and recover",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "What does list slicing `a[1:4]` include?",
-            "topic": "Python",
-            "difficulty": "Medium",
-            "targetYear": "Final Year",
-            "durationSec": 45,
-            "options": [
-                {
-                    "text": "Indices 1, 2, and 3",
-                    "isCorrect": true
-                },
-                {
-                    "text": "Indices 1, 2, 3, and 4",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Only index 4",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Indices 0 through 4",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "What is the key purpose of Python's Global Interpreter Lock in the standard CPython implementation?",
-            "topic": "Python",
-            "difficulty": "Hard",
-            "targetYear": "TY",
-            "durationSec": 60,
-            "options": [
-                {
-                    "text": "It prevents all concurrent I/O operations",
-                    "isCorrect": false
-                },
-                {
-                    "text": "It protects interpreter state so only one thread executes Python bytecode at a time in the traditional CPython runtime",
-                    "isCorrect": true
-                },
-                {
-                    "text": "It prevents multiprocessing",
-                    "isCorrect": false
-                },
-                {
-                    "text": "It makes every Python operation atomic",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "In Python, why can using a mutable default argument such as `def f(x, a=[]):` cause surprising behavior?",
-            "topic": "Python",
-            "difficulty": "Hard",
-            "targetYear": "Final Year",
-            "durationSec": 60,
-            "options": [
-                {
-                    "text": "The default object is created once when the function is defined and reused across calls",
-                    "isCorrect": true
-                },
-                {
-                    "text": "Python converts lists to tuples automatically",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Default arguments are always global variables",
-                    "isCorrect": false
-                },
-                {
-                    "text": "The function cannot accept positional arguments",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "What is the average-case time complexity of searching for a key in a well-distributed hash table?",
-            "topic": "Data Structures",
-            "difficulty": "Easy",
-            "targetYear": "TY",
-            "durationSec": 30,
-            "options": [
-                {
-                    "text": "O(1)",
-                    "isCorrect": true
-                },
-                {
-                    "text": "O(log n)",
-                    "isCorrect": false
-                },
-                {
-                    "text": "O(n)",
-                    "isCorrect": false
-                },
-                {
-                    "text": "O(n log n)",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which data structure follows the LIFO principle?",
-            "topic": "Data Structures",
-            "difficulty": "Easy",
-            "targetYear": "Final Year",
-            "durationSec": 30,
-            "options": [
-                {
-                    "text": "Queue",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Stack",
-                    "isCorrect": true
-                },
-                {
-                    "text": "Heap",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Graph",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which data structure is most directly used to implement breadth-first search?",
-            "topic": "Data Structures",
-            "difficulty": "Easy",
-            "targetYear": "TY",
-            "durationSec": 30,
-            "options": [
-                {
-                    "text": "Stack",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Queue",
-                    "isCorrect": true
-                },
-                {
-                    "text": "Heap",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Hash table",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which tree traversal visits nodes in Left-Root-Right order?",
-            "topic": "Data Structures",
-            "difficulty": "Easy",
-            "targetYear": "Final Year",
-            "durationSec": 30,
-            "options": [
-                {
-                    "text": "Preorder",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Inorder",
-                    "isCorrect": true
-                },
-                {
-                    "text": "Postorder",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Level-order",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which structure is designed to efficiently support prefix-based string queries?",
-            "topic": "Data Structures",
-            "difficulty": "Easy",
-            "targetYear": "TY",
-            "durationSec": 30,
-            "options": [
-                {
-                    "text": "Trie",
-                    "isCorrect": true
-                },
-                {
-                    "text": "Stack",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Heap",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Circular queue",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "What is the worst-case search time in an unbalanced binary search tree containing n nodes?",
-            "topic": "Data Structures",
-            "difficulty": "Medium",
-            "targetYear": "Final Year",
-            "durationSec": 45,
-            "options": [
-                {
-                    "text": "O(1)",
-                    "isCorrect": false
-                },
-                {
-                    "text": "O(log n)",
-                    "isCorrect": false
-                },
-                {
-                    "text": "O(n)",
-                    "isCorrect": true
-                },
-                {
-                    "text": "O(n log n)",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which heap property must hold in a min-heap?",
-            "topic": "Data Structures",
-            "difficulty": "Medium",
-            "targetYear": "TY",
-            "durationSec": 45,
-            "options": [
-                {
-                    "text": "Every parent is less than or equal to its children",
-                    "isCorrect": true
-                },
-                {
-                    "text": "Every parent is greater than all descendants",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Every leaf is smaller than the root",
-                    "isCorrect": false
-                },
-                {
-                    "text": "The tree must be a binary search tree",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which linked-list operation can be performed in O(1) time when a pointer to the target node's predecessor is already available?",
-            "topic": "Data Structures",
-            "difficulty": "Medium",
-            "targetYear": "Final Year",
-            "durationSec": 45,
-            "options": [
-                {
-                    "text": "Insert a node after the predecessor",
-                    "isCorrect": true
-                },
-                {
-                    "text": "Search for an arbitrary value",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Sort the entire list",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Find the median without extra structure",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "What is the main purpose of a disjoint-set union structure?",
-            "topic": "Data Structures",
-            "difficulty": "Medium",
-            "targetYear": "TY",
-            "durationSec": 45,
-            "options": [
-                {
-                    "text": "Maintain dynamically changing equivalence classes",
-                    "isCorrect": true
-                },
-                {
-                    "text": "Sort arbitrary strings lexicographically",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Perform matrix multiplication",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Store recursive call frames",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "When path compression and union by rank are both used, the amortized time complexity of a disjoint-set operation is best described as:",
-            "topic": "Data Structures",
-            "difficulty": "Hard",
-            "targetYear": "Final Year",
-            "durationSec": 60,
-            "options": [
-                {
-                    "text": "O(log n) exactly",
-                    "isCorrect": false
-                },
-                {
-                    "text": "O(alpha(n)) amortized",
-                    "isCorrect": true
-                },
-                {
-                    "text": "O(n) amortized",
-                    "isCorrect": false
-                },
-                {
-                    "text": "O(n log n) amortized",
-                    "isCorrect": false
-                }
-            ]
-        },
-        {
-            "text": "Which data structure is most appropriate for supporting range minimum queries with efficient updates?",
-            "topic": "Data Structures",
-            "difficulty": "Hard",
-            "targetYear": "TY",
-            "durationSec": 60,
-            "options": [
-                {
-                    "text": "Stack",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Segment tree",
-                    "isCorrect": true
-                },
-                {
-                    "text": "Simple queue",
-                    "isCorrect": false
-                },
-                {
-                    "text": "Singly linked list",
-                    "isCorrect": false
-                }
-            ]
-        }
+  {
+    "text": "Which Java collection guarantees insertion-order iteration while allowing duplicate elements?",
+    "topic": "Java",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "HashSet",
+        "isCorrect": false
+      },
+      {
+        "text": "ArrayList",
+        "isCorrect": true
+      },
+      {
+        "text": "TreeSet",
+        "isCorrect": false
+      },
+      {
+        "text": "Hashtable",
+        "isCorrect": false
+      }
     ]
+  },
+  {
+    "text": "What is the result of declaring a Java method as final?",
+    "topic": "Java",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "It cannot be overloaded",
+        "isCorrect": false
+      },
+      {
+        "text": "It cannot be overridden by subclasses",
+        "isCorrect": true
+      },
+      {
+        "text": "It cannot be called from subclasses",
+        "isCorrect": false
+      },
+      {
+        "text": "It must be static",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which Java interface is the root interface of the collection hierarchy?",
+    "topic": "Java",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Iterable",
+        "isCorrect": false
+      },
+      {
+        "text": "Collection",
+        "isCorrect": true
+      },
+      {
+        "text": "List",
+        "isCorrect": false
+      },
+      {
+        "text": "Iterator",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which Java keyword is used to explicitly invoke a superclass constructor?",
+    "topic": "Java",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "this",
+        "isCorrect": false
+      },
+      {
+        "text": "super",
+        "isCorrect": true
+      },
+      {
+        "text": "base",
+        "isCorrect": false
+      },
+      {
+        "text": "parent",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which Java type represents a sequence of characters that is immutable?",
+    "topic": "Java",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "String",
+        "isCorrect": true
+      },
+      {
+        "text": "StringBuilder",
+        "isCorrect": false
+      },
+      {
+        "text": "StringBuffer",
+        "isCorrect": false
+      },
+      {
+        "text": "CharSequenceBuffer",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What does the Java garbage collector primarily reclaim?",
+    "topic": "Java",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Any object explicitly deleted by the programmer",
+        "isCorrect": false
+      },
+      {
+        "text": "Objects that are no longer reachable",
+        "isCorrect": true
+      },
+      {
+        "text": "All objects in the heap periodically",
+        "isCorrect": false
+      },
+      {
+        "text": "Only objects created using new",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which Java exception is unchecked?",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "IOException",
+        "isCorrect": false
+      },
+      {
+        "text": "SQLException",
+        "isCorrect": false
+      },
+      {
+        "text": "NullPointerException",
+        "isCorrect": true
+      },
+      {
+        "text": "ClassNotFoundException",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which statement about Java interfaces is correct in modern Java?",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Interfaces cannot contain implemented methods",
+        "isCorrect": false
+      },
+      {
+        "text": "Interfaces can contain default and static methods with implementations",
+        "isCorrect": true
+      },
+      {
+        "text": "Interfaces can be instantiated directly",
+        "isCorrect": false
+      },
+      {
+        "text": "Every interface method must be private",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What happens when an object is passed to a Java method and one of its fields is modified through the parameter?",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Java passes the object by reference in the C++ sense",
+        "isCorrect": false
+      },
+      {
+        "text": "Java passes a copy of the reference, so the referenced object's state can be modified",
+        "isCorrect": true
+      },
+      {
+        "text": "Java always creates a deep copy of the object",
+        "isCorrect": false
+      },
+      {
+        "text": "The modification is discarded when the method returns",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which mechanism allows Java generic type information to be removed from most bytecode representations at runtime?",
+    "topic": "Java",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Method overloading",
+        "isCorrect": false
+      },
+      {
+        "text": "Type erasure",
+        "isCorrect": true
+      },
+      {
+        "text": "Dynamic linking",
+        "isCorrect": false
+      },
+      {
+        "text": "Class initialization",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In C, what does the expression sizeof(char) always evaluate to?",
+    "topic": "C",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "0",
+        "isCorrect": false
+      },
+      {
+        "text": "1",
+        "isCorrect": true
+      },
+      {
+        "text": "2",
+        "isCorrect": false
+      },
+      {
+        "text": "sizeof(int)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which C storage class gives a local variable automatic storage duration by default?",
+    "topic": "C",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "static",
+        "isCorrect": false
+      },
+      {
+        "text": "extern",
+        "isCorrect": false
+      },
+      {
+        "text": "auto",
+        "isCorrect": true
+      },
+      {
+        "text": "register",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What does a pointer store in C?",
+    "topic": "C",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Always an integer value",
+        "isCorrect": false
+      },
+      {
+        "text": "The address of an object or function, depending on pointer type",
+        "isCorrect": true
+      },
+      {
+        "text": "Only the value of the referenced object",
+        "isCorrect": false
+      },
+      {
+        "text": "The size of the referenced object",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which header defines the malloc and free functions in standard C?",
+    "topic": "C",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "stdio.h",
+        "isCorrect": false
+      },
+      {
+        "text": "stdlib.h",
+        "isCorrect": true
+      },
+      {
+        "text": "string.h",
+        "isCorrect": false
+      },
+      {
+        "text": "memory.h",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which operator is used to obtain the address of an object in C?",
+    "topic": "C",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "*",
+        "isCorrect": false
+      },
+      {
+        "text": "&",
+        "isCorrect": true
+      },
+      {
+        "text": "->",
+        "isCorrect": false
+      },
+      {
+        "text": "%",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the primary purpose of the volatile qualifier in C?",
+    "topic": "C",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "To make a variable constant",
+        "isCorrect": false
+      },
+      {
+        "text": "To indicate that the object's value may change independently of normal program flow",
+        "isCorrect": true
+      },
+      {
+        "text": "To allocate the variable on the heap",
+        "isCorrect": false
+      },
+      {
+        "text": "To guarantee atomic access",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is undefined behavior in C?",
+    "topic": "C",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Behavior explicitly prohibited with a required diagnostic",
+        "isCorrect": false
+      },
+      {
+        "text": "Behavior for which the C standard imposes no requirements",
+        "isCorrect": true
+      },
+      {
+        "text": "Behavior that always causes a compiler error",
+        "isCorrect": false
+      },
+      {
+        "text": "Behavior that is implementation-defined",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Consider int a[5] = {1,2,3,4,5}; What does *(a + 3) evaluate to?",
+    "topic": "C",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "2",
+        "isCorrect": false
+      },
+      {
+        "text": "3",
+        "isCorrect": false
+      },
+      {
+        "text": "4",
+        "isCorrect": true
+      },
+      {
+        "text": "5",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which statement about static local variables in C is correct?",
+    "topic": "C",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "They are recreated and initialized every time control enters the block",
+        "isCorrect": false
+      },
+      {
+        "text": "They retain their stored value between function calls",
+        "isCorrect": true
+      },
+      {
+        "text": "They are always visible to every source file",
+        "isCorrect": false
+      },
+      {
+        "text": "They must be allocated dynamically",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the most important consequence of accessing an array element outside its valid bounds in C?",
+    "topic": "C",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "The compiler automatically resizes the array",
+        "isCorrect": false
+      },
+      {
+        "text": "The behavior is undefined",
+        "isCorrect": true
+      },
+      {
+        "text": "The value is guaranteed to be zero",
+        "isCorrect": false
+      },
+      {
+        "text": "A standard exception is always thrown",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which C++ feature allows a function to have different implementations based on the dynamic type of an object?",
+    "topic": "C++",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Compile-time constant evaluation",
+        "isCorrect": false
+      },
+      {
+        "text": "Virtual functions",
+        "isCorrect": true
+      },
+      {
+        "text": "Namespaces",
+        "isCorrect": false
+      },
+      {
+        "text": "Friend declarations",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which C++ keyword is used to allocate an object dynamically?",
+    "topic": "C++",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "alloc",
+        "isCorrect": false
+      },
+      {
+        "text": "new",
+        "isCorrect": true
+      },
+      {
+        "text": "create",
+        "isCorrect": false
+      },
+      {
+        "text": "malloc",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the default access specifier for members of a C++ class?",
+    "topic": "C++",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "public",
+        "isCorrect": false
+      },
+      {
+        "text": "private",
+        "isCorrect": true
+      },
+      {
+        "text": "protected",
+        "isCorrect": false
+      },
+      {
+        "text": "internal",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which operator is commonly overloaded to provide stream output for a user-defined C++ type?",
+    "topic": "C++",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": ">>",
+        "isCorrect": false
+      },
+      {
+        "text": "<<",
+        "isCorrect": true
+      },
+      {
+        "text": "::",
+        "isCorrect": false
+      },
+      {
+        "text": "&&",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which C++ cast is primarily intended for safe downcasting within a polymorphic class hierarchy?",
+    "topic": "C++",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "static_cast",
+        "isCorrect": false
+      },
+      {
+        "text": "dynamic_cast",
+        "isCorrect": true
+      },
+      {
+        "text": "reinterpret_cast",
+        "isCorrect": false
+      },
+      {
+        "text": "const_cast",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Why should a polymorphic C++ base class commonly have a virtual destructor?",
+    "topic": "C++",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "To prevent stack allocation",
+        "isCorrect": false
+      },
+      {
+        "text": "To ensure correct destruction when deleting a derived object through a base pointer",
+        "isCorrect": true
+      },
+      {
+        "text": "To make all constructors virtual",
+        "isCorrect": false
+      },
+      {
+        "text": "To disable inheritance",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What does std::move primarily do in C++?",
+    "topic": "C++",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Physically moves an object to a different memory address",
+        "isCorrect": false
+      },
+      {
+        "text": "Converts an expression to an rvalue reference, enabling move operations",
+        "isCorrect": true
+      },
+      {
+        "text": "Immediately destroys the source object",
+        "isCorrect": false
+      },
+      {
+        "text": "Copies the complete object byte-by-byte",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the primary purpose of RAII in modern C++?",
+    "topic": "C++",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "To eliminate all dynamic memory allocation",
+        "isCorrect": false
+      },
+      {
+        "text": "To bind resource lifetime to object lifetime",
+        "isCorrect": true
+      },
+      {
+        "text": "To force every class to use inheritance",
+        "isCorrect": false
+      },
+      {
+        "text": "To prevent constructors from throwing exceptions",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What problem can occur when a class uses multiple inheritance and two base classes provide the same non-virtual base subobject?",
+    "topic": "C++",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Name mangling is disabled",
+        "isCorrect": false
+      },
+      {
+        "text": "The derived object can contain multiple copies of the common base subobject",
+        "isCorrect": true
+      },
+      {
+        "text": "Constructors cannot execute",
+        "isCorrect": false
+      },
+      {
+        "text": "All virtual functions become static",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which Python data type is mutable?",
+    "topic": "Python",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "tuple",
+        "isCorrect": false
+      },
+      {
+        "text": "str",
+        "isCorrect": false
+      },
+      {
+        "text": "list",
+        "isCorrect": true
+      },
+      {
+        "text": "frozenset",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What does len([10, 20, 30]) return in Python?",
+    "topic": "Python",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "2",
+        "isCorrect": false
+      },
+      {
+        "text": "3",
+        "isCorrect": true
+      },
+      {
+        "text": "30",
+        "isCorrect": false
+      },
+      {
+        "text": "4",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which Python keyword is used to define a generator function that produces values lazily?",
+    "topic": "Python",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "yield",
+        "isCorrect": true
+      },
+      {
+        "text": "generate",
+        "isCorrect": false
+      },
+      {
+        "text": "lazy",
+        "isCorrect": false
+      },
+      {
+        "text": "defer",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What does dictionary.get(key, default) do when key is absent?",
+    "topic": "Python",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Raises KeyError unconditionally",
+        "isCorrect": false
+      },
+      {
+        "text": "Returns the supplied default value",
+        "isCorrect": true
+      },
+      {
+        "text": "Deletes the key",
+        "isCorrect": false
+      },
+      {
+        "text": "Inserts the key with a random value",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which Python mechanism allows a function to retain access to variables from its enclosing lexical scope?",
+    "topic": "Python",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Closure",
+        "isCorrect": true
+      },
+      {
+        "text": "Destructor",
+        "isCorrect": false
+      },
+      {
+        "text": "Iterator protocol",
+        "isCorrect": false
+      },
+      {
+        "text": "Metaclass declaration",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the key property of Python's `is` operator?",
+    "topic": "Python",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "It compares object identity",
+        "isCorrect": true
+      },
+      {
+        "text": "It always compares numerical values",
+        "isCorrect": false
+      },
+      {
+        "text": "It performs a deep copy",
+        "isCorrect": false
+      },
+      {
+        "text": "It compares only string contents",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the primary role of the **iter** method in Python's iterator protocol?",
+    "topic": "Python",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "It returns an iterator object",
+        "isCorrect": true
+      },
+      {
+        "text": "It always returns the next element",
+        "isCorrect": false
+      },
+      {
+        "text": "It terminates every loop",
+        "isCorrect": false
+      },
+      {
+        "text": "It converts an iterator into a list",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the purpose of Python's `nonlocal` keyword?",
+    "topic": "Python",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "To access a variable in the global namespace only",
+        "isCorrect": false
+      },
+      {
+        "text": "To rebind a variable in an enclosing non-global function scope",
+        "isCorrect": true
+      },
+      {
+        "text": "To make a variable immutable",
+        "isCorrect": false
+      },
+      {
+        "text": "To allocate a variable outside Python's memory manager",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Why can Python threads fail to provide parallel execution of CPU-bound Python bytecode in the standard CPython implementation?",
+    "topic": "Python",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Python does not support multiple threads",
+        "isCorrect": false
+      },
+      {
+        "text": "The Global Interpreter Lock restricts simultaneous execution of Python bytecode by multiple threads",
+        "isCorrect": true
+      },
+      {
+        "text": "Threads always execute only on the GPU",
+        "isCorrect": false
+      },
+      {
+        "text": "The operating system prohibits all Python threads",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which data structure follows the Last-In-First-Out principle?",
+    "topic": "Data Structures",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Queue",
+        "isCorrect": false
+      },
+      {
+        "text": "Stack",
+        "isCorrect": true
+      },
+      {
+        "text": "Priority queue",
+        "isCorrect": false
+      },
+      {
+        "text": "Circular buffer",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which traversal of a binary search tree produces keys in nondecreasing order?",
+    "topic": "Data Structures",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Preorder",
+        "isCorrect": false
+      },
+      {
+        "text": "Inorder",
+        "isCorrect": true
+      },
+      {
+        "text": "Postorder",
+        "isCorrect": false
+      },
+      {
+        "text": "Level order",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which data structure is most directly used to implement breadth-first search?",
+    "topic": "Data Structures",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Stack",
+        "isCorrect": false
+      },
+      {
+        "text": "Queue",
+        "isCorrect": true
+      },
+      {
+        "text": "Heap",
+        "isCorrect": false
+      },
+      {
+        "text": "Hash table",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average-case search complexity of a well-distributed hash table?",
+    "topic": "Data Structures",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "O(1)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n log n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n^2)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which property must an AVL tree maintain after every insertion or deletion?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Every node must have exactly two children",
+        "isCorrect": false
+      },
+      {
+        "text": "The height difference between the left and right subtrees of every node is at most one",
+        "isCorrect": true
+      },
+      {
+        "text": "All leaves must be at the same depth",
+        "isCorrect": false
+      },
+      {
+        "text": "Every node must have the same number of descendants",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the worst-case time complexity of deleting the minimum element from a binary heap containing n elements?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n log n)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In a disjoint-set union structure using union by rank and path compression, the amortized time per operation is closest to which bound?",
+    "topic": "Data Structures",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "O(1) exactly",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(alpha(n))",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which technique is used by a B-tree to keep search, insertion, and deletion efficient when nodes can contain multiple keys?",
+    "topic": "Data Structures",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Maintaining a nearly constant height by allowing multiple children per internal node",
+        "isCorrect": true
+      },
+      {
+        "text": "Storing every key only in a linked list",
+        "isCorrect": false
+      },
+      {
+        "text": "Using recursion without balancing",
+        "isCorrect": false
+      },
+      {
+        "text": "Restricting every node to exactly two children",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the primary advantage of a trie over a comparison-based balanced search tree for string keys?",
+    "topic": "Data Structures",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Its search time can depend primarily on the key length rather than the number of stored keys",
+        "isCorrect": true
+      },
+      {
+        "text": "It always uses less memory than a binary search tree",
+        "isCorrect": false
+      },
+      {
+        "text": "It requires no extra nodes",
+        "isCorrect": false
+      },
+      {
+        "text": "It guarantees O(1) search regardless of key length",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which operation is typically O(1) in a singly linked list when a pointer to the first node is available?",
+    "topic": "Data Structures",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Accessing the element at index n/2",
+        "isCorrect": false
+      },
+      {
+        "text": "Inserting a node at the beginning",
+        "isCorrect": true
+      },
+      {
+        "text": "Searching for an arbitrary value",
+        "isCorrect": false
+      },
+      {
+        "text": "Finding the last node without a tail pointer",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the maximum number of edges in a simple undirected graph with n vertices?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "n",
+        "isCorrect": false
+      },
+      {
+        "text": "n - 1",
+        "isCorrect": false
+      },
+      {
+        "text": "n(n - 1) / 2",
+        "isCorrect": true
+      },
+      {
+        "text": "n(n + 1)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which Java feature allows a class to inherit behavior from multiple sources without supporting multiple class inheritance?",
+    "topic": "Java",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Multiple interfaces",
+        "isCorrect": true
+      },
+      {
+        "text": "Multiple superclasses",
+        "isCorrect": false
+      },
+      {
+        "text": "Multiple constructors",
+        "isCorrect": false
+      },
+      {
+        "text": "Multiple packages",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the output of `System.out.println(10 + 20 + \"30\");` in Java?",
+    "topic": "Java",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "3030",
+        "isCorrect": false
+      },
+      {
+        "text": "102030",
+        "isCorrect": false
+      },
+      {
+        "text": "3030",
+        "isCorrect": true
+      },
+      {
+        "text": "60",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which Java collection does not allow duplicate elements?",
+    "topic": "Java",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "List",
+        "isCorrect": false
+      },
+      {
+        "text": "Set",
+        "isCorrect": true
+      },
+      {
+        "text": "Queue",
+        "isCorrect": false
+      },
+      {
+        "text": "ArrayList",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which keyword is used to create an object dynamically in Java?",
+    "topic": "Java",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "alloc",
+        "isCorrect": false
+      },
+      {
+        "text": "malloc",
+        "isCorrect": false
+      },
+      {
+        "text": "new",
+        "isCorrect": true
+      },
+      {
+        "text": "create",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which Java type is designed to represent a sequence of characters that cannot be modified after creation?",
+    "topic": "Java",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "String",
+        "isCorrect": true
+      },
+      {
+        "text": "StringBuilder",
+        "isCorrect": false
+      },
+      {
+        "text": "StringBuffer",
+        "isCorrect": false
+      },
+      {
+        "text": "CharacterArray",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which exception is thrown when an array index is outside its valid range in Java?",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "NullPointerException",
+        "isCorrect": false
+      },
+      {
+        "text": "ArrayIndexOutOfBoundsException",
+        "isCorrect": true
+      },
+      {
+        "text": "IndexException",
+        "isCorrect": false
+      },
+      {
+        "text": "IllegalArgumentException",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which statement about Java interfaces is correct?",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "A class can implement multiple interfaces",
+        "isCorrect": true
+      },
+      {
+        "text": "An interface can extend a class",
+        "isCorrect": false
+      },
+      {
+        "text": "Interfaces cannot contain default methods",
+        "isCorrect": false
+      },
+      {
+        "text": "A class can extend multiple classes",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What happens when a Java method is declared `final`?",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "It cannot be overloaded",
+        "isCorrect": false
+      },
+      {
+        "text": "It cannot be overridden",
+        "isCorrect": true
+      },
+      {
+        "text": "It cannot be called",
+        "isCorrect": false
+      },
+      {
+        "text": "It must be static",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which mechanism determines the overridden instance method implementation at runtime in Java?",
+    "topic": "Java",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Static binding",
+        "isCorrect": false
+      },
+      {
+        "text": "Dynamic method dispatch",
+        "isCorrect": true
+      },
+      {
+        "text": "Compile-time constant folding",
+        "isCorrect": false
+      },
+      {
+        "text": "Preprocessing",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Java, which statement about `HashMap` is correct?",
+    "topic": "Java",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "It guarantees insertion order",
+        "isCorrect": false
+      },
+      {
+        "text": "It allows one null key and multiple null values",
+        "isCorrect": true
+      },
+      {
+        "text": "It prohibits all null values",
+        "isCorrect": false
+      },
+      {
+        "text": "It sorts keys automatically",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the primary purpose of the `volatile` keyword in Java?",
+    "topic": "Java",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "To make compound operations atomic",
+        "isCorrect": false
+      },
+      {
+        "text": "To establish visibility guarantees for reads and writes",
+        "isCorrect": true
+      },
+      {
+        "text": "To permanently store a variable",
+        "isCorrect": false
+      },
+      {
+        "text": "To prevent garbage collection",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which C storage class specifies that a variable should retain its value between function calls?",
+    "topic": "C",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "auto",
+        "isCorrect": false
+      },
+      {
+        "text": "register",
+        "isCorrect": false
+      },
+      {
+        "text": "static",
+        "isCorrect": true
+      },
+      {
+        "text": "extern",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which operator is used to obtain the address of a variable in C?",
+    "topic": "C",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "*",
+        "isCorrect": false
+      },
+      {
+        "text": "&",
+        "isCorrect": true
+      },
+      {
+        "text": "%",
+        "isCorrect": false
+      },
+      {
+        "text": "#",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which header file provides the declaration of `printf()`?",
+    "topic": "C",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "stdlib.h",
+        "isCorrect": false
+      },
+      {
+        "text": "string.h",
+        "isCorrect": false
+      },
+      {
+        "text": "stdio.h",
+        "isCorrect": true
+      },
+      {
+        "text": "memory.h",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What does `strlen()` return for a valid null-terminated C string?",
+    "topic": "C",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Number of characters before the null character",
+        "isCorrect": true
+      },
+      {
+        "text": "Size of the pointer",
+        "isCorrect": false
+      },
+      {
+        "text": "Number of bytes including the null character",
+        "isCorrect": false
+      },
+      {
+        "text": "Allocated capacity of the string",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which C construct is primarily used to group variables of different data types under one name?",
+    "topic": "C",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Array",
+        "isCorrect": false
+      },
+      {
+        "text": "Structure",
+        "isCorrect": true
+      },
+      {
+        "text": "Macro",
+        "isCorrect": false
+      },
+      {
+        "text": "Enumeration",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What does a pointer variable store in C?",
+    "topic": "C",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "A memory address",
+        "isCorrect": true
+      },
+      {
+        "text": "Only an integer value",
+        "isCorrect": false
+      },
+      {
+        "text": "Only a character",
+        "isCorrect": false
+      },
+      {
+        "text": "A CPU register name",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the value of `sizeof(char)` in C?",
+    "topic": "C",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Always 0",
+        "isCorrect": false
+      },
+      {
+        "text": "Always 1",
+        "isCorrect": true
+      },
+      {
+        "text": "Always 2",
+        "isCorrect": false
+      },
+      {
+        "text": "Always 4",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which function dynamically allocates a block of memory initialized to zero in C?",
+    "topic": "C",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "malloc()",
+        "isCorrect": false
+      },
+      {
+        "text": "calloc()",
+        "isCorrect": true
+      },
+      {
+        "text": "realloc()",
+        "isCorrect": false
+      },
+      {
+        "text": "alloca()",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is undefined behavior in C?",
+    "topic": "C",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Behavior explicitly specified by the standard",
+        "isCorrect": false
+      },
+      {
+        "text": "Behavior for which the C standard imposes no requirements",
+        "isCorrect": true
+      },
+      {
+        "text": "A compiler warning that always stops execution",
+        "isCorrect": false
+      },
+      {
+        "text": "A runtime error defined identically on every platform",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Consider `int a[5]; int *p = a;`. What does `*(p + 3)` access?",
+    "topic": "C",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "a[1]",
+        "isCorrect": false
+      },
+      {
+        "text": "a[2]",
+        "isCorrect": false
+      },
+      {
+        "text": "a[3]",
+        "isCorrect": true
+      },
+      {
+        "text": "a[4]",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In C++, which feature allows the same function name to be defined with different parameter lists?",
+    "topic": "C++",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Function overloading",
+        "isCorrect": true
+      },
+      {
+        "text": "Function hiding only",
+        "isCorrect": false
+      },
+      {
+        "text": "Friendship",
+        "isCorrect": false
+      },
+      {
+        "text": "Encapsulation",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which C++ access specifier makes class members accessible from anywhere through an object, subject to other language rules?",
+    "topic": "C++",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "private",
+        "isCorrect": false
+      },
+      {
+        "text": "protected",
+        "isCorrect": false
+      },
+      {
+        "text": "public",
+        "isCorrect": true
+      },
+      {
+        "text": "internal",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which operator is commonly used for dynamic memory allocation in C++?",
+    "topic": "C++",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "alloc",
+        "isCorrect": false
+      },
+      {
+        "text": "new",
+        "isCorrect": true
+      },
+      {
+        "text": "malloc",
+        "isCorrect": false
+      },
+      {
+        "text": "create",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which special member function is called when an object is initialized from another object of the same class?",
+    "topic": "C++",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Copy constructor",
+        "isCorrect": true
+      },
+      {
+        "text": "Destructor",
+        "isCorrect": false
+      },
+      {
+        "text": "Move assignment operator",
+        "isCorrect": false
+      },
+      {
+        "text": "Default operator",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which C++ keyword is used to prevent a virtual function from being overridden in a derived class?",
+    "topic": "C++",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "sealed",
+        "isCorrect": false
+      },
+      {
+        "text": "final",
+        "isCorrect": true
+      },
+      {
+        "text": "override_only",
+        "isCorrect": false
+      },
+      {
+        "text": "constant",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the purpose of a virtual destructor in a polymorphic C++ base class?",
+    "topic": "C++",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "To allow proper destruction through a base-class pointer",
+        "isCorrect": true
+      },
+      {
+        "text": "To prevent object destruction",
+        "isCorrect": false
+      },
+      {
+        "text": "To make all constructors virtual",
+        "isCorrect": false
+      },
+      {
+        "text": "To allocate objects on the stack",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which C++ cast is specifically intended for safe downcasting within a polymorphic hierarchy and performs a runtime check?",
+    "topic": "C++",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "static_cast",
+        "isCorrect": false
+      },
+      {
+        "text": "dynamic_cast",
+        "isCorrect": true
+      },
+      {
+        "text": "reinterpret_cast",
+        "isCorrect": false
+      },
+      {
+        "text": "const_cast",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What does RAII in C++ primarily associate resource lifetime with?",
+    "topic": "C++",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "The lifetime of an object",
+        "isCorrect": true
+      },
+      {
+        "text": "The lifetime of the operating system",
+        "isCorrect": false
+      },
+      {
+        "text": "The lifetime of a namespace",
+        "isCorrect": false
+      },
+      {
+        "text": "The lifetime of a compiler process",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which C++ smart pointer provides exclusive ownership of a dynamically allocated object?",
+    "topic": "C++",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "shared_ptr",
+        "isCorrect": false
+      },
+      {
+        "text": "weak_ptr",
+        "isCorrect": false
+      },
+      {
+        "text": "unique_ptr",
+        "isCorrect": true
+      },
+      {
+        "text": "auto_ptr_ref",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the key issue with the classic diamond inheritance problem in C++?",
+    "topic": "C++",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Ambiguity caused by multiple copies of a common base subobject",
+        "isCorrect": true
+      },
+      {
+        "text": "Inability to define constructors",
+        "isCorrect": false
+      },
+      {
+        "text": "Automatic conversion to C",
+        "isCorrect": false
+      },
+      {
+        "text": "Loss of all virtual functions",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the purpose of a C++ virtual function table in typical implementations?",
+    "topic": "C++",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "To support dynamic dispatch of virtual functions",
+        "isCorrect": true
+      },
+      {
+        "text": "To store local automatic variables",
+        "isCorrect": false
+      },
+      {
+        "text": "To replace the stack",
+        "isCorrect": false
+      },
+      {
+        "text": "To store all template source code",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In C++, what does `std::move` primarily do?",
+    "topic": "C++",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Physically moves an object to another memory address",
+        "isCorrect": false
+      },
+      {
+        "text": "Converts an expression to an xvalue enabling move semantics",
+        "isCorrect": true
+      },
+      {
+        "text": "Immediately invokes the move constructor",
+        "isCorrect": false
+      },
+      {
+        "text": "Copies all bytes using memcpy",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which Python object is immutable?",
+    "topic": "Python",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "list",
+        "isCorrect": false
+      },
+      {
+        "text": "set",
+        "isCorrect": false
+      },
+      {
+        "text": "tuple",
+        "isCorrect": true
+      },
+      {
+        "text": "dict",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which keyword defines a function in Python?",
+    "topic": "Python",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "func",
+        "isCorrect": false
+      },
+      {
+        "text": "def",
+        "isCorrect": true
+      },
+      {
+        "text": "function",
+        "isCorrect": false
+      },
+      {
+        "text": "define",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What does `len([10, 20, 30])` return?",
+    "topic": "Python",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "2",
+        "isCorrect": false
+      },
+      {
+        "text": "3",
+        "isCorrect": true
+      },
+      {
+        "text": "4",
+        "isCorrect": false
+      },
+      {
+        "text": "30",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which Python data structure stores key-value pairs?",
+    "topic": "Python",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "tuple",
+        "isCorrect": false
+      },
+      {
+        "text": "list",
+        "isCorrect": false
+      },
+      {
+        "text": "dict",
+        "isCorrect": true
+      },
+      {
+        "text": "set",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which operator performs exponentiation in Python?",
+    "topic": "Python",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "^",
+        "isCorrect": false
+      },
+      {
+        "text": "**",
+        "isCorrect": true
+      },
+      {
+        "text": "//",
+        "isCorrect": false
+      },
+      {
+        "text": "%%",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the result of `7 // 2` in Python?",
+    "topic": "Python",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "3",
+        "isCorrect": true
+      },
+      {
+        "text": "3.5",
+        "isCorrect": false
+      },
+      {
+        "text": "4",
+        "isCorrect": false
+      },
+      {
+        "text": "1",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What does the Python `yield` statement make a function behave like?",
+    "topic": "Python",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "A generator function",
+        "isCorrect": true
+      },
+      {
+        "text": "A static method",
+        "isCorrect": false
+      },
+      {
+        "text": "A constructor",
+        "isCorrect": false
+      },
+      {
+        "text": "A module",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which Python mechanism is used to handle exceptions?",
+    "topic": "Python",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "try and except",
+        "isCorrect": true
+      },
+      {
+        "text": "check and catch",
+        "isCorrect": false
+      },
+      {
+        "text": "error and handle",
+        "isCorrect": false
+      },
+      {
+        "text": "test and recover",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What does list slicing `a[1:4]` include?",
+    "topic": "Python",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Indices 1, 2, and 3",
+        "isCorrect": true
+      },
+      {
+        "text": "Indices 1, 2, 3, and 4",
+        "isCorrect": false
+      },
+      {
+        "text": "Only index 4",
+        "isCorrect": false
+      },
+      {
+        "text": "Indices 0 through 4",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the key purpose of Python's Global Interpreter Lock in the standard CPython implementation?",
+    "topic": "Python",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "It prevents all concurrent I/O operations",
+        "isCorrect": false
+      },
+      {
+        "text": "It protects interpreter state so only one thread executes Python bytecode at a time in the traditional CPython runtime",
+        "isCorrect": true
+      },
+      {
+        "text": "It prevents multiprocessing",
+        "isCorrect": false
+      },
+      {
+        "text": "It makes every Python operation atomic",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In Python, why can using a mutable default argument such as `def f(x, a=[]):` cause surprising behavior?",
+    "topic": "Python",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "The default object is created once when the function is defined and reused across calls",
+        "isCorrect": true
+      },
+      {
+        "text": "Python converts lists to tuples automatically",
+        "isCorrect": false
+      },
+      {
+        "text": "Default arguments are always global variables",
+        "isCorrect": false
+      },
+      {
+        "text": "The function cannot accept positional arguments",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the average-case time complexity of searching for a key in a well-distributed hash table?",
+    "topic": "Data Structures",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "O(1)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n log n)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which data structure follows the LIFO principle?",
+    "topic": "Data Structures",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Queue",
+        "isCorrect": false
+      },
+      {
+        "text": "Stack",
+        "isCorrect": true
+      },
+      {
+        "text": "Heap",
+        "isCorrect": false
+      },
+      {
+        "text": "Graph",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which data structure is most directly used to implement breadth-first search?",
+    "topic": "Data Structures",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Stack",
+        "isCorrect": false
+      },
+      {
+        "text": "Queue",
+        "isCorrect": true
+      },
+      {
+        "text": "Heap",
+        "isCorrect": false
+      },
+      {
+        "text": "Hash table",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which tree traversal visits nodes in Left-Root-Right order?",
+    "topic": "Data Structures",
+    "difficulty": "Easy",
+    "targetYear": "Final Year",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Preorder",
+        "isCorrect": false
+      },
+      {
+        "text": "Inorder",
+        "isCorrect": true
+      },
+      {
+        "text": "Postorder",
+        "isCorrect": false
+      },
+      {
+        "text": "Level-order",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which structure is designed to efficiently support prefix-based string queries?",
+    "topic": "Data Structures",
+    "difficulty": "Easy",
+    "targetYear": "TY",
+    "durationSec": 30,
+    "options": [
+      {
+        "text": "Trie",
+        "isCorrect": true
+      },
+      {
+        "text": "Stack",
+        "isCorrect": false
+      },
+      {
+        "text": "Heap",
+        "isCorrect": false
+      },
+      {
+        "text": "Circular queue",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the worst-case search time in an unbalanced binary search tree containing n nodes?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n log n)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which heap property must hold in a min-heap?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Every parent is less than or equal to its children",
+        "isCorrect": true
+      },
+      {
+        "text": "Every parent is greater than all descendants",
+        "isCorrect": false
+      },
+      {
+        "text": "Every leaf is smaller than the root",
+        "isCorrect": false
+      },
+      {
+        "text": "The tree must be a binary search tree",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which linked-list operation can be performed in O(1) time when a pointer to the target node's predecessor is already available?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Insert a node after the predecessor",
+        "isCorrect": true
+      },
+      {
+        "text": "Search for an arbitrary value",
+        "isCorrect": false
+      },
+      {
+        "text": "Sort the entire list",
+        "isCorrect": false
+      },
+      {
+        "text": "Find the median without extra structure",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the main purpose of a disjoint-set union structure?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Maintain dynamically changing equivalence classes",
+        "isCorrect": true
+      },
+      {
+        "text": "Sort arbitrary strings lexicographically",
+        "isCorrect": false
+      },
+      {
+        "text": "Perform matrix multiplication",
+        "isCorrect": false
+      },
+      {
+        "text": "Store recursive call frames",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "When path compression and union by rank are both used, the amortized time complexity of a disjoint-set operation is best described as:",
+    "topic": "Data Structures",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "O(log n) exactly",
+        "isCorrect": false
+      },
+      {
+        "text": "O(alpha(n)) amortized",
+        "isCorrect": true
+      },
+      {
+        "text": "O(n) amortized",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n log n) amortized",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which data structure is most appropriate for supporting range minimum queries with efficient updates?",
+    "topic": "Data Structures",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Stack",
+        "isCorrect": false
+      },
+      {
+        "text": "Segment tree",
+        "isCorrect": true
+      },
+      {
+        "text": "Simple queue",
+        "isCorrect": false
+      },
+      {
+        "text": "Singly linked list",
+        "isCorrect": false
+      }
+    ]
+  }
+]
