@@ -60,16 +60,49 @@ export default function ResultPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-background flex flex-col items-center justify-center">
+      <>
+        <Navbar />
         <PageBackground />
-        <div className="flex flex-col items-center animate-pulse">
-          <ShieldCheck className="w-12 h-12 text-primary mb-6" />
-          <div className="text-primary uppercase tracking-widest text-sm font-bold flex items-center gap-3">
-            <Loader2 className="w-5 h-5 animate-spin" />
-            Analyzing Performance...
+        <main className="relative min-h-screen pt-20 pb-8 px-4 sm:px-6 flex flex-col items-center justify-center font-sans">
+          <div className="w-full max-w-lg z-10">
+            <div className="bg-secondary/40 backdrop-blur-md border border-border p-6 sm:p-8 rounded-2xl shadow-2xl text-center relative overflow-hidden animate-pulse">
+              
+              {/* Icon skeleton */}
+              <div className="mb-3 flex justify-center">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-background rounded-full border border-border"></div>
+              </div>
+
+              {/* Title skeleton */}
+              <div className="h-6 w-40 sm:w-48 bg-background rounded-md mx-auto mb-3"></div>
+              <div className="h-4 w-56 sm:w-64 bg-background rounded-md mx-auto mb-6"></div>
+
+              {/* Score skeleton */}
+              <div className="mb-6 p-4 sm:p-6 bg-background/50 rounded-xl border border-border">
+                <div className="h-3 w-24 sm:w-32 bg-secondary rounded-md mx-auto mb-4"></div>
+                <div className="h-14 sm:h-16 w-24 sm:w-32 bg-secondary rounded-md mx-auto"></div>
+              </div>
+
+              {/* Accordion skeleton */}
+              <div className="h-12 sm:h-14 w-full bg-background/50 border border-border rounded-xl mb-6"></div>
+
+              {/* Buttons skeleton */}
+              <div className="space-y-3">
+                <div className="h-10 sm:h-12 w-full bg-background/50 rounded-md"></div>
+                <div className="h-10 sm:h-12 w-full bg-background/50 rounded-md"></div>
+              </div>
+
+              {/* Analyzing performance overlay */}
+              <div className="absolute inset-0 bg-background/80 backdrop-blur-[2px] flex flex-col items-center justify-center z-20">
+                <Loader2 className="w-8 h-8 sm:w-10 sm:h-10 text-primary animate-spin mb-4" />
+                <div className="text-primary uppercase tracking-widest text-xs sm:text-sm font-bold animate-pulse">
+                  Analyzing Performance...
+                </div>
+              </div>
+
+            </div>
           </div>
-        </div>
-      </div>
+        </main>
+      </>
     );
   }
 
