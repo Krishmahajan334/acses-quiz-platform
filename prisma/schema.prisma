@@ -36,6 +36,8 @@ model Question {
   options         Option[]
   attemptQuestions AttemptQuestion[]
   uploadBatch     UploadHistory?    @relation(fields: [uploadBatchId], references: [id], onDelete: Cascade)
+  
+  @@index([eventId, difficulty, status])
 }
 
 model Option {
@@ -74,6 +76,8 @@ model Attempt {
   questions      AttemptQuestion[]
   answers        Answer[]
   coupon         Coupon?
+
+  @@index([participantId, eventId, status])
 }
 
 model AttemptQuestion {
@@ -89,6 +93,7 @@ model AttemptQuestion {
 
   @@unique([attemptId, questionId])
   @@unique([attemptId, position])
+  @@index([attemptId, answeredAt, position])
 }
 
 model Answer {
