@@ -24,6 +24,7 @@ export async function POST(request: Request) {
         event: true,
         answers: true,
         coupon: true,
+        participant: true,
       }
     });
 
