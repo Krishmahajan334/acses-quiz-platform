@@ -156,9 +156,9 @@ export default function ResultPage() {
       <Navbar />
       <PageBackground />
       
-      <main className="relative min-h-screen pt-20 pb-8 px-4 sm:px-6 flex flex-col items-center justify-center font-sans">
+      <main className="relative min-h-screen pt-24 pb-12 px-4 sm:px-6 flex flex-col items-center font-sans">
         
-        <div className="w-full max-w-lg z-10 animate-fade-up">
+        <div className="w-full max-w-lg z-10 animate-fade-up my-auto">
           
           <div className={`bg-secondary/40 backdrop-blur-md border p-6 sm:p-8 rounded-2xl shadow-2xl text-center relative overflow-hidden transition-all duration-500 \${result.passed ? 'border-primary/50' : 'border-border'}`}>
             
@@ -198,7 +198,7 @@ export default function ResultPage() {
                   Review Your Answers & Check Correct Options
                   <span className="text-primary transform group-open:rotate-180 transition-transform">▼</span>
                 </summary>
-                <div className="p-4 max-h-[500px] overflow-y-auto space-y-4 border-t border-border">
+                <div className="p-4 max-h-[60vh] overflow-y-auto space-y-4 border-t border-border custom-scrollbar">
                   {result.reviewData.map((item, index) => (
                     <div key={index} className="p-3 rounded-lg bg-secondary/20 border border-white/5 text-sm">
                       <p className="font-medium text-foreground mb-3">{index + 1}. {item.questionText}</p>
