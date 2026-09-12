@@ -1,9 +1,134 @@
 [
   {
+    "text": "Which lifecycle method of a Java Servlet is called only once when the servlet is first created?",
+    "topic": "Java Servlets",
+    "difficulty": "Hard",
+    "targetYear": "FY",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "service()",
+        "isCorrect": false
+      },
+      {
+        "text": "init()",
+        "isCorrect": true
+      },
+      {
+        "text": "destroy()",
+        "isCorrect": false
+      },
+      {
+        "text": "doGet()",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the primary difference between a Thread and a Process in an Operating System?",
+    "topic": "Operating Systems",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "Processes share memory space, threads do not.",
+        "isCorrect": false
+      },
+      {
+        "text": "Threads are heavyweight, processes are lightweight.",
+        "isCorrect": false
+      },
+      {
+        "text": "Threads share the same memory space, processes have isolated memory.",
+        "isCorrect": true
+      },
+      {
+        "text": "There is no functional difference.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "In microservices architecture, what pattern is commonly used to manage distributed transactions?",
+    "topic": "Advanced CS",
+    "difficulty": "Hard",
+    "targetYear": "Final Year",
+    "durationSec": 60,
+    "options": [
+      {
+        "text": "Saga Pattern",
+        "isCorrect": true
+      },
+      {
+        "text": "Singleton Pattern",
+        "isCorrect": false
+      },
+      {
+        "text": "Observer Pattern",
+        "isCorrect": false
+      },
+      {
+        "text": "Factory Pattern",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "What is the time complexity of a binary search algorithm on a sorted array?",
+    "topic": "Data Structures",
+    "difficulty": "Medium",
+    "targetYear": "FY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "O(n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(n log n)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(log n)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(1)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which interface in Java provides the capability to store key-value pairs?",
+    "topic": "Java",
+    "difficulty": "Medium",
+    "targetYear": "TY",
+    "durationSec": 45,
+    "options": [
+      {
+        "text": "List",
+        "isCorrect": false
+      },
+      {
+        "text": "Set",
+        "isCorrect": false
+      },
+      {
+        "text": "Collection",
+        "isCorrect": false
+      },
+      {
+        "text": "Map",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
     "text": "What does a capacitor primarily do in a basic electronic circuit?",
     "topic": "Basic Electronics",
     "difficulty": "Easy",
-    "targetYear": "FY",
+    "targetYear": "TY",
     "durationSec": 30,
     "options": [
       {
@@ -50,35 +175,10 @@
     ]
   },
   {
-    "text": "What is the time complexity of a binary search algorithm on a sorted array?",
-    "topic": "Data Structures",
-    "difficulty": "Medium",
-    "targetYear": "SY",
-    "durationSec": 45,
-    "options": [
-      {
-        "text": "O(n)",
-        "isCorrect": false
-      },
-      {
-        "text": "O(n log n)",
-        "isCorrect": false
-      },
-      {
-        "text": "O(log n)",
-        "isCorrect": true
-      },
-      {
-        "text": "O(1)",
-        "isCorrect": false
-      }
-    ]
-  },
-  {
     "text": "In C++, which keyword is used to prevent a class from being inherited?",
     "topic": "OOP",
     "difficulty": "Medium",
-    "targetYear": "SY",
+    "targetYear": "Final Year",
     "durationSec": 45,
     "options": [
       {
@@ -95,106 +195,6 @@
       },
       {
         "text": "const",
-        "isCorrect": false
-      }
-    ]
-  },
-  {
-    "text": "Which interface in Java provides the capability to store key-value pairs?",
-    "topic": "Java",
-    "difficulty": "Medium",
-    "targetYear": "TY",
-    "durationSec": 45,
-    "options": [
-      {
-        "text": "List",
-        "isCorrect": false
-      },
-      {
-        "text": "Set",
-        "isCorrect": false
-      },
-      {
-        "text": "Collection",
-        "isCorrect": false
-      },
-      {
-        "text": "Map",
-        "isCorrect": true
-      }
-    ]
-  },
-  {
-    "text": "Which lifecycle method of a Java Servlet is called only once when the servlet is first created?",
-    "topic": "Java Servlets",
-    "difficulty": "Hard",
-    "targetYear": "TY",
-    "durationSec": 60,
-    "options": [
-      {
-        "text": "service()",
-        "isCorrect": false
-      },
-      {
-        "text": "init()",
-        "isCorrect": true
-      },
-      {
-        "text": "destroy()",
-        "isCorrect": false
-      },
-      {
-        "text": "doGet()",
-        "isCorrect": false
-      }
-    ]
-  },
-  {
-    "text": "In microservices architecture, what pattern is commonly used to manage distributed transactions?",
-    "topic": "Advanced CS",
-    "difficulty": "Hard",
-    "targetYear": "Final Year",
-    "durationSec": 60,
-    "options": [
-      {
-        "text": "Saga Pattern",
-        "isCorrect": true
-      },
-      {
-        "text": "Singleton Pattern",
-        "isCorrect": false
-      },
-      {
-        "text": "Observer Pattern",
-        "isCorrect": false
-      },
-      {
-        "text": "Factory Pattern",
-        "isCorrect": false
-      }
-    ]
-  },
-  {
-    "text": "What is the primary difference between a Thread and a Process in an Operating System?",
-    "topic": "Operating Systems",
-    "difficulty": "Medium",
-    "targetYear": "Final Year",
-    "durationSec": 45,
-    "options": [
-      {
-        "text": "Processes share memory space, threads do not.",
-        "isCorrect": false
-      },
-      {
-        "text": "Threads are heavyweight, processes are lightweight.",
-        "isCorrect": false
-      },
-      {
-        "text": "Threads share the same memory space, processes have isolated memory.",
-        "isCorrect": true
-      },
-      {
-        "text": "There is no functional difference.",
         "isCorrect": false
       }
     ]
