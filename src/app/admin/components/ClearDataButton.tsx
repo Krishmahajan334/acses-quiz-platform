@@ -42,8 +42,8 @@ export default function ClearDataButton() {
       onClick={handleClear}
       disabled={loading}
       className={`flex items-center gap-2 px-4 py-2.5 rounded-md text-xs uppercase tracking-widest font-bold transition-all shadow-sm border \${
-        loading ? "bg-destructive/20 border-destructive/30 text-destructive cursor-not-allowed" : "bg-destructive text-destructive-foreground border-transparent hover:brightness-110 shadow-[0_0_15px_rgba(220,38,38,0.3)]"
-      }`}
+        loading ? "bg-red-500/20 border-red-500/30 text-red-500 cursor-not-allowed" : "bg-red-600 text-white border-transparent hover:bg-red-700 shadow-[0_0_15px_rgba(220,38,38,0.5)]"
+      } print:hidden`}
     >
       {loading ? (
         <>
