@@ -1,8 +1,8 @@
 import { z } from 'zod';
 
-// PRN Regex: 2 digits (year) + 3 or 4 letters + 3 digits
-// Example: 24UCS056
-const prnRegex = /^\d{2}[A-Za-z]{3,4}\d{3}$/;
+// PRN Regex: 2 digits (year) + 3 letters starting with U or P + 3 digits
+// Example: 24UCS001, 24PCS001, 24UAM001
+const prnRegex = /^\d{2}[UPup][A-Za-z]{2}\d{3}$/;
 
 // Mobile Regex: Exactly 10 digits starting with 6, 7, 8, or 9 (Indian numbers)
 const mobileRegex = /^[6-9]\d{9}$/;
@@ -34,7 +34,7 @@ export const registrationSchema = z.object({
     if (!prnRegex.test(data.prn)) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
-        message: "Invalid PRN format. Example: 24UCS056 (2 digits year + 3/4 letters + 3 digits)",
+        message: "Invalid PRN format. Example: 24UCS001 (2 digits year + U/P and 2 letters + 3 digits roll)",
         path: ["prn"],
       });
     }
@@ -43,7 +43,7 @@ export const registrationSchema = z.object({
     if (!prnRegex.test(data.prn)) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
-        message: "Invalid PRN format. Example: 24UCS056",
+        message: "Invalid PRN format. Example: 24UCS001",
         path: ["prn"],
       });
     }

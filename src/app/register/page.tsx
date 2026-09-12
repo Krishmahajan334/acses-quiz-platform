@@ -153,7 +153,7 @@ export default function RegisterPage() {
                   name="prn"
                   type="text"
                   required={isPrnRequired}
-                  placeholder="e.g. 24UCS056"
+                  placeholder="e.g. 24UCS001"
                   className={inputClass}
                   value={formData.prn}
                   onChange={(e) => setFormData({ ...formData, prn: e.target.value.toUpperCase() })}
