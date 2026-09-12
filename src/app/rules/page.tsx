@@ -52,10 +52,28 @@ export default function RulesPage() {
               Know the rules.<br />
               <span className="text-muted-foreground">Then play smart.</span>
             </h1>
-            <p className="text-muted-foreground text-lg max-w-2xl">
+            <p className="text-muted-foreground text-lg max-w-2xl mb-12">
               Read carefully before entering the challenge. 
               The system strictly enforces these parameters.
             </p>
+
+            {/* Membership CTA Banner */}
+            <a href="https://forms.gle/Sa3mbHEV2eoGC6jt9" target="_blank" className="block relative w-full rounded-2xl bg-gradient-to-r from-primary/20 via-primary/5 to-transparent border border-primary/30 p-6 md:p-8 hover:border-primary/60 transition-all group overflow-hidden cursor-pointer shadow-[0_0_30px_rgba(34,197,94,0.1)] hover:shadow-[0_0_40px_rgba(34,197,94,0.2)]">
+              <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors"></div>
+              <div className="relative flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-left">
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="bg-primary text-primary-foreground text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded-sm animate-pulse">Official</span>
+                    <h3 className="text-xl md:text-2xl font-bold text-primary uppercase tracking-wide">Become an ACSES Member</h3>
+                  </div>
+                  <p className="text-sm md:text-base text-foreground/80 leading-relaxed font-medium">Join the elite community of CSE students. Unlock exclusive technical workshops, premium events, and VIP community access.</p>
+                </div>
+                <div className="shrink-0 bg-primary text-primary-foreground px-6 py-4 rounded-md font-bold text-sm uppercase tracking-widest hover:brightness-110 transition-all flex items-center shadow-[0_0_20px_rgba(34,197,94,0.4)] w-full md:w-auto justify-center">
+                  Register Form
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </div>
+              </div>
+            </a>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">

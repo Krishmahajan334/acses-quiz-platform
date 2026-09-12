@@ -159,8 +159,6 @@ export default function ResultPage() {
                 </h3>
                 <p className="text-foreground/80 text-sm mb-4 leading-relaxed font-medium">
                   Congratulations on conquering the challenge! Present this secure cryptographic token at the ACSES desk to claim your <strong className="text-primary">exclusive discount for our upcoming technical event</strong>.
-                  <br /><br />
-                  Want even more benefits? <a href="https://forms.gle/Sa3mbHEV2eoGC6jt9" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-bold">Become an official ACSES member today</a> to unlock additional perks, workshops, and exclusive community access!
                 </p>
                 <div className="flex items-center gap-2">
                   <div className="flex-1 bg-background px-3 sm:px-4 py-3 rounded-lg border border-primary/20 font-mono text-xs sm:text-sm md:text-lg font-bold text-foreground tracking-widest shadow-inner select-all break-all">
@@ -177,21 +175,42 @@ export default function ResultPage() {
               </div>
             )}
 
-            <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 mb-8 text-center">
-              <p className="text-foreground/90 text-sm leading-relaxed">
-                Want even more benefits? <a href="https://forms.gle/Sa3mbHEV2eoGC6jt9" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-bold">Become an official ACSES member today</a> to unlock additional perks, workshops, and exclusive community access!
-              </p>
-            </div>
+            {/* Massive Membership CTA */}
+            <a 
+              href="https://forms.gle/Sa3mbHEV2eoGC6jt9" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block relative w-full rounded-2xl bg-gradient-to-br from-primary/30 via-primary/10 to-background border-2 border-primary/50 p-6 sm:p-8 mb-8 hover:border-primary transition-all group overflow-hidden cursor-pointer shadow-[0_0_40px_rgba(34,197,94,0.15)] hover:shadow-[0_0_60px_rgba(34,197,94,0.25)] hover:-translate-y-1"
+            >
+              <div className="absolute inset-0 bg-[url('/noise.png')] opacity-20 mix-blend-overlay pointer-events-none"></div>
+              <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
+              
+              <div className="relative flex flex-col items-center text-center">
+                <div className="mb-4 relative">
+                  <div className="absolute inset-0 bg-primary rounded-full blur-xl opacity-50 group-hover:opacity-70 animate-pulse transition-opacity"></div>
+                  <div className="w-16 h-16 bg-primary/20 rounded-full border border-primary/50 flex items-center justify-center relative z-10">
+                    <ShieldCheck className="w-8 h-8 text-primary" />
+                  </div>
+                </div>
+                
+                <h3 className="text-2xl sm:text-3xl font-black text-foreground uppercase tracking-tighter mb-2">
+                  Join the <span className="text-primary">Elite 1%</span>
+                </h3>
+                <p className="text-primary font-bold uppercase tracking-widest text-sm mb-4">
+                  Become an Official ACSES Member
+                </p>
+                <p className="text-foreground/80 text-sm mb-8 leading-relaxed max-w-sm mx-auto">
+                  Unlock exclusive technical workshops, premium events, and VIP access to the best computer science community on campus.
+                </p>
+                
+                <div className="bg-primary text-primary-foreground w-full py-4 rounded-md font-black uppercase tracking-widest text-sm group-hover:brightness-110 shadow-[0_0_20px_rgba(34,197,94,0.4)] transition-all flex items-center justify-center">
+                  Register Now
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </a>
 
             <div className="space-y-4">
-              <Link
-                href="https://forms.gle/Sa3mbHEV2eoGC6jt9"
-                target="_blank"
-                className="w-full inline-flex justify-center items-center py-4 px-6 rounded-md text-sm font-bold text-primary-foreground bg-primary/20 text-primary hover:bg-primary/30 border border-primary/30 focus:outline-none transition-all uppercase tracking-widest"
-              >
-                Become an ACSES Member
-              </Link>
-
               <Link
                 href="/links-standalone.html"
                 className="w-full inline-flex justify-center items-center py-4 px-6 rounded-md text-sm font-bold text-foreground bg-secondary hover:bg-secondary/80 focus:outline-none transition-all uppercase tracking-widest border border-white/5"
@@ -201,10 +220,9 @@ export default function ResultPage() {
 
               <Link
                 href="/"
-                className="w-full inline-flex justify-center items-center py-4 px-6 rounded-md text-sm font-bold text-primary-foreground bg-primary hover:brightness-110 focus:outline-none transition-all uppercase tracking-widest shadow-[0_0_15px_rgba(34,197,94,0.3)]"
+                className="w-full inline-flex justify-center items-center py-4 px-6 rounded-md text-sm font-bold text-primary-foreground bg-primary/20 text-primary hover:bg-primary/30 focus:outline-none transition-all uppercase tracking-widest"
               >
                 Return to Terminal
-                <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
           </div>
