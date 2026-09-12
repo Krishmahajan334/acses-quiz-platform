@@ -3,10 +3,10 @@ import { prisma } from '@/lib/db';
 
 export async function DELETE(
   request: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const participantId = params.id;
+    const { id: participantId } = await params;
     if (!participantId) {
       return NextResponse.json({ error: "Participant ID is required" }, { status: 400 });
     }
