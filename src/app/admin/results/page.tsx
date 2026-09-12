@@ -58,15 +58,15 @@ export default async function AdminResultsPage() {
     <div>
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
         <h2 className="text-3xl font-bold text-foreground uppercase tracking-tight">Quiz Results & Coupons</h2>
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap gap-3 print:hidden">
           <ExportButtons data={exportData} />
           <SyncDataButton />
           <ClearDataButton />
         </div>
       </div>
 
-      <div className="bg-secondary/40 shadow-lg border border-border rounded-xl overflow-hidden backdrop-blur-sm">
-        <div className="overflow-x-auto">
+      <div className="bg-secondary/40 shadow-lg border border-border rounded-xl overflow-hidden backdrop-blur-sm print:shadow-none print:border-none print:bg-transparent">
+        <div className="overflow-x-auto print:overflow-visible">
           <table className="min-w-full divide-y divide-border">
             <thead className="bg-background/50">
               <tr>
