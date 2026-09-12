@@ -74,11 +74,18 @@ export async function generateAttempt(participantId: string, eventId: string, du
   // 3. Round-robin pick based on participant year
   const selectedQuestions: any[] = [];
   const difficultyCycle = ['Easy', 'Medium', 'Hard'];
-  let difficultyIndex = 0;
+  let difficultyIndex = Math.floor(Math.random() * difficultyCycle.length);
 
   // Helper to pick questions from a given group of topic buckets
   const pickFromGroup = (group: Record<string, any[]>, countNeeded: number) => {
     const topicKeys = Object.keys(group);
+    
+    // Shuffle topic keys to guarantee different topic sequences for different users
+    for (let i = topicKeys.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [topicKeys[i], topicKeys[j]] = [topicKeys[j], topicKeys[i]];
+    }
+
     let keepPicking = true;
     let picked = 0;
     while (picked < countNeeded && keepPicking) {
