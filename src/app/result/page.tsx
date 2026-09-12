@@ -40,6 +40,15 @@ export default function ResultPage() {
         }
 
         setResult(data);
+
+        // Fire-and-forget background sync to Google Sheets
+        if (data.attemptId) {
+          fetch('/api/quiz/sync-webhook', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ attemptId: data.attemptId })
+          }).catch(console.error); // Silent catch
+        }
       } catch (err: any) {
         setError(err.message);
       } finally {

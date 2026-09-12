@@ -136,67 +136,26 @@ export async function POST(request: Request) {
       }
     });
 
-    // 3. Try to auto-sync to Google Sheets immediately
-    let autoSyncSuccess = false;
-    try {
-      const webhookUrl = process.env.GOOGLE_SCRIPT_WEB_URL;
-      if (webhookUrl) {
-        // Fetch all completed attempts for this participant to calculate history
-        const allAttempts = await prisma.attempt.findMany({
-          where: { participantId: attempt.participantId, status: 'COMPLETED' },
-          select: { scorePercent: true },
-          orderBy: { submittedAt: 'asc' }
+    // 3. Fallback: Always create a SyncJob. The client will immediately try to trigger the background sync API to process this job silently.
+    if (passed && couponCode) {
+        await prisma.syncJob.create({
+          data: {
+            type: 'EMAIL_AND_SHEETS',
+            payload: JSON.stringify({ attemptId: attempt.id, couponCode })
+          }
         });
-        
-        const attemptCount = allAttempts.length;
-        const allScores = `[${allAttempts.map(a => `${a.scorePercent !== null ? a.scorePercent.toFixed(0) : 0}%`).join(', ')}]`;
-
-        const postData = {
-          name: attempt.participant.name,
-          prn: attempt.participant.prn,
-          email: attempt.participant.email,
-          mobile: attempt.participant.mobile,
-          scorePercent,
-          status: 'COMPLETED',
-          couponCode,
-          attemptCount,
-          allScores,
-          timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true }),
-        };
-        const res = await fetch(webhookUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(postData),
+    } else {
+        await prisma.syncJob.create({
+          data: {
+            type: 'SHEETS_ONLY',
+            payload: JSON.stringify({ attemptId: attempt.id })
+          }
         });
-        if (res.ok) {
-          autoSyncSuccess = true;
-        }
-      }
-    } catch (e) {
-      console.error("Auto-sync to sheets failed", e);
-    }
-
-    // 4. Fallback to SyncJob if auto-sync failed (can be triggered manually in admin)
-    if (!autoSyncSuccess) {
-      if (passed && couponCode) {
-         await prisma.syncJob.create({
-           data: {
-             type: 'EMAIL_AND_SHEETS',
-             payload: JSON.stringify({ attemptId: attempt.id, couponCode })
-           }
-         });
-      } else {
-         await prisma.syncJob.create({
-           data: {
-             type: 'SHEETS_ONLY',
-             payload: JSON.stringify({ attemptId: attempt.id })
-           }
-         });
-      }
     }
 
     return NextResponse.json({
       success: true,
+      attemptId: attempt.id,
       scorePercent,
       passed,
       couponCode,
