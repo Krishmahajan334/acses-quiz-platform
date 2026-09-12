@@ -10,7 +10,9 @@ export default async function AdminResultsPage() {
   const attempts = await prisma.attempt.findMany({
     orderBy: { submittedAt: 'desc' },
     include: {
-      participant: true,
+      participant: {
+        include: { coupons: true }
+      },
       coupon: true,
     },
   });
@@ -47,7 +49,7 @@ export default async function AdminResultsPage() {
       mobile: attempt.participant.mobile || "N/A",
       score: attempt.scorePercent !== null ? `${attempt.scorePercent.toFixed(0)}%` : "0%",
       status: attempt.status,
-      couponCode: attempt.coupon?.code || "N/A",
+      couponCode: attempt.coupon?.code || attempt.participant?.coupons?.[0]?.code || "N/A",
       attemptCount: history.count,
       allScores: `[${history.scores.join(", ")}]`,
       date: attempt.submittedAt ? attempt.submittedAt.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true }) : "N/A"
@@ -113,7 +115,7 @@ export default async function AdminResultsPage() {
                     </span>
                   </td>
                   <td className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap text-xs sm:text-sm font-mono font-bold text-foreground hidden md:table-cell">
-                    {attempt.coupon?.code || <span className="text-muted-foreground font-normal">N/A</span>}
+                    {attempt.coupon?.code || attempt.participant?.coupons?.[0]?.code || <span className="text-muted-foreground font-normal">N/A</span>}
                   </td>
                   <td className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap text-[10px] sm:text-sm text-muted-foreground font-medium">
                     {attempt.submittedAt 
