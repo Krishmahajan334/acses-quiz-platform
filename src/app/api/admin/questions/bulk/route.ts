@@ -60,7 +60,7 @@ export async function POST(request: Request) {
         
         addedCount++;
       }
-    }, { maxWait: 20000, timeout: 60000 });
+    }, { maxWait: 50000, timeout: 300000 });
 
     return NextResponse.json({ success: true, message: `Successfully imported ${addedCount} questions.` });
   } catch (error: any) {
