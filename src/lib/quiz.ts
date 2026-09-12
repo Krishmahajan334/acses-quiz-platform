@@ -221,6 +221,7 @@ export async function generateAttempt(participantId: string, eventId: string, du
       data: {
         participantId,
         eventId,
+        targetYear: participant.year,
         startedAt,
         deadlineAt,
         status: 'ACTIVE'

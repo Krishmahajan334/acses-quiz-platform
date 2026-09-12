@@ -66,6 +66,7 @@ model Attempt {
   id             String            @id @default(uuid())
   participantId  String
   eventId        String
+  targetYear     String?
   status         String            @default("ACTIVE")
   startedAt      DateTime          @default(now())
   deadlineAt     DateTime

@@ -26,12 +26,12 @@ export async function POST(req: Request) {
     // Fetch all completed attempts for this participant to calculate history
     const allAttempts = await prisma.attempt.findMany({
       where: { participantId: attempt.participantId, status: 'COMPLETED' },
-      select: { scorePercent: true },
+      select: { scorePercent: true, targetYear: true },
       orderBy: { submittedAt: 'asc' }
     });
     
     const attemptCount = allAttempts.length;
-    const allScores = `[${allAttempts.map(a => `${a.scorePercent !== null ? a.scorePercent.toFixed(0) : 0}%`).join(', ')}]`;
+    const allScores = `[${allAttempts.map(a => `${a.targetYear || attempt.participant.year}: ${a.scorePercent !== null ? a.scorePercent.toFixed(0) : 0}%`).join(', ')}]`;
 
     // Attempt to find a coupon code (either from this attempt, or from a past one)
     let couponCode = attempt.coupon?.code || null;
