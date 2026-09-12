@@ -74,7 +74,13 @@ export default function UploadHistoryList() {
   }
 
   if (history.length === 0) {
-    return null; // Don't show the section if no history exists yet
+    return (
+      <div className="mb-8 bg-white rounded-2xl shadow-sm border border-gray-200 p-6 text-center">
+        <h2 className="text-lg font-bold text-gray-900 mb-2">Recent Uploads</h2>
+        <p className="text-sm text-gray-500">You haven't uploaded any question bank files yet.</p>
+        <p className="text-xs text-gray-400 mt-1">Upload a JSON file using the Bulk Upload button above to see your history here.</p>
+      </div>
+    );
   }
 
   return (
