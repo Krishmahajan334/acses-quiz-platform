@@ -1,5 +1,8 @@
 import { prisma } from '@/lib/db';
 import DeleteParticipantButton from '../components/DeleteParticipantButton';
+import SyncDataButton from '../components/SyncDataButton';
+import ClearDataButton from '../components/ClearDataButton';
+import ExportButtons from '../components/ExportButtons';
 
 export const dynamic = 'force-dynamic';
 
@@ -35,9 +38,32 @@ export default async function AdminResultsPage() {
     index === self.findIndex((a) => a.participantId === attempt.participantId)
   );
 
+  const exportData = latestAttempts.map((attempt) => {
+    const history = historyMap.get(attempt.participantId) || { count: 0, scores: [] };
+    return {
+      name: attempt.participant.name,
+      prn: attempt.participant.prn || "N/A",
+      email: attempt.participant.email,
+      mobile: attempt.participant.mobile || "N/A",
+      score: attempt.scorePercent !== null ? `${attempt.scorePercent.toFixed(0)}%` : "0%",
+      status: attempt.status,
+      couponCode: attempt.coupon?.code || "N/A",
+      attemptCount: history.count,
+      allScores: `[${history.scores.join(", ")}]`,
+      date: attempt.submittedAt ? attempt.submittedAt.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true }) : "N/A"
+    };
+  });
+
   return (
     <div>
-      <h2 className="text-3xl font-bold text-foreground uppercase tracking-tight mb-8">Quiz Results & Coupons</h2>
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
+        <h2 className="text-3xl font-bold text-foreground uppercase tracking-tight">Quiz Results & Coupons</h2>
+        <div className="flex flex-wrap gap-3">
+          <ExportButtons data={exportData} />
+          <SyncDataButton />
+          <ClearDataButton />
+        </div>
+      </div>
 
       <div className="bg-secondary/40 shadow-lg border border-border rounded-xl overflow-hidden backdrop-blur-sm">
         <div className="overflow-x-auto">
