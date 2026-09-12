@@ -72,7 +72,12 @@ export default async function AdminResultsPage() {
           <table className="min-w-full divide-y divide-border">
             <thead className="bg-background/50">
               <tr>
-                <th scope="col" className="px-6 py-4 text-left text-xs font-bold text-muted-foreground uppercase tracking-wider">Name / PRN</th>
+                <th scope="col" className="px-3 sm:px-6 py-4 text-left text-[10px] sm:text-xs font-black text-muted-foreground uppercase tracking-widest w-12">
+                  #
+                </th>
+                <th scope="col" className="px-3 sm:px-6 py-4 text-left text-[10px] sm:text-xs font-black text-muted-foreground uppercase tracking-widest">
+                  Name / PRN
+                </th>
                 <th scope="col" className="px-6 py-4 text-left text-xs font-bold text-muted-foreground uppercase tracking-wider hidden sm:table-cell">Email</th>
                 <th scope="col" className="px-6 py-4 text-left text-xs font-bold text-muted-foreground uppercase tracking-wider hidden lg:table-cell">History</th>
                 <th scope="col" className="px-6 py-4 text-left text-xs font-bold text-muted-foreground uppercase tracking-wider">Score</th>
@@ -82,11 +87,14 @@ export default async function AdminResultsPage() {
                 <th scope="col" className="px-6 py-4 text-right text-xs font-bold text-muted-foreground uppercase tracking-wider">Actions</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-border">
-              {latestAttempts.map((attempt) => {
+            <tbody className="divide-y divide-border/50">
+              {latestAttempts.map((attempt, index) => {
                 const history = historyMap.get(attempt.participantId) || { count: 0, scores: [] };
                 return (
-                <tr key={attempt.id} className="hover:bg-secondary/60 transition-colors">
+                <tr key={attempt.id} className="hover:bg-secondary/20 transition-colors group">
+                  <td className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap text-xs sm:text-sm font-bold text-muted-foreground">
+                    {index + 1}
+                  </td>
                   <td className="px-3 sm:px-6 py-3 sm:py-4">
                     <div className="text-xs sm:text-sm font-bold text-foreground break-words">{attempt.participant.name}</div>
                     <div className="text-[10px] sm:text-xs text-muted-foreground mt-1">PRN: {attempt.participant.prn || 'N/A'} ({attempt.participant.year})</div>
