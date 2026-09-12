@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Sora } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
@@ -12,6 +12,13 @@ const sora = Sora({
 export const metadata: Metadata = {
   title: "ACSES Technical Quiz",
   description: "Test your Computer Science knowledge with the ACSES Technical Quiz.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
