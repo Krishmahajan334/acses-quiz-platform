@@ -22,7 +22,20 @@ export async function POST(request: Request) {
       where: { id: attemptId },
       include: {
         event: true,
-        answers: true,
+        answers: {
+          include: {
+            option: true
+          }
+        },
+        questions: {
+          include: {
+            question: {
+              include: {
+                options: true
+              }
+            }
+          }
+        },
         coupon: true,
         participant: true,
       }
@@ -32,6 +45,23 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Invalid attempt." }, { status: 401 });
     }
 
+    // Securely construct the review data from the fetched attempt
+    const reviewData = attempt.questions.map(q => {
+      const questionText = q.question.text;
+      const answer = attempt.answers.find(a => a.questionId === q.questionId);
+      const selectedAnswer = answer?.option?.text || "Unanswered";
+      const correctOption = q.question.options.find(o => o.isCorrect);
+      const correctAnswer = correctOption?.text || "Unknown";
+      const isCorrect = answer?.isCorrect || false;
+
+      return {
+        questionText,
+        selectedAnswer,
+        correctAnswer,
+        isCorrect
+      };
+    });
+
     // Idempotency: If already completed or disqualified, return the result
     if (attempt.status === 'COMPLETED' || attempt.status === 'DISQUALIFIED') {
       return NextResponse.json({
@@ -40,6 +70,7 @@ export async function POST(request: Request) {
         scorePercent: attempt.scorePercent,
         passed: (attempt.scorePercent || 0) >= attempt.event.passPercent,
         couponCode: attempt.coupon?.code || null,
+        reviewData,
         message: "Attempt already finalized."
       });
     }
@@ -169,6 +200,7 @@ export async function POST(request: Request) {
       scorePercent,
       passed,
       couponCode,
+      reviewData,
     });
   } catch (error: any) {
     console.error("Quiz Finish Error:", error);
