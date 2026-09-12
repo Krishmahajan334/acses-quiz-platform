@@ -158,6 +158,52 @@ export default function ResultPage() {
               </div>
             </div>
 
+            {/* Answer Review Accordion */}
+            {result.reviewData && result.reviewData.length > 0 && (
+              <details className="group border border-border rounded-xl bg-background/50 mb-5 overflow-hidden transition-all text-left">
+                <summary className="p-4 cursor-pointer font-bold text-sm uppercase tracking-widest text-foreground flex justify-between items-center bg-secondary/30 group-open:bg-secondary/50 transition-colors select-none">
+                  Review Your Answers & Check Correct Options
+                  <span className="text-primary transform group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <div className="p-4 max-h-[500px] overflow-y-auto space-y-4 border-t border-border">
+                  {result.reviewData.map((item, index) => (
+                    <div key={index} className="p-3 rounded-lg bg-secondary/20 border border-white/5 text-sm">
+                      <p className="font-medium text-foreground mb-3">{index + 1}. {item.questionText}</p>
+                      
+                      <div className="flex flex-col gap-2">
+                        {item.isCorrect ? (
+                          <div className="flex items-start gap-2 bg-primary/10 border border-primary/20 p-2 rounded">
+                            <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                            <div className="text-primary font-medium">
+                              <span className="text-primary/70 text-xs uppercase mr-2 tracking-wider">You answered:</span>
+                              {item.selectedAnswer}
+                            </div>
+                          </div>
+                        ) : (
+                          <>
+                            <div className="flex items-start gap-2 bg-destructive/10 border border-destructive/20 p-2 rounded">
+                              <AlertTriangle className="w-4 h-4 text-destructive mt-0.5 shrink-0" />
+                              <div className="text-destructive font-medium">
+                                <span className="text-destructive/70 text-xs uppercase mr-2 tracking-wider">You answered:</span>
+                                {item.selectedAnswer}
+                              </div>
+                            </div>
+                            <div className="flex items-start gap-2 bg-primary/10 border border-primary/20 p-2 rounded">
+                              <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                              <div className="text-primary font-medium">
+                                <span className="text-primary/70 text-xs uppercase mr-2 tracking-wider">Correct answer:</span>
+                                {item.correctAnswer}
+                              </div>
+                            </div>
+                          </>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </details>
+            )}
+
             {result.passed && result.couponCode && (
               <div className="bg-primary/5 border border-primary/30 rounded-xl p-4 sm:p-5 mb-5 text-left relative overflow-hidden">
                 <h3 className="text-primary font-bold text-xs uppercase tracking-widest mb-2 flex items-center gap-2">
@@ -215,52 +261,6 @@ export default function ResultPage() {
                 </div>
               </div>
             </a>
-
-            {/* Answer Review Accordion */}
-            {result.reviewData && result.reviewData.length > 0 && (
-              <details className="group border border-border rounded-xl bg-background/50 mb-5 overflow-hidden transition-all text-left">
-                <summary className="p-4 cursor-pointer font-bold text-sm uppercase tracking-widest text-foreground flex justify-between items-center bg-secondary/30 group-open:bg-secondary/50 transition-colors select-none">
-                  Review Your Answers
-                  <span className="text-primary transform group-open:rotate-180 transition-transform">▼</span>
-                </summary>
-                <div className="p-4 max-h-[500px] overflow-y-auto space-y-4 border-t border-border">
-                  {result.reviewData.map((item, index) => (
-                    <div key={index} className="p-3 rounded-lg bg-secondary/20 border border-white/5 text-sm">
-                      <p className="font-medium text-foreground mb-3">{index + 1}. {item.questionText}</p>
-                      
-                      <div className="flex flex-col gap-2">
-                        {item.isCorrect ? (
-                          <div className="flex items-start gap-2 bg-primary/10 border border-primary/20 p-2 rounded">
-                            <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                            <div className="text-primary font-medium">
-                              <span className="text-primary/70 text-xs uppercase mr-2 tracking-wider">You answered:</span>
-                              {item.selectedAnswer}
-                            </div>
-                          </div>
-                        ) : (
-                          <>
-                            <div className="flex items-start gap-2 bg-destructive/10 border border-destructive/20 p-2 rounded">
-                              <AlertTriangle className="w-4 h-4 text-destructive mt-0.5 shrink-0" />
-                              <div className="text-destructive font-medium">
-                                <span className="text-destructive/70 text-xs uppercase mr-2 tracking-wider">You answered:</span>
-                                {item.selectedAnswer}
-                              </div>
-                            </div>
-                            <div className="flex items-start gap-2 bg-primary/10 border border-primary/20 p-2 rounded">
-                              <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                              <div className="text-primary font-medium">
-                                <span className="text-primary/70 text-xs uppercase mr-2 tracking-wider">Correct answer:</span>
-                                {item.correctAnswer}
-                              </div>
-                            </div>
-                          </>
-                        )}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </details>
-            )}
 
             <div className="space-y-3">
               <Link

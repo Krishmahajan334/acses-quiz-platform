@@ -29,6 +29,12 @@ export default async function AdminResultsPage() {
     h.scores.push(`${a.scorePercent !== null ? a.scorePercent.toFixed(0) : 0}%`);
   });
 
+  // Filter attempts to only show the LATEST attempt for each participant
+  // Since `attempts` is already ordered by `submittedAt: 'desc'`, we just take the first one we see per participant.
+  const latestAttempts = attempts.filter((attempt, index, self) =>
+    index === self.findIndex((a) => a.participantId === attempt.participantId)
+  );
+
   return (
     <div>
       <h2 className="text-3xl font-bold text-foreground uppercase tracking-tight mb-8">Quiz Results & Coupons</h2>
@@ -49,7 +55,7 @@ export default async function AdminResultsPage() {
               </tr>
             </thead>
             <tbody className="divide-y divide-border">
-              {attempts.map((attempt) => {
+              {latestAttempts.map((attempt) => {
                 const history = historyMap.get(attempt.participantId) || { count: 0, scores: [] };
                 return (
                 <tr key={attempt.id} className="hover:bg-secondary/60 transition-colors">
