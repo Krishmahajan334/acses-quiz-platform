@@ -26,7 +26,7 @@ export async function generateAttempt(participantId: string, eventId: string, du
       status: 'ACTIVE',
       targetYear: { in: [participant.year, 'ALL'] }
     },
-    select: { id: true, text: true }
+    select: { id: true, text: true, topic: true, difficulty: true }
   });
 
   // Deduplicate by text in case admin accidentally uploaded the same questions multiple times
