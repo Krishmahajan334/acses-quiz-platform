@@ -20,6 +20,18 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "No active event found. Please try again later." }, { status: 400 });
     }
 
+    // Check for duplicate PRN (if provided)
+    if (data.prn && data.prn.trim() !== "") {
+      const existingPrnUser = await prisma.participant.findFirst({
+        where: { prn: data.prn.trim() }
+      });
+      
+      // If someone else already registered with this PRN
+      if (existingPrnUser && existingPrnUser.email !== data.email) {
+        return NextResponse.json({ error: "This PRN is already registered to another participant." }, { status: 400 });
+      }
+    }
+
     // Upsert Participant
     const participant = await prisma.participant.upsert({
       where: { email: data.email },
