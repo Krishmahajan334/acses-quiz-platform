@@ -19,26 +19,6 @@ export async function generateAttempt(participantId: string, eventId: string, du
     throw new Error("Participant not found");
   }
 
-  // Fetch previously answered questions to avoid duplicates in multiple attempts
-  const pastAttempts = await prisma.attemptQuestion.findMany({
-    where: { attempt: { participantId } },
-    select: { questionId: true }
-  });
-  const pastQuestionIds = new Set(pastAttempts.map(aq => aq.questionId));
-
-  // Fetch active questions targeting their specific year (or ALL)
-  const allQuestionsRaw = await prisma.question.findMany({
-    where: { 
-      eventId, 
-      status: 'ACTIVE',
-      targetYear: { in: [participant.year, 'ALL'] }
-    },
-    select: { id: true, text: true, topic: true, difficulty: true }
-  });
-
-  // Deduplicate by text (ignoring variation tags), and filter out previously answered questions
-  const uniqueQuestionsMap = new Map();
-  
   const normalizeText = (text: string) => {
     return text
       .replace(/\(Variation \d+\)/gi, '')
@@ -47,9 +27,39 @@ export async function generateAttempt(participantId: string, eventId: string, du
       .toLowerCase();
   };
 
+  // Fetch previously answered questions to avoid duplicates (and their variations) in multiple attempts
+  const pastAttempts = await prisma.attemptQuestion.findMany({
+    where: { attempt: { participantId } },
+    select: { question: { select: { text: true } } }
+  });
+  const pastNormalizedTexts = new Set(pastAttempts.map(aq => normalizeText(aq.question.text)));
+
+  // Determine cascading target years based on the participant's year
+  let targetYears = [participant.year, 'ALL'];
+  if (participant.year === 'LY') {
+    targetYears = ['LY', 'TY', 'SY', 'ALL'];
+  } else if (participant.year === 'TY') {
+    targetYears = ['TY', 'SY', 'ALL'];
+  } else if (participant.year === 'SY') {
+    targetYears = ['SY', 'FY', 'ALL']; 
+  }
+
+  // Fetch active questions targeting their specific year scope
+  const allQuestionsRaw = await prisma.question.findMany({
+    where: { 
+      eventId, 
+      status: 'ACTIVE',
+      targetYear: { in: targetYears }
+    },
+    select: { id: true, text: true, topic: true, difficulty: true }
+  });
+
+  // Deduplicate by text (ignoring variation tags), and filter out previously answered questions
+  const uniqueQuestionsMap = new Map();
+  
   allQuestionsRaw.forEach(q => {
     const normalized = normalizeText(q.text);
-    if (!uniqueQuestionsMap.has(normalized) && !pastQuestionIds.has(q.id)) {
+    if (!uniqueQuestionsMap.has(normalized) && !pastNormalizedTexts.has(normalized)) {
       uniqueQuestionsMap.set(normalized, q); // store full object
     }
   });
