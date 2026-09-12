@@ -1,5 +1,57 @@
 [
   {
+    "text": "What is the time complexity of the quicksort algorithm in the worst case?",
+    "topic": "Algorithms",
+    "difficulty": "Hard",
+    "targetYear": "TY",
+    "durationSec": 60,
+    "imageUrl": "",
+    "options": [
+      {
+        "text": "O(N log N)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(N^2)",
+        "isCorrect": true
+      },
+      {
+        "text": "O(log N)",
+        "isCorrect": false
+      },
+      {
+        "text": "O(N)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "text": "Which of the following design patterns falls under the category of Creational Patterns?",
+    "topic": "System Design",
+    "difficulty": "Medium",
+    "targetYear": "Final Year",
+    "durationSec": 45,
+    "imageUrl": "",
+    "options": [
+      {
+        "text": "Observer Pattern",
+        "isCorrect": false
+      },
+      {
+        "text": "Strategy Pattern",
+        "isCorrect": false
+      },
+      {
+        "text": "Singleton Pattern",
+        "isCorrect": true
+      },
+      {
+        "text": "Decorator Pattern",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
     "text": "What does CPU stand for?",
     "topic": "Hardware",
     "difficulty": "Easy",
@@ -21,32 +73,6 @@
       },
       {
         "text": "Central Processor Unit",
-        "isCorrect": false
-      }
-    ]
-  },
-  {
-    "text": "Which data structure operates on a Last In First Out (LIFO) principle?",
-    "topic": "Data Structures",
-    "difficulty": "Medium",
-    "targetYear": "ALL",
-    "durationSec": 45,
-    "imageUrl": "",
-    "options": [
-      {
-        "text": "Queue",
-        "isCorrect": false
-      },
-      {
-        "text": "Stack",
-        "isCorrect": true
-      },
-      {
-        "text": "Linked List",
-        "isCorrect": false
-      },
-      {
-        "text": "Tree",
         "isCorrect": false
       }
     ]
