@@ -154,12 +154,15 @@ export async function generateAttempt(participantId: string, eventId: string, du
 
   // Transaction
   const attempt = await prisma.$transaction(async (tx) => {
-    // 1. Check for COMPLETED attempts (prevent retaking)
-    const completedAttempt = await tx.attempt.findFirst({
-      where: { participantId, eventId, status: 'COMPLETED' }
-    });
-    if (completedAttempt) {
-      throw new Error("You have already completed the quiz. Multiple attempts are not allowed.");
+    // 1. Check for COMPLETED attempts (prevent retaking unless multiple attempts allowed)
+    const activeEvent = await tx.quizEvent.findUnique({ where: { id: eventId } });
+    if (!activeEvent?.allowMultipleAttempts) {
+      const completedAttempt = await tx.attempt.findFirst({
+        where: { participantId, eventId, status: 'COMPLETED' }
+      });
+      if (completedAttempt) {
+        throw new Error("You have already completed the quiz. Multiple attempts are not allowed.");
+      }
     }
 
     // 2. Check for ACTIVE attempts

@@ -14,10 +14,11 @@ model QuizEvent {
   durationSec    Int
   questionCount  Int
   passPercent    Int
-  status         String     @default("ACTIVE")
-  createdAt      DateTime   @default(now())
-  questions      Question[]
-  attempts       Attempt[]
+  status                String     @default("ACTIVE")
+  allowMultipleAttempts Boolean    @default(false)
+  createdAt             DateTime   @default(now())
+  questions             Question[]
+  attempts              Attempt[]
 }
 
 model Question {

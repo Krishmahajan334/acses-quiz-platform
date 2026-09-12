@@ -1,4 +1,5 @@
 import { prisma } from '@/lib/db';
+import DeleteParticipantButton from '../components/DeleteParticipantButton';
 
 export const dynamic = 'force-dynamic';
 
@@ -26,6 +27,7 @@ export default async function AdminResultsPage() {
                 <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
                 <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Coupon Code</th>
                 <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                <th scope="col" className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
@@ -53,6 +55,9 @@ export default async function AdminResultsPage() {
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                     {attempt.submittedAt ? new Date(attempt.submittedAt).toLocaleString() : 'In Progress'}
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                    <DeleteParticipantButton participantId={attempt.participantId} name={attempt.participant.name} />
                   </td>
                 </tr>
               ))}

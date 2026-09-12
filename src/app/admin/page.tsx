@@ -1,6 +1,7 @@
 import { prisma } from '@/lib/db';
 import ClearDataButton from './components/ClearDataButton';
 import SyncDataButton from './components/SyncDataButton';
+import ToggleMultipleButton from './components/ToggleMultipleButton';
 import { Users, LayoutList, CheckCircle, Ticket } from 'lucide-react';
 
 export const dynamic = 'force-dynamic';
@@ -10,6 +11,9 @@ export default async function AdminDashboard() {
   const totalAttempts = await prisma.attempt.count();
   const completedAttempts = await prisma.attempt.count({ where: { status: 'COMPLETED' } });
   const totalCoupons = await prisma.coupon.count();
+  
+  const activeEvent = await prisma.quizEvent.findFirst({ where: { status: 'ACTIVE' } });
+  const allowMultipleAttempts = activeEvent?.allowMultipleAttempts || false;
 
   return (
     <div>
@@ -19,6 +23,7 @@ export default async function AdminDashboard() {
           <p className="text-muted-foreground mt-1 text-sm uppercase tracking-widest">System Metrics & Controls</p>
         </div>
         <div className="flex flex-wrap gap-4 w-full md:w-auto">
+          <ToggleMultipleButton initialState={allowMultipleAttempts} />
           <SyncDataButton />
           <ClearDataButton />
         </div>

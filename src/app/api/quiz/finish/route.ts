@@ -70,24 +70,35 @@ export async function POST(request: Request) {
       // 2. Generate coupon if eligible
       if (passed) {
         // Double check inside tx if coupon already created (for concurrent requests)
-        const existingCoupon = await tx.coupon.findUnique({ where: { attemptId: attempt.id } });
-        if (existingCoupon) {
-          couponCode = existingCoupon.code;
+        const existingCouponForThisAttempt = await tx.coupon.findUnique({ where: { attemptId: attempt.id } });
+        if (existingCouponForThisAttempt) {
+          couponCode = existingCouponForThisAttempt.code;
         } else {
-          let codeUnique = false;
-          while (!codeUnique) {
-            couponCode = generateCouponCode();
-            const existing = await tx.coupon.findUnique({ where: { code: couponCode } });
-            if (!existing) {
-              codeUnique = true;
-              await tx.coupon.create({
-                data: {
-                  code: couponCode,
-                  attemptId: attempt.id,
-                  participantId: attempt.participantId,
-                  status: 'ISSUED'
-                }
-              });
+          // Check if this participant ALREADY has a coupon from a previous attempt
+          const pastCoupon = await tx.coupon.findFirst({
+            where: { participantId: attempt.participantId }
+          });
+
+          if (pastCoupon) {
+            // Give them the same code they already earned!
+            couponCode = pastCoupon.code;
+          } else {
+            // They don't have a coupon yet, generate a new one
+            let codeUnique = false;
+            while (!codeUnique) {
+              couponCode = generateCouponCode();
+              const existing = await tx.coupon.findUnique({ where: { code: couponCode } });
+              if (!existing) {
+                codeUnique = true;
+                await tx.coupon.create({
+                  data: {
+                    code: couponCode,
+                    attemptId: attempt.id,
+                    participantId: attempt.participantId,
+                    status: 'ISSUED'
+                  }
+                });
+              }
             }
           }
         }
