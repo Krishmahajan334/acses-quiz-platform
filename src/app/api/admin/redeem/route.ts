@@ -8,8 +8,10 @@ export async function POST(req: Request) {
     const session = await getAdminSession();
     if (!session) {
       const cookieStore = await cookies();
-      const token = cookieStore.get('admin_token')?.value;
+      const token = cookieStore.get('admin_session_token')?.value;
       const secret = process.env.ADMIN_AUTH_SECRET;
+      
+      const rawCookies = req.headers.get('cookie');
       
       let verifyErr = "N/A";
       if (token) {
@@ -21,7 +23,7 @@ export async function POST(req: Request) {
       }
 
       return NextResponse.json({ 
-        error: `Unauthorized (Token exists: ${!!token}, Secret length: ${secret ? secret.length : 0}, Verify error: ${verifyErr})` 
+        error: `Unauthorized (Token exists: ${!!token}, Raw cookies present: ${!!rawCookies}, Secret length: ${secret ? secret.length : 0}, Verify error: ${verifyErr})` 
       }, { status: 401 });
     }
 

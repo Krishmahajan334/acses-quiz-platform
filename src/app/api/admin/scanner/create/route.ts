@@ -8,7 +8,7 @@ export async function POST() {
     const session = await getAdminSession();
     if (!session) {
       const cookieStore = await cookies();
-      const token = cookieStore.get('admin_token')?.value;
+      const token = cookieStore.get('admin_session_token')?.value;
       const secret = process.env.ADMIN_AUTH_SECRET;
       
       let verifyErr = "N/A";

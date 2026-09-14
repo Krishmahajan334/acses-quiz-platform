@@ -24,15 +24,15 @@ export async function POST(request: Request) {
       
       const token = await signAdminToken(payload);
       
-      const cookieStore = await cookies();
-      cookieStore.set('admin_token', token, {
+      const response = NextResponse.json({ success: true, role: 'SUPER_ADMIN' });
+      response.cookies.set('admin_session_token', token, {
         httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
         sameSite: 'lax',
         path: '/'
       });
       
-      return NextResponse.json({ success: true, role: 'SUPER_ADMIN' });
+      return response;
     }
     
     // Check database for admin
@@ -58,15 +58,15 @@ export async function POST(request: Request) {
     
     const token = await signAdminToken(payload);
     
-    const cookieStore = await cookies();
-    cookieStore.set('admin_token', token, {
+    const response = NextResponse.json({ success: true, role: admin.role });
+    response.cookies.set('admin_session_token', token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'lax',
       path: '/'
     });
     
-    return NextResponse.json({ success: true, role: admin.role });
+    return response;
     
   } catch (error) {
     console.error('Login error:', error);

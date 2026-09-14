@@ -33,7 +33,7 @@ export async function verifyAdminToken(token: string): Promise<AdminJwtPayload |
 
 export async function getAdminSession(): Promise<AdminJwtPayload | null> {
   const cookieStore = await cookies();
-  const token = cookieStore.get('admin_token')?.value;
+  const token = cookieStore.get('admin_session_token')?.value;
 
   if (!token) {
     return null;
