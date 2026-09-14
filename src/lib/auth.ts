@@ -1,7 +1,10 @@
 import { SignJWT, jwtVerify, type JWTPayload } from 'jose';
 import { cookies } from 'next/headers';
 
-const secret = new TextEncoder().encode(process.env.ADMIN_AUTH_SECRET);
+function getSecret() {
+  const secretStr = process.env.ADMIN_AUTH_SECRET || 'fallback-secret-do-not-use-in-prod';
+  return new TextEncoder().encode(secretStr);
+}
 
 export interface AdminJwtPayload extends JWTPayload {
   adminId: string;
@@ -14,15 +17,16 @@ export async function signAdminToken(payload: AdminJwtPayload) {
     .setProtectedHeader({ alg: 'HS256' })
     .setIssuedAt()
     .setExpirationTime('24h')
-    .sign(secret);
+    .sign(getSecret());
   return token;
 }
 
 export async function verifyAdminToken(token: string): Promise<AdminJwtPayload | null> {
   try {
-    const { payload } = await jwtVerify(token, secret);
+    const { payload } = await jwtVerify(token, getSecret());
     return payload as AdminJwtPayload;
   } catch (error) {
+    console.error("JWT Verify Error:", error);
     return null;
   }
 }

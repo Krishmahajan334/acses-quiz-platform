@@ -32,6 +32,7 @@ export default function RedeemPage() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ couponCode: code }),
+        credentials: "same-origin",
       });
 
       const data = await res.json();
@@ -95,7 +96,10 @@ export default function RedeemPage() {
     if (scanMode === "remote") {
       const createSession = async () => {
         try {
-          const res = await fetch("/api/admin/scanner/create", { method: "POST" });
+          const res = await fetch("/api/admin/scanner/create", { 
+            method: "POST",
+            credentials: "same-origin"
+          });
           const data = await res.json();
           if (data.sessionId) {
             setSessionId(data.sessionId);
@@ -121,7 +125,9 @@ export default function RedeemPage() {
     if (scanMode === "remote" && sessionId) {
       const interval = setInterval(async () => {
         try {
-          const res = await fetch(`/api/admin/scanner/poll?session=${sessionId}`);
+          const res = await fetch(`/api/admin/scanner/poll?session=${sessionId}`, {
+            credentials: "same-origin"
+          });
           const data = await res.json();
           if (data.result) {
             setScanResult(data.result);
