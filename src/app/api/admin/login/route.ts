@@ -29,8 +29,7 @@ export async function POST(request: Request) {
         httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
         sameSite: 'lax',
-        path: '/',
-        maxAge: 60 * 60 * 24 // 1 day
+        path: '/'
       });
       
       return NextResponse.json({ success: true, role: 'SUPER_ADMIN' });
@@ -64,8 +63,7 @@ export async function POST(request: Request) {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'lax',
-      path: '/',
-      maxAge: 60 * 60 * 24 // 1 day
+      path: '/'
     });
     
     return NextResponse.json({ success: true, role: admin.role });

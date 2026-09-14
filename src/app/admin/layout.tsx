@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ShieldCheck, LayoutDashboard, Database, Trophy, LogOut, Users } from 'lucide-react';
+import { ShieldCheck, LayoutDashboard, Database, Trophy, LogOut, Users, QrCode, Smartphone } from 'lucide-react';
 import { getAdminSession, isSuperAdmin } from '@/lib/auth';
 
 export default async function AdminLayout({
@@ -36,6 +36,14 @@ export default async function AdminLayout({
           <Link href="/admin/results" className="flex items-center gap-3 px-4 py-3 rounded-lg text-muted-foreground hover:bg-secondary/50 hover:text-foreground transition-all text-sm font-medium uppercase tracking-wide">
             <Trophy className="w-4 h-4" />
             Results & Coupons
+          </Link>
+          <Link href="/admin/redeem" className="flex items-center gap-3 px-4 py-3 rounded-lg text-muted-foreground hover:bg-secondary/50 hover:text-foreground transition-all text-sm font-medium uppercase tracking-wide">
+            <QrCode className="w-4 h-4" />
+            Scanner (Redeem)
+          </Link>
+          <Link href="/admin/remote" className="flex items-center gap-3 px-4 py-3 rounded-lg text-muted-foreground hover:bg-secondary/50 hover:text-foreground transition-all text-sm font-medium uppercase tracking-wide">
+            <Smartphone className="w-4 h-4" />
+            Pair Remote Scanner
           </Link>
         </nav>
         <div className="p-6 border-t border-border">
@@ -82,6 +90,10 @@ export default async function AdminLayout({
           <Link href="/admin/results" className="flex flex-col items-center gap-1 text-muted-foreground hover:text-primary transition-colors">
             <Trophy className="w-5 h-5" />
             <span className="text-[10px] font-bold uppercase tracking-wider">Results</span>
+          </Link>
+          <Link href="/admin/redeem" className="flex flex-col items-center gap-1 text-muted-foreground hover:text-primary transition-colors">
+            <QrCode className="w-5 h-5" />
+            <span className="text-[10px] font-bold uppercase tracking-wider">Scanner</span>
           </Link>
           {isSuper && (
             <Link href="/admin/admins" className="flex flex-col items-center gap-1 text-muted-foreground hover:text-primary transition-colors">
