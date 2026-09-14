@@ -3,6 +3,8 @@ import { redirect } from 'next/navigation';
 import { ShieldCheck, LayoutDashboard, Database, Trophy, LogOut, Users, QrCode } from 'lucide-react';
 import { getAdminSession, isSuperAdmin } from '@/lib/auth';
 
+import { AdminFetchPatcher } from './components/AdminFetchPatcher';
+
 export default async function AdminLayout({
   children,
 }: {
@@ -18,6 +20,7 @@ export default async function AdminLayout({
 
   return (
     <div className="min-h-screen bg-background flex font-sans">
+      <AdminFetchPatcher />
       {/* Sidebar */}
       <div className="w-64 bg-secondary/30 border-r border-border flex-col hidden md:flex print:hidden">
         <div className="p-6 flex items-center gap-3 border-b border-border">
