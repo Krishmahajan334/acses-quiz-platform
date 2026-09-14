@@ -41,7 +41,7 @@ export default async function AdminLayout({
             <QrCode className="w-4 h-4" />
             Scanner (Redeem)
           </Link>
-          <Link href="/admin/remote" className="flex items-center gap-3 px-4 py-3 rounded-lg text-muted-foreground hover:bg-secondary/50 hover:text-foreground transition-all text-sm font-medium uppercase tracking-wide">
+          <Link href="/remote" className="flex items-center gap-3 px-4 py-3 rounded-lg text-muted-foreground hover:bg-secondary/50 hover:text-foreground transition-all text-sm font-medium uppercase tracking-wide">
             <Smartphone className="w-4 h-4" />
             Pair Remote Scanner
           </Link>
@@ -78,7 +78,7 @@ export default async function AdminLayout({
         </main>
 
         {/* Mobile Bottom Navigation */}
-        <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-background/95 backdrop-blur-md border-t border-border flex justify-around items-center p-3 z-50 print:hidden">
+        <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-background/95 backdrop-blur-md border-t border-border flex justify-around items-center p-3 pb-[calc(env(safe-area-inset-bottom)+0.75rem)] z-50 print:hidden">
           <Link href="/admin" className="flex flex-col items-center gap-1 text-muted-foreground hover:text-primary transition-colors">
             <LayoutDashboard className="w-5 h-5" />
             <span className="text-[10px] font-bold uppercase tracking-wider">Dashboard</span>

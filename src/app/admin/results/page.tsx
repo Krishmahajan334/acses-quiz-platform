@@ -78,11 +78,11 @@ export default async function AdminResultsPage() {
                 <th scope="col" className="px-3 sm:px-6 py-4 text-left text-[10px] sm:text-xs font-black text-muted-foreground uppercase tracking-widest">
                   Name / PRN
                 </th>
-                <th scope="col" className="px-6 py-4 text-left text-xs font-bold text-muted-foreground uppercase tracking-wider hidden sm:table-cell">Email</th>
-                <th scope="col" className="px-6 py-4 text-left text-xs font-bold text-muted-foreground uppercase tracking-wider hidden lg:table-cell">History</th>
+                <th scope="col" className="px-6 py-4 text-left text-xs font-bold text-muted-foreground uppercase tracking-wider">Email</th>
+                <th scope="col" className="px-6 py-4 text-left text-xs font-bold text-muted-foreground uppercase tracking-wider">History</th>
                 <th scope="col" className="px-6 py-4 text-left text-xs font-bold text-muted-foreground uppercase tracking-wider">Score</th>
                 <th scope="col" className="px-6 py-4 text-left text-xs font-bold text-muted-foreground uppercase tracking-wider">Status</th>
-                <th scope="col" className="px-6 py-4 text-left text-xs font-bold text-muted-foreground uppercase tracking-wider hidden md:table-cell">Coupon Code</th>
+                <th scope="col" className="px-6 py-4 text-left text-xs font-bold text-muted-foreground uppercase tracking-wider">Coupon Code</th>
                 <th scope="col" className="px-6 py-4 text-left text-xs font-bold text-muted-foreground uppercase tracking-wider">Date</th>
                 <th scope="col" className="px-6 py-4 text-right text-xs font-bold text-muted-foreground uppercase tracking-wider">Actions</th>
               </tr>
@@ -99,10 +99,10 @@ export default async function AdminResultsPage() {
                     <div className="text-xs sm:text-sm font-bold text-foreground break-words">{attempt.participant.name}</div>
                     <div className="text-[10px] sm:text-xs text-muted-foreground mt-1">PRN: {attempt.participant.prn || 'N/A'} ({attempt.participant.year})</div>
                   </td>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap text-xs sm:text-sm text-muted-foreground hidden sm:table-cell">
+                  <td className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap text-xs sm:text-sm text-muted-foreground">
                     {attempt.participant.email}
                   </td>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap hidden lg:table-cell">
+                  <td className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap">
                     {history.count > 0 ? (
                       <div className="flex flex-col">
                         <span className="text-xs text-foreground font-bold">{history.count} {history.count === 1 ? 'attempt' : 'attempts'}</span>
@@ -122,7 +122,7 @@ export default async function AdminResultsPage() {
                       {attempt.status}
                     </span>
                   </td>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap text-xs sm:text-sm font-mono font-bold text-foreground hidden md:table-cell">
+                  <td className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap text-xs sm:text-sm font-mono font-bold text-foreground">
                     {attempt.coupon?.code || attempt.participant?.coupons?.[0]?.code || <span className="text-muted-foreground font-normal">N/A</span>}
                   </td>
                   <td className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap text-[10px] sm:text-sm text-muted-foreground font-medium">

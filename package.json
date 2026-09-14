@@ -16,6 +16,7 @@
     "@upstash/redis": "^1.38.4",
     "bcryptjs": "^3.0.3",
     "clsx": "^2.1.1",
+    "dotenv": "^17.4.2",
     "html5-qrcode": "^2.3.8",
     "jose": "^6.2.12",
     "lucide-react": "^1.45.0",

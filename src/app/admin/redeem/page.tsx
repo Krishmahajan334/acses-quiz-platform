@@ -99,15 +99,20 @@ export default function RedeemPage() {
           const data = await res.json();
           if (data.sessionId) {
             setSessionId(data.sessionId);
-            setPairingUrl(`${window.location.origin}/admin/remote?session=${data.sessionId}`);
+            setPairingUrl(`${window.location.origin}/remote?session=${data.sessionId}`);
+          } else {
+            console.error("Session creation error:", data.error);
+            setPairingUrl(`error: ${data.error || 'Failed to create session'}`);
           }
-        } catch (e) {
-          console.error("Failed to create session");
+        } catch (e: any) {
+          console.error("Failed to create session", e);
+          setPairingUrl(`error: Network error`);
         }
       };
       createSession();
     } else {
       setSessionId(null);
+      setPairingUrl("");
     }
   }, [scanMode]);
 
@@ -203,7 +208,13 @@ export default function RedeemPage() {
             <div className="space-y-6 flex flex-col items-center justify-center p-4">
               <div className="bg-white p-4 rounded-xl shadow-sm border border-border inline-block">
                 {pairingUrl ? (
-                  <QRCodeSVG value={pairingUrl} size={200} />
+                  pairingUrl.startsWith("error:") ? (
+                    <div className="w-[200px] h-[200px] flex items-center justify-center text-red-500 font-medium text-center p-4">
+                      {pairingUrl.replace("error: ", "")}
+                    </div>
+                  ) : (
+                    <QRCodeSVG value={pairingUrl} size={200} />
+                  )
                 ) : (
                   <div className="w-[200px] h-[200px] flex items-center justify-center text-muted-foreground">Generating...</div>
                 )}
