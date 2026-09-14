@@ -7,6 +7,7 @@ interface HistoryRecord {
   id: string;
   filename: string;
   questionCount: number;
+  uploadedBy: string;
   createdAt: string;
 }
 
@@ -91,6 +92,7 @@ export default function UploadHistoryList() {
           <tr>
             <th className="px-4 py-3 rounded-tl-lg rounded-bl-lg">File Name</th>
             <th className="px-4 py-3">Questions Added</th>
+            <th className="px-4 py-3">Uploaded By</th>
             <th className="px-4 py-3">Upload Date</th>
             <th className="px-4 py-3 rounded-tr-lg rounded-br-lg text-right">Actions</th>
           </tr>
@@ -104,6 +106,7 @@ export default function UploadHistoryList() {
                   +{record.questionCount}
                 </span>
               </td>
+              <td className="px-4 py-3 font-medium text-gray-700">{record.uploadedBy || 'System'}</td>
               <td className="px-4 py-3">{new Date(record.createdAt).toLocaleString()}</td>
               <td className="px-4 py-3 text-right">
                 <button

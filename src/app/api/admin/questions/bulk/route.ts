@@ -41,7 +41,8 @@ export async function POST(request: Request) {
       const uploadHistory = await tx.uploadHistory.create({
         data: {
           filename,
-          questionCount: 0 // We will update this at the end
+          questionCount: 0, // We will update this at the end
+          uploadedBy: session.username
         }
       });
 

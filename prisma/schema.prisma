@@ -148,6 +148,7 @@ model UploadHistory {
   id             String     @id @default(uuid())
   filename       String
   questionCount  Int
+  uploadedBy     String     @default("System")
   createdAt      DateTime   @default(now())
   questions      Question[]
 }
