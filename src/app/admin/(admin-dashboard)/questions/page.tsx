@@ -52,9 +52,9 @@ export default async function QuestionBankPage(props: { searchParams: Promise<{ 
           {['FY', 'SY', 'TY', 'Final Year'].map((year, index) => {
             const displayLabel = ['FY', 'SY', 'TY', 'LY'][index];
             const yearQs = allQuestions.filter(q => q.targetYear === year);
-            const easy = yearQs.filter(q => q.difficulty === 'Easy').length;
-            const med = yearQs.filter(q => q.difficulty === 'Medium').length;
-            const hard = yearQs.filter(q => q.difficulty === 'Hard').length;
+            const easy = yearQs.filter(q => q.difficulty.toLowerCase() === 'easy').length;
+            const med = yearQs.filter(q => q.difficulty.toLowerCase() === 'medium').length;
+            const hard = yearQs.filter(q => q.difficulty.toLowerCase() === 'hard').length;
             
             return (
               <div key={year} className="bg-gray-800 p-4 rounded-xl border border-gray-700">
