@@ -114,67 +114,88 @@ export async function generateAttempt(participantId: string, eventId: string, du
     }
   }
 
-  // 3. Select questions cycling through difficulties with dynamic fallback
-  const difficultyCycle = ['Easy', 'Medium', 'Hard'];
-  let difficultyIndex = Math.floor(Math.random() * difficultyCycle.length);
+  // 3. Determine exact difficulty counts (40% Easy, 40% Medium, 20% Hard)
+  const hardTarget = Math.max(1, Math.round(questionCount * 0.2));
+  const easyTarget = Math.max(1, Math.round(questionCount * 0.4));
+  const mediumTarget = Math.max(0, questionCount - hardTarget - easyTarget);
 
-  const pickFromBuckets = (buckets: Record<string, any[]>, count: number) => {
-    const picked: any[] = [];
-    while (picked.length < count) {
-      const targetDiff = difficultyCycle[difficultyIndex % difficultyCycle.length];
-      
-      if (buckets[targetDiff].length > 0) {
-        picked.push(buckets[targetDiff].pop());
-      } else {
-        // Fallback: Try other buckets if the target difficulty is exhausted
-        const fallbacks = ['Medium', 'Easy', 'Hard'].filter(d => d !== targetDiff);
-        let found = false;
-        for (const fb of fallbacks) {
-           if (buckets[fb].length > 0) {
-              picked.push(buckets[fb].pop());
-              found = true;
-              break;
-           }
-        }
-        if (!found) break; // Exhausted all difficulties in this category
-      }
-      difficultyIndex++;
-    }
-    return picked;
-  };
+  const requiredDifficulties: string[] = [
+    ...Array(easyTarget).fill('Easy'),
+    ...Array(mediumTarget).fill('Medium'),
+    ...Array(hardTarget).fill('Hard')
+  ];
+
+  // Shuffle the required difficulties array
+  for (let i = requiredDifficulties.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [requiredDifficulties[i], requiredDifficulties[j]] = [requiredDifficulties[j], requiredDifficulties[i]];
+  }
 
   const selectedQuestions: any[] = [];
   
+  // Define CS vs Basic split
+  let csCount = 0;
+  let basicCount = 0;
+  
   if (participant.year === 'FY') {
-    const csCount = Math.max(1, Math.round(questionCount * 0.2));
-    const basicCount = questionCount - csCount;
-    
-    let pickedBasic = pickFromBuckets(basicBuckets, basicCount);
-    let pickedCs = pickFromBuckets(csBuckets, csCount);
-    
-    // Fallbacks across categories if one is completely empty
-    if (pickedBasic.length < basicCount) pickedCs.push(...pickFromBuckets(csBuckets, basicCount - pickedBasic.length));
-    if (pickedCs.length < csCount) pickedBasic.push(...pickFromBuckets(basicBuckets, csCount - pickedCs.length));
-    
-    selectedQuestions.push(...pickedBasic, ...pickedCs);
+    csCount = Math.max(1, Math.round(questionCount * 0.2));
+    basicCount = questionCount - csCount;
   } else if (participant.year === 'SY') {
-    const basicCount = Math.max(1, Math.round(questionCount * 0.2));
-    const csCount = questionCount - basicCount;
-    
-    let pickedBasic = pickFromBuckets(basicBuckets, basicCount);
-    let pickedCs = pickFromBuckets(csBuckets, csCount);
-    
-    if (pickedBasic.length < basicCount) pickedCs.push(...pickFromBuckets(csBuckets, basicCount - pickedBasic.length));
-    if (pickedCs.length < csCount) pickedBasic.push(...pickFromBuckets(basicBuckets, csCount - pickedCs.length));
-    
-    selectedQuestions.push(...pickedBasic, ...pickedCs);
+    basicCount = Math.max(1, Math.round(questionCount * 0.2));
+    csCount = questionCount - basicCount;
   } else {
     // TY/LY: 100% CS
-    let pickedCs = pickFromBuckets(csBuckets, questionCount);
-    if (pickedCs.length < questionCount) {
-       pickedCs.push(...pickFromBuckets(basicBuckets, questionCount - pickedCs.length));
+    csCount = questionCount;
+    basicCount = 0;
+  }
+
+  // Assign difficulties to Basic slots and CS slots
+  const basicDifficulties = requiredDifficulties.slice(0, basicCount);
+  const csDifficulties = requiredDifficulties.slice(basicCount);
+
+  // Helper to safely pick from a category
+  const pickExact = (targetDiff: string, primaryBuckets: Record<string, any[]>, fallbackBuckets: Record<string, any[]>) => {
+    const normDiff = targetDiff.charAt(0).toUpperCase() + targetDiff.slice(1).toLowerCase();
+    
+    // Check Case-Insensitive keys just in case
+    const findBucket = (buckets: Record<string, any[]>, diff: string) => {
+      const key = Object.keys(buckets).find(k => k.toLowerCase() === diff.toLowerCase());
+      return key ? buckets[key] : [];
+    };
+
+    const primaryBucket = findBucket(primaryBuckets, normDiff);
+    if (primaryBucket && primaryBucket.length > 0) return primaryBucket.pop();
+
+    // Fallback 1: Same category, different difficulty
+    const allDiffs = ['Medium', 'Easy', 'Hard'];
+    for (const d of allDiffs) {
+      const fb = findBucket(primaryBuckets, d);
+      if (fb && fb.length > 0) return fb.pop();
     }
-    selectedQuestions.push(...pickedCs);
+
+    // Fallback 2: Different category, same difficulty
+    const secBucket = findBucket(fallbackBuckets, normDiff);
+    if (secBucket && secBucket.length > 0) return secBucket.pop();
+
+    // Fallback 3: Different category, different difficulty
+    for (const d of allDiffs) {
+      const fb = findBucket(fallbackBuckets, d);
+      if (fb && fb.length > 0) return fb.pop();
+    }
+    
+    return null;
+  };
+
+  // Pick Basic Questions
+  for (const diff of basicDifficulties) {
+    const q = pickExact(diff, basicBuckets, csBuckets);
+    if (q) selectedQuestions.push(q);
+  }
+
+  // Pick CS Questions
+  for (const diff of csDifficulties) {
+    const q = pickExact(diff, csBuckets, basicBuckets);
+    if (q) selectedQuestions.push(q);
   }
 
   // 4. Final shuffle so the student gets questions in a completely random difficulty order
