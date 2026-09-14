@@ -42,6 +42,7 @@ export default async function AdminResultsPage() {
 
   const exportData = latestAttempts.map((attempt) => {
     const history = historyMap.get(attempt.participantId) || { count: 0, scores: [] };
+    const coupon = attempt.coupon || attempt.participant?.coupons?.[0];
     return {
       name: attempt.participant.name,
       prn: attempt.participant.prn || "N/A",
@@ -49,7 +50,8 @@ export default async function AdminResultsPage() {
       mobile: attempt.participant.mobile || "N/A",
       score: attempt.scorePercent !== null ? `${attempt.scorePercent.toFixed(0)}%` : "0%",
       status: attempt.status,
-      couponCode: attempt.coupon?.code || attempt.participant?.coupons?.[0]?.code || "N/A",
+      couponCode: coupon?.code || "N/A",
+      couponStatus: coupon?.status || "N/A",
       attemptCount: history.count,
       allScores: `[${history.scores.join(", ")}]`,
       date: attempt.submittedAt ? attempt.submittedAt.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true }) : "N/A"
@@ -122,8 +124,25 @@ export default async function AdminResultsPage() {
                       {attempt.status}
                     </span>
                   </td>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap text-xs sm:text-sm font-mono font-bold text-foreground">
-                    {attempt.coupon?.code || attempt.participant?.coupons?.[0]?.code || <span className="text-muted-foreground font-normal">N/A</span>}
+                  <td className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap">
+                    {(() => {
+                      const coupon = attempt.coupon || attempt.participant?.coupons?.[0];
+                      if (!coupon) return <span className="text-muted-foreground text-sm font-normal">N/A</span>;
+                      
+                      const isRedeemed = coupon.status === 'REDEEMED';
+                      return (
+                        <div className="flex flex-col gap-1.5">
+                          <span className="font-mono text-xs sm:text-sm font-bold text-foreground">{coupon.code}</span>
+                          <span className={`text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-sm inline-flex w-max ${
+                            isRedeemed 
+                              ? 'bg-green-500/20 text-green-600 dark:text-green-400 border border-green-500/30' 
+                              : 'bg-secondary text-muted-foreground border border-border'
+                          }`}>
+                            {isRedeemed ? 'Redeemed' : 'Unused'}
+                          </span>
+                        </div>
+                      );
+                    })()}
                   </td>
                   <td className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap text-[10px] sm:text-sm text-muted-foreground font-medium">
                     {attempt.submittedAt 
