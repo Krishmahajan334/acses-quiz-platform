@@ -1,13 +1,12 @@
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
-import { cookies } from 'next/headers';
+import { getAdminSession } from '@/lib/auth';
 
 export async function POST(request: Request) {
   try {
-    const cookieStore = await cookies();
-    const token = cookieStore.get('admin_token')?.value;
+    const session = await getAdminSession();
 
-    if (!token || token !== process.env.ADMIN_AUTH_SECRET) {
+    if (!session) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
@@ -95,10 +94,9 @@ export async function POST(request: Request) {
 
 export async function DELETE(request: Request) {
   try {
-    const cookieStore = await cookies();
-    const token = cookieStore.get('admin_token')?.value;
+    const session = await getAdminSession();
 
-    if (!token || token !== process.env.ADMIN_AUTH_SECRET) {
+    if (!session) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 

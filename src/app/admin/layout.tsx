@@ -1,11 +1,15 @@
 import Link from 'next/link';
-import { ShieldCheck, LayoutDashboard, Database, Trophy, LogOut } from 'lucide-react';
+import { ShieldCheck, LayoutDashboard, Database, Trophy, LogOut, Users } from 'lucide-react';
+import { getAdminSession, isSuperAdmin } from '@/lib/auth';
 
-export default function AdminLayout({
+export default async function AdminLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const session = await getAdminSession();
+  const isSuper = isSuperAdmin(session);
+
   return (
     <div className="min-h-screen bg-background flex font-sans">
       {/* Sidebar */}
@@ -19,6 +23,12 @@ export default function AdminLayout({
             <LayoutDashboard className="w-4 h-4" />
             Dashboard
           </Link>
+          {isSuper && (
+            <Link href="/admin/admins" className="flex items-center gap-3 px-4 py-3 rounded-lg text-muted-foreground hover:bg-secondary/50 hover:text-foreground transition-all text-sm font-medium uppercase tracking-wide">
+              <Users className="w-4 h-4" />
+              Manage Admins
+            </Link>
+          )}
           <Link href="/admin/questions" className="flex items-center gap-3 px-4 py-3 rounded-lg text-muted-foreground hover:bg-secondary/50 hover:text-foreground transition-all text-sm font-medium uppercase tracking-wide">
             <Database className="w-4 h-4" />
             Question Bank
@@ -73,6 +83,12 @@ export default function AdminLayout({
             <Trophy className="w-5 h-5" />
             <span className="text-[10px] font-bold uppercase tracking-wider">Results</span>
           </Link>
+          {isSuper && (
+            <Link href="/admin/admins" className="flex flex-col items-center gap-1 text-muted-foreground hover:text-primary transition-colors">
+              <Users className="w-5 h-5" />
+              <span className="text-[10px] font-bold uppercase tracking-wider">Admins</span>
+            </Link>
+          )}
         </nav>
       </div>
     </div>

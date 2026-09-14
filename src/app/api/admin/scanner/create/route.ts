@@ -2,21 +2,22 @@ import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 import { getAdminSession } from '@/lib/auth';
 
-export async function GET() {
+export async function POST() {
   try {
     const session = await getAdminSession();
-
     if (!session) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const history = await prisma.uploadHistory.findMany({
-      orderBy: { createdAt: 'desc' }
+    const scannerSession = await prisma.scannerSession.create({
+      data: {
+        adminId: session.username,
+      }
     });
 
-    return NextResponse.json({ history });
+    return NextResponse.json({ sessionId: scannerSession.id });
   } catch (error: any) {
-    console.error("Upload History GET Error:", error);
+    console.error("Create Scanner Session Error:", error);
     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
   }
 }

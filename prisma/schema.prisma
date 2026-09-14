@@ -118,6 +118,7 @@ model Coupon {
   status        String      @default("ISSUED")
   issuedAt      DateTime    @default(now())
   redeemedAt    DateTime?
+  redeemedBy    String?
   attempt       Attempt     @relation(fields: [attemptId], references: [id])
   participant   Participant @relation(fields: [participantId], references: [id])
 }
@@ -149,4 +150,21 @@ model UploadHistory {
   questionCount  Int
   createdAt      DateTime   @default(now())
   questions      Question[]
+}
+
+model Admin {
+  id        String   @id @default(uuid())
+  username  String   @unique
+  password  String
+  role      String   @default("CO_ADMIN") // SUPER_ADMIN or CO_ADMIN
+  createdAt DateTime @default(now())
+}
+
+model ScannerSession {
+  id        String   @id @default(uuid())
+  adminId   String
+  status    String   @default("ACTIVE") // ACTIVE, CLOSED
+  lastScan  String?  // JSON of the last scan
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }

@@ -42,6 +42,8 @@ export async function POST(req: Request) {
       if (pastCoupon) couponCode = pastCoupon.code;
     }
 
+    const qrCodeUrl = couponCode ? `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${couponCode}` : null;
+
     const postData = {
       name: attempt.participant.name,
       prn: attempt.participant.prn,
@@ -50,6 +52,7 @@ export async function POST(req: Request) {
       scorePercent: attempt.scorePercent,
       status: 'COMPLETED',
       couponCode,
+      qrCodeUrl,
       attemptCount,
       allScores,
       timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true }),
