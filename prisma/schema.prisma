@@ -19,6 +19,20 @@ model QuizEvent {
   createdAt             DateTime   @default(now())
   questions             Question[]
   attempts              Attempt[]
+  yearConfigs           EventYearConfig[]
+}
+
+model EventYearConfig {
+  id             String    @id @default(uuid())
+  eventId        String
+  event          QuizEvent @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  year           String    // "FY", "SY", "TY", "LY"
+  easyCount      Int       @default(2)
+  mediumCount    Int       @default(2)
+  hardCount      Int       @default(1)
+  excludedTopics String    @default("")
+  
+  @@unique([eventId, year])
 }
 
 model Question {

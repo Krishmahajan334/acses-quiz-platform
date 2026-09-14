@@ -32,6 +32,10 @@ export default async function AdminLayout({
             <LayoutDashboard className="w-4 h-4" />
             Dashboard
           </Link>
+          <Link href="/admin/event-settings" className="flex items-center gap-3 px-4 py-3 rounded-lg text-muted-foreground hover:bg-secondary/50 hover:text-foreground transition-all text-sm font-medium uppercase tracking-wide">
+            <ShieldCheck className="w-4 h-4" />
+            Event Settings
+          </Link>
           {isSuper && (
             <Link href="/admin/admins" className="flex items-center gap-3 px-4 py-3 rounded-lg text-muted-foreground hover:bg-secondary/50 hover:text-foreground transition-all text-sm font-medium uppercase tracking-wide">
               <Users className="w-4 h-4" />

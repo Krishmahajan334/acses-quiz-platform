@@ -34,22 +34,25 @@ export async function generateAttempt(participantId: string, eventId: string, du
   });
   const pastNormalizedTexts = new Set(pastAttempts.map(aq => normalizeText(aq.question.text)));
 
-  // Determine cascading target years based on the participant's year
-  let targetYears = [participant.year, 'ALL'];
-  if (participant.year === 'LY') {
-    targetYears = ['LY', 'TY', 'SY', 'ALL'];
-  } else if (participant.year === 'TY') {
-    targetYears = ['TY', 'SY', 'ALL'];
-  } else if (participant.year === 'SY') {
-    targetYears = ['SY', 'FY', 'ALL']; 
-  }
+  const targetYears = participant.year === 'FY' ? ['ALL'] :
+                      participant.year === 'SY' ? ['ALL', 'SY'] :
+                      ['ALL', 'SY', 'TY', 'LY'];
 
-  // Fetch active questions targeting their specific year scope
+  // Fetch the configuration for this year
+  const yearConfig = await prisma.eventYearConfig.findUnique({
+    where: { eventId_year: { eventId, year: participant.year } }
+  });
+
+  const excludedTopicsArray = yearConfig?.excludedTopics 
+    ? yearConfig.excludedTopics.split(',').map(t => t.trim()).filter(Boolean)
+    : [];
+
   const allQuestionsRaw = await prisma.question.findMany({
     where: { 
       eventId, 
       status: 'ACTIVE',
-      targetYear: { in: targetYears }
+      targetYear: { in: targetYears },
+      ...(excludedTopicsArray.length > 0 ? { topic: { notIn: excludedTopicsArray } } : {})
     },
     select: { id: true, text: true, topic: true, difficulty: true }
   });
@@ -114,10 +117,13 @@ export async function generateAttempt(participantId: string, eventId: string, du
     }
   }
 
-  // 3. Determine exact difficulty counts (40% Easy, 40% Medium, 20% Hard)
-  const hardTarget = Math.max(1, Math.round(questionCount * 0.2));
-  const easyTarget = Math.max(1, Math.round(questionCount * 0.4));
-  const mediumTarget = Math.max(0, questionCount - hardTarget - easyTarget);
+  // 3. Determine exact difficulty counts from YearConfig
+  const hardTarget = yearConfig ? yearConfig.hardCount : Math.max(1, Math.round(questionCount * 0.2));
+  const easyTarget = yearConfig ? yearConfig.easyCount : Math.max(1, Math.round(questionCount * 0.4));
+  const mediumTarget = yearConfig ? yearConfig.mediumCount : Math.max(0, questionCount - hardTarget - easyTarget);
+  
+  // Update questionCount to match the configured sum
+  const totalTarget = easyTarget + mediumTarget + hardTarget;
 
   const requiredDifficulties: string[] = [
     ...Array(easyTarget).fill('Easy'),
@@ -138,14 +144,14 @@ export async function generateAttempt(participantId: string, eventId: string, du
   let basicCount = 0;
   
   if (participant.year === 'FY') {
-    csCount = Math.max(1, Math.round(questionCount * 0.2));
-    basicCount = questionCount - csCount;
+    csCount = Math.max(1, Math.round(totalTarget * 0.2));
+    basicCount = totalTarget - csCount;
   } else if (participant.year === 'SY') {
-    basicCount = Math.max(1, Math.round(questionCount * 0.2));
-    csCount = questionCount - basicCount;
+    basicCount = Math.max(1, Math.round(totalTarget * 0.2));
+    csCount = totalTarget - basicCount;
   } else {
     // TY/LY: 100% CS
-    csCount = questionCount;
+    csCount = totalTarget;
     basicCount = 0;
   }
 
