@@ -24,7 +24,7 @@ export async function POST(request: Request) {
       
       const token = await signAdminToken(payload);
       
-      const response = NextResponse.json({ success: true, role: 'SUPER_ADMIN' });
+      const response = NextResponse.json({ success: true, role: 'SUPER_ADMIN', token });
       response.cookies.set('admin_session_token', token, {
         httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
@@ -58,7 +58,7 @@ export async function POST(request: Request) {
     
     const token = await signAdminToken(payload);
     
-    const response = NextResponse.json({ success: true, role: admin.role });
+    const response = NextResponse.json({ success: true, role: admin.role, token });
     response.cookies.set('admin_session_token', token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',

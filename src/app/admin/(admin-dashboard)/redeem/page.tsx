@@ -28,9 +28,13 @@ export default function RedeemPage() {
     setScanResult(null);
 
     try {
+      const token = localStorage.getItem('admin_token_override');
+      const headers: HeadersInit = { "Content-Type": "application/json" };
+      if (token) headers['Authorization'] = `Bearer ${token}`;
+
       const res = await fetch("/api/admin/redeem", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers,
         body: JSON.stringify({ couponCode: code }),
         credentials: "same-origin",
       });
@@ -96,8 +100,13 @@ export default function RedeemPage() {
     if (scanMode === "remote") {
       const createSession = async () => {
         try {
+          const token = localStorage.getItem('admin_token_override');
+          const headers: HeadersInit = {};
+          if (token) headers['Authorization'] = `Bearer ${token}`;
+
           const res = await fetch("/api/admin/scanner/create", { 
             method: "POST",
+            headers,
             credentials: "same-origin"
           });
           const data = await res.json();
@@ -125,7 +134,12 @@ export default function RedeemPage() {
     if (scanMode === "remote" && sessionId) {
       const interval = setInterval(async () => {
         try {
+          const token = localStorage.getItem('admin_token_override');
+          const headers: HeadersInit = {};
+          if (token) headers['Authorization'] = `Bearer ${token}`;
+
           const res = await fetch(`/api/admin/scanner/poll?session=${sessionId}`, {
+            headers,
             credentials: "same-origin"
           });
           const data = await res.json();

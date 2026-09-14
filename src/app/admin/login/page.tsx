@@ -10,6 +10,13 @@ export default function AdminLoginPage() {
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
+  // Clear any existing token on mount
+  useState(() => {
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem('admin_token_override');
+    }
+  });
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
@@ -23,6 +30,10 @@ export default function AdminLoginPage() {
       });
 
       if (res.ok) {
+        const data = await res.json();
+        if (data.token) {
+          localStorage.setItem('admin_token_override', data.token);
+        }
         setIsLoading(false); // Force loading state to clear before routing
         window.location.href = '/admin';
       } else {

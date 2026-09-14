@@ -1,5 +1,5 @@
 import { SignJWT, jwtVerify, type JWTPayload } from 'jose';
-import { cookies } from 'next/headers';
+import { cookies, headers } from 'next/headers';
 
 function getSecret() {
   const secretStr = process.env.ADMIN_AUTH_SECRET || 'fallback-secret-do-not-use-in-prod';
@@ -33,7 +33,15 @@ export async function verifyAdminToken(token: string): Promise<AdminJwtPayload |
 
 export async function getAdminSession(): Promise<AdminJwtPayload | null> {
   const cookieStore = await cookies();
-  const token = cookieStore.get('admin_session_token')?.value;
+  let token = cookieStore.get('admin_session_token')?.value;
+
+  if (!token) {
+    const headersList = await headers();
+    const authHeader = headersList.get('authorization');
+    if (authHeader && authHeader.startsWith('Bearer ')) {
+      token = authHeader.substring(7);
+    }
+  }
 
   if (!token) {
     return null;
