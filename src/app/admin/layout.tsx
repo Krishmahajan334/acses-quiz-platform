@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { ShieldCheck, LayoutDashboard, Database, Trophy, LogOut, Users, QrCode, Smartphone } from 'lucide-react';
+import { redirect } from 'next/navigation';
+import { ShieldCheck, LayoutDashboard, Database, Trophy, LogOut, Users, QrCode } from 'lucide-react';
 import { getAdminSession, isSuperAdmin } from '@/lib/auth';
 
 export default async function AdminLayout({
@@ -8,6 +9,11 @@ export default async function AdminLayout({
   children: React.ReactNode;
 }) {
   const session = await getAdminSession();
+  
+  if (!session) {
+    redirect('/admin/login');
+  }
+
   const isSuper = isSuperAdmin(session);
 
   return (
@@ -41,15 +47,11 @@ export default async function AdminLayout({
             <QrCode className="w-4 h-4" />
             Scanner (Redeem)
           </Link>
-          <Link href="/remote" className="flex items-center gap-3 px-4 py-3 rounded-lg text-muted-foreground hover:bg-secondary/50 hover:text-foreground transition-all text-sm font-medium uppercase tracking-wide">
-            <Smartphone className="w-4 h-4" />
-            Pair Remote Scanner
-          </Link>
         </nav>
         <div className="p-6 border-t border-border">
-          <Link href="/" className="flex items-center justify-center gap-2 w-full px-4 py-3 text-xs uppercase tracking-widest font-bold text-muted-foreground hover:text-foreground transition-all border border-border rounded-md hover:bg-secondary/50">
+          <Link href="/api/admin/logout" className="flex items-center justify-center gap-2 w-full px-4 py-3 text-xs uppercase tracking-widest font-bold text-destructive hover:text-destructive transition-all border border-destructive/30 rounded-md hover:bg-destructive/10">
             <LogOut className="w-4 h-4" />
-            Exit to Terminal
+            Logout Admin
           </Link>
         </div>
       </div>
