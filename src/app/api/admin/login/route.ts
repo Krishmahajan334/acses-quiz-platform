@@ -28,8 +28,9 @@ export async function POST(request: Request) {
       response.cookies.set('admin_session_token', token, {
         httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
-        sameSite: 'none',
-        path: '/'
+        sameSite: 'lax', // Changed from none to lax
+        path: '/',
+        maxAge: 60 * 60 * 24 // 24 hours
       });
       
       return response;
@@ -60,11 +61,12 @@ export async function POST(request: Request) {
     
     const response = NextResponse.json({ success: true, role: admin.role, token });
     response.cookies.set('admin_session_token', token, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'none',
-      path: '/'
-    });
+        httpOnly: true,
+        secure: process.env.NODE_ENV === 'production',
+        sameSite: 'lax', // Changed from none to lax for better same-site stability
+        path: '/',
+        maxAge: 60 * 60 * 24 // 24 hours
+      });
     
     return response;
     
