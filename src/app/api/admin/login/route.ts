@@ -28,7 +28,7 @@ export async function POST(request: Request) {
       response.cookies.set('admin_session_token', token, {
         httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
-        sameSite: 'lax',
+        sameSite: 'none',
         path: '/'
       });
       
@@ -62,7 +62,7 @@ export async function POST(request: Request) {
     response.cookies.set('admin_session_token', token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
-      sameSite: 'lax',
+      sameSite: 'none',
       path: '/'
     });
     
