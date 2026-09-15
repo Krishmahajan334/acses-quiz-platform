@@ -48,11 +48,11 @@ export default function SettingsClient() {
       if (res.ok && data.success) {
         alert("Settings saved successfully!");
       } else {
-        alert("Failed to save settings.");
+        alert(data.error || "Failed to save settings. Please try again.");
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error(error);
-      alert("An error occurred while saving.");
+      alert(error.message || "An error occurred while saving.");
     } finally {
       setSaving(false);
     }

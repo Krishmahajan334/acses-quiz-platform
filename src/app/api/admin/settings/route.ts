@@ -28,6 +28,10 @@ export async function GET() {
     return NextResponse.json({
       success: true,
       prnRequiredYears: requiredYears
+    }, {
+      headers: {
+        'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate'
+      }
     });
   } catch (error) {
     console.error('Settings GET Error:', error);
