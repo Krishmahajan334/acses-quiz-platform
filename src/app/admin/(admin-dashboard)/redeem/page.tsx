@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { QrCode, Camera, Keyboard, AlertCircle, CheckCircle2, UserCircle2, Smartphone } from "lucide-react";
-import { Html5QrcodeScanner } from "html5-qrcode";
+import { Html5QrcodeScanner, Html5QrcodeSupportedFormats } from "html5-qrcode";
 import { QRCodeSVG } from 'qrcode.react';
 
 type ScanResult = {
@@ -73,7 +73,14 @@ export default function RedeemPage() {
     if (scanMode === "webcam") {
       scannerRef.current = new Html5QrcodeScanner(
         "reader",
-        { fps: 10, qrbox: { width: 250, height: 250 } },
+        { 
+          fps: 30, 
+          formatsToSupport: [Html5QrcodeSupportedFormats.QR_CODE],
+          videoConstraints: {
+            width: { ideal: 1280 },
+            height: { ideal: 720 }
+          }
+        },
         /* verbose= */ false
       );
       

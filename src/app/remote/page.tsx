@@ -4,7 +4,7 @@ import { useState, useEffect, useRef, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { Html5QrcodeScanner } from "html5-qrcode";
+import { Html5QrcodeScanner, Html5QrcodeSupportedFormats } from "html5-qrcode";
 import { QrCode, CheckCircle2, AlertCircle, XCircle, Loader2 } from "lucide-react";
 
 function RemoteScannerContent() {
@@ -41,9 +41,13 @@ function RemoteScannerContent() {
     scannerRef.current = new Html5QrcodeScanner(
       "remote-reader",
       { 
-        fps: 10, 
-        qrbox: { width: 250, height: 250 },
-        videoConstraints: { facingMode: "environment" }
+        fps: 30, 
+        formatsToSupport: [Html5QrcodeSupportedFormats.QR_CODE],
+        videoConstraints: { 
+          facingMode: "environment",
+          width: { ideal: 1280 },
+          height: { ideal: 720 }
+        }
       },
       false
     );
