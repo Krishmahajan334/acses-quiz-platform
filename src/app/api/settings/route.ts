@@ -5,12 +5,21 @@ export const dynamic = 'force-dynamic';
 
 export async function GET() {
   try {
-    const setting = await prisma.systemSetting.findUnique({
-      where: { key: 'PRN_REQUIRED_YEARS' }
-    });
+    let setting = null;
+    try {
+      setting = await prisma.systemSetting.findUnique({
+        where: { key: 'PRN_REQUIRED_YEARS' }
+      });
+    } catch (e: any) {
+      if (e.message?.includes('no such table') || e.code === 'P2021') {
+        console.warn('SystemSetting table missing, using defaults.');
+      } else {
+        throw e;
+      }
+    }
 
-    // Default configuration if none exists: FY is not required, everyone else is.
-    const requiredYears = setting ? JSON.parse(setting.value) : ['SY', 'TY', 'Final Year'];
+    // Default configuration if none exists
+    const requiredYears = setting ? JSON.parse(setting.value) : ['FY', 'SY', 'TY', 'Final Year'];
 
     return NextResponse.json({
       success: true,

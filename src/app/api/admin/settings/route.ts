@@ -10,11 +10,20 @@ export async function GET() {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
     }
 
-    const setting = await prisma.systemSetting.findUnique({
-      where: { key: 'PRN_REQUIRED_YEARS' }
-    });
+    let setting = null;
+    try {
+      setting = await prisma.systemSetting.findUnique({
+        where: { key: 'PRN_REQUIRED_YEARS' }
+      });
+    } catch (e: any) {
+      if (e.message?.includes('no such table') || e.code === 'P2021') {
+        console.warn('SystemSetting table missing, using defaults.');
+      } else {
+        throw e;
+      }
+    }
 
-    const requiredYears = setting ? JSON.parse(setting.value) : ['SY', 'TY', 'Final Year'];
+    const requiredYears = setting ? JSON.parse(setting.value) : ['FY', 'SY', 'TY', 'Final Year'];
 
     return NextResponse.json({
       success: true,
@@ -40,11 +49,32 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: false, error: 'Invalid data format' }, { status: 400 });
     }
 
-    await prisma.systemSetting.upsert({
-      where: { key: 'PRN_REQUIRED_YEARS' },
-      update: { value: JSON.stringify(prnRequiredYears) },
-      create: { key: 'PRN_REQUIRED_YEARS', value: JSON.stringify(prnRequiredYears) },
-    });
+    try {
+      await prisma.systemSetting.upsert({
+        where: { key: 'PRN_REQUIRED_YEARS' },
+        update: { value: JSON.stringify(prnRequiredYears) },
+        create: { key: 'PRN_REQUIRED_YEARS', value: JSON.stringify(prnRequiredYears) },
+      });
+    } catch (upsertError: any) {
+      // If table doesn't exist, create it and retry (useful for Vercel environments where db push isn't run automatically)
+      if (upsertError.message?.includes('no such table') || upsertError.code === 'P2021') {
+        console.log('SystemSetting table not found, creating it...');
+        await prisma.$executeRawUnsafe(`
+          CREATE TABLE IF NOT EXISTS "SystemSetting" (
+              "key" TEXT NOT NULL PRIMARY KEY,
+              "value" TEXT NOT NULL
+          );
+        `);
+        // Retry
+        await prisma.systemSetting.upsert({
+          where: { key: 'PRN_REQUIRED_YEARS' },
+          update: { value: JSON.stringify(prnRequiredYears) },
+          create: { key: 'PRN_REQUIRED_YEARS', value: JSON.stringify(prnRequiredYears) },
+        });
+      } else {
+        throw upsertError;
+      }
+    }
 
     return NextResponse.json({ success: true, message: 'Settings saved successfully' });
   } catch (error) {
