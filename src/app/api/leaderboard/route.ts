@@ -6,7 +6,9 @@ export const revalidate = 15; // Cache the response for 15 seconds
 export async function GET(request: Request) {
   try {
     const url = new URL(request.url);
-    const limit = parseInt(url.searchParams.get('limit') || '20', 10);
+    const limitParam = url.searchParams.get('limit') || '20';
+    const limit = limitParam === 'all' ? Infinity : parseInt(limitParam, 10);
+    const yearParam = url.searchParams.get('year') || 'All';
 
     // Get the active event
     const activeEvent = await prisma.quizEvent.findFirst({
@@ -17,13 +19,22 @@ export async function GET(request: Request) {
       return NextResponse.json({ success: true, leaderboard: [] });
     }
 
+    const whereClause: any = {
+      eventId: activeEvent.id,
+      scorePercent: { not: null },
+      submittedAt: { not: null }
+    };
+
+    // Filter by year if specified
+    if (yearParam !== 'All') {
+      whereClause.participant = {
+        year: yearParam
+      };
+    }
+
     // Fetch attempts that have a scorePercent
     const attempts = await prisma.attempt.findMany({
-      where: {
-        eventId: activeEvent.id,
-        scorePercent: { not: null },
-        submittedAt: { not: null }
-      },
+      where: whereClause,
       include: {
         participant: {
           select: {
@@ -58,7 +69,7 @@ export async function GET(request: Request) {
     });
 
     // Take top N
-    const topN = leaderboard.slice(0, limit);
+    const topN = limit === Infinity ? leaderboard : leaderboard.slice(0, limit);
 
     return NextResponse.json({
       success: true,

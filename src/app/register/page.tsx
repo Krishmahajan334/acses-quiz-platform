@@ -4,11 +4,12 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Navbar } from "@/components/ui/Navbar";
 import { PageBackground } from "@/components/ui/PageBackground";
-import { AlertCircle, Loader2 } from "lucide-react";
+import { AlertCircle, Loader2, Trophy, X } from "lucide-react";
 import { Leaderboard } from "@/components/ui/Leaderboard";
 
 export default function RegisterPage() {
   const router = useRouter();
+  const [showMobileLeaderboard, setShowMobileLeaderboard] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -221,8 +222,9 @@ export default function RegisterPage() {
           </div>
         </div>
 
-        <div className="max-w-md w-full relative z-10 animate-fade-up" style={{ animationDelay: '0.2s' }}>
-          <div className="mb-4 text-center lg:text-left">
+        {/* Desktop Leaderboard (Always visible on lg screens) */}
+        <div className="hidden lg:block max-w-md w-full relative z-10 animate-fade-up" style={{ animationDelay: '0.2s' }}>
+          <div className="mb-4 text-left">
             <h2 className="text-xl sm:text-2xl font-bold text-foreground tracking-tight uppercase">
               Top Performers
             </h2>
@@ -232,6 +234,40 @@ export default function RegisterPage() {
           </div>
           <Leaderboard limit={10} />
         </div>
+
+        {/* Mobile Leaderboard Toggle Button */}
+        <div className="lg:hidden fixed bottom-6 right-6 z-40">
+          <button
+            onClick={() => setShowMobileLeaderboard(true)}
+            className="flex items-center justify-center bg-primary text-primary-foreground p-4 rounded-full shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:scale-105 transition-transform"
+          >
+            <Trophy className="w-6 h-6" />
+          </button>
+        </div>
+
+        {/* Mobile Leaderboard Modal */}
+        {showMobileLeaderboard && (
+          <div className="lg:hidden fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-background/80 backdrop-blur-sm p-4">
+            <div className="bg-secondary w-full max-w-md rounded-2xl border border-border shadow-2xl animate-fade-up relative flex flex-col max-h-[85vh]">
+              <div className="flex justify-between items-center p-4 border-b border-border">
+                <div>
+                  <h2 className="text-lg font-bold text-foreground tracking-tight uppercase">Top Performers</h2>
+                  <p className="text-xs text-muted-foreground">Are you ready to beat their scores?</p>
+                </div>
+                <button 
+                  onClick={() => setShowMobileLeaderboard(false)}
+                  className="p-2 rounded-full bg-background border border-border text-foreground hover:bg-secondary transition-colors"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+              <div className="overflow-y-auto p-4 custom-scrollbar flex-1">
+                <Leaderboard limit={10} />
+              </div>
+            </div>
+          </div>
+        )}
+
       </main>
     </>
   );

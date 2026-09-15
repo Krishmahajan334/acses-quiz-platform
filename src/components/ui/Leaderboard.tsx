@@ -11,14 +11,20 @@ interface LeaderboardEntry {
   timeTakenSec: number;
 }
 
-export function Leaderboard({ limit = 20, refreshInterval = 30000 }: { limit?: number, refreshInterval?: number }) {
+export function Leaderboard({ limit = 20, refreshInterval = 30000 }: { limit?: number | 'all', refreshInterval?: number }) {
   const [data, setData] = useState<LeaderboardEntry[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  
+  // State for filtering and expansion
+  const [yearFilter, setYearFilter] = useState<string>('All');
+  const [isExpanded, setIsExpanded] = useState<boolean>(limit === 'all');
+  const [isExpanding, setIsExpanding] = useState(false);
 
-  const fetchLeaderboard = async () => {
+  const fetchLeaderboard = async (currentLimit: number | 'all', currentYear: string) => {
     try {
-      const res = await fetch(`/api/leaderboard?limit=${limit}`);
+      const limitParam = currentLimit === 'all' ? 'all' : currentLimit.toString();
+      const res = await fetch(`/api/leaderboard?limit=${limitParam}&year=${currentYear}`);
       const json = await res.json();
       if (json.success) {
         setData(json.leaderboard);
@@ -34,10 +40,18 @@ export function Leaderboard({ limit = 20, refreshInterval = 30000 }: { limit?: n
   };
 
   useEffect(() => {
-    fetchLeaderboard();
-    const interval = setInterval(fetchLeaderboard, refreshInterval);
+    const activeLimit = isExpanded ? 'all' : limit;
+    fetchLeaderboard(activeLimit, yearFilter);
+    const interval = setInterval(() => fetchLeaderboard(activeLimit, yearFilter), refreshInterval);
     return () => clearInterval(interval);
-  }, [limit, refreshInterval]);
+  }, [limit, refreshInterval, yearFilter, isExpanded]);
+
+  const handleExpand = async () => {
+    setIsExpanding(true);
+    setIsExpanded(true);
+    await fetchLeaderboard('all', yearFilter);
+    setIsExpanding(false);
+  };
 
   const formatTime = (seconds: number) => {
     const m = Math.floor(seconds / 60);
@@ -71,24 +85,39 @@ export function Leaderboard({ limit = 20, refreshInterval = 30000 }: { limit?: n
   }
 
   return (
-    <div className="bg-secondary/40 backdrop-blur-md rounded-2xl border border-border overflow-hidden shadow-2xl">
-      <div className="p-5 border-b border-border bg-secondary/50 flex items-center justify-between">
-        <h3 className="text-lg font-black text-foreground uppercase tracking-tight flex items-center gap-2">
+    <div className="bg-secondary/40 backdrop-blur-md rounded-2xl border border-border overflow-hidden shadow-2xl flex flex-col h-full max-h-[80vh]">
+      <div className="p-4 sm:p-5 border-b border-border bg-secondary/50 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <h3 className="text-base sm:text-lg font-black text-foreground uppercase tracking-tight flex items-center gap-2">
           <Trophy className="w-5 h-5 text-primary" /> Live Leaderboard
         </h3>
-        <div className="flex items-center gap-1.5 text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded border border-primary/20">
-          <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
-          LIVE
+        
+        <div className="flex items-center gap-3 justify-between sm:justify-end">
+          <select 
+            value={yearFilter}
+            onChange={(e) => setYearFilter(e.target.value)}
+            className="bg-background border border-border text-foreground text-xs font-bold rounded-lg px-2 py-1 outline-none focus:ring-1 focus:ring-primary uppercase tracking-widest"
+          >
+            <option value="All">All Years</option>
+            <option value="FY">First Year (FY)</option>
+            <option value="SY">Second Year (SY)</option>
+            <option value="TY">Third Year (TY)</option>
+            <option value="Final Year">Final Year</option>
+          </select>
+          
+          <div className="flex items-center gap-1.5 text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded border border-primary/20 shrink-0">
+            <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+            LIVE
+          </div>
         </div>
       </div>
       
       {data.length === 0 ? (
-        <div className="p-8 text-center text-muted-foreground text-sm">
+        <div className="p-8 text-center text-muted-foreground text-sm flex-1">
           No entries yet. Be the first to conquer the challenge!
         </div>
       ) : (
-        <div className="overflow-x-auto custom-scrollbar">
-          <table className="w-full text-sm text-left">
+        <div className="overflow-y-auto custom-scrollbar flex-1 relative">
+          <table className="w-full text-sm text-left relative">
             <thead className="text-[10px] text-muted-foreground uppercase tracking-widest bg-secondary/30">
               <tr>
                 <th className="px-4 py-3 font-bold w-16 text-center">Rank</th>
@@ -129,6 +158,19 @@ export function Leaderboard({ limit = 20, refreshInterval = 30000 }: { limit?: n
               ))}
             </tbody>
           </table>
+          
+          {!isExpanded && data.length > 0 && limit !== 'all' && (
+            <div className="p-4 bg-secondary/30 border-t border-border flex justify-center sticky bottom-0">
+              <button 
+                onClick={handleExpand}
+                disabled={isExpanding}
+                className="text-xs font-bold uppercase tracking-widest text-primary hover:text-primary-foreground bg-primary/10 hover:bg-primary px-4 py-2 rounded-lg transition-colors border border-primary/20 hover:border-primary disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+              >
+                {isExpanding ? <Loader2 className="w-4 h-4 animate-spin" /> : null}
+                {isExpanding ? 'Loading Full Board...' : 'View Full Leaderboard'}
+              </button>
+            </div>
+          )}
         </div>
       )}
     </div>
