@@ -74,7 +74,18 @@ export default function RegisterPage() {
 
   return (
     <>
-      <Navbar />
+      <Navbar 
+        hideStartButton={true}
+        rightNode={
+          <button
+            onClick={() => setShowMobileLeaderboard(true)}
+            className="lg:hidden bg-primary text-primary-foreground hover:brightness-110 active:scale-[0.97] transition-all rounded-md uppercase text-[10px] sm:text-xs font-bold tracking-widest px-3 py-2 flex items-center gap-1.5"
+          >
+            <Trophy className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+            <span>Leaderboard</span>
+          </button>
+        }
+      />
       <PageBackground />
       
       <main className="relative min-h-screen pt-32 pb-16 px-6 flex flex-col lg:flex-row items-center lg:items-start justify-center gap-8 lg:gap-12">
@@ -233,16 +244,6 @@ export default function RegisterPage() {
             </p>
           </div>
           <Leaderboard limit={10} />
-        </div>
-
-        {/* Mobile Leaderboard Toggle Button */}
-        <div className="lg:hidden fixed bottom-6 right-6 z-40">
-          <button
-            onClick={() => setShowMobileLeaderboard(true)}
-            className="flex items-center justify-center bg-primary text-primary-foreground p-4 rounded-full shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:scale-105 transition-transform"
-          >
-            <Trophy className="w-6 h-6" />
-          </button>
         </div>
 
         {/* Mobile Leaderboard Modal */}
