@@ -59,11 +59,15 @@ export default async function AdminLayout({
             Scanner (Redeem)
           </Link>
         </nav>
-        <div className="p-6 border-t border-border">
+        <div className="p-6 border-t border-border flex flex-col gap-4">
           <Link href="/api/admin/logout" className="flex items-center justify-center gap-2 w-full px-4 py-3 text-xs uppercase tracking-widest font-bold text-destructive hover:text-destructive transition-all border border-destructive/30 rounded-md hover:bg-destructive/10">
             <LogOut className="w-4 h-4" />
             Logout Admin
           </Link>
+          <div className="text-[10px] text-muted-foreground/70 text-center leading-tight">
+            <p className="font-semibold text-muted-foreground/90 mb-1">Designed & developed by Sorin Tech Lab, a unit of Krish Tech Labs.</p>
+            <p>This platform is the property of Sorin Tech Lab.</p>
+          </div>
         </div>
       </div>
 

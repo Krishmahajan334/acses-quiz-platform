@@ -103,6 +103,15 @@ export default function AdminLoginPage() {
             {isLoading ? 'Verifying...' : 'Access Dashboard'}
           </button>
         </form>
+
+        <div className="mt-8 pt-6 border-t border-gray-700 text-center">
+          <p className="text-xs text-gray-500 font-medium">
+            Designed and developed by Sorin Tech Lab, a unit of Krish Tech Labs.
+          </p>
+          <p className="text-xs text-gray-600 mt-1">
+            This platform is the property of Sorin Tech Lab.
+          </p>
+        </div>
       </div>
     </div>
   );

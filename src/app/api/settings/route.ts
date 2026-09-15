@@ -19,7 +19,7 @@ export async function GET() {
     }
 
     // Default configuration if none exists
-    const requiredYears = setting ? JSON.parse(setting.value) : ['SY', 'TY', 'Final Year'];
+    const requiredYears = setting ? JSON.parse(setting.value) : ['FY', 'SY', 'TY', 'Final Year'];
 
     return NextResponse.json({
       success: true,
