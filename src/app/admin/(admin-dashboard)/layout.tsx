@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
-import { ShieldCheck, LayoutDashboard, Database, Trophy, LogOut, Users, QrCode } from 'lucide-react';
+import { ShieldCheck, LayoutDashboard, Database, Trophy, LogOut, Users, QrCode, Settings } from 'lucide-react';
 import { getAdminSession, isSuperAdmin } from '@/lib/auth';
 
 import { AdminFetchPatcher } from './components/AdminFetchPatcher';
@@ -35,6 +35,10 @@ export default async function AdminLayout({
           <Link href="/admin/event-settings" className="flex items-center gap-3 px-4 py-3 rounded-lg text-muted-foreground hover:bg-secondary/50 hover:text-foreground transition-all text-sm font-medium uppercase tracking-wide">
             <ShieldCheck className="w-4 h-4" />
             Event Settings
+          </Link>
+          <Link href="/admin/settings" className="flex items-center gap-3 px-4 py-3 rounded-lg text-muted-foreground hover:bg-secondary/50 hover:text-foreground transition-all text-sm font-medium uppercase tracking-wide">
+            <Settings className="w-4 h-4" />
+            Registration Settings
           </Link>
           {isSuper && (
             <Link href="/admin/admins" className="flex items-center gap-3 px-4 py-3 rounded-lg text-muted-foreground hover:bg-secondary/50 hover:text-foreground transition-all text-sm font-medium uppercase tracking-wide">
@@ -100,9 +104,13 @@ export default async function AdminLayout({
             <Trophy className="w-5 h-5" />
             <span className="text-[10px] font-bold uppercase tracking-wider">Results</span>
           </Link>
-          <Link href="/admin/redeem" className="flex flex-col items-center gap-1 text-muted-foreground hover:text-primary transition-colors">
+          <Link href="/admin/redeem" className="flex flex-col items-center gap-1 text-muted-foreground hover:text-primary transition-colors hidden sm:flex">
             <QrCode className="w-5 h-5" />
             <span className="text-[10px] font-bold uppercase tracking-wider">Scanner</span>
+          </Link>
+          <Link href="/admin/settings" className="flex flex-col items-center gap-1 text-muted-foreground hover:text-primary transition-colors">
+            <Settings className="w-5 h-5" />
+            <span className="text-[10px] font-bold uppercase tracking-wider">Settings</span>
           </Link>
           {isSuper && (
             <Link href="/admin/admins" className="flex flex-col items-center gap-1 text-muted-foreground hover:text-primary transition-colors">

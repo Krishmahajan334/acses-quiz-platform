@@ -1,12 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { Navbar } from "@/components/ui/Navbar";
 import { PageBackground } from "@/components/ui/PageBackground";
-import { AlertCircle, Loader2, Trophy, X, Crown, Clock } from "lucide-react";
+import { AlertCircle, Loader2, Trophy, X, Crown, Clock, Target } from "lucide-react";
 import { Leaderboard } from "@/components/ui/Leaderboard";
-import { useEffect } from 'react';
 
 function TopPerformerBanner() {
   const [topPerformers, setTopPerformers] = useState<any[]>([]);
@@ -85,6 +84,18 @@ export default function RegisterPage() {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [emailSuggestions, setEmailSuggestions] = useState<string[]>([]);
+  const [prnRequiredYears, setPrnRequiredYears] = useState<string[]>(['SY', 'TY', 'Final Year']);
+
+  useEffect(() => {
+    fetch('/api/settings')
+      .then(res => res.json())
+      .then(data => {
+        if (data.success && data.prnRequiredYears) {
+          setPrnRequiredYears(data.prnRequiredYears);
+        }
+      })
+      .catch(console.error);
+  }, []);
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = e.target.value;
@@ -100,7 +111,7 @@ export default function RegisterPage() {
     }
   };
 
-  const isPrnRequired = formData.year !== 'FY';
+  const isPrnRequired = prnRequiredYears.includes(formData.year);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

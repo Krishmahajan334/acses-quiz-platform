@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import DeleteParticipantButton from "./DeleteParticipantButton";
 import { Loader2, Mail, CheckSquare, Square } from "lucide-react";
 
@@ -32,6 +32,30 @@ interface Props {
 export default function ResultsTableClient({ latestAttempts, historyMap }: Props) {
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
   const [loading, setLoading] = useState(false);
+  const [sortBy, setSortBy] = useState<string>("latest");
+
+  const sortedAttempts = useMemo(() => {
+    return [...latestAttempts].sort((a, b) => {
+      switch (sortBy) {
+        case "top":
+          if (b.scorePercent !== a.scorePercent) {
+            return (b.scorePercent || 0) - (a.scorePercent || 0);
+          }
+          const timeA = a.submittedAt && a.startedAt ? a.submittedAt.getTime() - a.startedAt.getTime() : Infinity;
+          const timeB = b.submittedAt && b.startedAt ? b.submittedAt.getTime() - b.startedAt.getTime() : Infinity;
+          return timeA - timeB;
+        case "oldest":
+          return (a.submittedAt?.getTime() || Infinity) - (b.submittedAt?.getTime() || Infinity);
+        case "name":
+          return a.participant.name.localeCompare(b.participant.name);
+        case "prn":
+          return (a.participant.prn || "").localeCompare(b.participant.prn || "");
+        case "latest":
+        default:
+          return (b.submittedAt?.getTime() || 0) - (a.submittedAt?.getTime() || 0);
+      }
+    });
+  }, [latestAttempts, sortBy]);
 
   const toggleAll = () => {
     if (selectedIds.size === latestAttempts.length) {
@@ -78,6 +102,25 @@ export default function ResultsTableClient({ latestAttempts, historyMap }: Props
 
   return (
     <div className="bg-secondary/40 shadow-lg border border-border rounded-xl overflow-hidden backdrop-blur-sm print:shadow-none print:border-none print:bg-transparent">
+      
+      {/* Sorting Controls */}
+      <div className="bg-background/50 border-b border-border px-4 py-3 flex items-center justify-between print:hidden">
+        <div className="flex items-center gap-2">
+          <span className="text-xs font-bold text-muted-foreground uppercase tracking-widest">Sort By:</span>
+          <select 
+            value={sortBy}
+            onChange={(e) => setSortBy(e.target.value)}
+            className="bg-secondary border border-border rounded text-sm px-2 py-1 text-foreground focus:outline-none focus:border-primary"
+          >
+            <option value="latest">Latest First</option>
+            <option value="oldest">Oldest First</option>
+            <option value="top">Top Performers</option>
+            <option value="name">Name (A-Z)</option>
+            <option value="prn">PRN (A-Z)</option>
+          </select>
+        </div>
+      </div>
+
       {selectedIds.size > 0 && (
         <div className="bg-blue-50/50 border-b border-blue-100 px-4 py-3 flex items-center justify-between">
           <span className="text-sm font-medium text-blue-800">
@@ -119,7 +162,7 @@ export default function ResultsTableClient({ latestAttempts, historyMap }: Props
             </tr>
           </thead>
           <tbody className="divide-y divide-border/50">
-            {latestAttempts.map((attempt, index) => {
+            {sortedAttempts.map((attempt, index) => {
               const history = historyMap[attempt.participantId] || { count: 0, scores: [] };
               const isSelected = selectedIds.has(attempt.id);
               return (
