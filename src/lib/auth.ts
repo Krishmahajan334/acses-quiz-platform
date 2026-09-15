@@ -16,7 +16,7 @@ export async function signAdminToken(payload: AdminJwtPayload) {
   const token = await new SignJWT(payload)
     .setProtectedHeader({ alg: 'HS256' })
     .setIssuedAt()
-    .setExpirationTime('72h')
+    .setExpirationTime('24h')
     .sign(getSecret());
   return token;
 }

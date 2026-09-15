@@ -30,7 +30,7 @@ export async function POST(request: Request) {
         secure: process.env.NODE_ENV === 'production',
         sameSite: 'lax', // Changed from none to lax
         path: '/',
-        maxAge: 60 * 60 * 72 // 72 hours
+        maxAge: 60 * 60 * 24 // 24 hours
       });
       
       return response;
@@ -65,7 +65,7 @@ export async function POST(request: Request) {
         secure: process.env.NODE_ENV === 'production',
         sameSite: 'lax', // Changed from none to lax for better same-site stability
         path: '/',
-        maxAge: 60 * 60 * 72 // 72 hours
+        maxAge: 60 * 60 * 24 // 24 hours
       });
     
     return response;
