@@ -6,7 +6,7 @@ import { Navbar } from "@/components/ui/Navbar";
 import { PageBackground } from "@/components/ui/PageBackground";
 import { ShieldCheck, AlertTriangle, Loader2, Trophy, Copy, CheckCircle2, ArrowRight, Download } from "lucide-react";
 import { QRCodeCanvas } from 'qrcode.react';
-import html2canvas from 'html2canvas';
+import * as htmlToImage from 'html-to-image';
 
 interface ResultData {
   success: boolean;
@@ -76,12 +76,10 @@ export default function ResultPage() {
     if (!couponRef.current || !result?.couponCode) return;
     try {
       setIsDownloading(true);
-      const canvas = await html2canvas(couponRef.current, {
+      const dataUrl = await htmlToImage.toPng(couponRef.current, {
         backgroundColor: '#000000',
-        scale: 2, // Higher quality
-        logging: false,
+        pixelRatio: 2,
       });
-      const dataUrl = canvas.toDataURL('image/png');
       const link = document.createElement('a');
       link.download = `ACSES_Coupon_${result.couponCode}.png`;
       link.href = dataUrl;
