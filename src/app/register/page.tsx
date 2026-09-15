@@ -18,6 +18,21 @@ export default function RegisterPage() {
   });
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const [emailSuggestions, setEmailSuggestions] = useState<string[]>([]);
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const val = e.target.value;
+    setFormData({ ...formData, email: val });
+
+    if (val.includes('@')) {
+      const [prefix, domain] = val.split('@');
+      const domains = ['gmail.com', 'yahoo.com', 'outlook.com', 'hotmail.com'];
+      const filtered = domains.filter(d => d.startsWith(domain || ''));
+      setEmailSuggestions(filtered.map(d => `${prefix}@${d}`));
+    } else {
+      setEmailSuggestions([]);
+    }
+  };
 
   const isPrnRequired = formData.year !== 'FY';
 
@@ -106,11 +121,18 @@ export default function RegisterPage() {
                   name="email"
                   type="email"
                   required
+                  list="email-suggestions"
                   placeholder="student@example.com"
                   className={inputClass}
                   value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  onChange={handleEmailChange}
+                  autoComplete="off"
                 />
+                <datalist id="email-suggestions">
+                  {emailSuggestions.map((suggestion) => (
+                    <option key={suggestion} value={suggestion} />
+                  ))}
+                </datalist>
               </div>
 
               <div>
