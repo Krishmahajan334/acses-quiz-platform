@@ -29,8 +29,12 @@ export async function GET() {
       return NextResponse.json({ completed: true });
     }
 
-    // Shuffle options for security
-    const shuffledOptions = currentAttemptQuestion.question.options.sort(() => 0.5 - Math.random());
+    // Shuffle options for security using Fisher-Yates algorithm
+    const shuffledOptions = [...currentAttemptQuestion.question.options];
+    for (let i = shuffledOptions.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledOptions[i], shuffledOptions[j]] = [shuffledOptions[j], shuffledOptions[i]];
+    }
 
     // Mark as served and calculate deadline if not already
     let qDeadlineAt = currentAttemptQuestion.deadlineAt;
