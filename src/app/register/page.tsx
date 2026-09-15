@@ -114,10 +114,10 @@ export default function RegisterPage() {
         rightNode={
           <button
             onClick={() => setShowMobileLeaderboard(true)}
-            className="lg:hidden bg-primary text-primary-foreground hover:brightness-110 active:scale-[0.97] transition-all rounded-md uppercase text-[10px] sm:text-xs font-bold tracking-widest px-3 py-2 flex items-center gap-1.5"
+            className="lg:hidden bg-primary/10 border border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground active:scale-[0.97] transition-all rounded-md uppercase text-[10px] font-bold tracking-widest px-2.5 py-1.5 flex items-center gap-1.5"
           >
-            <Trophy className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-            <span>Leaderboard</span>
+            <Trophy className="w-3.5 h-3.5" />
+            <span>Ranks</span>
           </button>
         }
       />
