@@ -3,6 +3,7 @@ import Link from 'next/link';
 import BulkUploadButton from '../components/BulkUploadButton';
 import BulkDeleteQuestionsButton from '../components/BulkDeleteQuestionsButton';
 import UploadHistoryList from '../components/UploadHistoryList';
+import DeleteQuestionButton from '../components/DeleteQuestionButton';
 
 export const dynamic = 'force-dynamic';
 
@@ -125,11 +126,7 @@ export default async function QuestionBankPage(props: { searchParams: Promise<{ 
                 </div>
                 <div className="flex space-x-2">
                   <Link href={`/admin/questions/${qItem.id}/edit`} className="text-sm font-semibold text-blue-600 hover:text-blue-800 transition bg-blue-50 px-3 py-1 rounded-md">Edit</Link>
-                  <form method="POST" action={`/api/admin/questions/${qItem.id}/delete`} onSubmit={(e) => {
-                    if (!confirm('Are you sure you want to delete this question?')) e.preventDefault();
-                  }}>
-                    <button type="submit" className="text-sm font-semibold text-red-600 hover:text-red-800 transition bg-red-50 px-3 py-1 rounded-md">Delete</button>
-                  </form>
+                  <DeleteQuestionButton questionId={qItem.id} />
                 </div>
               </div>
               
