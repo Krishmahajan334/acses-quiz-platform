@@ -75,19 +75,19 @@ export async function PUT(
         }
       });
 
-      // To update options securely, we can just delete old options and create new ones
-      await tx.option.deleteMany({
-        where: { questionId: id }
-      });
-
-      await tx.option.createMany({
-        data: options.map((opt: any) => ({
-          questionId: id,
-          text: opt.text,
-          isCorrect: opt.isCorrect,
-          optionKey: opt.optionKey
-        }))
-      });
+      // Update options individually to avoid FOREIGN KEY constraint failures
+      for (const opt of options) {
+        if (opt.id) {
+          await tx.option.update({
+            where: { id: opt.id },
+            data: {
+              text: opt.text,
+              isCorrect: opt.isCorrect,
+              optionKey: opt.optionKey
+            }
+          });
+        }
+      }
 
       return q;
     });
