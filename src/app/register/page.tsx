@@ -28,8 +28,8 @@ function TopPerformerBanner() {
     <div className="w-full bg-primary/5 border-b border-primary/20 backdrop-blur-md flex flex-col items-center justify-center animate-fade-in absolute top-[72px] md:top-[88px] left-0 z-40 shadow-sm overflow-hidden py-2">
       <style>{`
         @keyframes marquee {
-          0% { transform: translateX(100%); }
-          100% { transform: translateX(-100%); }
+          0% { transform: translateX(0%); }
+          100% { transform: translateX(-50%); }
         }
         .animate-marquee {
           display: inline-flex;
@@ -44,16 +44,17 @@ function TopPerformerBanner() {
       {/* Marquee Container */}
       <div className="w-full overflow-hidden flex items-center">
         <div className="animate-marquee flex items-center gap-12 px-4">
-          {topPerformers.map((p, index) => {
+          {[...topPerformers, ...topPerformers].map((p, index) => {
             const m = Math.floor(p.timeTakenSec / 60);
             const s = p.timeTakenSec % 60;
+            const realIndex = index % topPerformers.length;
             return (
-              <div key={index} className="flex items-center gap-2 text-xs sm:text-sm text-foreground font-medium uppercase tracking-wider shrink-0">
-                <Crown className={`w-4 h-4 ${index === 0 ? 'text-yellow-500 fill-yellow-500/20' : index === 1 ? 'text-gray-300 fill-gray-300/20' : 'text-amber-600 fill-amber-600/20'}`} />
-                <span className="opacity-80">Rank #{index + 1}:</span>
+              <div key={index} className="flex items-center gap-2 text-xs sm:text-sm text-foreground font-medium uppercase tracking-wider shrink-0 pr-12">
+                <Crown className={`w-4 h-4 ${realIndex === 0 ? 'text-yellow-500 fill-yellow-500/20' : realIndex === 1 ? 'text-gray-300 fill-gray-300/20' : 'text-amber-600 fill-amber-600/20'}`} />
+                <span className="opacity-80">Rank #{realIndex + 1}:</span>
                 <strong className="text-primary font-black">{p.name}</strong>
                 <span className="text-muted-foreground mx-1">•</span>
-                <span className={index === 0 ? 'text-yellow-500 font-bold' : 'text-foreground font-bold'}>{p.score}%</span>
+                <span className={realIndex === 0 ? 'text-yellow-500 font-bold' : 'text-foreground font-bold'}>{p.score}%</span>
                 <span className="text-muted-foreground mx-1 hidden sm:inline">•</span>
                 <span className="items-center gap-1 opacity-80 font-mono hidden sm:flex"><Clock className="w-3 h-3" /> {m}m {s}s</span>
               </div>
