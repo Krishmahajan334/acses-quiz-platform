@@ -6,18 +6,24 @@ import UploadHistoryList from '../components/UploadHistoryList';
 
 export const dynamic = 'force-dynamic';
 
-export default async function QuestionBankPage(props: { searchParams: Promise<{ page?: string }> }) {
+export default async function QuestionBankPage(props: { searchParams: Promise<{ page?: string, q?: string }> }) {
   const searchParams = await props.searchParams;
   const page = parseInt(searchParams.page || '1', 10);
+  const q = searchParams.q || '';
   const ITEMS_PER_PAGE = 50;
 
+  const whereClause = q ? {
+    text: { contains: q }
+  } : {};
+
   const allQuestions = await prisma.question.findMany({
+    where: whereClause,
     include: {
       options: true,
       event: true
     },
     orderBy: {
-      id: 'asc'
+      id: 'desc'
     }
   });
 
@@ -32,6 +38,18 @@ export default async function QuestionBankPage(props: { searchParams: Promise<{ 
           <p className="text-gray-500 mt-1 text-sm">View all questions and their options</p>
         </div>
         <div className="flex flex-wrap items-center gap-4 w-full md:w-auto">
+          <form method="GET" action="/admin/questions" className="flex">
+            <input 
+              type="text" 
+              name="q" 
+              defaultValue={q} 
+              placeholder="Search questions..." 
+              className="px-4 py-2 bg-white border border-gray-300 rounded-l-lg text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 w-48 md:w-64"
+            />
+            <button type="submit" className="bg-gray-100 hover:bg-gray-200 border border-l-0 border-gray-300 px-3 py-2 rounded-r-lg text-gray-600 transition">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+            </button>
+          </form>
           <BulkDeleteQuestionsButton />
           <BulkUploadButton />
           <Link href="/admin/questions/new" className="bg-gray-900 hover:bg-gray-800 text-white px-4 py-2 rounded-lg text-sm font-semibold transition shadow-sm whitespace-nowrap">
@@ -80,39 +98,43 @@ export default async function QuestionBankPage(props: { searchParams: Promise<{ 
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
             </svg>
             <h3 className="text-lg font-medium text-gray-900">No questions found</h3>
-            <p className="text-gray-500 mt-1">Get started by creating a new question.</p>
+            <p className="text-gray-500 mt-1">{q ? 'Try adjusting your search criteria.' : 'Get started by creating a new question.'}</p>
           </div>
         ) : (
-          questions.map((q, index) => (
-            <div key={q.id} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 hover:shadow-md transition">
+          questions.map((qItem, index) => (
+            <div key={qItem.id} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 hover:shadow-md transition">
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <div className="flex items-center gap-3 mb-2">
                     <span className="bg-gray-100 text-gray-600 text-xs font-bold px-2 py-1 rounded">
-                      Q{index + 1}
+                      Q{(page - 1) * ITEMS_PER_PAGE + index + 1}
                     </span>
                     <span className="bg-blue-50 text-blue-700 text-xs font-bold px-2 py-1 rounded">
-                      {q.difficulty}
+                      {qItem.difficulty}
                     </span>
                     <span className="bg-purple-50 text-purple-700 text-xs font-bold px-2 py-1 rounded">
-                      {q.topic}
+                      {qItem.topic}
                     </span>
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900">{q.text}</h3>
-                  {q.imageUrl && (
+                  <h3 className="text-lg font-bold text-gray-900">{qItem.text}</h3>
+                  {qItem.imageUrl && (
                     <div className="mt-3">
-                      <img src={q.imageUrl} alt="Question Graphic" className="max-h-32 rounded border border-gray-200 shadow-sm" />
+                      <img src={qItem.imageUrl} alt="Question Graphic" className="max-h-32 rounded border border-gray-200 shadow-sm" />
                     </div>
                   )}
                 </div>
                 <div className="flex space-x-2">
-                  <button className="text-sm text-gray-500 hover:text-blue-600 transition">Edit</button>
-                  <button className="text-sm text-red-500 hover:text-red-700 transition">Delete</button>
+                  <Link href={`/admin/questions/${qItem.id}/edit`} className="text-sm font-semibold text-blue-600 hover:text-blue-800 transition bg-blue-50 px-3 py-1 rounded-md">Edit</Link>
+                  <form method="POST" action={`/api/admin/questions/${qItem.id}/delete`} onSubmit={(e) => {
+                    if (!confirm('Are you sure you want to delete this question?')) e.preventDefault();
+                  }}>
+                    <button type="submit" className="text-sm font-semibold text-red-600 hover:text-red-800 transition bg-red-50 px-3 py-1 rounded-md">Delete</button>
+                  </form>
                 </div>
               </div>
               
               <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {q.options.map((opt) => (
+                {qItem.options.map((opt) => (
                   <div 
                     key={opt.id} 
                     className={`p-3 rounded-lg border text-sm flex items-center ${
@@ -141,7 +163,7 @@ export default async function QuestionBankPage(props: { searchParams: Promise<{ 
       {totalPages > 1 && (
         <div className="flex justify-center items-center gap-4 mt-8 bg-gray-900/50 py-4 rounded-xl border border-gray-800">
           <Link 
-            href={`/admin/questions?page=${Math.max(1, page - 1)}`}
+            href={`/admin/questions?page=${Math.max(1, page - 1)}${q ? `&q=${encodeURIComponent(q)}` : ''}`}
             className={`px-4 py-2 rounded font-bold text-sm transition-colors ${page === 1 ? 'bg-gray-800 text-gray-600 pointer-events-none' : 'bg-gray-800 text-white hover:bg-gray-700'}`}
           >
             &larr; Previous
@@ -150,7 +172,7 @@ export default async function QuestionBankPage(props: { searchParams: Promise<{ 
             Page {page} of {totalPages}
           </span>
           <Link 
-            href={`/admin/questions?page=${Math.min(totalPages, page + 1)}`}
+            href={`/admin/questions?page=${Math.min(totalPages, page + 1)}${q ? `&q=${encodeURIComponent(q)}` : ''}`}
             className={`px-4 py-2 rounded font-bold text-sm transition-colors ${page === totalPages ? 'bg-gray-800 text-gray-600 pointer-events-none' : 'bg-gray-800 text-white hover:bg-gray-700'}`}
           >
             Next &rarr;
