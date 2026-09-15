@@ -89,7 +89,17 @@ export async function PUT(
         }
       }
 
-      return q;
+      // Fetch the full updated question with options to return to the client
+      const fullQuestion = await tx.question.findUnique({
+        where: { id },
+        include: {
+          options: {
+            orderBy: { optionKey: 'asc' }
+          }
+        }
+      });
+
+      return fullQuestion;
     });
 
     return NextResponse.json({ success: true, question: updatedQuestion });
