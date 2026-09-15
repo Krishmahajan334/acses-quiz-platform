@@ -29,7 +29,7 @@ export default async function QuestionBankPage(props: { searchParams: Promise<{ 
     }
   });
 
-  const events = await prisma.event.findMany({
+  const events = await prisma.quizEvent.findMany({
     select: { id: true, name: true }
   });
 
