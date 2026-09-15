@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function AdminLoginPage() {
   const router = useRouter();
@@ -104,11 +106,27 @@ export default function AdminLoginPage() {
           </button>
         </form>
 
-        <div className="mt-8 pt-6 border-t border-gray-700 text-center">
-          <p className="text-xs text-gray-500 font-medium">
-            Designed and developed by Sorin Tech Lab, a unit of Krish Tech Labs.
-          </p>
-          <p className="text-xs text-gray-600 mt-1">
+        <div className="mt-8 pt-6 border-t border-gray-700 flex flex-col items-center justify-center gap-2">
+          <div className="flex flex-wrap items-center justify-center gap-2 text-[10px] text-gray-500 text-center">
+            <span className="font-semibold text-gray-400">Designed & developed by Sorin Tech Lab</span>
+            <span>a unit of</span>
+            <Link 
+              href="https://krishmahajan.dev" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 hover:text-primary transition-colors group"
+            >
+              <span className="font-semibold underline decoration-transparent group-hover:decoration-primary underline-offset-2 transition-all">Krish Tech Labs</span>
+              <Image 
+                src="/watermark_logo_light.png" 
+                alt="Krish Techlabs Logo" 
+                width={20} 
+                height={20} 
+                className="object-contain opacity-70 group-hover:opacity-100 transition-opacity"
+              />
+            </Link>
+          </div>
+          <p className="text-[10px] text-gray-600">
             This platform is the property of Sorin Tech Lab.
           </p>
         </div>

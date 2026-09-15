@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useRef, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
 import { Html5QrcodeScanner } from "html5-qrcode";
 import { QrCode, CheckCircle2, AlertCircle, XCircle } from "lucide-react";
 
@@ -35,13 +37,36 @@ function RemoteScannerContent() {
       setScanResult(null);
       scannerRef.current = new Html5QrcodeScanner(
         "remote-reader",
-        { fps: 10, qrbox: { width: 250, height: 250 } },
+        { 
+          fps: 10, 
+          qrbox: { width: 250, height: 250 },
+          videoConstraints: { facingMode: "environment" }
+        },
         false
       );
       
       scannerRef.current.render((decodedText) => {
         handleScan(decodedText);
       }, () => {});
+
+      // Hack to remove front cameras from the dropdown since they are useless here
+      const filterCameras = setInterval(() => {
+        const select = document.querySelector('#remote-reader select') as HTMLSelectElement;
+        if (select) {
+          Array.from(select.options).forEach(opt => {
+            if (opt.text.toLowerCase().includes('front') || opt.text.toLowerCase().includes('user') || opt.text.toLowerCase().includes('facing')) {
+              opt.style.display = 'none';
+            }
+          });
+        }
+      }, 500);
+
+      return () => {
+        clearInterval(filterCameras);
+        if (scannerRef.current) {
+          scannerRef.current.clear().catch(console.error);
+        }
+      };
     } else {
       if (scannerRef.current) {
         scannerRef.current.clear().catch(console.error);
@@ -110,6 +135,31 @@ function RemoteScannerContent() {
           </div>
         )}
       </main>
+
+      <footer className="p-4 border-t border-zinc-800 flex flex-col items-center justify-center gap-2 mt-auto">
+        <div className="flex flex-wrap items-center justify-center gap-1.5 text-[10px] text-zinc-500 text-center">
+          <span className="font-semibold text-zinc-400">Designed & developed by Sorin Tech Lab</span>
+          <span>a unit of</span>
+          <Link 
+            href="https://krishmahajan.dev" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 hover:text-primary transition-colors group"
+          >
+            <span className="font-semibold underline decoration-transparent group-hover:decoration-primary underline-offset-2 transition-all">Krish Tech Labs</span>
+            <Image 
+              src="/watermark_logo_light.png" 
+              alt="Krish Techlabs Logo" 
+              width={16} 
+              height={16} 
+              className="object-contain opacity-70 group-hover:opacity-100 transition-opacity"
+            />
+          </Link>
+        </div>
+        <p className="text-[9px] text-zinc-600 text-center leading-tight">
+          This platform is the property of Sorin Tech Lab.
+        </p>
+      </footer>
     </div>
   );
 }

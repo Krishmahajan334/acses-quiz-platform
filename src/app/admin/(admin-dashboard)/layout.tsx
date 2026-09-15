@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { redirect } from 'next/navigation';
 import { ShieldCheck, LayoutDashboard, Database, Trophy, LogOut, Users, QrCode, Settings } from 'lucide-react';
 import { getAdminSession, isSuperAdmin } from '@/lib/auth';
@@ -64,9 +65,29 @@ export default async function AdminLayout({
             <LogOut className="w-4 h-4" />
             Logout Admin
           </Link>
-          <div className="text-[10px] text-muted-foreground/70 text-center leading-tight">
-            <p className="font-semibold text-muted-foreground/90 mb-1">Designed & developed by Sorin Tech Lab, a unit of Krish Tech Labs.</p>
-            <p>This platform is the property of Sorin Tech Lab.</p>
+          <div className="flex flex-col items-center justify-center gap-2 mt-2 border-t border-border/50 pt-4">
+            <div className="flex flex-wrap items-center justify-center gap-1.5 text-[10px] text-muted-foreground/70 text-center">
+              <span className="font-semibold text-muted-foreground/90">Designed & developed by Sorin Tech Lab</span>
+              <span>a unit of</span>
+              <Link 
+                href="https://krishmahajan.dev" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 hover:text-primary transition-colors group"
+              >
+                <span className="font-semibold underline decoration-transparent group-hover:decoration-primary underline-offset-2 transition-all">Krish Tech Labs</span>
+                <Image 
+                  src="/watermark_logo_light.png" 
+                  alt="Krish Techlabs Logo" 
+                  width={16} 
+                  height={16} 
+                  className="object-contain opacity-70 group-hover:opacity-100 transition-opacity"
+                />
+              </Link>
+            </div>
+            <p className="text-[9px] text-muted-foreground/50 text-center leading-tight">
+              This platform is the property of Sorin Tech Lab.
+            </p>
           </div>
         </div>
       </div>
