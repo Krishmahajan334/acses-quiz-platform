@@ -37,7 +37,9 @@ export async function POST(request: Request) {
           }
         },
         coupon: true,
-        participant: true,
+        participant: {
+          include: { coupons: true }
+        },
       }
     });
 
@@ -69,7 +71,7 @@ export async function POST(request: Request) {
         disqualified: attempt.status === 'DISQUALIFIED',
         scorePercent: attempt.scorePercent,
         passed: (attempt.scorePercent || 0) >= attempt.event.passPercent,
-        couponCode: attempt.coupon?.code || null,
+        couponCode: attempt.coupon?.code || (attempt.participant.coupons && attempt.participant.coupons[0]?.code) || null,
         reviewData,
         message: "Attempt already finalized."
       });
