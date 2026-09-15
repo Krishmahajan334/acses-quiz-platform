@@ -16,6 +16,7 @@ type AttemptRow = {
     prn: string | null;
     email: string;
     year: string;
+    coupons?: { code: string; status: string }[];
   };
   coupon?: {
     code: string;
