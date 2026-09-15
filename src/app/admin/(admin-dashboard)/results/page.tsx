@@ -21,7 +21,7 @@ export default async function AdminResultsPage() {
   // Fetch all completed attempts to calculate historical attempt count and score arrays
   const allCompletedAttempts = await prisma.attempt.findMany({
     where: { status: 'COMPLETED' },
-    select: { participantId: true, scorePercent: true, submittedAt: true, targetYear: true, participant: { select: { year: true } } },
+    select: { participantId: true, scorePercent: true, startedAt: true, submittedAt: true, targetYear: true, participant: { select: { year: true } } },
     orderBy: { submittedAt: 'asc' } // chronological order for score array
   });
 
@@ -32,7 +32,16 @@ export default async function AdminResultsPage() {
     }
     const h = historyMap.get(a.participantId)!;
     h.count++;
-    h.scores.push(`${a.targetYear || a.participant.year}: ${a.scorePercent !== null ? a.scorePercent.toFixed(0) : 0}%`);
+    
+    let timeString = "";
+    if (a.startedAt && a.submittedAt) {
+      const timeTakenSec = Math.floor((a.submittedAt.getTime() - a.startedAt.getTime()) / 1000);
+      const m = Math.floor(timeTakenSec / 60);
+      const s = timeTakenSec % 60;
+      timeString = ` in ${m}m ${s}s`;
+    }
+
+    h.scores.push(`${a.targetYear || a.participant.year}: ${a.scorePercent !== null ? a.scorePercent.toFixed(0) : 0}%${timeString}`);
   });
 
   // Filter attempts to only show the LATEST attempt for each participant
