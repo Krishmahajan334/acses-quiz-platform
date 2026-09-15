@@ -84,7 +84,7 @@ export default function RegisterPage() {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [emailSuggestions, setEmailSuggestions] = useState<string[]>([]);
-  const [prnRequiredYears, setPrnRequiredYears] = useState<string[]>(['FY', 'SY', 'TY', 'Final Year']);
+  const [prnRequiredYears, setPrnRequiredYears] = useState<string[]>(['SY', 'TY', 'Final Year']);
 
   useEffect(() => {
     fetch('/api/settings')

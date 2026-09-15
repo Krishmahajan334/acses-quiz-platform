@@ -19,14 +19,14 @@ export async function GET() {
     }
 
     // Default configuration if none exists
-    const requiredYears = setting ? JSON.parse(setting.value) : ['FY', 'SY', 'TY', 'Final Year'];
+    const requiredYears = setting ? JSON.parse(setting.value) : ['SY', 'TY', 'Final Year'];
 
     return NextResponse.json({
       success: true,
       prnRequiredYears: requiredYears
     }, {
       headers: {
-        'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=120'
+        'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate'
       }
     });
   } catch (error) {
