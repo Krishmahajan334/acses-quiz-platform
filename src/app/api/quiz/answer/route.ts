@@ -40,13 +40,22 @@ export async function POST(request: Request) {
     
     if (finalOptionId && !isLate) {
       const option = await prisma.option.findFirst({
-        where: { id: finalOptionId, questionId }
+        where: { id: finalOptionId, questionId },
+        include: { question: { include: { options: true } } }
       });
 
       if (!option) {
         return NextResponse.json({ error: "Invalid option selected." }, { status: 400 });
       }
       isCorrect = option.isCorrect;
+
+      // Failsafe: Protect against data errors where duplicate options exist
+      if (!isCorrect && option.question?.options) {
+        const correctOpt = option.question.options.find(o => o.isCorrect);
+        if (correctOpt && correctOpt.text.trim().toLowerCase() === option.text.trim().toLowerCase()) {
+          isCorrect = true;
+        }
+      }
     } else {
       // If late, or no option selected, we force it to be incorrect
       finalOptionId = null;

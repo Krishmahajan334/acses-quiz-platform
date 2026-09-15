@@ -54,7 +54,12 @@ export async function POST(request: Request) {
       const selectedAnswer = answer?.option?.text || "Unanswered";
       const correctOption = q.question.options.find(o => o.isCorrect);
       const correctAnswer = correctOption?.text || "Unknown";
-      const isCorrect = answer?.isCorrect || false;
+      let isCorrect = answer?.isCorrect || false;
+
+      // Failsafe for data errors: if the text matches the correct answer, it is correct.
+      if (!isCorrect && selectedAnswer.trim().toLowerCase() === correctAnswer.trim().toLowerCase() && selectedAnswer !== "Unanswered") {
+        isCorrect = true;
+      }
 
       return {
         questionText,
@@ -81,8 +86,8 @@ export async function POST(request: Request) {
     // Calculate total possible questions
     const totalQuestions = attempt.event.questionCount;
     
-    // Count correct answers
-    const correctCount = attempt.answers.filter(a => a.isCorrect).length;
+    // Count correct answers using the potentially corrected reviewData to ensure fairness
+    const correctCount = reviewData.filter(r => r.isCorrect).length;
 
     const scorePercent = (correctCount / totalQuestions) * 100;
     const passed = scorePercent >= attempt.event.passPercent;
