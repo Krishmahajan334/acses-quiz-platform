@@ -3,6 +3,7 @@ import DeleteParticipantButton from '../components/DeleteParticipantButton';
 import SyncDataButton from '../components/SyncDataButton';
 import ClearDataButton from '../components/ClearDataButton';
 import ExportButtons from '../components/ExportButtons';
+import ResendMailButton from '../components/ResendMailButton';
 
 export const dynamic = 'force-dynamic';
 
@@ -150,7 +151,10 @@ export default async function AdminResultsPage() {
                       : 'In Progress'}
                   </td>
                   <td className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap text-right text-sm font-medium">
-                    <DeleteParticipantButton participantId={attempt.participantId} name={attempt.participant.name} />
+                    <div className="flex items-center justify-end gap-2">
+                      <ResendMailButton attemptId={attempt.id} />
+                      <DeleteParticipantButton participantId={attempt.participantId} name={attempt.participant.name} />
+                    </div>
                   </td>
                 </tr>
                 );
