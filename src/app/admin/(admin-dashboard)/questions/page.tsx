@@ -4,6 +4,7 @@ import BulkUploadButton from '../components/BulkUploadButton';
 import BulkDeleteQuestionsButton from '../components/BulkDeleteQuestionsButton';
 import UploadHistoryList from '../components/UploadHistoryList';
 import DeleteQuestionButton from '../components/DeleteQuestionButton';
+import SearchBar from './components/SearchBar';
 
 export const dynamic = 'force-dynamic';
 
@@ -39,18 +40,7 @@ export default async function QuestionBankPage(props: { searchParams: Promise<{ 
           <p className="text-gray-500 mt-1 text-sm">View all questions and their options</p>
         </div>
         <div className="flex flex-wrap items-center gap-4 w-full md:w-auto">
-          <form method="GET" action="/admin/questions" className="flex">
-            <input 
-              type="text" 
-              name="q" 
-              defaultValue={q} 
-              placeholder="Search questions..." 
-              className="px-4 py-2 bg-white border border-gray-300 rounded-l-lg text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 w-48 md:w-64"
-            />
-            <button type="submit" className="bg-gray-100 hover:bg-gray-200 border border-l-0 border-gray-300 px-3 py-2 rounded-r-lg text-gray-600 transition">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-            </button>
-          </form>
+          <SearchBar initialQuery={q} />
           <BulkDeleteQuestionsButton />
           <BulkUploadButton />
           <Link href="/admin/questions/new" className="bg-gray-900 hover:bg-gray-800 text-white px-4 py-2 rounded-lg text-sm font-semibold transition shadow-sm whitespace-nowrap">
