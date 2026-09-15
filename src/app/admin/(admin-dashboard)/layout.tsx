@@ -5,6 +5,7 @@ import { ShieldCheck, LayoutDashboard, Database, Trophy, LogOut, Users, QrCode, 
 import { getAdminSession, isSuperAdmin } from '@/lib/auth';
 
 import { AdminFetchPatcher } from './components/AdminFetchPatcher';
+import { VersionBadge } from './components/VersionBadge';
 
 export default async function AdminLayout({
   children,
@@ -25,8 +26,14 @@ export default async function AdminLayout({
       {/* Sidebar */}
       <div className="w-64 bg-secondary/30 border-r border-border flex-col hidden md:flex print:hidden">
         <div className="p-6 flex items-center gap-3 border-b border-border">
-          <ShieldCheck className="w-6 h-6 text-primary" />
-          <h1 className="text-xl font-bold text-foreground tracking-tight uppercase">Admin</h1>
+          <ShieldCheck className="w-6 h-6 text-primary shrink-0" />
+          <h1 className="text-xl font-bold text-foreground tracking-tight uppercase shrink-0">Admin</h1>
+          <VersionBadge 
+            sha={process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA}
+            message={process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_MESSAGE}
+            author={process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_AUTHOR_LOGIN}
+            branch={process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF}
+          />
         </div>
         <nav className="flex-1 px-4 py-6 space-y-2">
           <Link href="/admin" className="flex items-center gap-3 px-4 py-3 rounded-lg text-muted-foreground hover:bg-secondary/50 hover:text-foreground transition-all text-sm font-medium uppercase tracking-wide">
