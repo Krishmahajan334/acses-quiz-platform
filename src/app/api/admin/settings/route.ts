@@ -4,7 +4,8 @@ import { cookies } from 'next/headers';
 
 export async function GET() {
   try {
-    const adminSession = cookies().get('admin_session');
+    const cookieStore = await cookies();
+    const adminSession = cookieStore.get('admin_session');
     if (!adminSession?.value) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
     }
@@ -27,7 +28,8 @@ export async function GET() {
 
 export async function POST(request: Request) {
   try {
-    const adminSession = cookies().get('admin_session');
+    const cookieStore = await cookies();
+    const adminSession = cookieStore.get('admin_session');
     if (!adminSession?.value) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
     }

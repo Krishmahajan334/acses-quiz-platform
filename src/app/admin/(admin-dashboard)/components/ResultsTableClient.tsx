@@ -9,6 +9,7 @@ type AttemptRow = {
   participantId: string;
   scorePercent: number | null;
   status: string;
+  startedAt: Date | null;
   submittedAt: Date | null;
   participant: {
     name: string;
