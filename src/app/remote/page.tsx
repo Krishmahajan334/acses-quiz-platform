@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { Html5QrcodeScanner } from "html5-qrcode";
-import { QrCode, CheckCircle2, AlertCircle, XCircle } from "lucide-react";
+import { QrCode, CheckCircle2, AlertCircle, XCircle, Loader2 } from "lucide-react";
 
 function RemoteScannerContent() {
   const searchParams = useSearchParams();
@@ -13,11 +13,14 @@ function RemoteScannerContent() {
 
   const [scanResult, setScanResult] = useState<any>(null);
   const [isScanning, setIsScanning] = useState(true);
+  const isScanningRef = useRef(true);
   const scannerRef = useRef<Html5QrcodeScanner | null>(null);
 
   const handleScan = async (code: string) => {
-    if (!sessionId || !code) return;
+    if (!sessionId || !code || !isScanningRef.current) return;
+    isScanningRef.current = false;
     setIsScanning(false);
+    setScanResult(null); // Explicitly clear before new fetch
 
     try {
       const res = await fetch("/api/admin/scanner/scan", {
@@ -33,53 +36,42 @@ function RemoteScannerContent() {
   };
 
   useEffect(() => {
-    if (isScanning && sessionId) {
-      setScanResult(null);
-      scannerRef.current = new Html5QrcodeScanner(
-        "remote-reader",
-        { 
-          fps: 10, 
-          qrbox: { width: 250, height: 250 },
-          videoConstraints: { facingMode: "environment" }
-        },
-        false
-      );
-      
-      scannerRef.current.render((decodedText) => {
-        handleScan(decodedText);
-      }, () => {});
+    if (!sessionId) return;
+    
+    scannerRef.current = new Html5QrcodeScanner(
+      "remote-reader",
+      { 
+        fps: 10, 
+        qrbox: { width: 250, height: 250 },
+        videoConstraints: { facingMode: "environment" }
+      },
+      false
+    );
+    
+    scannerRef.current.render((decodedText) => {
+      handleScan(decodedText);
+    }, () => {});
 
-      // Hack to remove front cameras from the dropdown since they are useless here
-      const filterCameras = setInterval(() => {
-        const select = document.querySelector('#remote-reader select') as HTMLSelectElement;
-        if (select) {
-          Array.from(select.options).forEach(opt => {
-            if (opt.text.toLowerCase().includes('front') || opt.text.toLowerCase().includes('user') || opt.text.toLowerCase().includes('facing')) {
-              opt.style.display = 'none';
-            }
-          });
-        }
-      }, 500);
+    // Hack to remove front cameras from the dropdown since they are useless here
+    const filterCameras = setInterval(() => {
+      const select = document.querySelector('#remote-reader select') as HTMLSelectElement;
+      if (select) {
+        Array.from(select.options).forEach(opt => {
+          if (opt.text.toLowerCase().includes('front') || opt.text.toLowerCase().includes('user') || opt.text.toLowerCase().includes('facing')) {
+            opt.style.display = 'none';
+          }
+        });
+      }
+    }, 500);
 
-      return () => {
-        clearInterval(filterCameras);
-        if (scannerRef.current) {
-          scannerRef.current.clear().catch(console.error);
-        }
-      };
-    } else {
+    return () => {
+      clearInterval(filterCameras);
       if (scannerRef.current) {
         scannerRef.current.clear().catch(console.error);
         scannerRef.current = null;
       }
-    }
-
-    return () => {
-      if (scannerRef.current) {
-        scannerRef.current.clear().catch(console.error);
-      }
     };
-  }, [isScanning, sessionId]);
+  }, [sessionId]);
 
   if (!sessionId) {
     return (
@@ -103,32 +95,46 @@ function RemoteScannerContent() {
       </header>
 
       <main className="flex-1 flex flex-col items-center justify-center p-4">
-        {isScanning ? (
-          <div className="w-full max-w-md space-y-4">
-            <div id="remote-reader" className="w-full overflow-hidden rounded-xl border border-zinc-700 bg-zinc-800"></div>
-            <p className="text-center text-zinc-400 text-sm">Point camera at coupon QR code</p>
-          </div>
-        ) : (
+        <div className={`w-full max-w-md space-y-4 ${isScanning ? 'block' : 'hidden'}`}>
+          <div id="remote-reader" className="w-full overflow-hidden rounded-xl border border-zinc-700 bg-zinc-800"></div>
+          <p className="text-center text-zinc-400 text-sm">Point camera at coupon QR code</p>
+        </div>
+
+        {!isScanning && (
           <div className="w-full max-w-md p-6 bg-zinc-900 rounded-xl border border-zinc-800 flex flex-col items-center text-center space-y-6">
-            {scanResult?.success ? (
-              <CheckCircle2 className="w-20 h-20 text-green-500" />
+            {!scanResult ? (
+              <div className="flex flex-col items-center justify-center py-8">
+                <Loader2 className="w-16 h-16 text-primary animate-spin mb-4" />
+                <p className="text-zinc-400 font-medium">Verifying coupon...</p>
+              </div>
             ) : (
-              <AlertCircle className="w-20 h-20 text-red-500" />
+              <>
+                {scanResult.success ? (
+                  <CheckCircle2 className="w-20 h-20 text-green-500" />
+                ) : (
+                  <AlertCircle className="w-20 h-20 text-red-500" />
+                )}
+                
+                <div>
+                  <h2 className={`text-2xl font-bold ${scanResult.success ? 'text-green-500' : 'text-red-500'}`}>
+                    {scanResult.success ? "Success!" : "Failed"}
+                  </h2>
+                  <p className="text-zinc-300 mt-2 text-lg">{scanResult.message}</p>
+                  {scanResult.participant && (
+                    <p className="text-zinc-400 font-semibold mt-1">{scanResult.participant}</p>
+                  )}
+                </div>
+              </>
             )}
-            
-            <div>
-              <h2 className={`text-2xl font-bold ${scanResult?.success ? 'text-green-500' : 'text-red-500'}`}>
-                {scanResult?.success ? "Success!" : "Failed"}
-              </h2>
-              <p className="text-zinc-300 mt-2 text-lg">{scanResult?.message}</p>
-              {scanResult?.participant && (
-                <p className="text-zinc-400 font-semibold mt-1">{scanResult.participant}</p>
-              )}
-            </div>
 
             <button
-              onClick={() => setIsScanning(true)}
-              className="w-full py-4 bg-primary text-primary-foreground font-bold rounded-lg text-lg uppercase tracking-wide hover:bg-primary/90 active:scale-95 transition-all"
+              onClick={() => {
+                setScanResult(null);
+                isScanningRef.current = true;
+                setIsScanning(true);
+              }}
+              disabled={!scanResult}
+              className="w-full py-4 bg-primary text-primary-foreground font-bold rounded-lg text-lg uppercase tracking-wide hover:bg-primary/90 active:scale-95 transition-all disabled:opacity-50"
             >
               Scan Next
             </button>
