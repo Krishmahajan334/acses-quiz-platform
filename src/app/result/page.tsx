@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Navbar } from "@/components/ui/Navbar";
 import { PageBackground } from "@/components/ui/PageBackground";
 import { ShieldCheck, AlertTriangle, Loader2, Trophy, Copy, CheckCircle2, ArrowRight, Download } from "lucide-react";
-import { QRCodeSVG } from 'qrcode.react';
+import { QRCodeCanvas } from 'qrcode.react';
 import html2canvas from 'html2canvas';
 
 interface ResultData {
@@ -85,7 +85,9 @@ export default function ResultPage() {
       const link = document.createElement('a');
       link.download = `ACSES_Coupon_${result.couponCode}.png`;
       link.href = dataUrl;
+      document.body.appendChild(link);
       link.click();
+      document.body.removeChild(link);
     } catch (err) {
       console.error("Failed to download screenshot", err);
     } finally {
@@ -283,7 +285,7 @@ export default function ResultPage() {
                 
                 <div className="flex flex-col sm:flex-row items-center gap-6 mb-4">
                   <div className="bg-white p-3 rounded-lg shadow-lg shrink-0">
-                    <QRCodeSVG 
+                    <QRCodeCanvas 
                       value={result.couponCode}
                       size={120}
                       level="H"
