@@ -72,8 +72,8 @@ export async function POST(req: Request) {
         timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true }),
       };
 
-      // We don't wait for this to finish to avoid slowing down the scanner
-      fetch(webhookUrl, {
+      // Await the fetch to ensure Vercel doesn't kill the function before the webhook is sent
+      await fetch(webhookUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(postData),
