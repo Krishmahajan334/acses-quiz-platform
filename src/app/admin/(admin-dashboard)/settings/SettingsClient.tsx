@@ -16,7 +16,7 @@ export default function SettingsClient() {
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
-    fetch('/api/admin/settings')
+    fetch('/api/admin/settings', { credentials: 'include' })
       .then(res => res.json())
       .then(data => {
         if (data.success) {
@@ -41,6 +41,7 @@ export default function SettingsClient() {
       const res = await fetch('/api/admin/settings', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
         body: JSON.stringify({ prnRequiredYears })
       });
       
