@@ -4,8 +4,43 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Navbar } from "@/components/ui/Navbar";
 import { PageBackground } from "@/components/ui/PageBackground";
-import { AlertCircle, Loader2, Trophy, X } from "lucide-react";
+import { AlertCircle, Loader2, Trophy, X, Crown, Clock } from "lucide-react";
 import { Leaderboard } from "@/components/ui/Leaderboard";
+import { useEffect } from 'react';
+
+function TopPerformerBanner() {
+  const [topPerformer, setTopPerformer] = useState<any>(null);
+
+  useEffect(() => {
+    fetch('/api/leaderboard?limit=1')
+      .then(res => res.json())
+      .then(data => {
+        if (data.success && data.leaderboard.length > 0) {
+          setTopPerformer(data.leaderboard[0]);
+        }
+      })
+      .catch(console.error);
+  }, []);
+
+  if (!topPerformer) return null;
+
+  const m = Math.floor(topPerformer.timeTakenSec / 60);
+  const s = topPerformer.timeTakenSec % 60;
+
+  return (
+    <div className="w-full bg-primary/10 border-b border-primary/20 backdrop-blur-md px-4 py-2 flex items-center justify-center animate-fade-in absolute top-[72px] md:top-[88px] left-0 z-40 shadow-sm">
+      <div className="flex items-center gap-2 text-xs sm:text-sm text-foreground font-medium uppercase tracking-wider">
+        <Crown className="w-4 h-4 text-yellow-500 fill-yellow-500/20" />
+        <span className="opacity-80 hidden sm:inline">Current Leader:</span>
+        <strong className="text-primary font-black">{topPerformer.name}</strong>
+        <span className="text-muted-foreground mx-1">•</span>
+        <span className="text-yellow-500 font-bold">{topPerformer.score}%</span>
+        <span className="text-muted-foreground mx-1">•</span>
+        <span className="flex items-center gap-1 opacity-80 font-mono"><Clock className="w-3 h-3" /> {m}m {s}s</span>
+      </div>
+    </div>
+  );
+}
 
 export default function RegisterPage() {
   const router = useRouter();
@@ -86,9 +121,10 @@ export default function RegisterPage() {
           </button>
         }
       />
+      <TopPerformerBanner />
       <PageBackground />
       
-      <main className="relative min-h-screen pt-32 pb-16 px-6 flex flex-col lg:flex-row items-center lg:items-start justify-center gap-8 lg:gap-12">
+      <main className="relative min-h-screen pt-36 md:pt-40 pb-16 px-6 flex flex-col lg:flex-row items-center lg:items-start justify-center gap-8 lg:gap-12">
         <div className="max-w-md w-full relative z-10 animate-fade-up">
           
           <div className="bg-secondary/40 backdrop-blur-md rounded-2xl border border-border p-8 sm:p-10 shadow-2xl relative overflow-hidden">
@@ -246,10 +282,29 @@ export default function RegisterPage() {
           <Leaderboard limit={10} />
         </div>
 
+        {/* Mobile Leaderboard (Explicitly below the form) */}
+        <div className="lg:hidden max-w-md w-full relative z-10 animate-fade-up mt-4">
+          <div className="mb-4 text-center">
+            <h2 className="text-xl sm:text-2xl font-bold text-foreground tracking-tight uppercase">
+              Top Performers
+            </h2>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Are you ready to beat their scores?
+            </p>
+          </div>
+          <Leaderboard limit={10} />
+        </div>
+
         {/* Mobile Leaderboard Modal */}
         {showMobileLeaderboard && (
-          <div className="lg:hidden fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-background/80 backdrop-blur-sm p-4">
-            <div className="bg-secondary w-full max-w-md rounded-2xl border border-border shadow-2xl animate-fade-up relative flex flex-col max-h-[85vh]">
+          <div 
+            className="lg:hidden fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-background/80 backdrop-blur-sm p-4"
+            onClick={() => setShowMobileLeaderboard(false)}
+          >
+            <div 
+              className="bg-secondary w-full max-w-md rounded-2xl border border-border shadow-2xl animate-fade-up relative flex flex-col max-h-[85vh]"
+              onClick={(e) => e.stopPropagation()}
+            >
               <div className="flex justify-between items-center p-4 border-b border-border">
                 <div>
                   <h2 className="text-lg font-bold text-foreground tracking-tight uppercase">Top Performers</h2>
