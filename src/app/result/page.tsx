@@ -7,6 +7,7 @@ import { PageBackground } from "@/components/ui/PageBackground";
 import { ShieldCheck, AlertTriangle, Loader2, Trophy, Copy, CheckCircle2, ArrowRight, Download } from "lucide-react";
 import { QRCodeCanvas } from 'qrcode.react';
 import * as htmlToImage from 'html-to-image';
+import { useInView } from 'react-intersection-observer';
 
 interface ResultData {
   success: boolean;
@@ -31,6 +32,18 @@ export default function ResultPage() {
   const [isDownloading, setIsDownloading] = useState(false);
 
   const couponRef = useRef<HTMLDivElement>(null);
+  
+  // Track visibility of the main CTA
+  const { ref: ctaRef, inView: ctaInView, entry } = useInView({
+    threshold: 0.1, // trigger when at least 10% of the CTA is visible
+    rootMargin: "0px 0px -50px 0px"
+  });
+
+  const scrollToCta = () => {
+    if (entry?.target) {
+      entry.target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
 
   useEffect(() => {
     const finishQuiz = async () => {
@@ -320,6 +333,7 @@ export default function ResultPage() {
 
             {/* Massive Membership CTA */}
             <a 
+              ref={ctaRef}
               href="https://forms.gle/Sa3mbHEV2eoGC6jt9" 
               target="_blank" 
               rel="noopener noreferrer"
@@ -371,6 +385,28 @@ export default function ResultPage() {
           </div>
         </div>
       </main>
+
+      {/* Floating CTA Popup */}
+      <div 
+        className={`fixed bottom-6 right-6 sm:bottom-10 sm:right-10 z-50 transition-all duration-500 transform \${!ctaInView && result.passed ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-20 opacity-0 scale-90 pointer-events-none'}`}
+      >
+        <button
+          onClick={scrollToCta}
+          className="group relative flex items-center gap-3 bg-secondary/90 backdrop-blur-md border border-primary/50 p-3 sm:p-4 rounded-full shadow-[0_0_30px_rgba(34,197,94,0.2)] hover:bg-secondary hover:scale-105 hover:shadow-[0_0_40px_rgba(34,197,94,0.3)] transition-all"
+        >
+          <div className="absolute inset-0 bg-primary/20 rounded-full blur-md animate-pulse"></div>
+          <div className="w-10 h-10 bg-primary/20 rounded-full border border-primary/50 flex items-center justify-center relative z-10 shrink-0">
+            <ShieldCheck className="w-5 h-5 text-primary" />
+          </div>
+          <div className="text-left pr-4 relative z-10 hidden sm:block">
+            <div className="text-[10px] text-primary font-bold uppercase tracking-widest leading-tight">Become a Member</div>
+            <div className="text-foreground font-black uppercase tracking-tight text-sm">Join the Elite 1%</div>
+          </div>
+          <div className="text-left pr-2 relative z-10 block sm:hidden">
+            <div className="text-foreground font-black uppercase tracking-tight text-sm">Join ACSES</div>
+          </div>
+        </button>
+      </div>
     </>
   );
 }
