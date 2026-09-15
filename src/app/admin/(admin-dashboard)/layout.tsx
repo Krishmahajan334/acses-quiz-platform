@@ -71,6 +71,7 @@ export default async function AdminLayout({
           <a href="/api/admin/logout" className="flex items-center justify-center gap-2 w-full px-4 py-3 text-xs uppercase tracking-widest font-bold text-destructive hover:text-destructive transition-all border border-destructive/30 rounded-md hover:bg-destructive/10">
             <LogOut className="w-4 h-4" />
             Logout Admin
+          </a>
         </div>
       </div>
 
