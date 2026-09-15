@@ -16,14 +16,14 @@ export async function signAdminToken(payload: AdminJwtPayload) {
   const token = await new SignJWT(payload)
     .setProtectedHeader({ alg: 'HS256' })
     .setIssuedAt()
-    .setExpirationTime('24h')
+    .setExpirationTime('72h')
     .sign(getSecret());
   return token;
 }
 
 export async function verifyAdminToken(token: string): Promise<AdminJwtPayload | null> {
   try {
-    const { payload } = await jwtVerify(token, getSecret());
+    const { payload } = await jwtVerify(token, getSecret(), { clockTolerance: 60 });
     return payload as AdminJwtPayload;
   } catch (error) {
     console.error("JWT Verify Error:", error);
