@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { Navbar } from "@/components/ui/Navbar";
 import { PageBackground } from "@/components/ui/PageBackground";
 import { AlertCircle, Loader2 } from "lucide-react";
+import { Leaderboard } from "@/components/ui/Leaderboard";
 
 export default function RegisterPage() {
   const router = useRouter();
@@ -75,7 +76,7 @@ export default function RegisterPage() {
       <Navbar />
       <PageBackground />
       
-      <main className="relative min-h-screen pt-32 pb-16 px-6 flex items-center justify-center">
+      <main className="relative min-h-screen pt-32 pb-16 px-6 flex flex-col lg:flex-row items-center lg:items-start justify-center gap-8 lg:gap-12">
         <div className="max-w-md w-full relative z-10 animate-fade-up">
           
           <div className="bg-secondary/40 backdrop-blur-md rounded-2xl border border-border p-8 sm:p-10 shadow-2xl relative overflow-hidden">
@@ -218,6 +219,18 @@ export default function RegisterPage() {
               </div>
             </form>
           </div>
+        </div>
+
+        <div className="max-w-md w-full relative z-10 animate-fade-up" style={{ animationDelay: '0.2s' }}>
+          <div className="mb-4 text-center lg:text-left">
+            <h2 className="text-xl sm:text-2xl font-bold text-foreground tracking-tight uppercase">
+              Top Performers
+            </h2>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Are you ready to beat their scores?
+            </p>
+          </div>
+          <Leaderboard limit={10} />
         </div>
       </main>
     </>

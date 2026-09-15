@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Navbar } from "@/components/ui/Navbar";
 import { PageBackground } from "@/components/ui/PageBackground";
 import { ShieldCheck, AlertTriangle, Loader2, Trophy, Copy, CheckCircle2, ArrowRight, Download } from "lucide-react";
+import { Leaderboard } from "@/components/ui/Leaderboard";
 import { QRCodeCanvas } from 'qrcode.react';
 import * as htmlToImage from 'html-to-image';
 import { useInView } from 'react-intersection-observer';
@@ -384,6 +385,16 @@ export default function ResultPage() {
             </div>
           </div>
         </div>
+
+        {/* Global Leaderboard Section */}
+        <div className="w-full max-w-2xl z-10 animate-fade-up mt-12 mb-8">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl font-black text-foreground uppercase tracking-tight">Global Rankings</h2>
+            <p className="text-sm text-muted-foreground mt-1">See where you stand among all participants</p>
+          </div>
+          <Leaderboard limit={20} />
+        </div>
+
       </main>
 
       {/* Floating CTA Popup */}
