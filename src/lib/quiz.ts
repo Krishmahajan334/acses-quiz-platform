@@ -37,9 +37,10 @@ export async function generateAttempt(participantId: string, eventId: string, du
   });
   const pastNormalizedTexts = new Set(pastAttempts.map(aq => normalizeText(aq.question.text)));
 
-  const targetYears = participant.year === 'FY' ? ['ALL'] :
-                      participant.year === 'SY' ? ['ALL', 'SY'] :
-                      ['ALL', 'SY', 'TY', 'LY'];
+  const targetYears = participant.year === 'FY' ? ['ALL', 'FY'] :
+                      participant.year === 'SY' ? ['ALL', 'FY', 'SY'] :
+                      participant.year === 'TY' ? ['ALL', 'FY', 'SY', 'TY'] :
+                      ['ALL', 'FY', 'SY', 'TY', 'LY'];
 
   // Fetch the configuration for this year
   const yearConfig = await prisma.eventYearConfig.findUnique({
