@@ -26,7 +26,7 @@ export default function RegisterPage() {
 
     if (val.includes('@')) {
       const [prefix, domain] = val.split('@');
-      const domains = ['gmail.com', 'yahoo.com', 'outlook.com', 'hotmail.com'];
+      const domains = ['gmail.com', 'yahoo.com', 'outlook.com', 'hotmail.com', 'dkte.ac.in'];
       const filtered = domains.filter(d => d.startsWith(domain || ''));
       setEmailSuggestions(filtered.map(d => `${prefix}@${d}`));
     } else {
