@@ -9,6 +9,7 @@ import { Leaderboard } from "@/components/ui/Leaderboard";
 import { QRCodeCanvas } from 'qrcode.react';
 import * as htmlToImage from 'html-to-image';
 import { useInView } from 'react-intersection-observer';
+import { TopPerformerBanner } from "@/components/ui/TopPerformerBanner";
 
 interface ResultData {
   success: boolean;
@@ -111,6 +112,7 @@ export default function ResultPage() {
     return (
       <>
         <Navbar />
+        <TopPerformerBanner />
         <PageBackground />
         <main className="relative min-h-screen pt-20 pb-8 px-4 sm:px-6 flex flex-col items-center justify-center font-sans">
           <div className="w-full max-w-lg z-10">
@@ -177,6 +179,7 @@ export default function ResultPage() {
     return (
       <>
         <Navbar />
+        <TopPerformerBanner />
         <PageBackground />
         <main className="relative min-h-screen pt-32 pb-16 px-6 flex flex-col items-center justify-center font-sans">
           <div className="w-full max-w-lg z-10 animate-fade-up">
@@ -203,6 +206,7 @@ export default function ResultPage() {
   return (
     <>
       <Navbar />
+      <TopPerformerBanner />
       <PageBackground />
       
       <main className="relative min-h-screen pt-24 pb-12 px-4 sm:px-6 flex flex-col items-center font-sans">
