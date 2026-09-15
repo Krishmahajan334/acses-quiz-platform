@@ -205,7 +205,7 @@ export default function ResultsTableClient({ latestAttempts, historyMap }: Props
                 </td>
                 <td className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap">
                   {(() => {
-                    const coupon = attempt.coupon;
+                    const coupon = attempt.coupon || attempt.participant?.coupons?.[0];
                     if (!coupon) return <span className="text-muted-foreground text-sm font-normal">N/A</span>;
                     
                     const isRedeemed = coupon.status === 'REDEEMED';
