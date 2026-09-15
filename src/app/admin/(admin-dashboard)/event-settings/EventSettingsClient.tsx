@@ -20,11 +20,12 @@ type EventSettingsClientProps = {
     yearConfigs: any[];
   };
   allTopics: string[];
+  topicStats: Record<string, { Easy: number; Medium: number; Hard: number; Total: number; targetYears: string[] }>;
 };
 
 const YEARS = ['FY', 'SY', 'TY', 'LY'];
 
-export default function EventSettingsClient({ activeEvent, allTopics }: EventSettingsClientProps) {
+export default function EventSettingsClient({ activeEvent, allTopics, topicStats }: EventSettingsClientProps) {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState('FY');
   const [isSaving, setIsSaving] = useState(false);
@@ -115,6 +116,43 @@ export default function EventSettingsClient({ activeEvent, allTopics }: EventSet
   const currentConfig = configs[activeTab];
   const excludedTopicsArray = currentConfig.excludedTopics ? currentConfig.excludedTopics.split(',').filter(Boolean) : [];
   const totalQuestions = currentConfig.easyCount + currentConfig.mediumCount + currentConfig.hardCount;
+
+  // 1. Filter topics for this activeTab
+  const visibleTopics = allTopics.filter(topic => {
+    const stat = topicStats[topic];
+    if (!stat) return false;
+    // FY sees FY + ALL
+    // SY sees SY + ALL
+    // TY sees TY + SY + ALL
+    // LY sees LY + TY + SY + ALL
+    if (stat.targetYears.includes('ALL')) return true;
+    if (activeTab === 'FY') return stat.targetYears.includes('FY');
+    if (activeTab === 'SY') return stat.targetYears.includes('SY');
+    if (activeTab === 'TY') return stat.targetYears.includes('TY') || stat.targetYears.includes('SY');
+    if (activeTab === 'LY') return stat.targetYears.includes('LY') || stat.targetYears.includes('TY') || stat.targetYears.includes('SY');
+    return false;
+  });
+
+  // 2. Compute Summary for this year
+  let availableEasy = 0, availableMedium = 0, availableHard = 0;
+  let excludedEasy = 0, excludedMedium = 0, excludedHard = 0;
+
+  for (const topic of visibleTopics) {
+    const stat = topicStats[topic];
+    if (excludedTopicsArray.includes(topic)) {
+      excludedEasy += stat.Easy;
+      excludedMedium += stat.Medium;
+      excludedHard += stat.Hard;
+    } else {
+      availableEasy += stat.Easy;
+      availableMedium += stat.Medium;
+      availableHard += stat.Hard;
+    }
+  }
+
+  const isWarning = (currentConfig.easyCount > availableEasy) || 
+                    (currentConfig.mediumCount > availableMedium) || 
+                    (currentConfig.hardCount > availableHard);
 
   return (
     <div className="bg-secondary/20 border border-border rounded-xl overflow-hidden">
@@ -215,35 +253,63 @@ export default function EventSettingsClient({ activeEvent, allTopics }: EventSet
               </p>
             </div>
 
-            <div className="bg-background/50 border border-border rounded-lg p-1 overflow-hidden h-[400px] overflow-y-auto">
-              {allTopics.length === 0 && (
-                <div className="p-4 text-center text-muted-foreground text-sm">
-                  No topics found in the question bank.
-                </div>
-              )}
-              {allTopics.map(topic => {
-                const isExcluded = excludedTopicsArray.includes(topic);
-                const isEnabled = !isExcluded;
-                
-                return (
-                  <div 
-                    key={topic}
-                    className={`flex items-center justify-between p-3 mb-1 rounded-md transition-colors ${isEnabled ? 'bg-secondary/40' : 'bg-background opacity-60'}`}
-                  >
-                    <span className={`font-medium ${isEnabled ? 'text-foreground' : 'text-muted-foreground line-through'}`}>
-                      {topic}
-                    </span>
-                    <button
-                      onClick={() => handleTopicToggle(activeTab, topic)}
-                      className={`w-12 h-6 rounded-full transition-colors relative ${isEnabled ? 'bg-primary' : 'bg-secondary border border-border'}`}
-                    >
-                      <span 
-                        className={`absolute top-1 left-1 bg-white w-4 h-4 rounded-full transition-transform ${isEnabled ? 'translate-x-6' : 'translate-x-0'}`} 
-                      />
-                    </button>
+            <div className="bg-background/50 border border-border rounded-lg p-1 overflow-hidden h-[400px] flex flex-col">
+              <div className="flex-1 overflow-y-auto">
+                {visibleTopics.length === 0 && (
+                  <div className="p-4 text-center text-muted-foreground text-sm">
+                    No topics found for {activeTab}.
                   </div>
-                );
-              })}
+                )}
+                {visibleTopics.map(topic => {
+                  const isExcluded = excludedTopicsArray.includes(topic);
+                  const isEnabled = !isExcluded;
+                  const stat = topicStats[topic];
+                  
+                  return (
+                    <div 
+                      key={topic}
+                      className={`flex items-center justify-between p-3 mb-1 rounded-md transition-colors ${isEnabled ? 'bg-secondary/40' : 'bg-background opacity-60'}`}
+                    >
+                      <div className="flex flex-col">
+                        <span className={`font-medium ${isEnabled ? 'text-foreground' : 'text-muted-foreground line-through'}`}>
+                          {topic}
+                        </span>
+                        <span className="text-xs text-muted-foreground font-mono mt-0.5">
+                          E: {stat.Easy} | M: {stat.Medium} | H: {stat.Hard}
+                        </span>
+                      </div>
+                      <button
+                        onClick={() => handleTopicToggle(activeTab, topic)}
+                        className={`w-12 h-6 rounded-full transition-colors relative ${isEnabled ? 'bg-primary' : 'bg-secondary border border-border'}`}
+                      >
+                        <span 
+                          className={`absolute top-1 left-1 bg-white w-4 h-4 rounded-full transition-transform ${isEnabled ? 'translate-x-6' : 'translate-x-0'}`} 
+                        />
+                      </button>
+                    </div>
+                  );
+                })}
+              </div>
+              
+              {/* Bank Summary */}
+              <div className="p-3 bg-secondary border-t border-border mt-1 shrink-0">
+                <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2">Question Bank Summary for {activeTab}</h4>
+                <div className="grid grid-cols-2 gap-2 text-sm">
+                  <div className={`p-2 rounded border ${isWarning ? 'bg-destructive/10 border-destructive/30 text-destructive' : 'bg-background border-border text-foreground'}`}>
+                    <span className="block text-xs uppercase opacity-70 mb-1">Available (Included)</span>
+                    <span className="font-mono text-xs">E: {availableEasy} | M: {availableMedium} | H: {availableHard}</span>
+                  </div>
+                  <div className="bg-background border border-border p-2 rounded text-muted-foreground">
+                    <span className="block text-xs uppercase opacity-70 mb-1">Lost (Excluded)</span>
+                    <span className="font-mono text-xs">E: {excludedEasy} | M: {excludedMedium} | H: {excludedHard}</span>
+                  </div>
+                </div>
+                {isWarning && (
+                  <p className="text-xs text-destructive mt-2 font-medium">
+                    ⚠️ Warning: You have configured the quiz to require more questions than are currently available in the included topics! The quiz generation will fail.
+                  </p>
+                )}
+              </div>
             </div>
           </div>
 

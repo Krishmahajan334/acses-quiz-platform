@@ -17,14 +17,44 @@ export default async function EventSettingsPage() {
     );
   }
 
-  // Get all unique topics in the question bank
-  const topicsRaw = await prisma.question.findMany({
-    where: { eventId: activeEvent.id },
-    select: { topic: true },
-    distinct: ['topic']
+  // Get all active questions to build topic stats
+  const questions = await prisma.question.findMany({
+    where: { eventId: activeEvent.id, status: 'ACTIVE' },
+    select: { topic: true, difficulty: true, targetYear: true }
   });
   
-  const allTopics = topicsRaw.map(t => t.topic).filter(Boolean).sort();
+  type TopicStat = { Easy: number; Medium: number; Hard: number; Total: number; targetYears: Set<string> };
+  const topicStatsMap = new Map<string, TopicStat>();
+  
+  for (const q of questions) {
+    if (!q.topic) continue;
+    if (!topicStatsMap.has(q.topic)) {
+      topicStatsMap.set(q.topic, { Easy: 0, Medium: 0, Hard: 0, Total: 0, targetYears: new Set() });
+    }
+    
+    const stats = topicStatsMap.get(q.topic)!;
+    const diff = q.difficulty === 'Easy' || q.difficulty === 'Medium' || q.difficulty === 'Hard' 
+      ? q.difficulty 
+      : 'Medium';
+      
+    stats[diff]++;
+    stats.Total++;
+    stats.targetYears.add(q.targetYear || 'ALL');
+  }
+
+  const topicStats: Record<string, { Easy: number; Medium: number; Hard: number; Total: number; targetYears: string[] }> = {};
+  for (const [topic, stat] of Array.from(topicStatsMap.entries())) {
+    topicStats[topic] = {
+      Easy: stat.Easy,
+      Medium: stat.Medium,
+      Hard: stat.Hard,
+      Total: stat.Total,
+      targetYears: Array.from(stat.targetYears)
+    };
+  }
+
+  // Sort topics alphabetically
+  const allTopics = Object.keys(topicStats).sort();
 
   return (
     <div>
@@ -38,6 +68,7 @@ export default async function EventSettingsPage() {
       <EventSettingsClient 
         activeEvent={activeEvent}
         allTopics={allTopics}
+        topicStats={topicStats}
       />
     </div>
   );

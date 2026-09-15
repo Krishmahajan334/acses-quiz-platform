@@ -1,10 +1,12 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Navbar } from "@/components/ui/Navbar";
 import { PageBackground } from "@/components/ui/PageBackground";
-import { ShieldCheck, AlertTriangle, Loader2, Trophy, Copy, CheckCircle2, ArrowRight } from "lucide-react";
+import { ShieldCheck, AlertTriangle, Loader2, Trophy, Copy, CheckCircle2, ArrowRight, Download } from "lucide-react";
+import { QRCodeSVG } from 'qrcode.react';
+import html2canvas from 'html2canvas';
 
 interface ResultData {
   success: boolean;
@@ -26,6 +28,9 @@ export default function ResultPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
+  const [isDownloading, setIsDownloading] = useState(false);
+
+  const couponRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const finishQuiz = async () => {
@@ -64,6 +69,27 @@ export default function ResultPage() {
       navigator.clipboard.writeText(result.couponCode);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
+    }
+  };
+
+  const handleDownload = async () => {
+    if (!couponRef.current || !result?.couponCode) return;
+    try {
+      setIsDownloading(true);
+      const canvas = await html2canvas(couponRef.current, {
+        backgroundColor: '#000000',
+        scale: 2, // Higher quality
+        logging: false,
+      });
+      const dataUrl = canvas.toDataURL('image/png');
+      const link = document.createElement('a');
+      link.download = `ACSES_Coupon_${result.couponCode}.png`;
+      link.href = dataUrl;
+      link.click();
+    } catch (err) {
+      console.error("Failed to download screenshot", err);
+    } finally {
+      setIsDownloading(false);
     }
   };
 
@@ -247,25 +273,48 @@ export default function ResultPage() {
             )}
 
             {result.passed && result.couponCode && (
-              <div className="bg-primary/5 border border-primary/30 rounded-xl p-4 sm:p-5 mb-5 text-left relative overflow-hidden">
+              <div className="bg-primary/5 border border-primary/30 rounded-xl p-4 sm:p-5 mb-5 text-left relative overflow-hidden" ref={couponRef}>
                 <h3 className="text-primary font-bold text-xs uppercase tracking-widest mb-2 flex items-center gap-2">
                   <Trophy className="w-3 h-3" /> Qualified Reward
                 </h3>
-                <p className="text-foreground/80 text-xs sm:text-sm mb-3 leading-relaxed font-medium">
-                  Congratulations on conquering the challenge! Present this secure cryptographic token at the ACSES desk to claim your <strong className="text-primary">exclusive discount for our upcoming technical event</strong>.
+                <p className="text-foreground/80 text-xs sm:text-sm mb-4 leading-relaxed font-medium">
+                  Congratulations on conquering the challenge! Present this secure cryptographic token or QR code at the ACSES desk to claim your <strong className="text-primary">exclusive discount</strong>.
                 </p>
-                <div className="flex items-center gap-2">
-                  <div className="flex-1 bg-background px-3 py-2 sm:px-4 sm:py-3 rounded-lg border border-primary/20 font-mono text-xs sm:text-sm md:text-base font-bold text-foreground tracking-widest shadow-inner select-all break-all">
-                    {result.couponCode}
+                
+                <div className="flex flex-col sm:flex-row items-center gap-6 mb-4">
+                  <div className="bg-white p-3 rounded-lg shadow-lg shrink-0">
+                    <QRCodeSVG 
+                      value={result.couponCode}
+                      size={120}
+                      level="H"
+                    />
                   </div>
-                  <button 
-                    onClick={handleCopy}
-                    className="bg-primary/20 hover:bg-primary/30 text-primary p-2 sm:p-3 rounded-lg border border-primary/20 transition-colors flex-shrink-0"
-                    title="Copy Coupon"
-                  >
-                    {copied ? <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5" /> : <Copy className="w-4 h-4 sm:w-5 sm:h-5" />}
-                  </button>
+                  
+                  <div className="flex flex-col w-full">
+                    <span className="text-[10px] text-muted-foreground uppercase tracking-widest font-bold mb-1 ml-1">Your Token Code</span>
+                    <div className="flex items-center gap-2">
+                      <div className="flex-1 bg-background px-3 py-2 sm:px-4 sm:py-3 rounded-lg border border-primary/20 font-mono text-xs sm:text-sm md:text-base font-bold text-foreground tracking-widest shadow-inner select-all break-all">
+                        {result.couponCode}
+                      </div>
+                      <button 
+                        onClick={handleCopy}
+                        className="bg-primary/20 hover:bg-primary/30 text-primary p-2 sm:p-3 rounded-lg border border-primary/20 transition-colors flex-shrink-0"
+                        title="Copy Coupon"
+                      >
+                        {copied ? <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5" /> : <Copy className="w-4 h-4 sm:w-5 sm:h-5" />}
+                      </button>
+                    </div>
+                  </div>
                 </div>
+
+                <button
+                  onClick={handleDownload}
+                  disabled={isDownloading}
+                  className="w-full flex justify-center items-center gap-2 py-2.5 rounded-md bg-secondary border border-border text-xs sm:text-sm font-bold uppercase tracking-widest text-foreground hover:bg-secondary/80 transition-colors disabled:opacity-50"
+                >
+                  <Download className="w-4 h-4" />
+                  {isDownloading ? "Saving Image..." : "Download QR Code & Token"}
+                </button>
               </div>
             )}
 
