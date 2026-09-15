@@ -23,7 +23,7 @@ export async function generateAttempt(participantId: string, eventId: string, du
     return text
       .replace(/\(Variation \d+\)/gi, '')
       .replace(/Variation #\d+:/gi, '')
-      .trim()
+      .replace(/[^a-z0-9]/gi, '') // Strip all non-alphanumeric characters (spaces, punctuation, etc.)
       .toLowerCase();
   };
 
