@@ -71,31 +71,6 @@ export default async function AdminLayout({
           <a href="/api/admin/logout" className="flex items-center justify-center gap-2 w-full px-4 py-3 text-xs uppercase tracking-widest font-bold text-destructive hover:text-destructive transition-all border border-destructive/30 rounded-md hover:bg-destructive/10">
             <LogOut className="w-4 h-4" />
             Logout Admin
-          </a>
-          <div className="flex flex-col items-center justify-center gap-2 mt-2 border-t border-border/50 pt-4">
-            <div className="flex flex-wrap items-center justify-center gap-1.5 text-[10px] text-muted-foreground/70 text-center">
-              <span className="font-semibold text-muted-foreground/90">Designed & developed by Sorin Tech Lab</span>
-              <span>a unit of</span>
-              <Link 
-                href="https://krishmahajan.dev" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 hover:text-primary transition-colors group"
-              >
-                <span className="font-semibold underline decoration-transparent group-hover:decoration-primary underline-offset-2 transition-all">Krish Tech Labs</span>
-                <Image 
-                  src="/watermark_logo_light.png" 
-                  alt="Krish Techlabs Logo" 
-                  width={16} 
-                  height={16} 
-                  className="object-contain opacity-70 group-hover:opacity-100 transition-opacity"
-                />
-              </Link>
-            </div>
-            <p className="text-[9px] text-muted-foreground/50 text-center leading-tight">
-              This platform is the property of Sorin Tech Lab.
-            </p>
-          </div>
         </div>
       </div>
 
