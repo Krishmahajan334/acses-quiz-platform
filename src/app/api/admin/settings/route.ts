@@ -1,12 +1,11 @@
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
-import { cookies } from 'next/headers';
+import { getAdminSession } from '@/lib/auth';
 
 export async function GET() {
   try {
-    const cookieStore = await cookies();
-    const adminSession = cookieStore.get('admin_session');
-    if (!adminSession?.value) {
+    const adminSession = await getAdminSession();
+    if (!adminSession) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
     }
 
@@ -41,9 +40,8 @@ export async function GET() {
 
 export async function POST(request: Request) {
   try {
-    const cookieStore = await cookies();
-    const adminSession = cookieStore.get('admin_session');
-    if (!adminSession?.value) {
+    const adminSession = await getAdminSession();
+    if (!adminSession) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
     }
 
