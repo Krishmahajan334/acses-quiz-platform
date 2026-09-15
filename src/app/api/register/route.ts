@@ -12,7 +12,11 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Validation failed", issues: result.error.issues }, { status: 400 });
     }
 
-    const data = result.data;
+    let data = result.data;
+    data.email = data.email.trim().toLowerCase();
+    if (data.prn) {
+      data.prn = data.prn.trim().toUpperCase();
+    }
 
     // Get Active Event
     const event = await getActiveEvent();
@@ -21,9 +25,9 @@ export async function POST(request: Request) {
     }
 
     // Check for duplicate PRN (if provided)
-    if (data.prn && data.prn.trim() !== "") {
+    if (data.prn && data.prn !== "") {
       const existingPrnUser = await prisma.participant.findFirst({
-        where: { prn: data.prn.trim() }
+        where: { prn: data.prn }
       });
       
       // If someone else already registered with this PRN

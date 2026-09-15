@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 
-export const revalidate = 15; // Cache the response for 15 seconds
+export const dynamic = 'force-dynamic';
 
 export async function GET(request: Request) {
   try {
@@ -95,6 +95,10 @@ export async function GET(request: Request) {
     return NextResponse.json({
       success: true,
       leaderboard: topN
+    }, {
+      headers: {
+        'Cache-Control': 'public, s-maxage=15, stale-while-revalidate=30'
+      }
     });
 
   } catch (error: any) {

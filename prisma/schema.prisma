@@ -93,6 +93,7 @@ model Attempt {
   coupon         Coupon?
 
   @@index([participantId, eventId, status])
+  @@index([eventId, scorePercent])
 }
 
 model AttemptQuestion {
