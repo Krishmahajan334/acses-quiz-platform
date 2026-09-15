@@ -9,18 +9,18 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const { attemptId } = await request.json();
-    if (!attemptId) {
-      return NextResponse.json({ error: "Missing attemptId" }, { status: 400 });
+    const { attemptIds } = await request.json();
+    if (!attemptIds || !Array.isArray(attemptIds) || attemptIds.length === 0) {
+      return NextResponse.json({ error: "Missing attemptIds array" }, { status: 400 });
     }
 
-    const attempt = await prisma.attempt.findUnique({
-      where: { id: attemptId },
+    const attempts = await prisma.attempt.findMany({
+      where: { id: { in: attemptIds } },
       include: { participant: true, coupon: true }
     });
 
-    if (!attempt) {
-      return NextResponse.json({ error: "Attempt not found" }, { status: 404 });
+    if (attempts.length === 0) {
+      return NextResponse.json({ error: "Attempts not found" }, { status: 404 });
     }
 
     const webhookUrl = process.env.GOOGLE_SCRIPT_WEB_URL;
@@ -28,27 +28,36 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "GOOGLE_SCRIPT_WEB_URL is not set" }, { status: 500 });
     }
 
-    const postData = {
-      action: "resend_email",
-      name: attempt.participant.name,
-      prn: attempt.participant.prn,
-      email: attempt.participant.email,
-      mobile: attempt.participant.mobile,
-      scorePercent: attempt.scorePercent || 0,
-      status: attempt.status,
-      couponCode: attempt.coupon?.code || null,
-    };
+    let successCount = 0;
+    
+    // Process them sequentially to avoid overwhelming the script endpoint
+    for (const attempt of attempts) {
+      const postData = {
+        action: "resend_email",
+        name: attempt.participant.name,
+        prn: attempt.participant.prn,
+        email: attempt.participant.email,
+        mobile: attempt.participant.mobile,
+        scorePercent: attempt.scorePercent || 0,
+        status: attempt.status,
+        couponCode: attempt.coupon?.code || null,
+      };
 
-    const res = await fetch(webhookUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(postData),
-    });
+      const res = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(postData),
+      });
 
-    if (res.ok) {
-      return NextResponse.json({ success: true, message: "Email sent successfully" });
+      if (res.ok) {
+        successCount++;
+      }
+    }
+
+    if (successCount > 0) {
+      return NextResponse.json({ success: true, message: `Emails sent successfully to ${successCount} participants` });
     } else {
-      return NextResponse.json({ error: "Failed to communicate with Google Script" }, { status: 500 });
+      return NextResponse.json({ error: "Failed to communicate with Google Script for all attempts" }, { status: 500 });
     }
 
   } catch (error: any) {
