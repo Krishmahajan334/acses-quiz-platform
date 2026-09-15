@@ -3,8 +3,8 @@ import Link from 'next/link';
 import BulkUploadButton from '../components/BulkUploadButton';
 import BulkDeleteQuestionsButton from '../components/BulkDeleteQuestionsButton';
 import UploadHistoryList from '../components/UploadHistoryList';
-import DeleteQuestionButton from '../components/DeleteQuestionButton';
 import SearchBar from './components/SearchBar';
+import QuestionCard from './components/QuestionCard';
 
 export const dynamic = 'force-dynamic';
 
@@ -27,6 +27,10 @@ export default async function QuestionBankPage(props: { searchParams: Promise<{ 
     orderBy: {
       id: 'desc'
     }
+  });
+
+  const events = await prisma.event.findMany({
+    select: { id: true, name: true }
   });
 
   const totalPages = Math.ceil(allQuestions.length / ITEMS_PER_PAGE);
@@ -93,56 +97,12 @@ export default async function QuestionBankPage(props: { searchParams: Promise<{ 
           </div>
         ) : (
           questions.map((qItem, index) => (
-            <div key={qItem.id} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 hover:shadow-md transition">
-              <div className="flex justify-between items-start mb-4">
-                <div>
-                  <div className="flex items-center gap-3 mb-2">
-                    <span className="bg-gray-100 text-gray-600 text-xs font-bold px-2 py-1 rounded">
-                      Q{(page - 1) * ITEMS_PER_PAGE + index + 1}
-                    </span>
-                    <span className="bg-blue-50 text-blue-700 text-xs font-bold px-2 py-1 rounded">
-                      {qItem.difficulty}
-                    </span>
-                    <span className="bg-purple-50 text-purple-700 text-xs font-bold px-2 py-1 rounded">
-                      {qItem.topic}
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-900">{qItem.text}</h3>
-                  {qItem.imageUrl && (
-                    <div className="mt-3">
-                      <img src={qItem.imageUrl} alt="Question Graphic" className="max-h-32 rounded border border-gray-200 shadow-sm" />
-                    </div>
-                  )}
-                </div>
-                <div className="flex space-x-2">
-                  <Link href={`/admin/questions/${qItem.id}/edit`} className="text-sm font-semibold text-blue-600 hover:text-blue-800 transition bg-blue-50 px-3 py-1 rounded-md">Edit</Link>
-                  <DeleteQuestionButton questionId={qItem.id} />
-                </div>
-              </div>
-              
-              <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {qItem.options.map((opt) => (
-                  <div 
-                    key={opt.id} 
-                    className={`p-3 rounded-lg border text-sm flex items-center ${
-                      opt.isCorrect 
-                        ? 'border-green-500 bg-green-50 text-green-900 font-medium' 
-                        : 'border-gray-200 bg-gray-50 text-gray-700'
-                    }`}
-                  >
-                    <span className="mr-3 text-xs font-bold bg-white px-2 py-1 border rounded shadow-sm">
-                      {opt.optionKey}
-                    </span>
-                    {opt.text}
-                    {opt.isCorrect && (
-                      <svg className="w-5 h-5 ml-auto text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
+            <QuestionCard 
+              key={qItem.id} 
+              question={qItem} 
+              index={(page - 1) * ITEMS_PER_PAGE + index} 
+              events={events} 
+            />
           ))
         )}
       </div>
